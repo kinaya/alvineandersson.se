@@ -1,0 +1,546 @@
+/* Colors */
+$black: #222222;
+$white: #ffffff;
+$greenLight: #28a745;
+$greenDark: #145322;
+$redLight: #dc3545;
+$redDark: #6e1a22;
+$grayInactive: #999999;
+$gray: #808080;
+$grayBackground: #DCDCDC;
+$graySubheading: #383838;
+$orangered: #E27D60;
+$blue: #7fc8bc;
+$yellow: #E8A87C;
+$purple: #C38D9E;
+$turquoise: #41B3A3;
+$white: #F2F2F2;
+$purpleDark: #61464f;
+$purpleInactive: #9c707e;
+
+/* Breakpoints */
+$mobile: '480px';
+$tablet: '736px';
+$desktop: '980px';
+$wide: '1280px';
+
+/* Base */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "open-sans";
+	line-height: 1.4;
+	color: $black;
+}
+
+/* Typhography */
+h1 {
+	font-family: 'din-2014-narrow';
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2em;
+	margin: 0;
+	@media(min-width: $mobile) {
+		font-size: 2.5em;
+	}
+}
+h2 {
+	font-family: "din-2014-narrow";
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2.5em;
+	line-height: 1.1;
+	margin-top: 0;
+}
+h3 {
+	font-family: "din-2014-narrow";
+	font-weight: 400;
+	font-size: 1.4em;
+}
+
+/* Containers */
+.container {
+	padding: 2.5em 1em 2em 1em;
+	@media(min-width: $mobile) {
+		padding: 3em 2em 4em 2em;
+	}
+}
+.container .inner {
+	max-width: 940px;
+	margin: 0 auto;
+}
+.container.header {
+	background-color: $purple;
+	padding: 2.5em 1em 0 1em;
+	@media(min-width: $mobile) {
+		padding: 3em 2em 1em 2em;
+	}
+	@media(min-width: $tablet) {
+		padding: 3em 2em 2em 2em;
+	}
+}
+.container.services {
+	background-color: $purple;
+	background-image: url('../dist/programmering3.png');
+	background-repeat: no-repeat;
+	background-position: calc(50% - 550px) 104%;
+	background-size: 100px auto;
+}
+.container.projects {
+	background-color: $blue;
+	background-image: url('../dist/megafon.png');
+	background-repeat: no-repeat;
+	background-position: calc(50% + 550px) 100%;
+	background-size: 100px auto;
+}
+.container.skills {
+	background-color: $yellow;
+	color: $black;
+}
+.container.matchmaking {
+	background-color: $white;
+	padding-top: 3em;
+	@media(min-width: $mobile) {
+		padding-top: 5em;
+	}
+	@media(min-width: $tablet) {
+		padding-top: 6em;
+	}
+}
+.container.footer {
+	background-color: $orangered;
+	background-image: url('../dist/programmering_white.png');
+	background-repeat: no-repeat;
+	background-position: calc(50% - 550px) 0%;
+	background-size: 100px auto;
+}
+
+/* Header */
+.header h1 {
+	color: $graySubheading;
+	font-weight: 100;
+	line-height: 0.9;
+	text-align: center;
+	> span {
+		font-weight: 600;
+		color: $black;
+	}
+	@media(min-width: $mobile) {
+		text-align: left;
+	}
+}
+.subheading {
+	font-family: "din-2014-narrow";
+	font-size: 1.3em;
+	text-align: center;
+	display: block;
+	@media(min-width: $mobile) {
+		text-align: left;
+	}
+}
+
+/* Services */
+.services .wrapper {
+	@media(min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+.service {
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto 2em auto;
+	@media(min-width: $tablet) {
+		flex-basis: 47%;
+		margin-bottom: 3%;
+	}
+}
+.service h3 {
+	margin: 0 0 0.1em 0;
+	@media(min-width: $tablet) {
+		font-size: 1.6em; /* todo */
+	}
+}
+.service p {
+	margin-top: 0;
+}
+
+/* Projects */
+.projects h2 {
+	visibility: hidden;
+	height: 0;
+	margin: 0;
+}
+.projects .filter {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+	justify-content: center;
+}
+.projects .filter > span {
+	background-color: $grayBackground;
+	color: $gray;
+	font-family: "din-2014";
+	font-size: 1em;
+	padding: 0.4em 1em;
+	margin: 0.1em;
+	cursor: pointer;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	&:active, &:focus, &:hover,
+	&.active {
+		background-color: $greenLight;
+		color: $white;
+	}
+}
+.projects .wrapper {
+	@media(min-width: $tablet) {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap:wrap;
+	}
+}
+.project {
+	background-color: $white;
+	color: $black;
+	border-radius: 5px;
+	margin: 0 0 1em 0;
+	@media(min-width: $tablet) {
+		flex-basis: 49%;
+		margin-bottom: 2%;
+	}
+	@media(min-width: $desktop) {
+		flex-basis: 32%;
+		margin-bottom: 2%;
+	}
+}
+.project {
+	.info {
+		padding: 0.5em;
+	}
+	.title {
+		display: block;
+		margin: 0;
+	}
+	.tags {
+		font-size: 0.8em;
+		color: $gray;
+		margin-bottom: 0.5em;
+	}
+	.tag {
+		margin-right: 0.5em;
+	}
+	.date {
+		padding-right: 0.4em;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 5px 5px 0 0;
+	}
+	.description {
+		font-size: 0.9em;
+	}
+	.designer a {
+		color: $black;
+	}
+	.links a {
+		margin: 0.1em;
+		color: $gray;
+		font-size: 0.8em;
+		&:hover, &:active, &:focus {
+			color: $redLight;
+		}
+	}
+}
+
+/* Skills */
+.skills h2 {
+	text-align: center;
+	@media(min-width: $mobile) {
+		text-align: left;
+	}
+}
+.skills .label {
+	font-weight: 700;
+}
+
+/* Matchmaking */
+.matchmaking h2 {
+	text-align: center;
+	margin-bottom: 0;
+	max-width: 400px;
+	margin: 0 auto;
+	@media(min-width: $mobile) {
+		font-size: 3em;
+	}
+	@media(min-width: $tablet) {
+		font-size: 4em;
+		max-width: 600px;
+	}
+}
+.matchmaking .intro {
+	text-align: center;
+	font-size: 1.2em;
+	@media(min-width: $mobile) {
+		margin-top: 0;
+	}
+}
+.matchmaking .wrapper {
+	margin: 1em 0 2em 0;
+	@media(min-width: $mobile) {
+		margin: 3em 0 4em 0;
+	}
+}
+
+/* Matchmaking item yesno */
+.matchmaking .item.yesno {
+	display: block;
+	padding: 1em 1em 3em 1em;
+	text-align: center;
+	border: 2px solid $gray;
+	border-radius: 5px;
+	position: relative;
+	max-width: 300px;
+	margin: 0 auto;
+	@media(min-width: $mobile) {
+		padding: 2em 2em 3em 2em;
+	}
+	.alternative {
+		display: inline-block;
+		width: 80px;
+		height: 50px;
+		background-color: $grayBackground;
+		border: 2px solid $gray;
+		border-radius: 5px;
+		position: absolute;
+		line-height: 47px;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+		font-family: "din-2014-narrow";
+		font-size: 1.2em;
+		bottom: -27px;
+		&.ja {
+			left: 2em;
+		}
+		&.nej {
+			right: 2em;
+		}
+		&.active-true {
+			background-color: $greenLight;
+			border-color: $greenDark;
+			color: $white;
+		}
+	}
+	&.clickable-true .alternative {
+		cursor: pointer;
+		&:hover, &:active, &:focus {
+			background-color: $greenLight;
+			border-color: $greenDark;
+			color: $white;
+		}
+	}
+	&.clickable-false .alternative {
+		color: $grayInactive;
+		border-color: $grayInactive;
+		&.active-false {
+			border-color: $grayInactive;
+		}
+		&.active-true {
+			background-color: $greenLight;
+			border-color: $greenDark;
+			color: $white;
+		}
+	}
+}
+
+/* Matchmaking arrow */
+.matchmaking .arrow {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	height: 3em;
+	margin: 1em auto;
+	background-image: url('../dist/arrow.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 0;
+	opacity: 0.7;
+	position: relative;
+	&.left {
+		left: -2em;
+		transform: rotate(-40deg);
+	}
+	&.right {
+		left: 2em;
+		transform: rotate(40deg);
+	}
+}
+
+/* Matchmaking item alternatives */
+.matchmaking .item.alternatives {
+	display: flex;
+	justify-content: center;
+	.alternative {
+		flex-basis: 48%;
+		text-align: center;
+		border: 2px solid $gray;
+		border-radius: 5px;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+		max-width: 300px;
+		margin: 0 0.5em;
+		&.active-true {
+			background-color: $greenLight;
+			border-color: $greenDark;
+			color: $white;
+		}
+	}
+	.inner {
+		padding: 0.5em 0.5em;
+		display: block;
+		position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+		@media(min-width: $mobile) {
+			padding: 1em 1.5em;
+		}
+		@media(min-width: $tablet) {
+			padding: 1.5em 2em;
+		}
+	}
+	&.clickable-true .alternative {
+		cursor: pointer;
+		&:hover, &:active, &:focus {
+			background-color: $greenLight;
+			border-color: $greenDark;
+			color: $white;
+		}
+	}
+	&.clickable-false .alternative {
+		border: 2px solid $grayInactive;
+		color: $grayInactive;
+		&.active-true {
+			background-color: $greenLight;
+			border-color: $greenDark;
+			color: $white;
+		}
+	}
+}
+
+/* Matchmaking item visibility */
+.matchmaking .outer {
+	-webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+	transition: all 1s;
+	&.visible-true {
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+	}
+	&.visible-false {
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/* Matchmaking answer */
+.matchmaking .item.answer {
+	text-align: center;
+	.text {
+		display: block;
+		margin: 3em 0 0 0;
+		color: $white;
+		@media(min-width: $mobile) {
+			margin: 3em 1em 1em 1em;
+		}
+		@media(min-width: $tablet) {
+			margin: 3em 3em 1em 3em;
+		}
+	}
+	.inner {
+		max-width: 500px;
+		border-radius: 5px;
+		padding: 2em;
+		position: relative;
+		margin-top: 2em;
+	}
+	.headline {
+		position: absolute;
+		left: 1em;
+		top: -1em;
+		display: inline-block;
+		color: green;
+		border-radius: 5px;
+		padding: 1em 2em;
+		font-size: 1.4em;
+		font-family: 'din-2014-narrow';
+		color: $white;
+		transform: rotate(-10deg);
+	}
+	&.answermatch {
+		.inner {
+			background-color: $greenLight;
+			border: 2px solid $greenDark;
+		}
+		.headline {
+			background-color: $greenDark;
+		}
+	}
+	&.answernomatch {
+		.inner {
+			background-color: $redLight;
+			border: 2px solid $redDark;
+		}
+		.headline {
+			background-color: $redDark;
+		}
+	}
+}
+.matchmaking .redo {
+	display: block;
+	max-width: 570px;
+	margin: 0 auto;
+	text-align: right;
+	color: $gray;
+	text-decoration: underline;
+	padding: 1em 0;
+	cursor: pointer;
+	&:hover, &:active, &:focus {
+		color: $redLight;
+	}
+}
+
+/* Footer */
+.footer {
+	a {
+		display: block;
+		color: $black;
+		text-decoration: none;
+		margin: 0.5em 0;
+		span {
+			border-bottom: 1px solid $black;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		&:hover, &:active, &:focus {
+			color: $white;
+			span {
+				border-bottom: 1px solid $white;
+			}
+		}
+	}
+}

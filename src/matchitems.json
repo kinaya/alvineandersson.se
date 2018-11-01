@@ -1,0 +1,166 @@
+[
+  {
+    "id": "varfor",
+    "visible": true,
+    "clickable": true,
+    "type": "alternatives",
+    "arrow": false,
+    "arrowAlignment": "center",
+    "alternatives": [
+      {
+        "id": "anstalla",
+        "text": "Jag letar utvecklare att anställa eller samarbeta med",
+        "link": "grymutvecklare",
+        "active": false,
+        "alignment": "left"
+      },
+      {
+        "id": "byggahemsida",
+        "text": "Jag letar utvecklare för att bygga min hemsida",
+        "link": "byggahemsida",
+        "active": false,
+        "alignment": "right"
+      }
+    ]
+  },
+  {
+    "id": "grymutvecklare",
+    "text": "Vi är i behov av en grym utvecklare för kortare eller längre uppdrag",
+    "visible": false,
+    "clickable": true,
+    "type": "yesno",
+    "arrow": true,
+    "arrowAlignment": "center",
+    "alternatives": [
+      {
+        "id": "ja",
+        "text": "Ja",
+        "link": "three",
+        "active": false,
+        "alignment": "left"
+      },
+      {
+        "id": "nej",
+        "text": "Nej",
+        "link": "answernomatch",
+        "active": false,
+        "alignment": "right"
+      }
+    ]
+  },
+  {
+    "id": "byggahemsida",
+    "text": "Vi vill ha en modern, tillgänglig hemsida som är enkel att uppdatera",
+    "visible": false,
+    "clickable": true,
+    "type": "yesno",
+    "arrow": true,
+    "arrowAlignment": "center",
+    "alternatives": [
+      {
+        "id": "ja",
+        "text": "Ja",
+        "link": "threetwo",
+        "active": false,
+        "alignment": "left"
+      },
+      {
+        "id": "nej",
+        "text": "Nej",
+        "link": "answernomatch",
+        "active": false,
+        "alignment": "right"
+      }
+    ]
+  },
+  {
+    "id": "three",
+    "type": "alternatives",
+    "visible": false,
+    "clickable": true,
+    "arrow": true,
+    "arrowAlignment": "center",
+    "alternatives": [
+      {
+        "id": "nolltolerans",
+        "text": "Vi arbetar aktivt rasism, sexism och andra former av förtryck på vår arbetsplats",
+        "link": "four",
+        "active": false,
+        "alignment": "left"
+      },
+      {
+        "id": "alibi",
+        "text": "Alla utvecklare på vår byrå är män. Det ser inte bra ut, vi måste anställa någon annan!",
+        "link": "answernomatch",
+        "active": false,
+        "alignment": "right"
+      }
+    ]
+  },
+  {
+    "id": "threetwo",
+    "type": "alternatives",
+    "visible": false,
+    "clickable": true,
+    "arrow": true,
+    "arrowAlignment": "center",
+    "alternatives": [
+      {
+        "id": "nolltolerans",
+        "text": "Vår verksamhet bidrar till att göra världen lite bättre",
+        "link": "answermatch",
+        "active": false,
+        "alignment": "left"
+      },
+      {
+        "id": "alibi",
+        "text": "Vi har verksamhet inom vapenindustri och/eller gränsbevakning",
+        "link": "answernomatch",
+        "active": false,
+        "alignment": "right"
+      }
+    ]
+  },
+  {
+    "id": "four",
+    "type": "alternatives",
+    "visible": false,
+    "clickable": true,
+    "arrow": true,
+    "arrowAlignment": "center",
+    "alternatives": [
+      {
+        "id": "pengar",
+        "text": "Vi har som främsta mål att tjäna sjukt mycket pengar!",
+        "link": "answernomatch",
+        "active": false,
+        "alignment": "left"
+      },
+      {
+        "id": "braverksamhet",
+        "text": "Vår verksamhet som är bra för välrden och våra anställda",
+        "link": "answermatch",
+        "active": false,
+        "alignment": "right"
+      }
+    ]
+  },
+  {
+    "id": "answermatch",
+    "type": "answer",
+    "visible": false,
+    "arrow": true,
+    "arrowAlignment": "center",
+    "headline": "Match!",
+    "text": "Det verkar som att vi skulle passa bra ihop! Proin at nunc arcu. Proin varius egestas bibendum. Aliquam maximus purus vel erat faucibus, ac scelerisque risus mattis. Aliquam mauris lacus, varius a ligula ac, aliquet rhoncus urna"
+  },
+  {
+    "id": "answernomatch",
+    "type": "answer",
+    "visible": false,
+    "arrow": true,
+    "arrowAlignment": "center",
+    "headline": "No match!",
+    "text": "It's not you it's me... just kidding it's you!. Proin at nunc arcu. Proin varius egestas bibendum. Aliquam maximus purus vel erat faucibus, ac scelerisque risus mattis. Aliquam mauris lacus, varius a ligula ac, aliquet rhoncus urna"
+  }
+]

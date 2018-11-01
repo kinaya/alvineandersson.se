@@ -1,0 +1,192 @@
+[
+    {
+      "id":"pablodigallvar",
+      "title":"På blodigt allvar",
+      "description": "Suspendisse potenti. Morbi sed nisl maximus dictum sapien.",
+      "link": "https://pablodigtallvar.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för pablodigtallvar.se"
+      },
+      "date": "sep 2018",
+      "tags": [ "Drupal" ],
+      "extendedTags": ["Drupal 8", "Php"],
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson"
+      }
+    },
+    {
+      "id":"mensvarkstestet",
+      "title": "Mensvärkstestet",
+      "description": "Quiz för att testa hur mycket mensvärk påverkar ens liv. Quizet är byggt i React, och inskickade svar sparas i Drupal.",
+      "github": "https://github.com/kinaya",
+      "link": "https://test.pablodigtallvar.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
+      },
+      "date": "sep 2018",
+      "tags": ["React", "Drupal"],
+      "extendedTags": ["React", "Redux", "Drupal 8"]
+    },
+    {
+      "id":"nagotharhant",
+      "title": "Något har hänt",
+      "description": "Interaktiv berättelse där besökaren väljer vad som händer. Byggs med React som frontend och Decoupled Drupal som backend. Lansering maj 2019.",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för nagotharahant.se"
+      },
+      "date": "Pågående",
+      "tags": ["React", "Drupal"],
+      "extendedTags": ["React", "Redux", "Drupal 8"]
+    },
+    {
+      "id":"safunkarsex",
+      "title":"Så funkar sex",
+      "description": "Mötesplats på webben med tillgängligt material om sex och sexualitet.",
+      "github": "https://github.com/kinaya",
+      "link": "https://safunkarsex.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för safunkarsex.se"
+      },
+      "date": "april 2017",
+      "tags": ["Drupal"],
+      "extendedTags": ["Drupal 7", "Php"]
+    },
+    {
+      "id":"patalomsex",
+      "title":"På tal om sex",
+      "description": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial.",
+      "github": "https://github.com/kinaya",
+      "link": "https://patalomsex.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för patalomsex.se"
+      },
+      "date": "maj 2016",
+      "tags": [ "Drupal" ],
+      "extendedTags": ["Drupal 7", "Php"]
+    },
+    {
+      "id": "newcomersyouth",
+      "title": "Newcomers Youth",
+      "description": "Suspendisse potenti. Morbi sed nisl maximus dictum sapien.",
+      "github": "https://github.com/kinaya",
+      "link": "https://newcomersyouth.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Image of imai"
+      },
+      "date": "mars 2017",
+      "tags": [ "Wordpress" ],
+      "extendedTags": ["Wordpress", "Php"]
+    },
+    {
+      "id":"fridhadvokatbyra",
+      "title":"Fridh Advokatbyrå",
+      "description": "Advokatbyrå specialiserad på migrationsrätt.",
+      "github": "https://github.com/kinaya",
+      "link": "https://fridhadvokatbyra.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
+      },
+      "date": "mars 2016",
+      "tags": ["Drupal"],
+      "extendedTags": ["Drupal 7", "Php"]
+    },
+    {
+      "id":"lesbiskmakt",
+      "title":"Lesbisk Makt",
+      "description": "En lesbisk guide till allt! Integrering Google Maps API för att Geotagga platser",
+      "github": "https://github.com/kinaya",
+      "link": "https://lesbiskmakt.nu",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
+      },
+      "date": "nov 2017",
+      "tags": ["Drupal"],
+      "extendedTags": ["Drupal 7", "Php"],
+      "designer": {
+        "url": "http://maryamfanni.se",
+        "name": "mayramfanni.se"
+      }
+    },
+    {
+      "id": "Djurfabriken",
+      "title": "Djurfabriken",
+      "description": "Suspendisse potenti. Morbi sed nisl maximus dictum sapien.",
+      "github": "https://github.com/kinaya",
+      "link": "https://djurfabriken.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Image of djurfabriken"
+      },
+      "date": "okt 2018",
+      "tags": ["React"],
+      "extendedTags": ["React"],
+      "designer": {
+        "url": "http://kaisaandersson.se",
+        "name": "kaisaandersson.se"
+      }
+    },
+    {
+      "id": "luleapride",
+      "title": "Luleå Pride",
+      "description": "Suspendisse potenti. Morbi sed nisl maximus dictum sapien.",
+      "github": "https://github.com/kinaya",
+      "link": "http://luleapride.se",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Image of Luleå Pride"
+      },
+      "date": "juni 2016",
+      "tags": ["Wordpress"],
+      "extendedTags": ["Wordpress", "Php"]
+    },
+    {
+      "id": "kollektivbudget",
+      "title": "KollektivBudget",
+      "description": "Webbapp för att hantera budget i ett kollektiv",
+      "github": "https://github.com/kinaya",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Bild på kollektivbudget"
+      },
+      "date": "okt 2018",
+      "tags": ["Node.js", "React"],
+      "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"]
+    },
+    {
+      "id": "malinfors",
+      "title": "Psykolog Malin Fors",
+      "description": "Suspendisse potenti. Morbi sed nisl maximus dictum sapien.",
+      "github": "https://github.com/kinaya",
+      "link": "http://malinfors.no",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Image of Malin Fors"
+      },
+      "date": "okt 2018",
+      "tags": ["Wordpress"],
+      "extendedTags": ["Wordpress", "Php"]
+    },
+    {
+      "id": "ingenillegal",
+      "title": "Ingen människa är illegal",
+      "description": "Suspendisse potenti. Morbi sed nisl maximus dictum sapien.",
+      "github": "https://github.com/kinaya",
+      "link": "https://ingenillegal.org",
+      "img": {
+        "url": "http://localhost/alvineandersson.se/public_html/dist/pba.png",
+        "alt": "Image of imai"
+      },
+      "date": "nov 2018",
+      "tags": ["Drupal"],
+      "extendedTags": ["Drupal 6", "Php"]
+    }
+  ]
