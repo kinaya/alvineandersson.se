@@ -1,4 +1,13 @@
-import { MATCHMAKING, FILTER_PROJECTS } from '../constants'
+import { MATCHMAKING, FILTER_PROJECTS, NAVIGATE } from '../constants'
+
+export function navigate(direction) {
+  return function(dispatch) {
+    dispatch({
+      type: NAVIGATE,
+      direction: direction
+    })
+  }
+}
 
 export function matchMaking(clickedItem, clickedAlternative, itemToShow, arrowAlignment) {
   return function(dispatch, getState) {

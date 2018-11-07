@@ -24,6 +24,88 @@ $tablet: '736px';
 $desktop: '980px';
 $wide: '1280px';
 
+
+/* Animate */
+.slide {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.right .slide-enter {
+	transform: translate(100%, 0%);
+}
+.right .slide-enter-active {
+	transform: translate(0%,0%);
+	transition: transform 1000ms;
+	position: fixed;
+}
+.right .slide-exit {
+	transform: translate(0%,0%);
+}
+.right .slide-exit-active {
+	transform: translate(-100%,0%);
+	transition: transform 1000ms;
+}
+.left .slide-enter {
+	transform: translate(-100%, 0%);
+}
+.left .slide-enter-active {
+	transform: translate(0%,0%);
+	transition: transform 1000ms;
+}
+.left .slide-exit {
+	transform: translate(0%,0%);
+}
+.left .slide-exit-active {
+	transform: translate(100%,0%);
+	transition: transform 1000ms;
+}
+
+// Listanimate
+.listanimate-enter {
+	opacity: 0;
+}
+.listanimate-enter-active {
+	opacity: 1;
+	transition: all 500ms;
+}
+.listanimate-exit {
+	opacity: 1;
+	max-height: 1000px;
+	overflow: hidden;
+}
+.listanimate-exit-active {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 500ms;
+}
+
+
+
+/* 100& height effect */
+html, body {
+	height: 100%;
+}
+.container.header {
+	height: 100vh;
+	.inner {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.scrollarrow {
+	background: url(../dist/arrow.png);
+	height: 50px;
+	width: 50px;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 2em auto 0 auto;
+	opacity: 0.7;
+}
+
 /* Base */
 body {
 	margin: 0;
@@ -59,7 +141,11 @@ h3 {
 }
 
 /* Containers */
-.container {
+.container.footer,
+.container.matchmaking,
+.container.skills,
+.container.services,
+.container.projectsTwo {
 	padding: 2.5em 1em 2em 1em;
 	@media(min-width: $mobile) {
 		padding: 3em 2em 4em 2em;
@@ -71,20 +157,23 @@ h3 {
 }
 .container.header {
 	background-color: $purple;
-	padding: 2.5em 1em 0 1em;
+//	padding: 2.5em 1em 0 1em;
 	@media(min-width: $mobile) {
-		padding: 3em 2em 1em 2em;
+//		padding: 3em 2em 1em 2em;
 	}
 	@media(min-width: $tablet) {
-		padding: 3em 2em 2em 2em;
+//		padding: 3em 2em 2em 2em;
 	}
 }
-.container.services {
+.container.intro {
 	background-color: $purple;
 	background-image: url('../dist/programmering3.png');
 	background-repeat: no-repeat;
 	background-position: calc(50% - 550px) 104%;
 	background-size: 100px auto;
+}
+.container.services {
+	background-color: $yellow;
 }
 .container.projects {
 	background-color: $blue;
@@ -115,31 +204,167 @@ h3 {
 	background-size: 100px auto;
 }
 
-/* Header */
-.header h1 {
-	color: $graySubheading;
-	font-weight: 100;
-	line-height: 0.9;
-	text-align: center;
-	> span {
-		font-weight: 600;
-		color: $black;
+/* ProjectPage */
+.projectPage {
+	background-color: yellow;
+	padding: 2em;
+	.inner {
+		margin-top: 6em;
 	}
-	@media(min-width: $mobile) {
-		text-align: left;
+	.info > div > span:first-child {
+		font-weight: 600
+	}
+	h1 {
+		margin: 1.5em 0 0.5em
+	}
+	img {
+		width: 100%;
+	}
+	.arrow {
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 110px;
+		font-size: 1.4em;
+		text-decoration: none;
+		color: $black;
+		background-image: url('../dist/arrowLeft.png');
+		background-repeat: no-repeat;
+		background-position: 5% 0%;
+		background-size: contain;
+		transition: all 0.5s;
+		&:hover, &:active, &:focus {
+			background-position: 0% 0%;
+		}
 	}
 }
-.subheading {
-	font-family: "din-2014-narrow";
-	font-size: 1.3em;
-	text-align: center;
-	display: block;
-	@media(min-width: $mobile) {
-		text-align: left;
+.projectPage .navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4em;
+	&.first {
+		justify-content: flex-end;
+	}
+	&.last {
+		justify-content: flex-start;
+	}
+	a {
+		display: block;
+		background-color: $black;
+		color: $white;
+		padding: 1em;
+		font-size: 1.6em;
+		text-decoration: none;
+		width: 300px;
+		transition: all 0.3s;
+		span {
+			font-size: 0.5em;
+			display: block;
+			text-transform: uppercase;
+		}
+		&.next {
+			text-align: right;
+		}
+		&:hover, &:active, &:focus {
+			background-color: $redDark;
+		}
 	}
 }
 
+/* ProjectTwo */
+.projectTwo {
+	a {
+		display: block;
+		text-decoration: none;
+		color: $black;
+		//background-color: pink;
+		//margin: 2em 0;
+		padding: 6em 0;
+		overflow: hidden;
+		border-bottom: 1px solid $grayBackground;
+		&:hover, &:active, &:focus {
+			h3 {
+				background-position: 100% 50%;
+			}
+		}
+		transition: transform 500ms;
+		transform: translate(0, 200px);
+	}
+	a.visible {
+		transform: translate(0,0);
+	}
+	h3 {
+		margin: 0 0 0.1em;
+		font-size: 5em;
+		line-height:1;
+		background-image: url('../dist/arrowRight.png');
+		background-repeat: no-repeat;
+		background-size: auto 70%;
+		background-position: 90% 50%;
+		width: 100%;
+		transition: all 0.5s;
+	}
+	.description {
+		font-size: 1.5em;
+		margin-bottom: 0.5em;
+		max-width: 800px;
+	}
+	.tags {
+		font-size: 0.8em;
+	}
+	img {
+		width: 200px;
+		height: auto;
+		margin-right: 2em;
+		float: left;
+	}
+}
+
+/* Logo */
+.logo {
+	font-family: "din-2014-narrow";
+	padding: 2em;
+	position: absolute;
+	text-decoration: none;
+	color: $black;
+	.name {
+		text-transform: uppercase;
+		text-align: left;
+		color: $graySubheading;
+		font-weight: 100;
+		font-size: 2.5em;
+		line-height: 0.9;
+		> span {
+			font-weight: 600;
+			color: $black;
+		}
+	}
+	.subheading {
+		font-size: 1.3em;
+		text-align: left;
+		display: block;
+	}
+}
+.projectPage .logo {
+	padding: 0 2em 2em 0;
+	&:hover, &:active, &:focus {
+		.name > span {
+			color: $redDark;
+		}
+	}
+}
+
+/* Header */
+.header p {
+	text-align: center;
+	font-size: 2em;
+	margin: 0;
+}
+
 /* Services */
+.container.services .inner {
+	max-width: 1100px;
+}
 .services .wrapper {
 	@media(min-width: $tablet) {
 		display: flex;
@@ -153,31 +378,57 @@ h3 {
 	margin: 0 auto 2em auto;
 	@media(min-width: $tablet) {
 		flex-basis: 47%;
-		margin-bottom: 3%;
+		//margin-bottom: 3%;
+		margin: 4% 0;
 	}
 }
 .service h3 {
 	margin: 0 0 0.1em 0;
 	@media(min-width: $tablet) {
-		font-size: 1.6em; /* todo */
+		font-size: 2em; /* todo */
 	}
 }
 .service p {
 	margin-top: 0;
+	font-size: 1.2em;
+}
+.service {
+	transition: transform 2000ms;
+	transform: translate(0,0);
+}
+.service.drupal.invisible {
+	transform: translate(70px,70px);
+}
+.service.node.invisible {
+	transform: translate(-70px, 70px);
+}
+.service.opensource.invisible {
+	transform: translate(70px,-70px);
+}
+.service.accessibility.invisible {
+	transform: translate(-70px, -70px);
+}
+.service .icon {
+	width: 70px;
+	height: 70px;
+	margin: 0 0 -20px 20px;
 }
 
 /* Projects */
+.projectsTwo h2,
 .projects h2 {
 	visibility: hidden;
 	height: 0;
 	margin: 0;
 }
+.projectsTwo .filter,
 .projects .filter {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 1em;
 	justify-content: center;
 }
+.projectsTwo .filter > span,
 .projects .filter > span {
 	background-color: $grayBackground;
 	color: $gray;
@@ -267,6 +518,13 @@ h3 {
 }
 .skills .label {
 	font-weight: 700;
+}
+.skills p.visible {
+	transform: translate(0,0);
+	transition: transform 1000ms;
+}
+.skills p.invisible {
+	transform: translate(-500px,0);
 }
 
 /* Matchmaking */

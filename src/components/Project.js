@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 
-const Project = ({project}) => {
+const Project = ({project, navigate}) => {
 
     let tags = [];
     project.extendedTags.map((tag, i) => {
