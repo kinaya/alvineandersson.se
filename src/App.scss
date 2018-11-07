@@ -104,6 +104,15 @@ html, body {
 	background-repeat: no-repeat;
 	margin: 2em auto 0 auto;
 	opacity: 0.7;
+	animation: MoveUpDown 2s linear infinite;
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+		transform: translate(0,0);
+  }
+  50% {
+		transform: translate(0,20px);
+  }
 }
 
 /* Base */
@@ -118,6 +127,7 @@ body {
 /* Typhography */
 h1 {
 	font-family: 'din-2014-narrow';
+	font-family: 'cheap-pine', sans-serif;
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 2em;
@@ -128,16 +138,25 @@ h1 {
 }
 h2 {
 	font-family: "din-2014-narrow";
+	font-family: 'cheap-pine', sans-serif;
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 2.5em;
 	line-height: 1.1;
 	margin-top: 0;
+	@media(min-width: $tablet) {
+		font-size: 4em;
+		margin-bottom: 0.5em;
+	}
 }
 h3 {
 	font-family: "din-2014-narrow";
+	font-family: "cheap-pine", sans-serif;
 	font-weight: 400;
-	font-size: 1.4em;
+	font-size: 1.2em;
+	@media(min-width: $tablet) {
+		font-size: 3em;
+	}
 }
 
 /* Containers */
@@ -157,7 +176,7 @@ h3 {
 }
 .container.header {
 	background-color: $purple;
-//	padding: 2.5em 1em 0 1em;
+	background-image: url('../dist/bg_header.png');
 	@media(min-width: $mobile) {
 //		padding: 3em 2em 1em 2em;
 	}
@@ -174,6 +193,11 @@ h3 {
 }
 .container.services {
 	background-color: $yellow;
+	background-image: url('../dist/bg_services.png');
+}
+.container.projectsTwo {
+	background-color: $white;
+	background-image: url('../dist/bg_projects.png');
 }
 .container.projects {
 	background-color: $blue;
@@ -183,11 +207,13 @@ h3 {
 	background-size: 100px auto;
 }
 .container.skills {
-	background-color: $yellow;
+	background-color: $turquoise;
+	background-image: url('../dist/bg_skills.png');
 	color: $black;
 }
 .container.matchmaking {
 	background-color: $white;
+	background-image: url('../dist/bg_matchmaking.png');
 	padding-top: 3em;
 	@media(min-width: $mobile) {
 		padding-top: 5em;
@@ -198,15 +224,18 @@ h3 {
 }
 .container.footer {
 	background-color: $orangered;
-	background-image: url('../dist/programmering_white.png');
-	background-repeat: no-repeat;
-	background-position: calc(50% - 550px) 0%;
-	background-size: 100px auto;
+//	background-image: url('../dist/programmering_white.png');
+	background-image: url('../dist/bg_header.png');
+//	background-repeat: no-repeat;
+//	background-position: calc(50% - 550px) 0%;
+//	background-size: 100px auto;
 }
+
 
 /* ProjectPage */
 .projectPage {
-	background-color: yellow;
+	background-color: $orangered;
+	background-image: url('../dist/bg_header.png');
 	padding: 2em;
 	.inner {
 		margin-top: 6em;
@@ -215,7 +244,8 @@ h3 {
 		font-weight: 600
 	}
 	h1 {
-		margin: 1.5em 0 0.5em
+		margin: 0.5em 0 0.2em;
+		font-size: 4em;
 	}
 	img {
 		width: 100%;
@@ -277,11 +307,8 @@ h3 {
 		display: block;
 		text-decoration: none;
 		color: $black;
-		//background-color: pink;
-		//margin: 2em 0;
 		padding: 6em 0;
 		overflow: hidden;
-		border-bottom: 1px solid $grayBackground;
 		&:hover, &:active, &:focus {
 			h3 {
 				background-position: 100% 50%;
@@ -289,6 +316,10 @@ h3 {
 		}
 		transition: transform 500ms;
 		transform: translate(0, 200px);
+		background-image: url('../dist/wavy.png');
+		background-repeat: repeat-x;
+		background-position: 0 100%;
+		background-size: auto 15px;
 	}
 	a.visible {
 		transform: translate(0,0);
@@ -355,6 +386,39 @@ h3 {
 }
 
 /* Header */
+.header .slogan {
+	text-align: center;
+	span:nth-child(1) {
+		font-family: 'cheap-pine-sans';
+		font-size: 1.5em;
+		line-height: 1;
+		display: block;
+		margin-right: 3em;
+	}
+	span:nth-child(2) {
+		font-family: 'cheap-pine';
+		font-size: 4em;
+		line-height: 0.8;
+		display: block;
+		margin-left: 0.5em;
+	}
+	span:nth-child(3) {
+		font-family: 'cheap-pine-sans';
+		font-size: 1.5em;
+		line-height: 1;
+		display: block;
+		margin-left: 4em;
+		margin-top: 0.2em;
+	}
+	span:nth-child(4) {
+		font-family: 'cheap-pine';
+		font-size: 4em;
+		line-height: 0.8;
+		display: block;
+		margin-right: 0.5em;
+	}
+}
+
 .header p {
 	text-align: center;
 	font-size: 2em;
@@ -384,9 +448,9 @@ h3 {
 }
 .service h3 {
 	margin: 0 0 0.1em 0;
-	@media(min-width: $tablet) {
-		font-size: 2em; /* todo */
-	}
+//	@media(min-width: $tablet) {
+//		font-size: 2em; /* todo */
+//	}
 }
 .service p {
 	margin-top: 0;
@@ -432,8 +496,10 @@ h3 {
 .projects .filter > span {
 	background-color: $grayBackground;
 	color: $gray;
-	font-family: "din-2014";
-	font-size: 1em;
+//	font-family: "din-2014";
+	font-family: "cheap-pine";
+	font-size: 2em;
+//	font-size: 1em;
 	padding: 0.4em 1em;
 	margin: 0.1em;
 	cursor: pointer;
@@ -537,8 +603,8 @@ h3 {
 		font-size: 3em;
 	}
 	@media(min-width: $tablet) {
-		font-size: 4em;
-		max-width: 600px;
+		font-size: 7em;
+		max-width: 700px;
 	}
 }
 .matchmaking .intro {

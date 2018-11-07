@@ -72,7 +72,14 @@ html, body {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 2em auto 0 auto;
-  opacity: 0.7; }
+  opacity: 0.7;
+  animation: MoveUpDown 2s linear infinite; }
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0, 20px); } }
 
 /* Base */
 body {
@@ -85,6 +92,7 @@ body {
 /* Typhography */
 h1 {
   font-family: 'din-2014-narrow';
+  font-family: 'cheap-pine', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2em;
@@ -95,16 +103,25 @@ h1 {
 
 h2 {
   font-family: "din-2014-narrow";
+  font-family: 'cheap-pine', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2.5em;
   line-height: 1.1;
   margin-top: 0; }
+  @media (min-width: 736px) {
+    h2 {
+      font-size: 4em;
+      margin-bottom: 0.5em; } }
 
 h3 {
   font-family: "din-2014-narrow";
+  font-family: "cheap-pine", sans-serif;
   font-weight: 400;
-  font-size: 1.4em; }
+  font-size: 1.2em; }
+  @media (min-width: 736px) {
+    h3 {
+      font-size: 3em; } }
 
 /* Containers */
 .container.footer,
@@ -126,7 +143,8 @@ h3 {
   margin: 0 auto; }
 
 .container.header {
-  background-color: #C38D9E; }
+  background-color: #C38D9E;
+  background-image: url(bg_header.png); }
 
 .container.intro {
   background-color: #C38D9E;
@@ -136,7 +154,12 @@ h3 {
   background-size: 100px auto; }
 
 .container.services {
-  background-color: #E8A87C; }
+  background-color: #E8A87C;
+  background-image: url(bg_services.png); }
+
+.container.projectsTwo {
+  background-color: #F2F2F2;
+  background-image: url(bg_projects.png); }
 
 .container.projects {
   background-color: #7fc8bc;
@@ -146,11 +169,13 @@ h3 {
   background-size: 100px auto; }
 
 .container.skills {
-  background-color: #E8A87C;
+  background-color: #41B3A3;
+  background-image: url(bg_skills.png);
   color: #222222; }
 
 .container.matchmaking {
   background-color: #F2F2F2;
+  background-image: url(bg_matchmaking.png);
   padding-top: 3em; }
   @media (min-width: 480px) {
     .container.matchmaking {
@@ -161,21 +186,20 @@ h3 {
 
 .container.footer {
   background-color: #E27D60;
-  background-image: url(programmering_white.png);
-  background-repeat: no-repeat;
-  background-position: calc(50% - 550px) 0%;
-  background-size: 100px auto; }
+  background-image: url(bg_header.png); }
 
 /* ProjectPage */
 .projectPage {
-  background-color: yellow;
+  background-color: #E27D60;
+  background-image: url(bg_header.png);
   padding: 2em; }
   .projectPage .inner {
     margin-top: 6em; }
   .projectPage .info > div > span:first-child {
     font-weight: 600; }
   .projectPage h1 {
-    margin: 1.5em 0 0.5em; }
+    margin: 0.5em 0 0.2em;
+    font-size: 4em; }
   .projectPage img {
     width: 100%; }
   .projectPage .arrow {
@@ -227,9 +251,12 @@ h3 {
   color: #222222;
   padding: 6em 0;
   overflow: hidden;
-  border-bottom: 1px solid #DCDCDC;
   transition: transform 500ms;
-  transform: translate(0, 200px); }
+  transform: translate(0, 200px);
+  background-image: url(wavy.png);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: auto 15px; }
   .projectTwo a:hover h3, .projectTwo a:active h3, .projectTwo a:focus h3 {
     background-position: 100% 50%; }
 
@@ -289,6 +316,34 @@ h3 {
     color: #6e1a22; }
 
 /* Header */
+.header .slogan {
+  text-align: center; }
+  .header .slogan span:nth-child(1) {
+    font-family: 'cheap-pine-sans';
+    font-size: 1.5em;
+    line-height: 1;
+    display: block;
+    margin-right: 3em; }
+  .header .slogan span:nth-child(2) {
+    font-family: 'cheap-pine';
+    font-size: 4em;
+    line-height: 0.8;
+    display: block;
+    margin-left: 0.5em; }
+  .header .slogan span:nth-child(3) {
+    font-family: 'cheap-pine-sans';
+    font-size: 1.5em;
+    line-height: 1;
+    display: block;
+    margin-left: 4em;
+    margin-top: 0.2em; }
+  .header .slogan span:nth-child(4) {
+    font-family: 'cheap-pine';
+    font-size: 4em;
+    line-height: 0.8;
+    display: block;
+    margin-right: 0.5em; }
+
 .header p {
   text-align: center;
   font-size: 2em;
@@ -315,10 +370,6 @@ h3 {
 
 .service h3 {
   margin: 0 0 0.1em 0; }
-  @media (min-width: 736px) {
-    .service h3 {
-      font-size: 2em;
-      /* todo */ } }
 
 .service p {
   margin-top: 0;
@@ -363,8 +414,8 @@ h3 {
 .projects .filter > span {
   background-color: #DCDCDC;
   color: #808080;
-  font-family: "din-2014";
-  font-size: 1em;
+  font-family: "cheap-pine";
+  font-size: 2em;
   padding: 0.4em 1em;
   margin: 0.1em;
   cursor: pointer;
@@ -465,8 +516,8 @@ h3 {
       font-size: 3em; } }
   @media (min-width: 736px) {
     .matchmaking h2 {
-      font-size: 4em;
-      max-width: 600px; } }
+      font-size: 7em;
+      max-width: 700px; } }
 
 .matchmaking .intro {
   text-align: center;

@@ -11,7 +11,7 @@ const Header = ({}) => {
       </div>
 
 			<div className="inner">
-        <p>Suspendisse potenti. Nulla quis egestas mi. Fusce lobortis et mauris eu interdum. Etiam aliquam non ligula et pulvinar. Vivamus ac felis at erat vulputate.</p>
+        <h1 className="slogan"><span>Med kod</span> <span>som verktyg</span> <span>för</span> <span>revolutionen</span></h1>
         <span className="scrollarrow"></span>
 			</div>
     </div>
