@@ -1,5 +1,79 @@
 /* Colors */
 /* Breakpoints */
+/* Animate */
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.right .slide-enter {
+  transform: translate(100%, 0%); }
+
+.right .slide-enter-active {
+  transform: translate(0%, 0%);
+  transition: transform 1000ms;
+  position: fixed; }
+
+.right .slide-exit {
+  transform: translate(0%, 0%); }
+
+.right .slide-exit-active {
+  transform: translate(-100%, 0%);
+  transition: transform 1000ms; }
+
+.left .slide-enter {
+  transform: translate(-100%, 0%); }
+
+.left .slide-enter-active {
+  transform: translate(0%, 0%);
+  transition: transform 1000ms; }
+
+.left .slide-exit {
+  transform: translate(0%, 0%); }
+
+.left .slide-exit-active {
+  transform: translate(100%, 0%);
+  transition: transform 1000ms; }
+
+.listanimate-enter {
+  opacity: 0; }
+
+.listanimate-enter-active {
+  opacity: 1;
+  transition: all 500ms; }
+
+.listanimate-exit {
+  opacity: 1;
+  max-height: 1000px;
+  overflow: hidden; }
+
+.listanimate-exit-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms; }
+
+/* 100& height effect */
+html, body {
+  height: 100%; }
+
+.container.header {
+  height: 100vh; }
+  .container.header .inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.scrollarrow {
+  background: url(arrow.png);
+  height: 50px;
+  width: 50px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 2em auto 0 auto;
+  opacity: 0.7; }
+
 /* Base */
 body {
   margin: 0;
@@ -33,10 +107,18 @@ h3 {
   font-size: 1.4em; }
 
 /* Containers */
-.container {
+.container.footer,
+.container.matchmaking,
+.container.skills,
+.container.services,
+.container.projectsTwo {
   padding: 2.5em 1em 2em 1em; }
   @media (min-width: 480px) {
-    .container {
+    .container.footer,
+    .container.matchmaking,
+    .container.skills,
+    .container.services,
+    .container.projectsTwo {
       padding: 3em 2em 4em 2em; } }
 
 .container .inner {
@@ -44,21 +126,17 @@ h3 {
   margin: 0 auto; }
 
 .container.header {
-  background-color: #C38D9E;
-  padding: 2.5em 1em 0 1em; }
-  @media (min-width: 480px) {
-    .container.header {
-      padding: 3em 2em 1em 2em; } }
-  @media (min-width: 736px) {
-    .container.header {
-      padding: 3em 2em 2em 2em; } }
+  background-color: #C38D9E; }
 
-.container.services {
+.container.intro {
   background-color: #C38D9E;
   background-image: url(programmering3.png);
   background-repeat: no-repeat;
   background-position: calc(50% - 550px) 104%;
   background-size: 100px auto; }
+
+.container.services {
+  background-color: #E8A87C; }
 
 .container.projects {
   background-color: #7fc8bc;
@@ -88,29 +166,138 @@ h3 {
   background-position: calc(50% - 550px) 0%;
   background-size: 100px auto; }
 
-/* Header */
-.header h1 {
-  color: #383838;
-  font-weight: 100;
-  line-height: 0.9;
-  text-align: center; }
-  .header h1 > span {
-    font-weight: 600;
-    color: #222222; }
-  @media (min-width: 480px) {
-    .header h1 {
-      text-align: left; } }
+/* ProjectPage */
+.projectPage {
+  background-color: yellow;
+  padding: 2em; }
+  .projectPage .inner {
+    margin-top: 6em; }
+  .projectPage .info > div > span:first-child {
+    font-weight: 600; }
+  .projectPage h1 {
+    margin: 1.5em 0 0.5em; }
+  .projectPage img {
+    width: 100%; }
+  .projectPage .arrow {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 110px;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #222222;
+    background-image: url(arrowLeft.png);
+    background-repeat: no-repeat;
+    background-position: 5% 0%;
+    background-size: contain;
+    transition: all 0.5s; }
+    .projectPage .arrow:hover, .projectPage .arrow:active, .projectPage .arrow:focus {
+      background-position: 0% 0%; }
 
-.subheading {
+.projectPage .navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4em; }
+  .projectPage .navigation.first {
+    justify-content: flex-end; }
+  .projectPage .navigation.last {
+    justify-content: flex-start; }
+  .projectPage .navigation a {
+    display: block;
+    background-color: #222222;
+    color: #F2F2F2;
+    padding: 1em;
+    font-size: 1.6em;
+    text-decoration: none;
+    width: 300px;
+    transition: all 0.3s; }
+    .projectPage .navigation a span {
+      font-size: 0.5em;
+      display: block;
+      text-transform: uppercase; }
+    .projectPage .navigation a.next {
+      text-align: right; }
+    .projectPage .navigation a:hover, .projectPage .navigation a:active, .projectPage .navigation a:focus {
+      background-color: #6e1a22; }
+
+/* ProjectTwo */
+.projectTwo a {
+  display: block;
+  text-decoration: none;
+  color: #222222;
+  padding: 6em 0;
+  overflow: hidden;
+  border-bottom: 1px solid #DCDCDC;
+  transition: transform 500ms;
+  transform: translate(0, 200px); }
+  .projectTwo a:hover h3, .projectTwo a:active h3, .projectTwo a:focus h3 {
+    background-position: 100% 50%; }
+
+.projectTwo a.visible {
+  transform: translate(0, 0); }
+
+.projectTwo h3 {
+  margin: 0 0 0.1em;
+  font-size: 5em;
+  line-height: 1;
+  background-image: url(arrowRight.png);
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  background-position: 90% 50%;
+  width: 100%;
+  transition: all 0.5s; }
+
+.projectTwo .description {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  max-width: 800px; }
+
+.projectTwo .tags {
+  font-size: 0.8em; }
+
+.projectTwo img {
+  width: 200px;
+  height: auto;
+  margin-right: 2em;
+  float: left; }
+
+/* Logo */
+.logo {
   font-family: "din-2014-narrow";
-  font-size: 1.3em;
+  padding: 2em;
+  position: absolute;
+  text-decoration: none;
+  color: #222222; }
+  .logo .name {
+    text-transform: uppercase;
+    text-align: left;
+    color: #383838;
+    font-weight: 100;
+    font-size: 2.5em;
+    line-height: 0.9; }
+    .logo .name > span {
+      font-weight: 600;
+      color: #222222; }
+  .logo .subheading {
+    font-size: 1.3em;
+    text-align: left;
+    display: block; }
+
+.projectPage .logo {
+  padding: 0 2em 2em 0; }
+  .projectPage .logo:hover .name > span, .projectPage .logo:active .name > span, .projectPage .logo:focus .name > span {
+    color: #6e1a22; }
+
+/* Header */
+.header p {
   text-align: center;
-  display: block; }
-  @media (min-width: 480px) {
-    .subheading {
-      text-align: left; } }
+  font-size: 2em;
+  margin: 0; }
 
 /* Services */
+.container.services .inner {
+  max-width: 1100px; }
+
 @media (min-width: 736px) {
   .services .wrapper {
     display: flex;
@@ -124,30 +311,55 @@ h3 {
   @media (min-width: 736px) {
     .service {
       flex-basis: 47%;
-      margin-bottom: 3%; } }
+      margin: 4% 0; } }
 
 .service h3 {
   margin: 0 0 0.1em 0; }
   @media (min-width: 736px) {
     .service h3 {
-      font-size: 1.6em;
+      font-size: 2em;
       /* todo */ } }
 
 .service p {
-  margin-top: 0; }
+  margin-top: 0;
+  font-size: 1.2em; }
+
+.service {
+  transition: transform 2000ms;
+  transform: translate(0, 0); }
+
+.service.drupal.invisible {
+  transform: translate(70px, 70px); }
+
+.service.node.invisible {
+  transform: translate(-70px, 70px); }
+
+.service.opensource.invisible {
+  transform: translate(70px, -70px); }
+
+.service.accessibility.invisible {
+  transform: translate(-70px, -70px); }
+
+.service .icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 0 -20px 20px; }
 
 /* Projects */
+.projectsTwo h2,
 .projects h2 {
   visibility: hidden;
   height: 0;
   margin: 0; }
 
+.projectsTwo .filter,
 .projects .filter {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1em;
   justify-content: center; }
 
+.projectsTwo .filter > span,
 .projects .filter > span {
   background-color: #DCDCDC;
   color: #808080;
@@ -161,7 +373,11 @@ h3 {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  .projects .filter > span:active, .projects .filter > span:focus, .projects .filter > span:hover, .projects .filter > span.active {
+  .projectsTwo .filter > span:active, .projectsTwo .filter > span:focus, .projectsTwo .filter > span:hover, .projectsTwo .filter > span.active,
+  .projects .filter > span:active,
+  .projects .filter > span:focus,
+  .projects .filter > span:hover,
+  .projects .filter > span.active {
     background-color: #28a745;
     color: #F2F2F2; }
 
@@ -230,6 +446,13 @@ h3 {
 
 .skills .label {
   font-weight: 700; }
+
+.skills p.visible {
+  transform: translate(0, 0);
+  transition: transform 1000ms; }
+
+.skills p.invisible {
+  transform: translate(-500px, 0); }
 
 /* Matchmaking */
 .matchmaking h2 {
