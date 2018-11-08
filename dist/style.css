@@ -727,6 +727,22 @@ h3 {
     color: #dc3545; }
 
 /* Footer */
+.footer .imagewrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative; }
+
+.footer .image {
+  background-image: url(/alvine.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: block;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: -100px;
+  right: 0; }
+
 .footer a {
   display: block;
   color: #222222;
