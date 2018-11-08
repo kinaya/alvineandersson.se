@@ -353,34 +353,44 @@ h3 {
 
 /* Logo */
 .logo {
-	font-family: "din-2014-narrow";
+//	font-family: "din-2014-narrow";
 	padding: 2em;
 	position: absolute;
 	text-decoration: none;
 	color: $black;
+
 	.name {
-		text-transform: uppercase;
-		text-align: left;
+//		text-transform: uppercase;
+		text-align: center;
 		color: $graySubheading;
 		font-weight: 100;
-		font-size: 2.5em;
+		font-size: 3.5em;
 		line-height: 0.9;
-		> span {
-			font-weight: 600;
-			color: $black;
-		}
+		font-family: "trailmade";
+		font-family: "cantoni-pro";
+		font-weight: 700;
+		text-shadow: 0px 0px transparent;
+		transition: all 0.5s;
+//		> span {
+//			font-weight: 600;
+//			color: $black;
+//		}
 	}
 	.subheading {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		text-align: left;
 		display: block;
+		font-family: 'cheap-pine-sans';
+		letter-spacing: 1px;
+		line-height: 0.9;
+		text-align: center;
 	}
 }
 .projectPage .logo {
 	padding: 0 2em 2em 0;
 	&:hover, &:active, &:focus {
-		.name > span {
-			color: $redDark;
+		.name {
+			text-shadow: 4px 0px #DAA520;
 		}
 	}
 }
@@ -508,6 +518,9 @@ h3 {
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+
+	clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%);
+
 	&:active, &:focus, &:hover,
 	&.active {
 		background-color: $greenLight;

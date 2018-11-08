@@ -6,8 +6,8 @@ const Header = ({}) => {
     <div className="container header">
 
       <div className="logo">
-        <div className="name"><span>Alvine</span>Andersson</div>
-        <div className="subheading">frilansande webbutvecklare</div>
+        <div className="name"><span>Alvine</span> Andersson</div>
+        <div className="subheading">- frilansande webbutvecklare - </div>
       </div>
 
 			<div className="inner">
