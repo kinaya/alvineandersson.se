@@ -2,6 +2,7 @@ import { MATCHMAKING, FILTER_PROJECTS, NAVIGATE } from '../constants'
 
 export function navigate(direction) {
   return function(dispatch) {
+    setTimeout(function(){ window.scrollTo(0,0) }, 1000);
     dispatch({
       type: NAVIGATE,
       direction: direction

@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 
 const ProjectPage = ({project, projects, navigate}) => {
 
-//  componentDidMount() {
-//     window.scrollTo(0, 0);
-//   }
-
   // Generate previous and next links
   let nextLink = null;
   let nextTitle = null;

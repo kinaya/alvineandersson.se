@@ -31,6 +31,9 @@ $wide: '1280px';
 	top: 0;
 	width: 100%;
 }
+.slide-exit {
+//	position: fixed;
+}
 .right .slide-enter {
 	transform: translate(100%, 0%);
 }
@@ -52,6 +55,7 @@ $wide: '1280px';
 .left .slide-enter-active {
 	transform: translate(0%,0%);
 	transition: transform 1000ms;
+	position: fixed;
 }
 .left .slide-exit {
 	transform: translate(0%,0%);

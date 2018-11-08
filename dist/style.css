@@ -26,7 +26,8 @@
 
 .left .slide-enter-active {
   transform: translate(0%, 0%);
-  transition: transform 1000ms; }
+  transition: transform 1000ms;
+  position: fixed; }
 
 .left .slide-exit {
   transform: translate(0%, 0%); }
@@ -65,7 +66,7 @@ html, body {
     transform: translateY(-50%); }
 
 .scrollarrow {
-  background: url(arrow.png);
+  background: url(/arrow.png);
   height: 50px;
   width: 50px;
   display: block;
@@ -144,38 +145,38 @@ h3 {
 
 .container.header {
   background-color: #C38D9E;
-  background-image: url(bg_header.png); }
+  background-image: url(/bg_header.png); }
 
 .container.intro {
   background-color: #C38D9E;
-  background-image: url(programmering3.png);
+  background-image: url(/programmering3.png);
   background-repeat: no-repeat;
   background-position: calc(50% - 550px) 104%;
   background-size: 100px auto; }
 
 .container.services {
   background-color: #E8A87C;
-  background-image: url(bg_services.png); }
+  background-image: url(/bg_services.png); }
 
 .container.projectsTwo {
   background-color: #F2F2F2;
-  background-image: url(bg_projects.png); }
+  background-image: url(/bg_projects.png); }
 
 .container.projects {
   background-color: #7fc8bc;
-  background-image: url(megafon.png);
+  background-image: url(/megafon.png);
   background-repeat: no-repeat;
   background-position: calc(50% + 550px) 100%;
   background-size: 100px auto; }
 
 .container.skills {
   background-color: #41B3A3;
-  background-image: url(bg_skills.png);
+  background-image: url(/bg_skills.png);
   color: #222222; }
 
 .container.matchmaking {
   background-color: #F2F2F2;
-  background-image: url(bg_matchmaking.png);
+  background-image: url(/bg_matchmaking.png);
   padding-top: 3em; }
   @media (min-width: 480px) {
     .container.matchmaking {
@@ -186,12 +187,12 @@ h3 {
 
 .container.footer {
   background-color: #E27D60;
-  background-image: url(bg_header.png); }
+  background-image: url(/bg_header.png); }
 
 /* ProjectPage */
 .projectPage {
   background-color: #E27D60;
-  background-image: url(bg_header.png);
+  background-image: url(/bg_header.png);
   padding: 2em; }
   .projectPage .inner {
     margin-top: 6em; }
@@ -210,7 +211,7 @@ h3 {
     font-size: 1.4em;
     text-decoration: none;
     color: #222222;
-    background-image: url(arrowLeft.png);
+    background-image: url(/arrowLeft.png);
     background-repeat: no-repeat;
     background-position: 5% 0%;
     background-size: contain;
@@ -253,7 +254,7 @@ h3 {
   overflow: hidden;
   transition: transform 500ms;
   transform: translate(0, 200px);
-  background-image: url(wavy.png);
+  background-image: url(/wavy.png);
   background-repeat: repeat-x;
   background-position: 0 100%;
   background-size: auto 15px; }
@@ -267,7 +268,7 @@ h3 {
   margin: 0 0 0.1em;
   font-size: 5em;
   line-height: 1;
-  background-image: url(arrowRight.png);
+  background-image: url(/arrowRight.png);
   background-repeat: no-repeat;
   background-size: auto 70%;
   background-position: 90% 50%;
@@ -597,7 +598,7 @@ h3 {
   max-width: 300px;
   height: 3em;
   margin: 1em auto;
-  background-image: url(arrow.png);
+  background-image: url(/arrow.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 0;
