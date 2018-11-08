@@ -290,30 +290,34 @@ h3 {
 
 /* Logo */
 .logo {
-  font-family: "din-2014-narrow";
   padding: 2em;
   position: absolute;
   text-decoration: none;
   color: #222222; }
   .logo .name {
-    text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     color: #383838;
     font-weight: 100;
-    font-size: 2.5em;
-    line-height: 0.9; }
-    .logo .name > span {
-      font-weight: 600;
-      color: #222222; }
+    font-size: 3.5em;
+    line-height: 0.9;
+    font-family: "trailmade";
+    font-family: "cantoni-pro";
+    font-weight: 700;
+    text-shadow: 0px 0px transparent;
+    transition: all 0.5s; }
   .logo .subheading {
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: left;
-    display: block; }
+    display: block;
+    font-family: 'cheap-pine-sans';
+    letter-spacing: 1px;
+    line-height: 0.9;
+    text-align: center; }
 
 .projectPage .logo {
   padding: 0 2em 2em 0; }
-  .projectPage .logo:hover .name > span, .projectPage .logo:active .name > span, .projectPage .logo:focus .name > span {
-    color: #6e1a22; }
+  .projectPage .logo:hover .name, .projectPage .logo:active .name, .projectPage .logo:focus .name {
+    text-shadow: 4px 0px #DAA520; }
 
 /* Header */
 .header .slogan {
@@ -423,7 +427,8 @@ h3 {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%); }
   .projectsTwo .filter > span:active, .projectsTwo .filter > span:focus, .projectsTwo .filter > span:hover, .projectsTwo .filter > span.active,
   .projects .filter > span:active,
   .projects .filter > span:focus,
