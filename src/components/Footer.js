@@ -4,6 +4,9 @@ const Footer = ({}) => {
 
   return (
     <div className="container footer">
+      <div className="imagewrapper">
+        <div className="image"></div>
+      </div>
 			<div className="inner">
         <h2>Kontakt</h2>
 				<a href="mailto:hej@alvineandersson.se"><span>hej@alvineandersson.se</span></a>

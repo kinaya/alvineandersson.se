@@ -865,6 +865,22 @@ h3 {
 
 /* Footer */
 .footer {
+	.imagewrapper {
+		max-width: 940px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.image {
+		background-image: url('../dist/alvine.png');
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		display: block;
+		width:400px;
+		height:300px;
+		position: absolute;
+		top:-100px;
+		right: 0;
+	}
 	a {
 		display: block;
 		color: $black;
