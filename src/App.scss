@@ -25,14 +25,12 @@ $desktop: '980px';
 $wide: '1280px';
 
 
+
 /* Animate */
-.slide {
+.slide-enter, .slide-exit {
 	position: absolute;
 	top: 0;
 	width: 100%;
-}
-.slide-exit {
-//	position: fixed;
 }
 .right .slide-enter {
 	transform: translate(100%, 0%);
@@ -40,6 +38,7 @@ $wide: '1280px';
 .right .slide-enter-active {
 	transform: translate(0%,0%);
 	transition: transform 1000ms;
+	transition-timing-function: cubic-bezier(1,0,.23,1);
 	position: fixed;
 }
 .right .slide-exit {
@@ -48,6 +47,7 @@ $wide: '1280px';
 .right .slide-exit-active {
 	transform: translate(-100%,0%);
 	transition: transform 1000ms;
+	transition-timing-function: cubic-bezier(1,0,.23,1);
 }
 .left .slide-enter {
 	transform: translate(-100%, 0%);
@@ -55,6 +55,7 @@ $wide: '1280px';
 .left .slide-enter-active {
 	transform: translate(0%,0%);
 	transition: transform 1000ms;
+	transition-timing-function: cubic-bezier(1,0,.23,1);
 	position: fixed;
 }
 .left .slide-exit {
@@ -63,7 +64,28 @@ $wide: '1280px';
 .left .slide-exit-active {
 	transform: translate(100%,0%);
 	transition: transform 1000ms;
+	transition-timing-function: cubic-bezier(1,0,.23,1);
 }
+
+// Heading
+.project-heading span {
+	display: inline-block;
+}
+.right .slide-enter .project-heading span {
+	transform: translate(500px,0);
+}
+.right .slide-enter-active .project-heading span {
+	transform: translate(0,0);
+}
+// Image
+.right .slide-enter .parallax {
+	background-position: 100px 0;
+}
+.right .slide-enter-active .parallax {
+	background-position: 0 0;
+	transition: all 1500ms ease-in-out 500ms;
+}
+
 
 // Listanimate
 .listanimate-enter {
@@ -90,6 +112,9 @@ $wide: '1280px';
 /* 100& height effect */
 html, body {
 	height: 100%;
+}
+body {
+	overflow-y:scroll !important;
 }
 .container.header {
 	height: 100vh;
@@ -135,6 +160,7 @@ h1 {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 2em;
+	line-height: 1.1;
 	margin: 0;
 	@media(min-width: $mobile) {
 		font-size: 2.5em;
@@ -161,6 +187,9 @@ h3 {
 	@media(min-width: $tablet) {
 		font-size: 3em;
 	}
+}
+p {
+	font-size: 1.2em;
 }
 
 /* Containers */
@@ -200,7 +229,8 @@ h3 {
 	background-image: url('../dist/bg_services.png');
 }
 .container.projectsTwo {
-	background-color: $white;
+	background-color: $turquoise;
+//	background-color: $white;
 	background-image: url('../dist/bg_projects.png');
 }
 .container.projects {
@@ -211,7 +241,8 @@ h3 {
 	background-size: 100px auto;
 }
 .container.skills {
-	background-color: $turquoise;
+
+	background-color: $orangered;
 	background-image: url('../dist/bg_skills.png');
 	color: $black;
 }
@@ -227,7 +258,7 @@ h3 {
 	}
 }
 .container.footer {
-	background-color: $orangered;
+	background-color: $turquoise;
 //	background-image: url('../dist/programmering_white.png');
 	background-image: url('../dist/bg_header.png');
 //	background-repeat: no-repeat;
@@ -240,17 +271,52 @@ h3 {
 .projectPage {
 	background-color: $orangered;
 	background-image: url('../dist/bg_header.png');
-	padding: 2em;
+	overflow: hidden;
+	.container {
+		padding: 2em;
+	}
 	.inner {
 		margin-top: 6em;
 	}
-	.info > div > span:first-child {
-		font-weight: 600
-	}
+	// Heading
 	h1 {
-		margin: 0.5em 0 0.2em;
-		font-size: 4em;
+		margin: 2em 0 0.2em;
+		font-size: 6em;
 	}
+	.project-name {
+		font-size: 1.6em;
+	}
+	// Paralax
+	.parallax {
+	  position: relative;
+	  height: 600px;
+	  color: white;
+		overflow: hidden;
+		margin: 6em -150px;
+		background-image: url('../dist/project_large.jpg');
+		//background-position: fixed;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transform: rotate(-1deg);
+		//border: 3px solid $black;
+//		-moz-box-shadow:    inset 0 0 10px #000000;
+//-webkit-box-shadow: inset 0 0 10px #000000;
+//box-shadow:         inset 0 0 10px #000000;
+	}
+	// Description
+	.project-description {
+		margin: 4em 0 2em;
+	}
+	// Info
+	.info > div {
+		margin: 0 0 1em 0;
+	}
+	.info > div > span:first-child {
+		font-style: italic;
+		display: block;
+	}
+
 	img {
 		width: 100%;
 	}
@@ -311,19 +377,19 @@ h3 {
 		display: block;
 		text-decoration: none;
 		color: $black;
-		padding: 6em 0;
+		color: $white;
+		padding: 2em 0;
+		display: flex;
+		align-items: center;
 		overflow: hidden;
 		&:hover, &:active, &:focus {
-			h3 {
-				background-position: 100% 50%;
+			.arrow {
+				transform: translate(0,0);
 			}
 		}
 		transition: transform 500ms;
 		transform: translate(0, 200px);
-		background-image: url('../dist/wavy.png');
-		background-repeat: repeat-x;
-		background-position: 0 100%;
-		background-size: auto 15px;
+		border-bottom: 1px solid $white;
 	}
 	a.visible {
 		transform: translate(0,0);
@@ -332,17 +398,13 @@ h3 {
 		margin: 0 0 0.1em;
 		font-size: 5em;
 		line-height:1;
-		background-image: url('../dist/arrowRight.png');
-		background-repeat: no-repeat;
-		background-size: auto 70%;
-		background-position: 90% 50%;
 		width: 100%;
-		transition: all 0.5s;
 	}
-	.description {
-		font-size: 1.5em;
-		margin-bottom: 0.5em;
-		max-width: 800px;
+	.arrow {
+		font-size: 5em;
+		margin-left: auto;
+		transition: transform 500ms;
+		transform: translate(-30px,0);
 	}
 	.tags {
 		font-size: 0.8em;
@@ -433,6 +495,42 @@ h3 {
 	}
 }
 
+/*
+.header .messenger {
+	position: relative;
+	> span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-family: monospace;
+		white-space: nowrap;
+	  text-shadow: 0 2px 2px rgba(#000, 0.9);
+		opacity: 0;
+	}
+	> span:nth-child(1) {
+		animation: rotate-text;
+		animation-duration: 2000ms;
+		animation-delay: 0ms;
+	}
+	> span:nth-child(2) {
+		animation: rotate-text;
+		animation-duration: 2000ms;
+		animation-delay: 2000ms;
+	}
+	> span:nth-child(3) {
+		animation: rotate-text;
+		animation-duration: 2000ms;
+		animation-delay: 4000ms;
+	}
+}*/
+
+@keyframes rotate-text {
+	0%   { opacity: 0; }
+	30% { opacity: 1;}
+	70% { opacity: 1;}
+  100% { opacity: 0; }
+}
+
 .header p {
 	text-align: center;
 	font-size: 2em;
@@ -471,20 +569,20 @@ h3 {
 	font-size: 1.2em;
 }
 .service {
-	transition: transform 2000ms;
+	transition: transform 1000ms;
 	transform: translate(0,0);
 }
 .service.drupal.invisible {
-	transform: translate(70px,70px);
+	transform: translate(40px,40px);
 }
 .service.node.invisible {
-	transform: translate(-70px, 70px);
+	transform: translate(-40px, 40px);
 }
 .service.opensource.invisible {
-	transform: translate(70px,-70px);
+	transform: translate(40px,-40px);
 }
 .service.accessibility.invisible {
-	transform: translate(-70px, -70px);
+	transform: translate(-40px, -40px);
 }
 .service .icon {
 	width: 70px;

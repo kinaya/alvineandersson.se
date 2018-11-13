@@ -2,6 +2,13 @@ import React, { Component} from "react";
 
 const Header = ({}) => {
 
+/*  <div className="messenger">
+    <span>Revolutionen</span>
+    <span>Roligt</span>
+    <span>Utveckling</span>
+  </div>*/
+
+
   return (
     <div className="container header">
 

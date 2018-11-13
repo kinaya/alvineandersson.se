@@ -27,12 +27,12 @@ render() {
   return (
       <div className={`App ${direction}`}>
         <TransitionGroup component="main" className="page-main">
-        <CSSTransition key={currentKey} timeout={1000} classNames="slide" appear>
+        <CSSTransition key={currentKey} timeout={2000} classNames="slide" appear>
         <div className='slide'>
         <Switch location={location}>
 
         <Route exact path="/" render={() => (
-            <div>
+            <div className="docscroller">
               <Header />
               <Services />
               <ProjectsContainerTwo />
