@@ -6,7 +6,7 @@
       "description": "Paragraphs i Drupal 8 var det perfekta verktyget för att ge redaktörerna frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt och samtidigt behålla ett enhetligt utseende. Hemsidan finns på fem olika språk, med möjlighet att översätta innehåll och gränssnitt.",
       "link": "https://pablodigtallvar.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt1.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Skärmdump av startsidan för pablodigtallvar.se"
       },
       "date": "sep 2018",
@@ -25,7 +25,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://test.pablodigtallvar.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
+        "url": "http://alv.hemsida.eu/p_fridh.png",
         "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
       },
       "date": "sep 2018",
@@ -38,7 +38,7 @@
       "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer.",
       "description": "Detta projekt är under utveckling. Lansering i maj 2019. Webbplatsen kommer, förutom information, innehålla en interaktiv berättelse där besökaren väljer vad som händer. Berättelsen byggs med React.js som frontend och Drupal 8 som backend. Berättelsen varvas med frågor besökaren kan svara på, och som skickas via RESTful Api och sparas i Drupals databas.",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt1.png",
+        "url": "http://alv.hemsida.eu/p_patalomsex.png",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
       "date": "Pågående",

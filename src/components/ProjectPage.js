@@ -122,7 +122,7 @@ class ProjectPage extends React.Component {
 
     </div>
 
-    <div className="parallax" style={style}></div>
+    <div className="parallax" ><div className="parallaxinner" style={style}></div></div>
 
     <div className="inner">
       <p className="project-description">{project.description}</p>

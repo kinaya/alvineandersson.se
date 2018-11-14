@@ -30,7 +30,6 @@ class ProjectTwo extends React.Component {
             <div className="info">
               <h3 className="title">{project.title}</h3>
             </div>
-            <div className="arrow">&#8594;</div>
           </Link>
         }
         </VisibilitySensor>

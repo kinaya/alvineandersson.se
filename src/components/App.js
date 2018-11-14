@@ -1,5 +1,6 @@
 import React, { Component} from "react";
 import Header from "./Header";
+import HeaderTwo from "./HeaderTwo";
 import Skills from "./Skills";
 import Footer from "./Footer";
 import Services from "./Services";
@@ -33,7 +34,7 @@ render() {
 
         <Route exact path="/" render={() => (
             <div className="docscroller">
-              <Header />
+              <HeaderTwo />
               <Services />
               <ProjectsContainerTwo />
               <Skills />

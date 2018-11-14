@@ -13,7 +13,8 @@ $orangered: #E27D60;
 $blue: #7fc8bc;
 $yellow: #E8A87C;
 $purple: #C38D9E;
-$turquoise: #41B3A3;
+//$turquoise: #41B3A3;
+$turquoise: #a5d3d3;
 $white: #F2F2F2;
 $purpleDark: #61464f;
 $purpleInactive: #9c707e;
@@ -78,10 +79,10 @@ $wide: '1280px';
 	transform: translate(0,0);
 }
 // Image
-.right .slide-enter .parallax {
+.right .slide-enter .parallax .parallaxinner {
 	background-position: 100px 0;
 }
-.right .slide-enter-active .parallax {
+.right .slide-enter-active .parallax .parallaxinner {
 	background-position: 0 0;
 	transition: all 1500ms ease-in-out 500ms;
 }
@@ -116,6 +117,7 @@ html, body {
 body {
 	overflow-y:scroll !important;
 }
+.container.headertwo,
 .container.header {
 	height: 100vh;
 	.inner {
@@ -157,8 +159,9 @@ body {
 h1 {
 	font-family: 'din-2014-narrow';
 	font-family: 'cheap-pine', sans-serif;
+	font-family: 'rig-solid-bold-fill', sans-serif;
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 2em;
 	line-height: 1.1;
 	margin: 0;
@@ -169,8 +172,9 @@ h1 {
 h2 {
 	font-family: "din-2014-narrow";
 	font-family: 'cheap-pine', sans-serif;
+	font-family: 'rig-solid-bold-fill', sans-serif;
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 2.5em;
 	line-height: 1.1;
 	margin-top: 0;
@@ -182,7 +186,13 @@ h2 {
 h3 {
 	font-family: "din-2014-narrow";
 	font-family: "cheap-pine", sans-serif;
-	font-weight: 400;
+	font-family: 'rig-solid-bold-inline-solo', sans-serif;
+	font-family: "rig-solid-bold-halftone", sans-serif;
+	color: $black;
+//	rig-solid-bold-inline
+//	rig-solid-bold-reverse
+//	rig-solid-bold-outline
+	font-weight: 700;
 	font-size: 1.2em;
 	@media(min-width: $tablet) {
 		font-size: 3em;
@@ -207,6 +217,7 @@ p {
 	max-width: 940px;
 	margin: 0 auto;
 }
+.container.headertwo,
 .container.header {
 	background-color: $purple;
 	background-image: url('../dist/bg_header.png');
@@ -269,7 +280,8 @@ p {
 
 /* ProjectPage */
 .projectPage {
-	background-color: $orangered;
+//	background-color: $orangered;
+	background-color: $turquoise;
 	background-image: url('../dist/bg_header.png');
 	overflow: hidden;
 	.container {
@@ -281,7 +293,7 @@ p {
 	// Heading
 	h1 {
 		margin: 2em 0 0.2em;
-		font-size: 6em;
+		font-size: 4.4em;
 	}
 	.project-name {
 		font-size: 1.6em;
@@ -293,16 +305,31 @@ p {
 	  color: white;
 		overflow: hidden;
 		margin: 6em -150px;
-		background-image: url('../dist/project_large.jpg');
-		//background-position: fixed;
+		transform: rotate(-1deg);
+/*		background-image: url('../dist/project_large.jpg');
 		background-position: 0 0;
 		background-repeat: no-repeat;
 		background-size: cover;
 		transform: rotate(-1deg);
-		//border: 3px solid $black;
-//		-moz-box-shadow:    inset 0 0 10px #000000;
-//-webkit-box-shadow: inset 0 0 10px #000000;
-//box-shadow:         inset 0 0 10px #000000;
+		clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%);	*/
+		background-color: #d3bca5;
+		background-color: #83c2c2;
+		padding: 3em 0;
+		clip-path: polygon(0% 100%, 20% 98%, 40% 97%, 60% 100%, 75% 98%, 100% 100%, 100% 0%, 75% 2%, 55% 3%, 40% 0%, 20% 1%, 0% 0%);
+
+		.parallaxinner {
+			background-image: url('../dist/project_large.jpg');
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+//			transform: rotate(-1deg);
+//			clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%);
+			clip-path: polygon(0% 98%, 20% 100%, 50% 97%, 75% 99%, 100% 100%, 100% 0%, 85% 1%, 65% 0%, 30% 3%, 10% 1%, 0% 0%);
+			width:100%;
+			height:100%;
+			display: block;
+
+		}
 	}
 	// Description
 	.project-description {
@@ -371,51 +398,7 @@ p {
 	}
 }
 
-/* ProjectTwo */
-.projectTwo {
-	a {
-		display: block;
-		text-decoration: none;
-		color: $black;
-		color: $white;
-		padding: 2em 0;
-		display: flex;
-		align-items: center;
-		overflow: hidden;
-		&:hover, &:active, &:focus {
-			.arrow {
-				transform: translate(0,0);
-			}
-		}
-		transition: transform 500ms;
-		transform: translate(0, 200px);
-		border-bottom: 1px solid $white;
-	}
-	a.visible {
-		transform: translate(0,0);
-	}
-	h3 {
-		margin: 0 0 0.1em;
-		font-size: 5em;
-		line-height:1;
-		width: 100%;
-	}
-	.arrow {
-		font-size: 5em;
-		margin-left: auto;
-		transition: transform 500ms;
-		transform: translate(-30px,0);
-	}
-	.tags {
-		font-size: 0.8em;
-	}
-	img {
-		width: 200px;
-		height: auto;
-		margin-right: 2em;
-		float: left;
-	}
-}
+
 
 /* Logo */
 .logo {
@@ -462,6 +445,18 @@ p {
 }
 
 /* Header */
+.headertwo {
+	.logo {
+		position: relative;
+		.name {
+			font-size: 10em;
+		}
+		.subheading {
+			font-size: 3em;
+		}
+	}
+}
+
 .header .slogan {
 	text-align: center;
 	span:nth-child(1) {
@@ -610,8 +605,8 @@ p {
 	color: $gray;
 //	font-family: "din-2014";
 	font-family: "cheap-pine";
-	font-size: 2em;
-//	font-size: 1em;
+	font-family: "rig-solid-bold-fill";
+	font-size: 1.5em;
 	padding: 0.4em 1em;
 	margin: 0.1em;
 	cursor: pointer;
@@ -620,22 +615,67 @@ p {
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-
 	clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%);
-
 	&:active, &:focus, &:hover,
 	&.active {
 		background-color: $greenLight;
 		color: $white;
 	}
 }
-.projects .wrapper {
+.project-list {
 	@media(min-width: $tablet) {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap:wrap;
 	}
 }
+.projectTwo {
+	@media(min-width: $tablet) {
+		flex-basis: 42%;
+		overflow: hidden;
+	}
+}
+/* ProjectTwo */
+.projectTwo:nth-child(odd) a {
+	margin: 0 0 10em 0;
+}
+.projectTwo:nth-child(even) a {
+	margin: 10em 0 0  0;
+}
+.projectTwo {
+	a {
+		display: block;
+		text-decoration: none;
+		overflow: hidden;
+		text-align: center;
+		&:hover, &:active, &:focus {
+			h3 {
+				font-family: "rig-solid-bold-fill";
+			}
+		}
+		transition: transform 500ms;
+		transform: translate(0, 200px);
+	}
+	a.visible {
+		transform: translate(0,0);
+	}
+
+	h3 {
+		margin: 0 0 0.1em;
+		font-size: 2.4em;
+		line-height:1;
+		width: 100%;
+		font-family: "rig-solid-bold-reverse";
+	}
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+	}
+}
+
+
+/*
 .project {
 	background-color: $white;
 	color: $black;
@@ -688,7 +728,7 @@ p {
 			color: $redLight;
 		}
 	}
-}
+}*/
 
 /* Skills */
 .skills h2 {
@@ -712,14 +752,15 @@ p {
 .matchmaking h2 {
 	text-align: center;
 	margin-bottom: 0;
-	max-width: 400px;
+	font-family: "rig-solid-bold-halftone";
+//	max-width: 400px;
 	margin: 0 auto;
 	@media(min-width: $mobile) {
 		font-size: 3em;
 	}
 	@media(min-width: $tablet) {
 		font-size: 7em;
-		max-width: 700px;
+//		max-width: 700px;
 	}
 }
 .matchmaking .intro {
