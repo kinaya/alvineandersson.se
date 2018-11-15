@@ -75,7 +75,7 @@
 
 .right .slide-enter-active .parallax .parallaxinner {
   background-position: 0 0;
-  transition: all 500ms ease-in-out 250ms; }
+  transition: all 800ms ease-in-out 400ms; }
 
 .listanimate-enter {
   opacity: 0; }
@@ -171,7 +171,8 @@ h3 {
   font-family: "rig-solid-bold-halftone", sans-serif;
   color: #222222;
   font-weight: 700;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  line-height: 1.1; }
   @media (min-width: 736px) {
     h3 {
       font-size: 3em; } }
@@ -341,31 +342,40 @@ p {
   padding: 2em;
   position: absolute;
   text-decoration: none;
-  color: #222222; }
+  color: #222222;
+  font-family: 'rig-solid-bold-halftone'; }
   .logo .name {
     text-align: center;
     color: #383838;
     font-weight: 100;
     font-size: 3.5em;
     line-height: 0.9;
-    font-family: "trailmade";
-    font-family: "cantoni-pro";
     font-weight: 700;
     text-shadow: 0px 0px transparent;
     transition: all 0.5s; }
-  .logo .subheading {
-    font-size: 1.2em;
-    text-align: left;
-    display: block;
-    font-family: 'cheap-pine-sans';
-    letter-spacing: 1px;
-    line-height: 0.9;
-    text-align: center; }
 
 .projectPage .logo {
-  padding: 0 2em 2em 0; }
-  .projectPage .logo:hover .name, .projectPage .logo:active .name, .projectPage .logo:focus .name {
-    text-shadow: 4px 0px #DAA520; }
+  font-size: 2em;
+  padding: 0;
+  transition: all 300ms;
+  background-color: #F2F2F2;
+  border-radius: 25px;
+  display: flex;
+  padding: 0.2em 0.4em;
+  line-height: 1;
+  position: fixed;
+  z-index: 999; }
+  .projectPage .logo .first-letter {
+    transition: all 300ms ease-in-out;
+    display: inline-block;
+    overflow: hidden; }
+  .projectPage .logo .letters {
+    transition: all 300ms ease-in-out;
+    display: inline-block;
+    max-width: 0px;
+    overflow: hidden; }
+  .projectPage .logo:hover .letters, .projectPage .logo:active .letters, .projectPage .logo:focus .letters {
+    max-width: 200px; }
 
 /* Header */
 .headertwo .logo {
@@ -462,7 +472,7 @@ p {
       margin: 4% 0; } }
 
 .service h3 {
-  margin: 0 0 0.1em 0; }
+  margin: 0 0 0.2em 0; }
 
 .service p {
   margin-top: 0;
@@ -483,11 +493,6 @@ p {
 
 .service.accessibility.invisible {
   transform: translate(-40px, -40px); }
-
-.service .icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 0 -20px 20px; }
 
 /* Projects */
 .projectsTwo h2,

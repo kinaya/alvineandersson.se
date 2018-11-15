@@ -119,7 +119,7 @@ $wide: '1280px';
 }
 .right .slide-enter-active .parallax .parallaxinner {
 	background-position: 0 0;
-	transition: all 500ms ease-in-out 250ms;
+	transition: all 800ms ease-in-out 400ms;
 }
 
 
@@ -229,6 +229,7 @@ h3 {
 //	rig-solid-bold-outline
 	font-weight: 700;
 	font-size: 1.2em;
+	line-height: 1.1;
 	@media(min-width: $tablet) {
 		font-size: 3em;
 	}
@@ -438,44 +439,55 @@ p {
 
 /* Logo */
 .logo {
-//	font-family: "din-2014-narrow";
 	padding: 2em;
 	position: absolute;
 	text-decoration: none;
 	color: $black;
+	font-family: 'rig-solid-bold-halftone';
 
 	.name {
-//		text-transform: uppercase;
 		text-align: center;
 		color: $graySubheading;
 		font-weight: 100;
 		font-size: 3.5em;
 		line-height: 0.9;
-		font-family: "trailmade";
-		font-family: "cantoni-pro";
 		font-weight: 700;
 		text-shadow: 0px 0px transparent;
 		transition: all 0.5s;
-//		> span {
-//			font-weight: 600;
-//			color: $black;
-//		}
-	}
-	.subheading {
-		font-size: 1.2em;
-		text-align: left;
-		display: block;
-		font-family: 'cheap-pine-sans';
-		letter-spacing: 1px;
-		line-height: 0.9;
-		text-align: center;
 	}
 }
 .projectPage .logo {
-	padding: 0 2em 2em 0;
+	font-size: 2em;
+	padding: 0;
+	transition: all 300ms;
+	background-color: $white;
+	border-radius: 25px;
+	display: flex;
+	padding: 0.2em 0.4em;
+	line-height: 1;
+	position: fixed;
+	z-index: 999;
+	.first-letter {
+		transition: all 300ms ease-in-out;
+		display: inline-block;
+		overflow: hidden;
+	}
+	.letters {
+		transition: all 300ms ease-in-out;
+		display: inline-block;
+		max-width: 0px;
+		overflow: hidden;
+//		transform: translateX(-0.3em);
+//		background-color: $white;
+//		padding: 0 0.3em 0 0;
+//		border-radius: 0 25px 25px 0;
+	}
 	&:hover, &:active, &:focus {
-		.name {
-			text-shadow: 4px 0px #DAA520;
+		.first-letter {
+//			border-radius: 50% 0 0 50%;
+		}
+		.letters {
+			max-width: 200px;
 		}
 	}
 }
@@ -590,7 +602,7 @@ p {
 	}
 }
 .service h3 {
-	margin: 0 0 0.1em 0;
+	margin: 0 0 0.2em 0;
 //	@media(min-width: $tablet) {
 //		font-size: 2em; /* todo */
 //	}
@@ -614,11 +626,6 @@ p {
 }
 .service.accessibility.invisible {
 	transform: translate(-40px, -40px);
-}
-.service .icon {
-	width: 70px;
-	height: 70px;
-	margin: 0 0 -20px 20px;
 }
 
 /* Projects */

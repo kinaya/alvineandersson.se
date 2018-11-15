@@ -75,9 +75,9 @@ class ProjectPage extends React.Component {
   let titlearray = project.title.split("");
   titlearray.map((char, i) => {
     let length = titlearray.length;
-    let interval = 500 / length;
+    let interval = 800 / length;
     if(char != " ") {
-      title.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 250ms` }} key={i}>{char}</span>)
+      title.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 400ms` }} key={i}>{char}</span>)
     } else {
       title.push(<span key={i}>&#160;</span>)
     }
@@ -88,9 +88,9 @@ class ProjectPage extends React.Component {
   let infoarray = project.info.split("");
   infoarray.map((char, i) => {
     let length = infoarray.length;
-    let interval = 500 / length;
+    let interval = 800 / length;
     if(char != " ") {
-      info.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 250ms` }} key={i}>{char}</span>)
+      info.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 400ms` }} key={i}>{char}</span>)
     } else {
       info.push(<span key={i}>&#160;</span>)
     }
@@ -105,8 +105,8 @@ class ProjectPage extends React.Component {
     <div className="container">
 
     <Link className="logo" to="/" onClick={() => navigate('left')}>
-      <div className="name"><span>Alvine</span>Andersson</div>
-      <div className="subheading">frilansande webbutvecklare</div>
+      <span className="first-letter">A</span>
+      <span className="letters">lvine</span>
     </Link>
 
     <div className="inner">

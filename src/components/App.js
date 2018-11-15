@@ -28,7 +28,7 @@ render() {
   return (
       <div className={`App ${direction}`}>
         <TransitionGroup component="main" className="page-main">
-        <CSSTransition key={currentKey} timeout={1000} classNames="slide" appear>
+        <CSSTransition key={currentKey} timeout={1400} classNames="slide" appear>
         <div className='slide'>
         <Switch location={location}>
 

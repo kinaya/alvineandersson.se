@@ -13,8 +13,7 @@ const HeaderTwo = ({}) => {
     <div className="container headertwo">
     <div className="inner">
       <div className="logo">
-        <div className="name"><span>Alvine</span> Andersson</div>
-        <div className="subheading">- med kod som verktyg - </div>
+        <div className="name">Med kod som verktyg</div>
       </div>
 </div>
     </div>
