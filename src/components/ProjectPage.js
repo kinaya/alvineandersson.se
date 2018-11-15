@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class ProjectPage extends React.Component {
@@ -75,9 +75,9 @@ class ProjectPage extends React.Component {
   let titlearray = project.title.split("");
   titlearray.map((char, i) => {
     let length = titlearray.length;
-    let interval = 1000 / length;
+    let interval = 500 / length;
     if(char != " ") {
-      title.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 500ms` }} key={i}>{char}</span>)
+      title.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 250ms` }} key={i}>{char}</span>)
     } else {
       title.push(<span key={i}>&#160;</span>)
     }
@@ -88,9 +88,9 @@ class ProjectPage extends React.Component {
   let infoarray = project.info.split("");
   infoarray.map((char, i) => {
     let length = infoarray.length;
-    let interval = 1000 / length;
+    let interval = 500 / length;
     if(char != " ") {
-      info.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 500ms` }} key={i}>{char}</span>)
+      info.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 250ms` }} key={i}>{char}</span>)
     } else {
       info.push(<span key={i}>&#160;</span>)
     }

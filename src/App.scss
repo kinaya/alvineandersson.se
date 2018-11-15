@@ -28,35 +28,68 @@ $wide: '1280px';
 
 
 /* Animate */
+/*@keyframes sliding-in-from-right {
+  0%   {transform: skew(0deg);}
+  50%  {transform: skew(10deg);}
+  100% {transform: skew(0deg);}
+}*/
+
+@keyframes sliding-in-from-right {
+  0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+  50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 10vw 100vh, 0vw 0vh);}
+  100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+}
+@keyframes sliding-in-from-right-position {
+	0% {position: fixed}
+	100% {position: relative}
+}
+
+
 .slide-enter, .slide-exit {
 	position: absolute;
 	top: 0;
 	width: 100%;
 }
 .right .slide-enter {
+	z-index: 999;
 	transform: translate(100%, 0%);
-}
-.right .slide-enter-active {
-	transform: translate(0%,0%);
-	transition: transform 1000ms;
-	transition-timing-function: cubic-bezier(1,0,.23,1);
 	position: fixed;
 }
-.right .slide-exit {
+.right .slide-enter-active {
+	z-index: 999;
 	transform: translate(0%,0%);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+	//position: relative;
+	transition: transform 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+//	position: fixed;
+//	animation: sliding-in-from-right 750ms linear infinite, sliding-in-from-right-position 500ms linear infinite;
+
+	animation-name: sliding-in-from-right;
+	animation-duration: 750ms;
+}
+.right .slide-exit {
+	z-index: 1;
+//	transform: translate(0%,0%);
 }
 .right .slide-exit-active {
-	transform: translate(-100%,0%);
-	transition: transform 1000ms;
-	transition-timing-function: cubic-bezier(1,0,.23,1);
+	z-index: 1;
+//	transform: translate(-100%,0%);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
 }
 .left .slide-enter {
 	transform: translate(-100%, 0%);
 }
 .left .slide-enter-active {
 	transform: translate(0%,0%);
-	transition: transform 1000ms;
-	transition-timing-function: cubic-bezier(1,0,.23,1);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+	transition: transform 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
 	position: fixed;
 }
 .left .slide-exit {
@@ -64,8 +97,10 @@ $wide: '1280px';
 }
 .left .slide-exit-active {
 	transform: translate(100%,0%);
-	transition: transform 1000ms;
-	transition-timing-function: cubic-bezier(1,0,.23,1);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+	transition: transform 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
 }
 
 // Heading
@@ -84,7 +119,7 @@ $wide: '1280px';
 }
 .right .slide-enter-active .parallax .parallaxinner {
 	background-position: 0 0;
-	transition: all 1500ms ease-in-out 500ms;
+	transition: all 500ms ease-in-out 250ms;
 }
 
 
@@ -240,9 +275,10 @@ p {
 	background-image: url('../dist/bg_services.png');
 }
 .container.projectsTwo {
-	background-color: $turquoise;
-//	background-color: $white;
-	background-image: url('../dist/bg_projects.png');
+//	background-color: $turquoise;
+//	background-image: url('../dist/bg_projects.png');
+	background-color: $white;
+	background-image: url('../dist/bg_matchmaking.png');
 }
 .container.projects {
 	background-color: $blue;
@@ -519,12 +555,12 @@ p {
 	}
 }*/
 
-@keyframes rotate-text {
+/*@keyframes rotate-text {
 	0%   { opacity: 0; }
 	30% { opacity: 1;}
 	70% { opacity: 1;}
   100% { opacity: 0; }
-}
+}*/
 
 .header p {
 	text-align: center;
