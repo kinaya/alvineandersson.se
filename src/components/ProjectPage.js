@@ -84,17 +84,25 @@ class ProjectPage extends React.Component {
   });
 
   // Generate info
-  let info = []
+  let info = ""
   let infoarray = project.info.split("");
-  infoarray.map((char, i) => {
-    let length = infoarray.length;
-    let interval = 800 / length;
-    if(char != " ") {
-      info.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 400ms` }} key={i}>{char}</span>)
-    } else {
-      info.push(<span key={i}>&#160;</span>)
+  let wordarray = project.info.split(" ");
+  // Calculate the correct time for the different transitions
+  let length = infoarray.length;
+  let interval = 800 / length;
+  let times = 1;
+
+  for(let i = 0; i < wordarray.length; i++) {
+    info += '<span class="word">';
+    let word = wordarray[i];
+    let lettersarray = word.split("");
+    for(let y = 0; y < lettersarray.length; y++) {
+      let letter = lettersarray[y];
+      info += '<span aria-hidden="true" style="transition: all ' + times * interval  + 'ms ease-in-out 400ms">' + letter + '</span>';
+      times += 1;
     }
-  });
+    info += '</span>';
+  }
 
   let style = {
     backgroundPositionY: -scrollTop
@@ -111,9 +119,9 @@ class ProjectPage extends React.Component {
 
     <div className="inner">
 
+
       <div className="project-heading">
-        <h1 className="project-title" aria-label={project.info}>
-          {info}
+        <h1 className="project-title" aria-label={project.info} dangerouslySetInnerHTML={{ __html: info }}>
         </h1>
       <p className="project-name">
         {title}
@@ -128,11 +136,11 @@ class ProjectPage extends React.Component {
       <p className="project-description">{project.description}</p>
 
       <div className="info">
-        <div><span>Datum:</span> {project.date}</div>
-        <div><span>Tekniker:</span> {tags}</div>
-        {project.designer ? <div><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></div> : ''}
-        {project.github ? <div><span>Github:</span> <a href={project.github}>{project.github}</a></div> : ''}
-        {project.link ? <div><span>Url:</span> <a href={project.link}>{project.link}</a></div> : ''}
+        <p><span>Datum:</span> {project.date}</p>
+        <p><span>Tekniker:</span> {tags}</p>
+        {project.designer ? <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p> : ''}
+        {project.github ? <p><span>Github:</span> <a href={project.github}>{project.github}</a></p> : ''}
+        {project.link ? <p><span>Url:</span> <a href={project.link}>{project.link}</a></p> : ''}
       </div>
 
 
@@ -140,8 +148,8 @@ class ProjectPage extends React.Component {
 
 
       <div className={`navigation ${navigationClass}`}>
-        {previousLink ? <Link onClick={() => navigate('left')} className="previous" to={previousLink}><span>&#8592; Föregående</span>{previousTitle}</Link> : ''}
-        {nextLink ? <Link onClick={() => navigate('right')} className="next" to={nextLink}><span>Nästa &#8594;</span>{nextTitle}</Link> : ''}
+        {previousLink ? <Link onClick={() => navigate('left')} className="previous" to={previousLink}><span>Föregående</span>{previousTitle}</Link> : ''}
+        {nextLink ? <Link onClick={() => navigate('right')} className="next" to={nextLink}><span>Nästa</span>{nextTitle}</Link> : ''}
       </div>
 
     </div>

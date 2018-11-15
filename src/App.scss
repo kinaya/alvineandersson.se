@@ -15,6 +15,9 @@ $yellow: #E8A87C;
 $purple: #C38D9E;
 //$turquoise: #41B3A3;
 $turquoise: #a5d3d3;
+$turquioseDark: #83c2c2;
+$turquioseHover: #689b9b;
+
 $white: #F2F2F2;
 $purpleDark: #61464f;
 $purpleInactive: #9c707e;
@@ -27,24 +30,21 @@ $wide: '1280px';
 
 
 
-/* Animate */
-/*@keyframes sliding-in-from-right {
-  0%   {transform: skew(0deg);}
-  50%  {transform: skew(10deg);}
-  100% {transform: skew(0deg);}
-}*/
-
 @keyframes sliding-in-from-right {
   0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
   50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 10vw 100vh, 0vw 0vh);}
   100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
 }
-@keyframes sliding-in-from-right-position {
-	0% {position: fixed}
-	100% {position: relative}
+@keyframes sliding-in-from-left {
+  0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+  50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 90vw 100vh, 0vw 100vh, 0vw 0vh);}
+  100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
 }
 
-
+.slide {
+	position: relative;
+	z-index: 1;
+}
 .slide-enter, .slide-exit {
 	position: absolute;
 	top: 0;
@@ -56,25 +56,24 @@ $wide: '1280px';
 	position: fixed;
 }
 .right .slide-enter-active {
-	z-index: 999;
 	transform: translate(0%,0%);
 //	transition: transform 1000ms;
 //	transition-timing-function: cubic-bezier(1,0,.23,1);
-	//position: relative;
 	transition: transform 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
-//	position: fixed;
-//	animation: sliding-in-from-right 750ms linear infinite, sliding-in-from-right-position 500ms linear infinite;
-
 	animation-name: sliding-in-from-right;
 	animation-duration: 750ms;
 }
+.right .slide-enter-done {
+	position: relative;
+	z-index: 999;
+}
 .right .slide-exit {
-	z-index: 1;
+//	z-index: 1;
 //	transform: translate(0%,0%);
 }
 .right .slide-exit-active {
-	z-index: 1;
+//	z-index: 1;
 //	transform: translate(-100%,0%);
 //	transition: transform 1000ms;
 //	transition-timing-function: cubic-bezier(1,0,.23,1);
@@ -82,6 +81,7 @@ $wide: '1280px';
 //	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
 }
 .left .slide-enter {
+	z-index: 999;
 	transform: translate(-100%, 0%);
 }
 .left .slide-enter-active {
@@ -90,22 +90,33 @@ $wide: '1280px';
 //	transition-timing-function: cubic-bezier(1,0,.23,1);
 	transition: transform 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+	animation-name: sliding-in-from-left;
+	animation-duration: 750ms;
 	position: fixed;
 }
+.left .slide-enter-done {
+	position: relative;
+	z-index: 999;
+}
 .left .slide-exit {
-	transform: translate(0%,0%);
+//	z-index: 1;
+//	transform: translate(0%,0%);
 }
 .left .slide-exit-active {
-	transform: translate(100%,0%);
+//	z-index: 1;
+//	transform: translate(100%,0%);
 //	transition: transform 1000ms;
 //	transition-timing-function: cubic-bezier(1,0,.23,1);
-	transition: transform 500ms;
-	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+//	transition: transform 500ms;
+//	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
 }
 
 // Heading
 .project-heading span {
 	display: inline-block;
+}
+.project-heading span.word:after {
+	content: "\00a0";
 }
 .right .slide-enter .project-heading span {
 	transform: translate(500px,0);
@@ -235,7 +246,7 @@ h3 {
 	}
 }
 p {
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 /* Containers */
@@ -349,8 +360,7 @@ p {
 		background-size: cover;
 		transform: rotate(-1deg);
 		clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%);	*/
-		background-color: #d3bca5;
-		background-color: #83c2c2;
+		background-color: $turquioseDark;
 		padding: 3em 0;
 		clip-path: polygon(0% 100%, 20% 98%, 40% 97%, 60% 100%, 75% 98%, 100% 100%, 100% 0%, 75% 2%, 55% 3%, 40% 0%, 20% 1%, 0% 0%);
 
@@ -373,10 +383,10 @@ p {
 		margin: 4em 0 2em;
 	}
 	// Info
-	.info > div {
+	.info > p {
 		margin: 0 0 1em 0;
 	}
-	.info > div > span:first-child {
+	.info > p > span:first-child {
 		font-style: italic;
 		display: block;
 	}
@@ -405,7 +415,7 @@ p {
 .projectPage .navigation {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 4em;
+	margin: 6em 0 2em;
 	&.first {
 		justify-content: flex-end;
 	}
@@ -415,22 +425,30 @@ p {
 	a {
 		display: block;
 		background-color: $black;
-		color: $white;
+		background-color: $turquioseDark;
+		color: $black;
 		padding: 1em;
-		font-size: 1.6em;
+		font-size: 1.8em;
 		text-decoration: none;
 		width: 300px;
+		font-family: "rig-solid-bold-fill";
+
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
 		transition: all 0.3s;
+		clip-path: polygon(0% 0%, 40% 4%, 98% 0%, 100% 60%, 100% 100%, 65% 98%, 2% 100%, 0% 45%);
 		span {
-			font-size: 0.5em;
+			font-size: 0.6em;
 			display: block;
-			text-transform: uppercase;
+			font-family: "open-sans";
 		}
 		&.next {
 			text-align: right;
 		}
 		&:hover, &:active, &:focus {
-			background-color: $redDark;
+			background-color: $turquioseHover;
+			clip-path: polygon(1% 1%, 40% 0%, 100% 2%, 99% 60%, 100% 100%, 65% 100%, 0% 98%, 2% 45%);
 		}
 	}
 }
@@ -644,10 +662,8 @@ p {
 }
 .projectsTwo .filter > span,
 .projects .filter > span {
-	background-color: $grayBackground;
-	color: $gray;
-//	font-family: "din-2014";
-	font-family: "cheap-pine";
+	background-color: $turquioseDark;
+	color: $black;
 	font-family: "rig-solid-bold-fill";
 	font-size: 1.5em;
 	padding: 0.4em 1em;
@@ -661,8 +677,8 @@ p {
 	clip-path: polygon(2% 95%, 20% 94%, 40% 97%, 60% 100%, 75% 90%, 95% 95%, 100% 95%, 100% 70%, 95% 55%, 99% 40%, 100% 0%, 70% 5%, 0% 0%, 3% 50%);
 	&:active, &:focus, &:hover,
 	&.active {
-		background-color: $greenLight;
-		color: $white;
+		background-color: $turquioseHover;
+		clip-path: polygon(2% 97%, 20% 96%, 40% 94%, 60% 98%, 75% 92%, 95% 96%, 100% 96%, 98% 70%, 97% 55%, 100% 40%, 98% 0%, 70% 4%, 0% 0%, 2% 50%);
 	}
 }
 .project-list {
