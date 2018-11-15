@@ -255,16 +255,18 @@ p {
   .projectPage .inner {
     margin-top: 6em; }
   .projectPage h1 {
-    margin: 2em 0 0.2em;
-    font-size: 4.4em; }
+    margin: 2em 0 0.2em; }
+    @media (min-width: 736px) {
+      .projectPage h1 {
+        font-size: 4.4em; } }
   .projectPage .project-name {
     font-size: 1.6em; }
   .projectPage .parallax {
     position: relative;
-    height: 600px;
+    height: 300px;
     color: white;
     overflow: hidden;
-    margin: 6em -150px;
+    margin: 2em -50px;
     transform: rotate(-1deg);
     /*		background-image: url('../dist/project_large.jpg');
 		background-position: 0 0;
@@ -275,6 +277,10 @@ p {
     background-color: #83c2c2;
     padding: 3em 0;
     clip-path: polygon(0% 100%, 20% 98%, 40% 97%, 60% 100%, 75% 98%, 100% 100%, 100% 0%, 75% 2%, 55% 3%, 40% 0%, 20% 1%, 0% 0%); }
+    @media (min-width: 736px) {
+      .projectPage .parallax {
+        margin: 6em -150px;
+        height: 600px; } }
     .projectPage .parallax .parallaxinner {
       background-image: url(/project_large.jpg);
       background-position: 0 0;
@@ -385,10 +391,11 @@ p {
 /* Header */
 .headertwo .logo {
   position: relative; }
-  .headertwo .logo .name {
-    font-size: 10em; }
-  .headertwo .logo .subheading {
-    font-size: 3em; }
+  @media (min-width: 736px) {
+    .headertwo .logo .name {
+      font-size: 10em; }
+    .headertwo .logo .subheading {
+      font-size: 3em; } }
 
 .header .slogan {
   text-align: center; }
@@ -548,17 +555,18 @@ p {
     overflow: hidden; } }
 
 /* ProjectTwo */
-.projectTwo:nth-child(odd) a {
-  margin: 0 0 10em 0; }
-
-.projectTwo:nth-child(even) a {
-  margin: 10em 0 0  0; }
+@media (min-width: 736px) {
+  .projectTwo:nth-child(odd) a {
+    margin: 0 0 10em 0; }
+  .projectTwo:nth-child(even) a {
+    margin: 10em 0 0  0; } }
 
 .projectTwo a {
   display: block;
   text-decoration: none;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 2em;
   transition: transform 500ms;
   transform: translate(0, 200px); }
   .projectTwo a:hover h3, .projectTwo a:active h3, .projectTwo a:focus h3 {

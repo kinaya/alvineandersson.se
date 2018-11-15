@@ -341,7 +341,10 @@ p {
 	// Heading
 	h1 {
 		margin: 2em 0 0.2em;
-		font-size: 4.4em;
+		@media(min-width: $tablet) {
+			font-size: 4.4em;
+
+		}
 	}
 	.project-name {
 		font-size: 1.6em;
@@ -349,10 +352,15 @@ p {
 	// Paralax
 	.parallax {
 	  position: relative;
-	  height: 600px;
+	  height: 300px;
 	  color: white;
 		overflow: hidden;
+		margin: 2em -50px;
+		@media(min-width: $tablet) {
 		margin: 6em -150px;
+		height: 600px;
+		}
+
 		transform: rotate(-1deg);
 /*		background-image: url('../dist/project_large.jpg');
 		background-position: 0 0;
@@ -514,11 +522,13 @@ p {
 .headertwo {
 	.logo {
 		position: relative;
-		.name {
+		@media(min-width: $tablet) {
+			.name {
 			font-size: 10em;
-		}
-		.subheading {
+			}
+			.subheading {
 			font-size: 3em;
+			}
 		}
 	}
 }
@@ -695,11 +705,13 @@ p {
 	}
 }
 /* ProjectTwo */
+@media(min-width: $tablet) {
 .projectTwo:nth-child(odd) a {
 	margin: 0 0 10em 0;
 }
 .projectTwo:nth-child(even) a {
 	margin: 10em 0 0  0;
+}
 }
 .projectTwo {
 	a {
@@ -707,6 +719,7 @@ p {
 		text-decoration: none;
 		overflow: hidden;
 		text-align: center;
+		margin-bottom: 2em;
 		&:hover, &:active, &:focus {
 			h3 {
 				font-family: "rig-solid-bold-fill";
