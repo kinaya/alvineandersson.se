@@ -8,93 +8,27 @@ const Skills = ({}) => {
 			<div className="inner">
         <h2>Namedropping</h2>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Webteknologier och språk</span>: HTML5, CSS3 (+SASS), PHP, Node.js
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Webteknologier och språk:</span> HTML5, CSS3 (+SASS), PHP, Node.js</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Scripts/UI</span>: JavaScript, JQuery, Bootstrap, Underscore, Materialize
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Scripts/UI:</span> JavaScript, JQuery, Bootstrap, Underscore, Materialize</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Frameworks</span>: React (+ Redux och next.js för SSR), Laravel, Symfony, Express.js
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Frameworks:</span> React (+ Redux och next.js för SSR), Laravel, Symfony, Express.js</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">CMSs</span>: Drupal och Wordpress
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">CMSs:</span> Drupal och Wordpress</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Databaser och bestående data</span>: MySQL, MariaDB, PostgreSQL, MongoDB, Memcached, Redis
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Databaser och bestående data:</span> MySQL, MariaDB, PostgreSQL, MongoDB, Memcached, Redis</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Testning och debug tools</span>: PHPUnit, Jest + Mocha, Mozilla Firebug, Chrome developer tools
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Testning och debug tools:</span> PHPUnit, Jest + Mocha, Mozilla Firebug, Chrome developer tools</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">RESTFul API</span>: Custom i node.js, Wordpress eller Drupal som headless.
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">RESTFul API:</span> Custom i node.js, Wordpress eller Drupal som headless</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Package managers och andra verktyg</span>: git, npm, gulp, webpack, composer
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Package managers och andra verktyg:</span> git, npm, gulp, webpack, composer</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Autenticering och behörigheter</span>: OAuth, Basic Authentication, Token Authentication, JWT
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Autenticering och behörigheter</span> OAuth, Basic Authentication, Token Authentication, JWT</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            <span className="label">Server, PaaS and distribuering</span>: Apache, Heroku, Docker
-          </p>
-        }
-        </VisibilitySensor>
+        <p><span className="label">Server, PaaS and distribuering:</span> Apache, Heroku, Docker</p>
 
-        <VisibilitySensor partialVisibility={true} >
-        {({isVisible}) =>
-          <p className={isVisible ? 'visible' : 'invisible'}>
-            Grundläggande koll på Java, Python, Angular, Vue, gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, ofta bollplank för koncept och ux i projekt, van projektledare och en stjärna på att googla.
-          </p>
-        }
-        </VisibilitySensor>
+        <p>Grundläggande koll på Java, Python, Angular, Vue, gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, ofta bollplank för koncept och ux i projekt, van projektledare och en stjärna på att googla.</p>
 
 			</div>
     </div>

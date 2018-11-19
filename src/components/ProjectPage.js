@@ -71,7 +71,7 @@ class ProjectPage extends React.Component {
   });
 
   // Generate title
-  let title = [];
+/*  let title = [];
   let titlearray = project.title.split("");
   titlearray.map((char, i) => {
     let length = titlearray.length;
@@ -81,7 +81,28 @@ class ProjectPage extends React.Component {
     } else {
       title.push(<span key={i}>&#160;</span>)
     }
-  });
+  });*/
+
+  // Generate title
+  let title = ""
+  let titlearray = project.title.split("");
+  let titlewordarray = project.title.split(" ");
+  // Calculate the correct time for the different transitions
+  let titlelength = titlearray.length;
+  let titleinterval = 800 / length;
+  let titletimes = 1;
+
+  for(let i = 0; i < titlewordarray.length; i++) {
+    title += '<span class="word">';
+    let word = titlewordarray[i];
+    let lettersarray = word.split("");
+    for(let y = 0; y < lettersarray.length; y++) {
+      let letter = lettersarray[y];
+      title += '<span aria-hidden="true" style="transition: all ' + titletimes * titleinterval  + 'ms ease-in-out 400ms">' + letter + '</span>';
+      titletimes += 1;
+    }
+    title += '</span>';
+  }
 
   // Generate info
   let info = ""
@@ -104,6 +125,7 @@ class ProjectPage extends React.Component {
     info += '</span>';
   }
 
+
   let style = {
     backgroundPositionY: -scrollTop
   }
@@ -121,10 +143,9 @@ class ProjectPage extends React.Component {
 
 
       <div className="project-heading">
-        <h1 className="project-title" aria-label={project.info} dangerouslySetInnerHTML={{ __html: info }}>
+        <h1 className="project-title" aria-label={project.info} dangerouslySetInnerHTML={{ __html: title }}>
         </h1>
-      <p className="project-name">
-        {title}
+      <p className="project-name" aria-label={project.title} dangerouslySetInnerHTML={{__html: info}}>
       </p>
       </div>
 

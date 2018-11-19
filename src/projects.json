@@ -53,7 +53,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://safunkarsex.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Skärmdump av startsidan för safunkarsex.se"
       },
       "date": "april 2017",
@@ -68,7 +68,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://patalomsex.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt1.png",
+        "url": "http://alv.hemsida.eu/p_fridh.png",
         "alt": "Skärmdump av startsidan för patalomsex.se"
       },
       "date": "maj 2016",
@@ -83,7 +83,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://newcomersyouth.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
       },
       "date": "mars 2017",
@@ -98,7 +98,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://fridhadvokatbyra.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt1.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
       },
       "date": "mars 2016",
@@ -113,7 +113,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://lesbiskmakt.nu",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
+        "url": "http://alv.hemsida.eu/p_fridh.png",
         "alt": "Skärmdump av startsidan för lesbiskmakt.nu"
       },
       "date": "nov 2017",
@@ -132,7 +132,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://djurfabriken.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt1.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Skärmdump av startsidan för djurfabriken.se"
       },
       "date": "okt 2017",
@@ -151,7 +151,7 @@
       "github": "https://github.com/kinaya",
       "link": "http://luleapride.se",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Skärmdump av startsidan för luleapride.se"
       },
       "date": "juni 2016",
@@ -165,7 +165,7 @@
       "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
       "github": "https://github.com/kinaya",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt1.png",
+        "url": "http://alv.hemsida.eu/p_fridh.png",
         "alt": "Bild av startsidan för kollektivbudget"
       },
       "date": "okt 2018",
@@ -180,26 +180,11 @@
       "github": "https://github.com/kinaya",
       "link": "http://malinfors.no",
       "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
+        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
         "alt": "Bild av startsidan för malinfors.no"
       },
       "date": "okt 2018",
       "tags": ["Wordpress"],
       "extendedTags": ["Wordpress", "Php", "MariaDB"]
-    },
-    {
-      "id": "alvineandersson",
-      "title": "AlvineAndersson.se",
-      "info": "Personlig webbplats och portfolio.",
-      "description": "React.js och Redux. Interaktivt där besökaren t.ex kan spela ett matchmaking spel.",
-      "github": "https://github.com/kinaya",
-      "link": "http://alvineandersson.se",
-      "img": {
-        "url": "http://alv.hemsida.eu/projekt2.png",
-        "alt": "Bild av startsidan för alvineandersson.se"
-      },
-      "date": "okt 2018",
-      "tags": ["Node.js", "React"],
-      "extendedTags": ["Node.js", "React"]
     }
   ]

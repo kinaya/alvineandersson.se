@@ -156,6 +156,10 @@ $wide: '1280px';
 
 
 
+
+
+
+
 /* 100& height effect */
 html, body {
 	height: 100%;
@@ -170,6 +174,7 @@ body {
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+    max-width: none;
 	}
 }
 .scrollarrow {
@@ -266,14 +271,10 @@ p {
 }
 .container.headertwo,
 .container.header {
-	background-color: $purple;
-	background-image: url('../dist/bg_header.png');
-	@media(min-width: $mobile) {
-//		padding: 3em 2em 1em 2em;
-	}
-	@media(min-width: $tablet) {
-//		padding: 3em 2em 2em 2em;
-	}
+//	background-color: $purple;
+  background-color: $white;
+	background-image: url('../dist/bg_raster.png');
+  background-size: cover;
 }
 .container.intro {
 	background-color: $purple;
@@ -283,14 +284,15 @@ p {
 	background-size: 100px auto;
 }
 .container.services {
-	background-color: $yellow;
-	background-image: url('../dist/bg_services.png');
+//	background-color: $yellow;
+  background-color:$turquoise;
+//	background-image: url('../dist/bg_services.png');
 }
 .container.projectsTwo {
 //	background-color: $turquoise;
 //	background-image: url('../dist/bg_projects.png');
 	background-color: $white;
-	background-image: url('../dist/bg_matchmaking.png');
+	background-image: url('../dist/bg_raster.png');
 }
 .container.projects {
 	background-color: $blue;
@@ -301,13 +303,15 @@ p {
 }
 .container.skills {
 
-	background-color: $orangered;
+//	background-color: $orangered;
+  background-color: $turquoise;
 	background-image: url('../dist/bg_skills.png');
 	color: $black;
 }
 .container.matchmaking {
 	background-color: $white;
-	background-image: url('../dist/bg_matchmaking.png');
+	background-image: url('../dist/bg_raster.png');
+  background-size: cover;
 	padding-top: 3em;
 	@media(min-width: $mobile) {
 		padding-top: 5em;
@@ -465,24 +469,11 @@ p {
 
 /* Logo */
 .logo {
-	padding: 2em;
+  padding: 2em;
 	position: absolute;
 	text-decoration: none;
 	color: $black;
 	font-family: 'rig-solid-bold-halftone';
-
-	.name {
-		text-align: center;
-		color: $graySubheading;
-		font-weight: 100;
-		font-size: 3.5em;
-		line-height: 0.9;
-		font-weight: 700;
-		text-shadow: 0px 0px transparent;
-		transition: all 0.5s;
-	}
-}
-.projectPage .logo {
 	font-size: 2em;
 	padding: 0;
 	transition: all 300ms;
@@ -503,37 +494,75 @@ p {
 		display: inline-block;
 		max-width: 0px;
 		overflow: hidden;
-//		transform: translateX(-0.3em);
-//		background-color: $white;
-//		padding: 0 0.3em 0 0;
-//		border-radius: 0 25px 25px 0;
 	}
 	&:hover, &:active, &:focus {
-		.first-letter {
-//			border-radius: 50% 0 0 50%;
-		}
 		.letters {
 			max-width: 200px;
 		}
 	}
 }
-
-/* Header */
-.headertwo {
-	.logo {
-		position: relative;
-		@media(min-width: $tablet) {
-			.name {
-			font-size: 10em;
-			}
-			.subheading {
-			font-size: 3em;
-			}
-		}
-	}
+.header .logo {
+  margin: 1em 0 0 1em;
 }
 
-.header .slogan {
+/* Test */
+.badge {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 100px;
+  border: 10px solid red;
+  overflow: visible;
+}
+.badge-header {
+  fill: $black;
+  font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-size: 0.5em;
+}
+.badge-footer {
+  fill: $black;
+  font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-size: 0.5em;
+}
+.badge-name {
+  fill: $black;
+  font-family: "rig-solid-bold-halftone", sans-serif;
+  font-size: 1em;
+}
+
+
+
+.slogan {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  .frilansande {
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    display: block;
+    font-size: 4em;
+    line-height:1;
+  }
+  .utvecklare {
+    font-family: "rig-solid-bold-halftone", sans-serif;
+    display: block;
+    font-size: 7em;
+    line-height: 1.2;
+  }
+  .name {
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    display: block;
+    font-size: 4em;
+    line-height:1;
+  }
+  .verktyg {
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    display: block;
+    font-size: 2em;
+  }
+}
+
+/*.header .slogan {
 	text-align: center;
 	span:nth-child(1) {
 		font-family: 'cheap-pine-sans';
@@ -564,7 +593,7 @@ p {
 		display: block;
 		margin-right: 0.5em;
 	}
-}
+}*/
 
 /*
 .header .messenger {
@@ -667,7 +696,7 @@ p {
 .projects .filter {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 	justify-content: center;
 }
 .projectsTwo .filter > span,
@@ -698,20 +727,27 @@ p {
 		flex-wrap:wrap;
 	}
 }
-.projectTwo {
-	@media(min-width: $tablet) {
-		flex-basis: 42%;
-		overflow: hidden;
-	}
-}
+
 /* ProjectTwo */
+.projectsTwo.container .inner {
+  max-width: 1200px;
+}
 @media(min-width: $tablet) {
-.projectTwo:nth-child(odd) a {
-	margin: 0 0 10em 0;
-}
-.projectTwo:nth-child(even) a {
-	margin: 10em 0 0  0;
-}
+  .projectTwo {
+    flex-basis: 28%;
+    margin-bottom: 6em;
+  }
+  .projectTwo:nth-child(5n + 2),
+  .projectTwo:nth-child(5n + 1) {
+    flex-basis: 46%;
+    overflow: hidden;
+  }
+  .projectTwo:nth-child(5n + 1) a {
+    margin: 0 0 0 auto;
+  }
+  .projectTwo:nth-child(5n + 2) a {
+    margin: 0 auto 0 0;
+  }
 }
 .projectTwo {
 	a {
@@ -719,7 +755,8 @@ p {
 		text-decoration: none;
 		overflow: hidden;
 		text-align: center;
-		margin-bottom: 2em;
+    margin: 0 auto;
+    max-width: 336px;
 		&:hover, &:active, &:focus {
 			h3 {
 				font-family: "rig-solid-bold-fill";
@@ -734,7 +771,7 @@ p {
 
 	h3 {
 		margin: 0 0 0.1em;
-		font-size: 2.4em;
+		font-size: 1.8em;
 		line-height:1;
 		width: 100%;
 		font-family: "rig-solid-bold-reverse";
@@ -803,11 +840,12 @@ p {
 }*/
 
 /* Skills */
+.skills.container {
+  padding: 8em 0;
+  text-align: center;
+}
 .skills h2 {
-	text-align: center;
-	@media(min-width: $mobile) {
-		text-align: left;
-	}
+
 }
 .skills .label {
 	font-weight: 700;
