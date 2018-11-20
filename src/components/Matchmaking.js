@@ -9,7 +9,7 @@ class Matchmaking extends Component{
     return(
       <div className="container matchmaking">
 				<div className="inner">
-          <h2>Lets play a Matchmaking game!</h2>
+          <h2><span>Lets play</span><span>matchmaking!</span></h2>
           <p className="intro">Välj ett alternativ för att starta</p>
           <div className="wrapper">
             {matchitems.map((item, i) => { return (

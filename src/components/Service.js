@@ -24,7 +24,7 @@ class Service extends React.Component {
       <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
       {({isVisible}) =>
         <div className={isVisible ? `service ${id} visible` : `service ${id} invisible`}>
-          <h3>{headline}</h3>
+          <h3><span>{headline}</span></h3>
           <p>{text}</p>
         </div>
       }

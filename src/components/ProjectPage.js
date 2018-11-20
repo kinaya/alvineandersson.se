@@ -36,8 +36,10 @@ class ProjectPage extends React.Component {
   // Generate previous and next links
   let nextLink = null;
   let nextTitle = null;
+  let nextImageUrl = null;
   let previousLink = null;
   let previousTitle = null;
+  let previousImageUrl = null;
   let navigationClass = '';
   for(let i = 0; i < projects.length; i++) {
     if(projects[i].id === project.id) {
@@ -45,11 +47,13 @@ class ProjectPage extends React.Component {
       if(i != 0) {
         previousLink = '/projects/' + projects[i-1].id
         previousTitle = projects[i-1].title
+        previousImageUrl = projects[i-1].img.url
       }
       // Add nextLink if not on last project
       if(i != projects.length -1) {
         nextLink = '/projects/' + projects[i+1].id
         nextTitle = projects[i+1].title
+        nextImageUrl = projects[i+1].img.url
       }
       if(i == 0) {
         navigationClass = 'first'
@@ -89,7 +93,7 @@ class ProjectPage extends React.Component {
   let titlewordarray = project.title.split(" ");
   // Calculate the correct time for the different transitions
   let titlelength = titlearray.length;
-  let titleinterval = 800 / length;
+  let titleinterval = 800 / titlelength;
   let titletimes = 1;
 
   for(let i = 0; i < titlewordarray.length; i++) {
@@ -130,6 +134,9 @@ class ProjectPage extends React.Component {
     backgroundPositionY: -scrollTop
   }
 
+//      <div className="parallax" ><div className="parallaxinner" style={style}></div></div>
+//       <p className="project-name" aria-label={project.title} dangerouslySetInnerHTML={{__html: info}}></p>
+
   return (
     <div className="projectPage" >
     <div className="container">
@@ -143,15 +150,14 @@ class ProjectPage extends React.Component {
 
 
       <div className="project-heading">
-        <h1 className="project-title" aria-label={project.info} dangerouslySetInnerHTML={{ __html: title }}>
-        </h1>
-      <p className="project-name" aria-label={project.title} dangerouslySetInnerHTML={{__html: info}}>
-      </p>
+        <h1 className="project-title" aria-label={project.info} dangerouslySetInnerHTML={{ __html: title }}></h1>
       </div>
 
     </div>
 
-    <div className="parallax" ><div className="parallaxinner" style={style}></div></div>
+    <div className="image"><img src={project.image.url} /></div>
+
+
 
     <div className="inner">
       <p className="project-description">{project.description}</p>
@@ -169,8 +175,8 @@ class ProjectPage extends React.Component {
 
 
       <div className={`navigation ${navigationClass}`}>
-        {previousLink ? <Link onClick={() => navigate('left')} className="previous" to={previousLink}><span>Föregående</span>{previousTitle}</Link> : ''}
-        {nextLink ? <Link onClick={() => navigate('right')} className="next" to={nextLink}><span>Nästa</span>{nextTitle}</Link> : ''}
+        {previousLink ? <Link style={{backgroundImage: `url(${previousImageUrl})`}} onClick={() => navigate('left')} className="previous" to={previousLink}><span className="text"><span className="inner"><span>Föregående</span>{previousTitle}</span></span></Link> : ''}
+        {nextLink ? <Link style={{backgroundImage: `url(${nextImageUrl})`}} onClick={() => navigate('right')} className="next" to={nextLink}><span className="text"><span className="inner"><span>Nästa</span>{nextTitle}</span></span></Link> : ''}
       </div>
 
     </div>

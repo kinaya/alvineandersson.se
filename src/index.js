@@ -7,7 +7,11 @@ import projects from "./projects.json";
 import matchitems from "./matchitems.json";
 import ScrollToTop from "./components/ScrollToTop";
 import AppContainer from "./containers/AppContainer";
-import { BrowserRouter} from "react-router-dom";
+//import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+//import createHistory from 'history/createBrowserHistory';
+//import createMemoryHistory from 'history/createBrowserHistory';
+import createHistory from 'history/createMemoryHistory';
 
 const initialState = {
   projects: {
@@ -18,16 +22,23 @@ const initialState = {
     matchitems: matchitems
   },
   navigation: {
-    direction: 'right'
+    direction: 'left',
+    prevPathKey: null,
+    animation: 'dont-animate'
   }
 }
 
 const store = configureStore(initialState)
 
+//const history = createHistory();
+const history = createHistory();
+
+//  <BrowserRouter history={history}>
+
 ReactDOM.render(
 
   <Provider store={store}>
-  <BrowserRouter>
+  <BrowserRouter history={history}>
     <AppContainer />
     </BrowserRouter>
   </Provider>,

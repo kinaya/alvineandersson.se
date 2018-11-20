@@ -9,14 +9,14 @@
     "alternatives": [
       {
         "id": "anstalla",
-        "text": "Jag letar utvecklare att anställa eller samarbeta med",
+        "text": "Jag vill anställa en utvecklare på vårt företag",
         "link": "grymutvecklare",
         "active": false,
         "alignment": "left"
       },
       {
         "id": "byggahemsida",
-        "text": "Jag letar utvecklare för att bygga min hemsida",
+        "text": "Jag behöver någon som bygger min hemsida",
         "link": "byggahemsida",
         "active": false,
         "alignment": "right"

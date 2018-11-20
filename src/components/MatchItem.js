@@ -19,7 +19,7 @@ class MatchItem extends Component{
                 className={`alternative active-${alternative.active}`}
                 onClick={() => matchMaking(item.id, alternative.id, alternative.link, alternative.alignment)}
                 key={i}>
-                <span className="inner">{alternative.text}</span>
+                <span className="inner">{alternative.text}</span>                
               </span>
             )})
           ):(
@@ -31,7 +31,7 @@ class MatchItem extends Component{
               </span>
             )})
           )}
-            </div>
+          </div>
         </div>
       )
 

@@ -21,15 +21,13 @@ class ProjectTwo extends React.Component {
 
     return (
       <div className="projectTwo">
-        <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
+        <VisibilitySensor intervalCheck={false} scrollCheck={true} onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
         {({isVisible}) =>
-          <Link onClick={() =>  navigate('right')} className={isVisible ? 'visible' : 'insivible'} to={`/projects/${project.id}`} >
+          <Link onClick={() =>  navigate('right')} className={isVisible ? 'visible' : 'invisible'} to={`/projects/${project.id}`} >
             <div className="image">
               <img src={project.img.url} />
             </div>
-            <div className="info">
-              <h3 className="title">{project.title}</h3>
-            </div>
+              <h3 className="title"><span>{project.title}</span></h3>
           </Link>
         }
         </VisibilitySensor>

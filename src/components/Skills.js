@@ -6,7 +6,6 @@ const Skills = ({}) => {
   return (
     <div className="container skills">
 			<div className="inner">
-        <h2>Namedropping</h2>
 
         <p><span className="label">Webteknologier och språk:</span> HTML5, CSS3 (+SASS), PHP, Node.js</p>
 

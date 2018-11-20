@@ -1,18 +1,21 @@
 import { connect } from 'react-redux'
 import App from '../components/App'
 import {withRouter} from 'react-router-dom'
-import {navigate} from '../actions'
+import {navigate, locationChange} from '../actions'
 
 function mapStateToProps(state) {
   return {
     projects: state.projects.projects,
-    direction: state.navigation.direction
+    direction: state.navigation.direction,
+    animation: state.navigation.animation,
+    prevPathKey: state.navigation.prevPathKey
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    navigate: (direction) => dispatch(navigate(direction))
+    navigate: (direction) => dispatch(navigate(direction)),
+    locationChange: (key) => dispatch(locationChange(key))
   }
 }
 

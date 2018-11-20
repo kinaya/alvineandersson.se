@@ -6,7 +6,7 @@
       "description": "Paragraphs i Drupal 8 var det perfekta verktyget för att ge redaktörerna frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt och samtidigt behålla ett enhetligt utseende. Hemsidan finns på fem olika språk, med möjlighet att översätta innehåll och gränssnitt.",
       "link": "https://pablodigtallvar.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/pba_list.jpg",
         "alt": "Skärmdump av startsidan för pablodigtallvar.se"
       },
       "date": "sep 2018",
@@ -15,22 +15,30 @@
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson"
+      },
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
       }
     },
     {
       "id":"mensvarkstestet",
-      "title": "Mensvärkstestet",
+      "title": "Mensvärks-testet",
       "info": "Hur känns din mensvärk? Huggande, pirrigt eller hjärtattack?",
       "description": "Quiz byggt i React.js med frågor om ens mens och mensvärk. Quizet består av olika typer av frågor såsom enkelval, flerval, slider och ja-eller-nej påståenden. I slutet får en en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt) samt ett mensvärksdjur som en kan dela på sociala medier. Svar skickas via RESTful API och sparas i ett backend byggt med Drupal 8. Lanseringsveckan gjorde över 10.000 personer testet.",
       "github": "https://github.com/kinaya",
       "link": "https://test.pablodigtallvar.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_fridh.png",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
       },
       "date": "sep 2018",
       "tags": ["React", "Drupal"],
-      "extendedTags": ["React", "Redux", "Drupal 8"]
+      "extendedTags": ["React", "Redux", "Drupal 8"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id":"nagotharhant",
@@ -38,12 +46,16 @@
       "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer.",
       "description": "Detta projekt är under utveckling. Lansering i maj 2019. Webbplatsen kommer, förutom information, innehålla en interaktiv berättelse där besökaren väljer vad som händer. Berättelsen byggs med React.js som frontend och Drupal 8 som backend. Berättelsen varvas med frågor besökaren kan svara på, och som skickas via RESTful Api och sparas i Drupals databas.",
       "img": {
-        "url": "http://alv.hemsida.eu/p_patalomsex.png",
+        "url": "http://alv.hemsida.eu/pba_list.jpg",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
       "date": "Pågående",
       "tags": ["React", "Drupal"],
-      "extendedTags": ["React", "Redux", "Drupal 8"]
+      "extendedTags": ["React", "Redux", "Drupal 8"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id":"safunkarsex",
@@ -53,12 +65,16 @@
       "github": "https://github.com/kinaya",
       "link": "https://safunkarsex.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Skärmdump av startsidan för safunkarsex.se"
       },
       "date": "april 2017",
       "tags": ["Drupal"],
-      "extendedTags": ["Drupal 7", "Php", "MySQL"]
+      "extendedTags": ["Drupal 7", "Php", "MySQL"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id":"patalomsex",
@@ -68,12 +84,35 @@
       "github": "https://github.com/kinaya",
       "link": "https://patalomsex.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_fridh.png",
+        "url": "http://alv.hemsida.eu/pba_list.jpg",
         "alt": "Skärmdump av startsidan för patalomsex.se"
       },
       "date": "maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": ["Drupal 7", "Php"]
+      "extendedTags": ["Drupal 7", "Php"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
+    },
+    {
+      "id":"filmregionsydost",
+      "title":"Filmregion Sydost",
+      "info": "Utbildningsmaterial med ett normkritiskt perspektiv på sexualitet och identitet.",
+      "description": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför.",
+      "github": "https://github.com/kinaya",
+      "link": "https://patalomsex.se",
+      "img": {
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
+        "alt": "Skärmdump av startsidan för filmregionsydost.se"
+      },
+      "date": "maj 2016",
+      "tags": [ "Drupal" ],
+      "extendedTags": ["Drupal 7", "Php"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id": "newcomersyouth",
@@ -83,12 +122,16 @@
       "github": "https://github.com/kinaya",
       "link": "https://newcomersyouth.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
       },
       "date": "mars 2017",
       "tags": [ "Wordpress" ],
-      "extendedTags": ["Wordpress", "Php", "MariaDB"]
+      "extendedTags": ["Wordpress", "Php", "MariaDB"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id":"fridhadvokatbyra",
@@ -98,12 +141,16 @@
       "github": "https://github.com/kinaya",
       "link": "https://fridhadvokatbyra.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
       },
       "date": "mars 2016",
       "tags": ["Drupal"],
-      "extendedTags": ["Drupal 7", "Php", "MySQL"]
+      "extendedTags": ["Drupal 7", "Php", "MySQL"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id":"lesbiskmakt",
@@ -113,7 +160,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://lesbiskmakt.nu",
       "img": {
-        "url": "http://alv.hemsida.eu/p_fridh.png",
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för lesbiskmakt.nu"
       },
       "date": "nov 2017",
@@ -122,6 +169,10 @@
       "designer": {
         "url": "http://maryamfanni.se",
         "name": "mayramfanni.se"
+      },
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
       }
     },
     {
@@ -132,7 +183,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://djurfabriken.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för djurfabriken.se"
       },
       "date": "okt 2017",
@@ -141,6 +192,10 @@
       "designer": {
         "url": "http://kaisaandersson.se",
         "name": "kaisaandersson.se"
+      },
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
       }
     },
     {
@@ -151,26 +206,34 @@
       "github": "https://github.com/kinaya",
       "link": "http://luleapride.se",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för luleapride.se"
       },
       "date": "juni 2016",
       "tags": ["Wordpress"],
-      "extendedTags": ["Wordpress", "Php", "MariaDB"]
+      "extendedTags": ["Wordpress", "Php", "MariaDB"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id": "kollektivbudget",
-      "title": "KollektivBudget",
+      "title": "Kollektiv-Budget",
       "info": "Håll koll på ekonomin - för kollektiv och andra som handlar gemensamt.",
       "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
       "github": "https://github.com/kinaya",
       "img": {
-        "url": "http://alv.hemsida.eu/p_fridh.png",
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Bild av startsidan för kollektivbudget"
       },
       "date": "okt 2018",
       "tags": ["Node.js", "React"],
-      "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"]
+      "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     },
     {
       "id": "malinfors",
@@ -180,11 +243,15 @@
       "github": "https://github.com/kinaya",
       "link": "http://malinfors.no",
       "img": {
-        "url": "http://alv.hemsida.eu/p_safunkarsex.png",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Bild av startsidan för malinfors.no"
       },
       "date": "okt 2018",
       "tags": ["Wordpress"],
-      "extendedTags": ["Wordpress", "Php", "MariaDB"]
+      "extendedTags": ["Wordpress", "Php", "MariaDB"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
     }
   ]
