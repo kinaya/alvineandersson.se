@@ -32,6 +32,88 @@ $desktop: '980px';
 $wide: '1280px';
 
 
+/* Moving line */
+.projectTwo a:hover .diamond #diamond-inner {
+  animation: move 500ms ease-in-out forwards;
+}
+#diamond-inner {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 700;
+  stroke: #797979;
+  stroke-width: 2;
+}
+@keyframes move {
+  0% { stroke-dashoffset: 700; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Background gradient */
+.stop1 {
+  stop-color: #F2F2F2;
+}
+.stop2 {
+  stop-color: #F2F2F2;
+}
+.projectTwo a:hover .diamond .stop1 {
+  animation: change-color1 500ms ease-in-out forwards;
+}
+@keyframes change-color1 {
+  0% {stop-color: #F2F2F2;}
+  50% {stop-color: #d9d9d9; }
+  100% {stop-color: #d9d9d9;}
+}
+
+/* Blur background image */
+.projectTwo a img {
+//  -webkit-filter: blur(0px); /* Safari 6.0 - 9.0 */
+//  filter: blur(0px);
+  opacity: 1;
+  transition: all 500ms ease;
+}
+.projectTwo a:hover img {
+//  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+//  filter: blur(1px);
+  opacity: 0.9;
+}
+.project-list .projectTwo a h3 {
+  clip-path: none;
+  background-color: transparent;
+//  transform: translateY(-50%) scale(1.0);
+  transition: all 500ms ease-in-out;
+  letter-spacing: 0px;
+}
+.project-list .projectTwo a:hover h3 {
+  letter-spacing: 1px;
+//  transform: translateY(-50%) scale(1.02);
+}
+
+/* Diamond */
+.diamond-wrapper {
+  position: relative;
+  height: 500px;
+  width: 610px;
+}
+.diamond {
+  transform: translateY(-50%);
+  top: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes sliding-in-from-right {
   0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
