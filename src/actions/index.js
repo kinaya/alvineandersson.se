@@ -32,14 +32,14 @@ export function navigate(direction) {
   }
 }
 
-export function matchMaking(clickedItem, clickedAlternative, itemToShow, arrowAlignment) {
+export function matchMaking(clickedItem, clickedAlternative, itemToShow, alignment) {
   return function(dispatch, getState) {
     dispatch({
       type: MATCHMAKING,
       clickedItem: clickedItem,
       clickedAlternative: clickedAlternative,
       itemToShow: itemToShow,
-      arrowAlignment: arrowAlignment
+      alignment: alignment
     })
   }
 }

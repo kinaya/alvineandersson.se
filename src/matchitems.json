@@ -4,8 +4,7 @@
     "visible": true,
     "clickable": true,
     "type": "alternatives",
-    "arrow": false,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "alternatives": [
       {
         "id": "anstalla",
@@ -29,8 +28,7 @@
     "visible": false,
     "clickable": true,
     "type": "yesno",
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "alternatives": [
       {
         "id": "ja",
@@ -54,8 +52,7 @@
     "visible": false,
     "clickable": true,
     "type": "yesno",
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "alternatives": [
       {
         "id": "ja",
@@ -78,8 +75,7 @@
     "type": "alternatives",
     "visible": false,
     "clickable": true,
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "alternatives": [
       {
         "id": "nolltolerans",
@@ -102,8 +98,7 @@
     "type": "alternatives",
     "visible": false,
     "clickable": true,
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "alternatives": [
       {
         "id": "nolltolerans",
@@ -126,8 +121,7 @@
     "type": "alternatives",
     "visible": false,
     "clickable": true,
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "left",
     "alternatives": [
       {
         "id": "pengar",
@@ -149,8 +143,7 @@
     "id": "answermatch",
     "type": "answer",
     "visible": false,
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "headline": "Match!",
     "text": "Det verkar som att vi skulle passa bra ihop! Proin at nunc arcu. Proin varius egestas bibendum. Aliquam maximus purus vel erat faucibus, ac scelerisque risus mattis. Aliquam mauris lacus, varius a ligula ac, aliquet rhoncus urna"
   },
@@ -158,8 +151,7 @@
     "id": "answernomatch",
     "type": "answer",
     "visible": false,
-    "arrow": true,
-    "arrowAlignment": "center",
+    "alignment": "center",
     "headline": "No match!",
     "text": "It's not you it's me... just kidding it's you!. Proin at nunc arcu. Proin varius egestas bibendum. Aliquam maximus purus vel erat faucibus, ac scelerisque risus mattis. Aliquam mauris lacus, varius a ligula ac, aliquet rhoncus urna"
   }

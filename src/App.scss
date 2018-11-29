@@ -32,15 +32,145 @@ $desktop: '980px';
 $wide: '1280px';
 
 
+/* Animated intro */
+.introslogan {
+  padding: 8em 0;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.twinkle {
+  position: absolute;
+  top: 2em;
+  bottom: 6em;
+  right: 10em;
+  left: 6em;
+  opacity: 0;
+  animation: revealstars 2s 2s forwards;
+  .star {
+    fill: #72baba;
+    animation: twinkle 2s infinite;
+  }
+  .star:nth-child(2n) {
+    animation-delay: 1s;
+  }
+  .star:nth-child(3n) {
+    animation-delay: 1.5s;
+  }
+}
+@keyframes revealstars {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.webbutvecklare {
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+  text-align:center;
+  position: relative;
+  .text {
+    text-transform: uppercase;
+    display: block;
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+  }
+  .code {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    > span {
+      display: inline-block;
+      padding: 0.5em 1em;
+      font-size: 1.2em;
+      font-family: ocr-a-std, monospace;
+    }
+  }
+}
+.alvineandersson {
+  max-width: 1000px;
+  height: auto;
+  margin: 1em auto;
+  .text {
+    text-transform: uppercase;
+    display: block;
+    //font-family: "rig-solid-bold-inline-solo", sans-serif;
+    font-family: "rig-solid-bold-halftone", sans-serif;
+  }
+  .text-stroke {
+    fill: none;
+//    stroke: #51256f;
+    stroke: #72baba;
+    stroke-width: 2.8px;
+    stroke-dashoffset: -100;
+    stroke-dasharray: 100;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    animation: dash 2s ease-in-out forwards;
+  }
+  .text-stroke-2 {
+//    stroke: #f6bdfa;
+    stroke: $black;
+    animation-delay: 0.5s;
+  }
+}
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.medkodsomverktyg {
+//  font-family: goodlife-sans-condensed, sans-serif;
+  font-family: cantoni-pro, serif;
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translate(20px, -60px);
+  animation: verktyg 2s 2s forwards;
+}
+@keyframes verktyg {
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
 /* Moving line */
 .projectTwo a:hover .diamond #diamond-inner {
-  animation: move 500ms ease-in-out forwards;
+  //animation: move 500ms ease-in-out forwards;
+  //animation: move 1s forwards;
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760px;
 }
 #diamond-inner {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 700;
+//  stroke-dasharray: 900;
+//  stroke-dashoffset: 700;
+  stroke-dasharray: 100 540;
+  stroke-dashoffset: -174;
+  stroke-width: 2px;
   stroke: #797979;
-  stroke-width: 2;
+//  stroke-width: 2;
+  transition: stroke-width 0.5s, stroke-dashoffset 0.5s, stroke-dasharray 0.5s;
 }
 @keyframes move {
   0% { stroke-dashoffset: 700; }
@@ -1132,7 +1262,7 @@ p {
 }
 
 /* Matchmaking item yesno */
-.matchmaking .item.yesno {
+/*.matchmaking .item.yesno {
 	display: block;
 	padding: 1em 1em 3em 1em;
 	text-align: center;
@@ -1155,7 +1285,6 @@ p {
 
 
 		position: absolute;
-//		line-height: 47px;
     line-height: 70px;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -1163,7 +1292,6 @@ p {
 		transition: all 0.3s;
 		font-family: "din-2014-narrow";
 		font-size: 1.2em;
-//		bottom: -27px;
     bottom: -37px;
 		&.ja {
 			left: 16px;
@@ -1174,9 +1302,6 @@ p {
 		&.active-true {
       background-color: $turquioseDark;
       color: $black;
-//			background-color: $greenLight;
-//			border-color: $greenDark;
-//			color: $white;
 		}
 	}
 	&.clickable-true .alternative {
@@ -1199,10 +1324,10 @@ p {
       background-color: $black-gray;
 		}
 	}
-}
+}*/
 
 /* Matchmaking arrow */
-.matchmaking .arrow {
+/*.matchmaking .arrow {
 	display: block;
 	width: 100%;
 	max-width: 300px;
@@ -1222,18 +1347,63 @@ p {
 		left: 2em;
 		transform: rotate(40deg);
 	}
+}*/
+
+.matchmaking .outer {
+//  margin-top: -2em;
 }
+/*.matchmaking .item.yesno {
+  clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 51% 99%, 49% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
+  background-color: $black;
+  color: $white;
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  .matchText {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    padding: 2em;
+    text-align: center;
+  }
+}
+.matchAlternatives {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+.alternative {
+  clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 51% 99%, 49% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
+  background-color: $black;
+  color: $white;
+  max-width: 300px;
+  height: 250px;
+  flex-basis: 48%;
+  text-align: center;
+}
+}*/
 
+/* Matchmaking alternatives */
+/*.matchmaking .item.alternatives {
+  display: flex;
+  justify-content: center;
+}*/
 
-/* Matchmaking item alternatives */
-.matchmaking .item.alternatives {
-	display: flex;
-	justify-content: center;
-  font-size: 1.2em;
+/* Matchmaking item */
+.matchmaking .outer.visible-true .item {
+  margin-bottom: -3.6em;
+}
+.matchmaking .outer.align-left {
+  transform: translateX(-150px);
+}
+.matchmaking .item {
+//  margin-top:-3.2em;
+  display: flex;
+  justify-content: center;
 	.alternative {
+    font-size: 1.2em;
     display: block;
     position: relative;
-		flex-basis: 48%;
 		text-align: center;
     clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 51% 99%, 49% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
     background-color: $black;
@@ -1243,13 +1413,9 @@ p {
 		-moz-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
-		max-width: 300px;
-		margin: 0 0.5em;
-		&.active-true {
-//			background-color: $greenLight;
-//			border-color: $greenDark;
-//			color: $white;
-		}
+		width: 300px;
+    height: 150px;
+		//margin: 0 0.5em;
 	}
 	.inner {
 		padding: 0.5em 0.5em;
@@ -1257,6 +1423,7 @@ p {
 		position: relative;
   	top: 50%;
   	transform: translateY(-50%);
+    z-index: 10;
 		@media(min-width: $mobile) {
 			padding: 1em 1.5em;
 		}
@@ -1273,14 +1440,120 @@ p {
 	&.clickable-false .alternative {
     background-color: transparent;
     color: rgba(35,35,35,0.4);
-		&.active-true {
-      background-color: $black-gray;
-      color: $white;
-		}
-	}
+  }
+  &.clickable-false .alternative.active-true {
+    background-color: $black-gray;
+    color: $white;
+  }
 }
 
+/* Yesno */
+.item.yesno {
+  .yesnoalt {
+    position: absolute;
+    top:0;
+    bottom:0;
+    z-index: 999;
+    &.clickable-true {
+      cursor: pointer;
+    }
+    &.active-true ~ .half-diamond {
+      background-color: $black-gray;
+    }
+    &.ja {
+      left: 0;
+      right: 50%;
+      &:hover {
+        ~ .half-diamond-left {
+          background-color: $black-gray;
+        }
+      }
+      .text {
+        position: absolute;
+        bottom: 2em;
+        right: 1em;
+      }
+    }
+    &.nej {
+      left: 50%;
+      right: 0;
+      &:hover {
+        ~ .half-diamond-right {
+          background-color: $black-gray;
+        }
+      }
+      .text {
+        position: absolute;
+        bottom: 2em;
+        left: 1em;
+      }
+    }
+  }
+  .half-diamond-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background-color: transparent;
+    transition: all 0.5s;
+  }
+  .half-diamond-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    background-color: transparent;
+    transition: all 0.5s;
+  }
+}
+
+.matchmaking .outer.match {
+  .item {
+
+  }
+}
+
+/*.yesnoalt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  .text-wrapper {
+//    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  &:hover {
+    .text-wrapper {
+      background-color: $black-gray;
+    }
+  }
+  &.ja {
+    left: 0;
+    right: 50%;
+/*    background-color: $black;
+    &:hover {
+      background-color: $black-gray;
+    }*//*
+  }
+  &.nej {
+    left: 50%;
+    right: 0;
+/*    background-color: $black;
+    &:hover {
+      background-color: $black-gray;
+    }*//*
+  }
+}*/
+
+
 /* Matchmaking item visibility */
+.matchmaking .match,
 .matchmaking .outer {
 	-webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -1300,7 +1573,23 @@ p {
 }
 
 /* Matchmaking answer */
-.matchmaking .item.answer {
+.matchmaking .match {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.matchmaking .match .answer {
+  background-color: #474e38;
+  background-color: #6B020C;
+  text-align: center;
+  padding: 6em;
+  clip-path: polygon(0% 0%, calc(50% - 150px) 0%, 50% 63px, calc(50% + 150px) 0%, 100% 0%, 100% 100%, 0% 100% );
+  font-size: 1.2em;
+  color: $white;
+  &.alignment-left {
+    clip-path: polygon(0% 0%, 150px 63px, 300px 0%, 100% 0%, 100% 100%, 0% 100% );
+  }
+}
+/*.matchmaking .item.answer {
 	text-align: center;
 	.text {
 		display: block;
@@ -1352,10 +1641,10 @@ p {
 			background-color: $redDark;
 		}
 	}
-}
+}*/
 .matchmaking .redo {
 	display: block;
-	max-width: 570px;
+	max-width: 900px;
 	margin: 0 auto;
 	text-align: right;
 	color: $gray;
