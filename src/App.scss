@@ -88,6 +88,7 @@ $wide: '1280px';
     text-transform: uppercase;
     display: block;
     font-family: "rig-solid-bold-inline-solo", sans-serif;
+    fill: $black;
   }
   .code {
     position: absolute;
@@ -138,6 +139,7 @@ $wide: '1280px';
 .medkodsomverktyg {
 //  font-family: goodlife-sans-condensed, sans-serif;
   font-family: cantoni-pro, serif;
+  fill: $black;
   max-width: 400px;
   margin: 0 auto;
   opacity: 0;

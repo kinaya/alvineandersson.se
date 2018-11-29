@@ -46,7 +46,8 @@
   .webbutvecklare .text {
     text-transform: uppercase;
     display: block;
-    font-family: "rig-solid-bold-inline-solo", sans-serif; }
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    fill: #222222; }
   .webbutvecklare .code {
     position: absolute;
     bottom: 0;
@@ -86,6 +87,7 @@
 
 .medkodsomverktyg {
   font-family: cantoni-pro, serif;
+  fill: #222222;
   max-width: 400px;
   margin: 0 auto;
   opacity: 0;
