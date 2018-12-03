@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import Header from "./Header";
 import HeaderTwo from "./HeaderTwo";
+import HeaderThree from './HeaderThree';
 import Skills from "./Skills";
 import Footer from "./Footer";
 import Services from "./Services";
@@ -89,7 +90,7 @@ render() {
 
         <Route exact path="/" render={() => (
             <div className="docscroller">
-              <HeaderTwo />
+              <HeaderThree />
               <Services />
               <ProjectsContainerTwo />
               <Skills />

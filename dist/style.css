@@ -1,6 +1,114 @@
 /* Colors */
 /* Breakpoints */
 /* Animated intro */
+.header {
+  position: relative; }
+  .header .circle {
+    border: 10px solid purple;
+    max-width: 600px;
+    height: auto; }
+  .header .rectangle {
+    fill: red; }
+
+/*.headercircle {
+  background: radial-gradient(transparent, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  &:before {
+    content: '';
+    background: radial-gradient(transparent, $black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:100;
+    animation: gradient 4s forwards;
+  }
+}
+@keyframes gradient {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}*/
+.headerslogan {
+  padding: 8em 0;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto; }
+
+.webb .text {
+  fill: #F2F2F2;
+  font-family: trade-gothic-next, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.3em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  opacity: 0;
+  animation: webb 0.3s forwards;
+  animation-delay: 2.9s; }
+
+.webb .linetwo,
+.webb .lineone {
+  stroke: #F2F2F2;
+  stroke-width: 0.5px; }
+
+@keyframes webb {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.utvecklare .text {
+  font-family: "rig-solid-bold-inline-solo", sans-serif;
+  text-transform: uppercase;
+  display: block; }
+
+.utvecklare .text-stroke {
+  fill: none;
+  stroke: #72baba;
+  stroke-width: 2.8px;
+  stroke-dashoffset: -100;
+  stroke-dasharray: 100;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  animation: dash 2s ease-in-out forwards; }
+
+.utvecklare .text-stroke-2 {
+  stroke: #F2F2F2;
+  animation-delay: 0.5s; }
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0; } }
+
+.alvine .text {
+  text-transform: uppercase;
+  display: block;
+  font-family: trade-gothic-next, sans-serif;
+  fill: #F2F2F2;
+  letter-spacing: 2.9px;
+  font-size: 0.6em; }
+
+.medkod .text {
+  font-family: fairwater-script, sans-serif;
+  font-size: 0.54em;
+  fill: #F2F2F2;
+  animation: medkod 2s forwards;
+  animation-delay: 3s;
+  opacity: 0; }
+
+@keyframes medkod {
+  100% {
+    opacity: 1; } }
+
 .introslogan {
   padding: 8em 0;
   position: relative;
@@ -47,7 +155,7 @@
     text-transform: uppercase;
     display: block;
     font-family: "rig-solid-bold-inline-solo", sans-serif;
-    fill: #222222; }
+    fill: #F2F2F2; }
   .webbutvecklare .code {
     position: absolute;
     bottom: 0;
@@ -78,7 +186,7 @@
     stroke-linejoin: round;
     animation: dash 2s ease-in-out forwards; }
   .alvineandersson .text-stroke-2 {
-    stroke: #222222;
+    stroke: #F2F2F2;
     animation-delay: 0.5s; }
 
 @keyframes dash {
@@ -87,7 +195,7 @@
 
 .medkodsomverktyg {
   font-family: cantoni-pro, serif;
-  fill: #222222;
+  fill: #F2F2F2;
   max-width: 400px;
   margin: 0 auto;
   opacity: 0;
@@ -380,9 +488,9 @@ p {
 
 .container.headertwo,
 .container.header {
-  background-color: #a5d3d3;
-  background-image: url(/bg_raster.png);
-  background-size: cover; }
+  background-image: url(/aurora.jpg);
+  background-size: cover;
+  height: 100vh; }
 
 .container.intro {
   background-color: #C38D9E;
@@ -390,9 +498,6 @@ p {
   background-repeat: no-repeat;
   background-position: calc(50% - 550px) 104%;
   background-size: 100px auto; }
-
-.container.services {
-  background-color: #a5d3d3; }
 
 .container.projectsTwo {
   background-color: #F2F2F2;
@@ -739,14 +844,28 @@ p {
     justify-content: space-between; } }
 
 .service {
+  clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 49% 99%, 51% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
+  background-color: #a5d3d3;
+  background-color: darkslategray;
+  background-color: #38474e;
+  color: #F2F2F2;
   text-align: center;
   max-width: 500px;
-  margin: 0 auto 1em auto; }
+  margin: 0 auto 1em auto;
+  padding: 2em 0 4em 0; }
   @media (min-width: 736px) {
     .service {
       flex-basis: 47%;
       flex-basis: 30%;
       margin: 4% 0; } }
+
+.heart {
+  width: 50px;
+  stroke: transparent;
+  fill: #F2F2F2; }
+
+p {
+  padding: 1em; }
 
 .service h3 {
   margin: 0 0 0.2em 0;

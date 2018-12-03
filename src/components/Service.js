@@ -24,7 +24,11 @@ class Service extends React.Component {
       <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
       {({isVisible}) =>
         <div className={isVisible ? `service ${id} visible` : `service ${id} invisible`}>
-          <h3><span>{headline}</span></h3>
+
+<svg className="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/>
+</svg>
+
           <p>{text}</p>
         </div>
       }

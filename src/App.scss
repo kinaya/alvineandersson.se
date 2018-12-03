@@ -33,6 +33,134 @@ $wide: '1280px';
 
 
 /* Animated intro */
+.header {
+  position: relative;
+  .circle {
+    border:10px solid purple;
+    max-width:600px;
+    height: auto;
+  }
+  .rectangle {
+    fill: red;
+  }
+}
+/*.headercircle {
+  background: radial-gradient(transparent, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  &:before {
+    content: '';
+    background: radial-gradient(transparent, $black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:100;
+    animation: gradient 4s forwards;
+  }
+}
+@keyframes gradient {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}*/
+
+
+.headerslogan {
+  padding: 8em 0;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.webb {
+  .text {
+    fill: $white;
+    font-family: trade-gothic-next, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.3em;
+    letter-spacing: 1px;
+    font-weight: 700;
+    opacity: 0;
+    animation: webb 0.3s forwards;
+    animation-delay: 2.9s;
+  }
+  .linetwo,
+  .lineone {
+    stroke: $white;
+    stroke-width: 0.5px;
+  }
+}
+@keyframes webb {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.utvecklare {
+  .text {
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    text-transform: uppercase;
+    display: block;
+  }
+  .text-stroke {
+    fill: none;
+    stroke: #72baba;
+    stroke-width: 2.8px;
+    stroke-dashoffset: -100;
+    stroke-dasharray: 100;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    animation: dash 2s ease-in-out forwards;
+  }
+  .text-stroke-2 {
+    stroke: $white;
+    animation-delay: 0.5s;
+  }
+}
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.alvine {
+  .text {
+    text-transform: uppercase;
+    display: block;
+    font-family: trade-gothic-next, sans-serif;
+    fill: $white;
+    letter-spacing: 2.9px;
+    font-size: 0.6em;
+  }
+}
+.medkod {
+  .text {
+    font-family: fairwater-script, sans-serif;
+    font-size: 0.54em;
+    fill: $white;
+    animation: medkod 2s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+  }
+}
+@keyframes medkod {
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .introslogan {
   padding: 8em 0;
   position: relative;
@@ -88,7 +216,7 @@ $wide: '1280px';
     text-transform: uppercase;
     display: block;
     font-family: "rig-solid-bold-inline-solo", sans-serif;
-    fill: $black;
+    fill: $white;
   }
   .code {
     position: absolute;
@@ -127,7 +255,7 @@ $wide: '1280px';
   }
   .text-stroke-2 {
 //    stroke: #f6bdfa;
-    stroke: $black;
+    stroke: $white;
     animation-delay: 0.5s;
   }
 }
@@ -139,7 +267,7 @@ $wide: '1280px';
 .medkodsomverktyg {
 //  font-family: goodlife-sans-condensed, sans-serif;
   font-family: cantoni-pro, serif;
-  fill: $black;
+  fill: $white;
   max-width: 400px;
   margin: 0 auto;
   opacity: 0;
@@ -506,9 +634,11 @@ p {
 .container.header {
 //	background-color: $purple;
 //  background-color: $white;
-  background-color: $turquoise;
-	background-image: url('../dist/bg_raster.png');
+//  background-color: $turquoise;
+//	background-image: url('../dist/bg_raster.png');
+  background-image: url(../dist/aurora.jpg);
   background-size: cover;
+  height: 100vh;
 }
 .container.intro {
 	background-color: $purple;
@@ -519,7 +649,7 @@ p {
 }
 .container.services {
 //	background-color: $yellow;
-  background-color:$turquoise;
+//  background-color:$turquoise;
 //	background-image: url('../dist/bg_services.png');
 }
 .container.projectsTwo {
@@ -959,19 +1089,30 @@ p {
 	}
 }
 .service {
-//  clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 49% 99%, 51% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
-//  background-color: $white;
-//  padding: 6em 2em;
-
+  clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 49% 99%, 51% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
+  background-color: $turquoise;
+  background-color: darkslategray;
+  background-color: $black-gray;
+//  background-color: indianred;
+  color: $white;
 	text-align: center;
 	max-width: 500px;
 	margin: 0 auto 1em auto;
+  padding: 2em 0 4em 0;
 	@media(min-width: $tablet) {
 		flex-basis: 47%;
     flex-basis: 30%;
 		//margin-bottom: 3%;
 		margin: 4% 0;
 	}
+}
+.heart {
+  width:50px;
+  stroke: transparent;
+  fill: $white;
+}
+p {
+  padding: 1em;
 }
 .service h3 {
 	margin: 0 0 0.2em 0;
