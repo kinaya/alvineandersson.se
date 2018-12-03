@@ -23,6 +23,9 @@ $white: #F2F2F2;
 $purpleDark: #61464f;
 $purpleInactive: #9c707e;
 
+$red: #82363A;
+$red: #FF7E57;
+
 $black-gray: #38474e;
 
 /* Breakpoints */
@@ -362,6 +365,7 @@ $wide: '1280px';
   right: 0;
   width: 80%;
   height: 80%;
+  fill: $white;
 }
 
 
@@ -710,11 +714,12 @@ p {
 		padding: 2em;
 	}
 	.inner {
-		margin-top: 6em;
+    max-width: 780px;
 	}
 	// Heading
 	h1 {
-		margin: 3em 0 1.5em;
+		margin: 2em 0 0.5em 0;
+    max-width: 780px;
 //    text-align: center;
 		@media(min-width: $tablet) {
 			font-size: 4.4em;
@@ -726,7 +731,7 @@ p {
 	}
   .image {
     max-width: 940px;
-    margin: 0 auto;
+    margin: 0 auto 3em auto;
     overflow: hidden;
     img {
 //      width: 100%;
@@ -773,9 +778,9 @@ p {
 		}
 	}
 	// Description
-	.project-description {
-		margin: 4em 0 2em;
-	}
+//	.project-description {
+//		margin: 4em 0 1em;
+//	}
 	// Info
 	.info > p {
 		margin: 0 0 1em 0;
@@ -908,36 +913,26 @@ p {
 
 /* Logo */
 .logo {
-  padding: 2em;
-	position: absolute;
 	text-decoration: none;
 	color: $black;
-	font-family: 'rig-solid-bold-halftone';
+  font-family: "rig-solid-bold-inline-solo", sans-serif;
 	font-size: 2em;
 	padding: 0;
 	transition: all 300ms;
-	background-color: $white;
+  background-color: $black;
+//  mix-blend-mode: screen;
+//  border: 2px solid $white;
+  color: $white;
 	border-radius: 25px;
 	display: flex;
-	padding: 0.2em 0.4em;
+	padding: 0.3em 0.45em 0.2em;
 	line-height: 1;
 	position: fixed;
 	z-index: 999;
-	.first-letter {
-		transition: all 300ms ease-in-out;
-		display: inline-block;
-		overflow: hidden;
-	}
-	.letters {
-		transition: all 300ms ease-in-out;
-		display: inline-block;
-		max-width: 0px;
-		overflow: hidden;
-	}
+  transition: all 0.3s;
 	&:hover, &:active, &:focus {
-		.letters {
-			max-width: 200px;
-		}
+    background-color: $red;
+//    border: 2px solid green;
 	}
 }
 .header .logo {
@@ -1090,9 +1085,7 @@ p {
 }
 .service {
   clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 49% 99%, 51% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
-  background-color: $turquoise;
-  background-color: darkslategray;
-  background-color: $black-gray;
+  background-color: $red;
 //  background-color: indianred;
   color: $white;
 	text-align: center;
@@ -1105,15 +1098,16 @@ p {
 		//margin-bottom: 3%;
 		margin: 4% 0;
 	}
+  p {
+    padding: 1em;
+  }
 }
 .heart {
   width:50px;
   stroke: transparent;
   fill: $white;
 }
-p {
-  padding: 1em;
-}
+
 .service h3 {
 	margin: 0 0 0.2em 0;
   font-size: 2em;
@@ -1252,6 +1246,7 @@ p {
 	h3 {
 		margin: 0 0 0.1em;
 		font-size: 1.8em;
+    font-size: 1.6em;
 		line-height:1;
 		width: 100%;
     font-family: open-sans;
@@ -1265,18 +1260,35 @@ p {
     background-color: $white;
     width: 240px;
     height: 200px;
-		font-family: "rig-solid-bold-inline-solo";
+//		font-family: "rig-solid-bold-inline-solo";
+    font-family: "trade-gothic-next", sans-serif;
+    text-transform: uppercase;
     line-height: 1.1;
     margin: 0 auto;
-    span {
+    > span {
       display: block;
       max-width: 200px;
       margin: 0 auto;
       position: relative;
       transform: translateY(-50%);
-      top: 50%;
+      top: 48%;
+      > span {
+        display: block;
+        font-size: 0.6em;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 0.2em;
+      }
     }
 	}
+  .what {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+  }
   .image {
   //  width: 150px;
     margin: 0 auto;

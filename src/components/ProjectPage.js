@@ -142,15 +142,14 @@ class ProjectPage extends React.Component {
     <div className="container">
 
     <Link className="logo" to="/" onClick={() => navigate('left')}>
-      <span className="first-letter">A</span>
-      <span className="letters">lvine</span>
+      <span>A</span>
     </Link>
 
     <div className="inner">
 
 
       <div className="project-heading">
-        <h1 className="project-title" aria-label={project.info} dangerouslySetInnerHTML={{ __html: title }}></h1>
+        <h1 className="project-title" aria-label={project.title} dangerouslySetInnerHTML={{ __html: title }}></h1>
       </div>
 
     </div>

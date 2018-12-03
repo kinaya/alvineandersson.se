@@ -34,7 +34,6 @@ class ProjectTwo extends React.Component {
                    width="3.33333in" height="2.69444in"
                    viewBox="0 0 240 194" class="diamond">
 
-                <defs>
 
                 <path id="diamond-outer" class="diamond-outer"
 
@@ -66,14 +65,7 @@ class ProjectTwo extends React.Component {
                            98.00,7.31 116.00,0.53 116.00,0.53
                            123.64,-0.65 129.07,2.43 136.00,5.20 Z" />
 
-                           <linearGradient id="gradient" gradientUnits="userSpaceOnUse">
-                             <stop class="stop1" offset="0%"/>
-                             <stop class="stop2" offset="100%"/>
-                           </linearGradient>
 
-                  </defs>
-
-                  <use x="0" y="0" xlinkHref="#diamond-outer" fill="url('#gradient')"  />
 
                            <path id="diamond-inner"
                                   fill="none"
@@ -110,9 +102,7 @@ class ProjectTwo extends React.Component {
 
 
 
-
-
-              <h3 className="title"><span>{project.title}</span></h3>
+              <h3 className="title"><span><span>{project.what}</span>{project.title}</span></h3>
           </Link>
         }
         </VisibilitySensor>

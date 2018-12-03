@@ -274,7 +274,8 @@
   left: 0;
   right: 0;
   width: 80%;
-  height: 80%; }
+  height: 80%;
+  fill: #F2F2F2; }
 
 @keyframes sliding-in-from-right {
   0% {
@@ -545,9 +546,10 @@ p {
   .projectPage .container {
     padding: 2em; }
   .projectPage .inner {
-    margin-top: 6em; }
+    max-width: 780px; }
   .projectPage h1 {
-    margin: 3em 0 1.5em; }
+    margin: 2em 0 0.5em 0;
+    max-width: 780px; }
     @media (min-width: 736px) {
       .projectPage h1 {
         font-size: 4.4em; } }
@@ -555,7 +557,7 @@ p {
     font-size: 1.6em; }
   .projectPage .image {
     max-width: 940px;
-    margin: 0 auto;
+    margin: 0 auto 3em auto;
     overflow: hidden; }
     .projectPage .image img {
       width: calc(100% + 100px);
@@ -590,8 +592,6 @@ p {
       width: 100%;
       height: 100%;
       display: block; }
-  .projectPage .project-description {
-    margin: 4em 0 2em; }
   .projectPage .info > p {
     margin: 0 0 1em 0; }
   .projectPage .info > p > span:first-child {
@@ -682,32 +682,23 @@ p {
 
 /* Logo */
 .logo {
-  padding: 2em;
-  position: absolute;
   text-decoration: none;
   color: #222222;
-  font-family: 'rig-solid-bold-halftone';
+  font-family: "rig-solid-bold-inline-solo", sans-serif;
   font-size: 2em;
   padding: 0;
   transition: all 300ms;
-  background-color: #F2F2F2;
+  background-color: #222222;
+  color: #F2F2F2;
   border-radius: 25px;
   display: flex;
-  padding: 0.2em 0.4em;
+  padding: 0.3em 0.45em 0.2em;
   line-height: 1;
   position: fixed;
-  z-index: 999; }
-  .logo .first-letter {
-    transition: all 300ms ease-in-out;
-    display: inline-block;
-    overflow: hidden; }
-  .logo .letters {
-    transition: all 300ms ease-in-out;
-    display: inline-block;
-    max-width: 0px;
-    overflow: hidden; }
-  .logo:hover .letters, .logo:active .letters, .logo:focus .letters {
-    max-width: 200px; }
+  z-index: 999;
+  transition: all 0.3s; }
+  .logo:hover, .logo:active, .logo:focus {
+    background-color: #FF7E57; }
 
 .header .logo {
   margin: 1em 0 0 1em; }
@@ -845,9 +836,7 @@ p {
 
 .service {
   clip-path: polygon(49% 1%, 51% 1%, 99% 24%, 100% 26%, 100% 74%, 99% 76%, 49% 99%, 51% 99%, 1% 76%, 0% 74%, 0% 26%, 1% 24%);
-  background-color: #a5d3d3;
-  background-color: darkslategray;
-  background-color: #38474e;
+  background-color: #FF7E57;
   color: #F2F2F2;
   text-align: center;
   max-width: 500px;
@@ -858,14 +847,13 @@ p {
       flex-basis: 47%;
       flex-basis: 30%;
       margin: 4% 0; } }
+  .service p {
+    padding: 1em; }
 
 .heart {
   width: 50px;
   stroke: transparent;
   fill: #F2F2F2; }
-
-p {
-  padding: 1em; }
 
 .service h3 {
   margin: 0 0 0.2em 0;
@@ -973,6 +961,7 @@ p {
 .projectTwo h3 {
   margin: 0 0 0.1em;
   font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 1;
   width: 100%;
   font-family: open-sans;
@@ -986,16 +975,31 @@ p {
   background-color: #F2F2F2;
   width: 240px;
   height: 200px;
-  font-family: "rig-solid-bold-inline-solo";
+  font-family: "trade-gothic-next", sans-serif;
+  text-transform: uppercase;
   line-height: 1.1;
   margin: 0 auto; }
-  .projectTwo h3 span {
+  .projectTwo h3 > span {
     display: block;
     max-width: 200px;
     margin: 0 auto;
     position: relative;
     transform: translateY(-50%);
-    top: 50%; }
+    top: 48%; }
+    .projectTwo h3 > span > span {
+      display: block;
+      font-size: 0.6em;
+      letter-spacing: 1px;
+      font-weight: 400;
+      margin-bottom: 0.2em; }
+
+.projectTwo .what {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  bottom: 0; }
 
 .projectTwo .image {
   margin: 0 auto; }

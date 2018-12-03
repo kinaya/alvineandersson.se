@@ -20,8 +20,7 @@ const HeaderThree = ({}) => {
     <div className="headercircle">
 
       <Link className="logo" to="/" onClick={() => navigate('left')}>
-        <span className="first-letter">A</span>
-        <span className="letters">lvine</span>
+        <span>A</span>
       </Link>
 
 
