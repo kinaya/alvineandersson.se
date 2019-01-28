@@ -40,7 +40,7 @@
       {
         "id": "nej",
         "text": "Nej",
-        "link": "answernomatch",
+        "link": "no-match",
         "active": false,
         "alignment": "right"
       }
@@ -64,7 +64,7 @@
       {
         "id": "nej",
         "text": "Nej",
-        "link": "answernomatch",
+        "link": "no-match",
         "active": false,
         "alignment": "right"
       }
@@ -87,7 +87,7 @@
       {
         "id": "alibi",
         "text": "Alla utvecklare på vår byrå är män. Det ser inte bra ut, vi måste anställa någon annan!",
-        "link": "answernomatch",
+        "link": "no-match",
         "active": false,
         "alignment": "right"
       }
@@ -103,14 +103,14 @@
       {
         "id": "nolltolerans",
         "text": "Vår verksamhet bidrar till att göra världen lite bättre",
-        "link": "answermatch",
+        "link": "no-match",
         "active": false,
         "alignment": "left"
       },
       {
         "id": "alibi",
         "text": "Vi har verksamhet inom vapenindustri och/eller gränsbevakning",
-        "link": "answernomatch",
+        "link": "match",
         "active": false,
         "alignment": "right"
       }
@@ -126,21 +126,21 @@
       {
         "id": "pengar",
         "text": "Vi har som främsta mål att tjäna sjukt mycket pengar!",
-        "link": "answernomatch",
+        "link": "no-match",
         "active": false,
         "alignment": "left"
       },
       {
         "id": "braverksamhet",
         "text": "Vår verksamhet som är bra för välrden och våra anställda",
-        "link": "answermatch",
+        "link": "match",
         "active": false,
         "alignment": "right"
       }
     ]
   },
   {
-    "id": "answermatch",
+    "id": "match",
     "type": "answer",
     "visible": false,
     "alignment": "center",
@@ -148,7 +148,7 @@
     "text": "Det verkar som att vi skulle passa bra ihop! Proin at nunc arcu. Proin varius egestas bibendum. Aliquam maximus purus vel erat faucibus, ac scelerisque risus mattis. Aliquam mauris lacus, varius a ligula ac, aliquet rhoncus urna"
   },
   {
-    "id": "answernomatch",
+    "id": "no-match",
     "type": "answer",
     "visible": false,
     "alignment": "center",

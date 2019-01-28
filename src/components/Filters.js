@@ -13,7 +13,7 @@ const Filters = ({ projects, currentFilter, filterProjects }) => {
     return(
       <div className="filter">
         {filters.map((filterItem, i) => { return (
-          <span className={`${currentFilter.includes(filterItem) ? 'active' : 'unactive'}`} onClick={() => filterProjects(filterItem)} key={i}>{filterItem}</span>
+          <span className={`select ${currentFilter.includes(filterItem) ? 'active' : 'unactive'}`} onClick={() => filterProjects(filterItem)} key={i}>{filterItem}</span>
         )})}
       </div>
     );

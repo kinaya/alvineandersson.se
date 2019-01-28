@@ -1,0 +1,47 @@
+.footer {
+  background-image: url('../dist/footer_image.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 150%;
+  background-position: -250px 0;
+
+  @media(min-width: $mobile) {
+    background-position: -310px 0;
+  }
+
+  @media(min-width: $desktop) {
+    background-size: cover;
+    background-position: 0 0;
+    padding: 10rem 2rem;
+  }
+
+  .contact {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    color: $white;
+    @media(min-width: $desktop) {
+      margin: 0 0 0 auto;
+      text-align: left;
+    }
+  }
+
+	a {
+		display: block;
+		color: $white;
+		text-decoration: none;
+		margin: 0.5em 0;
+		span {
+			border-bottom: 1px solid $white;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		&:hover, &:active, &:focus {
+			color: $blue;
+			span {
+				border-bottom: 1px solid $blue;
+			}
+		}
+	}
+}

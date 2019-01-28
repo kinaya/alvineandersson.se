@@ -137,48 +137,66 @@ class ProjectPage extends React.Component {
 //      <div className="parallax" ><div className="parallaxinner" style={style}></div></div>
 //       <p className="project-name" aria-label={project.title} dangerouslySetInnerHTML={{__html: info}}></p>
 
+/*{previousLink &&
+  <div className="previous project">
+    <div className="image"><img src={`${previousImageUrl}`} /></div>
+    <div className="info">
+      <div className="what"><span>Hemsida</span></div>
+      <Link onClick={() => navigate('left')} to={previousLink} className="title">{previousTitle}</Link>
+      <div className="tags">Mars 2017</div>
+    </div>
+  </div>
+}*/
+
+
   return (
     <div className="projectPage" >
-    <div className="container">
+      <div className="container">
 
-    <Link className="logo" to="/" onClick={() => navigate('left')}>
-      <span>A</span>
-    </Link>
+      <Link className="logo" to="/" onClick={() => navigate('left')}>
+        <span>A</span>
+      </Link>
 
-    <div className="inner">
+      <div className="inner">
 
+        <div className="project-heading">
+          <h1 className="project-title" aria-label={project.title} dangerouslySetInnerHTML={{ __html: title }}></h1>
+        </div>
 
-      <div className="project-heading">
-        <h1 className="project-title" aria-label={project.title} dangerouslySetInnerHTML={{ __html: title }}></h1>
+        <p className="description">{project.info}</p>
+
       </div>
 
-    </div>
+      <div className="featuredImage"><img src={project.image.url} /></div>
 
-    <div className="image"><img src={project.image.url} /></div>
+      <div className="inner">
+        <p className="project-description">{project.description}</p>
 
+        <div className="stats">
+          <p><span>Datum:</span> {project.date}</p>
+          <p><span>Tekniker:</span> {tags}</p>
+          {project.designer ? <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p> : ''}
+          {project.github ? <p><span>Github:</span> <a href={project.github}>{project.github}</a></p> : ''}
+          {project.link.url ? <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p> : ''}
+        </div>
 
-
-    <div className="inner">
-      <p className="project-description">{project.description}</p>
-
-      <div className="info">
-        <p><span>Datum:</span> {project.date}</p>
-        <p><span>Tekniker:</span> {tags}</p>
-        {project.designer ? <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p> : ''}
-        {project.github ? <p><span>Github:</span> <a href={project.github}>{project.github}</a></p> : ''}
-        {project.link ? <p><span>Url:</span> <a href={project.link}>{project.link}</a></p> : ''}
       </div>
-
-
-
-
 
       <div className={`navigation ${navigationClass}`}>
-        {previousLink ? <Link style={{backgroundImage: `url(${previousImageUrl})`}} onClick={() => navigate('left')} className="previous" to={previousLink}><span className="text"><span className="inner"><span>Föregående</span>{previousTitle}</span></span></Link> : ''}
-        {nextLink ? <Link style={{backgroundImage: `url(${nextImageUrl})`}} onClick={() => navigate('right')} className="next" to={nextLink}><span className="text"><span className="inner"><span>Nästa</span>{nextTitle}</span></span></Link> : ''}
+        <div className="inner">
+        {nextLink &&
+          <div className="next project">
+            <div className="image"><img src={`${nextImageUrl}`} /></div>
+            <div className="info">
+              <div className="what"><span>Hemsida</span></div>
+              <Link onClick={() => navigate('right')} to={nextLink} className="title">{nextTitle}</Link>
+              <div className="tags">Mars 2017</div>
+            </div>
+          </div>
+        }
+        </div>
       </div>
 
-    </div>
     </div>
     </div>
   );

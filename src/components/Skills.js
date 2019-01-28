@@ -7,27 +7,30 @@ const Skills = ({}) => {
     <div className="container skills">
 			<div className="inner">
 
-        <p><span className="label">Webteknologier och språk:</span> HTML5, CSS3 (+SASS), PHP, Node.js</p>
+        <h2>Kunskaper</h2>
 
-        <p><span className="label">Scripts/UI:</span> JavaScript, JQuery, Bootstrap, Underscore, Materialize</p>
+        <div className="stacks">
+          <div className="stack">
+            <h4>#1 MERN</h4>
+            <p>Applikationer med <strong>React/Redux</strong> som frontend, backend API via <strong>Express</strong> byggt på <strong>node.js</strong> server och <strong>MongoDB</strong> databas. Routing, internalisering osv.</p>
+          </div>
 
-        <p><span className="label">Frameworks:</span> React (+ Redux och next.js för SSR), Laravel, Symfony, Express.js</p>
+          <div className="stack">
+            <h4>#2 CMS</h4>
+            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Konfiguration, temautveckling och custom-made plugins. Standard eller med fristående frontend via REST Api</p>
+          </div>
+        </div>
 
-        <p><span className="label">CMSs:</span> Drupal och Wordpress</p>
-
-        <p><span className="label">Databaser och bestående data:</span> MySQL, MariaDB, PostgreSQL, MongoDB, Memcached, Redis</p>
-
-        <p><span className="label">Testning och debug tools:</span> PHPUnit, Jest + Mocha, Mozilla Firebug, Chrome developer tools</p>
-
-        <p><span className="label">RESTFul API:</span> Custom i node.js, Wordpress eller Drupal som headless</p>
-
-        <p><span className="label">Package managers och andra verktyg:</span> git, npm, gulp, webpack, composer</p>
-
-        <p><span className="label">Autenticering och behörigheter</span> OAuth, Basic Authentication, Token Authentication, JWT</p>
-
-        <p><span className="label">Server, PaaS and distribuering:</span> Apache, Heroku, Docker</p>
-
-        <p>Grundläggande koll på Java, Python, Angular, Vue, gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, ofta bollplank för koncept och ux i projekt, van projektledare och en stjärna på att googla.</p>
+        <div className="list">
+          <h4>Namedropping</h4>
+          <p><span className="label">Språk/Frameworks:</span> HTML, Css/Sass, PHP, JavaScript, JQuery, React/Redux, Node.js, Express.js</p>
+          <p><span className="label">CMS:</span> Drupal, Wordpress, SquareSpace</p>
+          <p><span className="label">Databaser:</span> MySQL, MariaDB, MongoDB</p>
+          <p><span className="label">Testning:</span> PHPUnit, Jest, Mocha</p>
+          <p><span className="label">Tekniker:</span> Service Workers, OAuth, JWT, Bootstrap, Materialize, SVG animation</p>
+          <p><span className="label">Utveckling och distribuering:</span> git, webpack, Apache/Cpanel, Heroku, Docker</p>
+          <p>Grundläggande koll på Java/Android utveckling, samt Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, ofta bollplank för koncept och ux i projekt, van projektledare och en stjärna på att googla.</p>
+        </div>
 
 			</div>
     </div>

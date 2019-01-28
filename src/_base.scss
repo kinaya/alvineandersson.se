@@ -1,0 +1,313 @@
+/* Colors */
+//$black: #222222;
+$black: #333333;
+$white: #fefefe;
+$greenLight: #28a745;
+$greenDark: #145322;
+$redLight: #dc3545;
+$redDark: #6e1a22;
+$grayInactive: #999999;
+$gray: #808080;
+$grayBackground: #DCDCDC;
+$graySubheading: #383838;
+$orangered: #E27D60;
+$blue: #7fc8bc;
+$yellow: #E8A87C;
+$purple: #C38D9E;
+$turquoise: #a5d3d3;
+$turquioseDark: #83c2c2;
+$turquioseHover: #689b9b;
+
+$white: #F2F2F2;
+$purpleDark: #61464f;
+$purpleInactive: #9c707e;
+
+$red: #82363A;
+$red: #FF7E57;
+
+$black-gray: #38474e;
+
+$blue-dark: #72baba;
+
+$red: #d3a5a5;
+$red-dark: #c28383;
+
+$green: #a5d3a5;
+$green-dark: #83c283;
+
+$green: #d3d3a5;
+$green-dark: #bdbd94;
+
+
+$gray-1: #eeeeee;
+$gray-2: #a3a3a3;
+$gray-3: #d6d6d6;
+$gray-4: #7a7a7a;
+
+
+/* Breakpoints */
+$mobile: '480px';
+$tablet: '736px';
+$desktop: '980px';
+$wide: '1280px';
+
+
+
+/* Layout */
+@keyframes sliding-in-from-right {
+  0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+  50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 10vw 100vh, 0vw 0vh);}
+  100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+}
+@keyframes sliding-in-from-left {
+  0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+  50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 90vw 100vh, 0vw 100vh, 0vw 0vh);}
+  100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
+}
+
+.slide {
+	position: relative;
+	z-index: 1;
+}
+.slide-enter, .slide-exit {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.right .slide-enter {
+	z-index: 999;
+	transform: translate(100%, 0%);
+	position: fixed;
+}
+.right .slide-enter-active {
+	transform: translate(0%,0%);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+	transition: transform 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+	animation-name: sliding-in-from-right;
+	animation-duration: 750ms;
+}
+.right .slide-enter-done {
+	position: relative;
+	z-index: 999;
+}
+.right .slide-exit {
+//	z-index: 1;
+//	transform: translate(0%,0%);
+}
+.right .slide-exit-active {
+//	z-index: 1;
+//	transform: translate(-100%,0%);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+}
+.left .slide-enter {
+	z-index: 999;
+	transform: translate(-100%, 0%);
+}
+.left .slide-enter-active {
+	transform: translate(0%,0%);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+	transition: transform 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+
+  position: fixed;
+  animation-name: sliding-in-from-left;
+  animation-duration: 750ms;
+
+}
+/*.animate.left .slide-enter-active {
+  position: fixed;
+  animation-name: sliding-in-from-left;
+  animation-duration: 750ms;
+}
+.dont-animate.left .slide-enter-active {
+  position: absolute;
+  animation: none;
+}*/
+
+.left .slide-enter-done {
+	position: relative;
+	z-index: 999;
+}
+.left .slide-exit {
+//  z-index: 1;
+//	z-index: 1;
+//	transform: translate(0%,0%);
+}
+.left .slide-exit-active {
+//	z-index: 1;
+//	transform: translate(100%,0%);
+//	transition: transform 1000ms;
+//	transition-timing-function: cubic-bezier(1,0,.23,1);
+//	transition: transform 500ms;
+//	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
+}
+
+// Heading
+.project-heading span {
+	display: inline-block;
+}
+.project-heading span.word:after {
+	content: "\00a0";
+}
+.right .slide-enter .project-heading span {
+	transform: translate(500px,0);
+}
+.right .slide-enter-active .project-heading span {
+	transform: translate(0,0);
+}
+// Image
+.right .slide-enter .parallax .parallaxinner {
+	background-position: 100px 0;
+}
+.right .slide-enter-active .parallax .parallaxinner {
+	background-position: 0 0;
+	transition: all 800ms ease-in-out 400ms;
+}
+
+
+// Listanimate
+.listanimate-enter {
+	opacity: 0;
+}
+.listanimate-enter-active {
+	opacity: 1;
+	transition: all 500ms;
+}
+.listanimate-exit {
+	opacity: 1;
+	max-height: 1000px;
+	overflow: hidden;
+}
+.listanimate-exit-active {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 500ms;
+}
+
+
+
+
+
+
+
+/* 100& height effect */
+html, body {
+	height: 100%;
+}
+body {
+	overflow-y:scroll !important;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "open-sans";
+	line-height: 1.4;
+	color: $black;
+}
+
+h1 {
+	font-family: 'din-2014-narrow';
+	font-family: 'cheap-pine', sans-serif;
+	font-family: 'rig-solid-bold-fill', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.1;
+	margin: 0;
+	@media(min-width: $mobile) {
+		font-size: 2.5rem;
+	}
+}
+
+h2 {
+	font-family: "din-2014-narrow";
+	font-family: 'cheap-pine', sans-serif;
+	font-family: 'rig-solid-bold-fill', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 1.1;
+	margin-top: 0;
+	@media(min-width: $tablet) {
+		font-size: 4rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+h3 {
+	font-family: "din-2014-narrow";
+	font-family: "cheap-pine", sans-serif;
+	font-family: 'rig-solid-bold-inline-solo', sans-serif;
+	font-family: "rig-solid-bold-halftone", sans-serif;
+	color: $black;
+	font-weight: 700;
+	font-size: 1.2rem;
+	line-height: 1.1;
+	@media(min-width: $tablet) {
+		font-size: 3rem;
+	}
+}
+
+p {
+	font-size: 1.2rem;
+  @media(min-width:$tablet) {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Containers */
+.container {
+  padding: 3rem 1rem;
+	@media(min-width: $mobile) {
+    padding: 6rem 2rem 6rem 2rem;
+	}
+  .inner {
+    max-width: 940px;
+  	margin: 0 auto;
+  }
+}
+
+.container.header {
+  background-image: url(../dist/aurora.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+}
+
+.container.projects {
+	background-color: $white;
+	background-image: url('../dist/bg_raster.png');
+  background-size: 100%;
+  background-repeat: repeat-y;
+  .inner {
+    max-width: 740px;
+  }
+}
+
+.container.skills {
+  background-color: $turquoise;
+	background-image: url('../dist/bg_skills.png');
+	color: $black;
+}
+
+.container.matchmaking {
+	background-color: $white;
+	background-image: url('../dist/bg_raster.png');
+  background-size: cover;
+	padding-top: 3rem;
+	@media(min-width: $mobile) {
+		padding-top: 5rem;
+	}
+	@media(min-width: $tablet) {
+		padding-top: 6rem;
+	}
+}

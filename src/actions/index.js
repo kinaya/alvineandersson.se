@@ -13,6 +13,8 @@ export function navigate(direction) {
 //  console.log('Is this run?');
   // If scrolling on the project page navigated to, the scroll will be 0 on start page
   // If not, it will be what it was....
+  console.log('Test');
+  console.log(direction);
   setTimeout(function(){ window.scrollTo(0,0) }, 500);
 
   return function(dispatch) {
