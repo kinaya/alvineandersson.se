@@ -175,9 +175,9 @@ class ProjectPage extends React.Component {
         <div className="stats">
           <p><span>Datum:</span> {project.date}</p>
           <p><span>Tekniker:</span> {tags}</p>
-          {project.designer ? <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p> : ''}
-          {project.github ? <p><span>Github:</span> <a href={project.github}>{project.github}</a></p> : ''}
-          {project.link.url ? <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p> : ''}
+          {project.designer && <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p>}
+          {project.github && <p><span>Github:</span> <a href={project.github}>{project.github}</a></p>}
+          {project.link && project.link.url && <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p>}
         </div>
 
       </div>

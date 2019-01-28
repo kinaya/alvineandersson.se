@@ -10,8 +10,8 @@
         "name": "pablodigtallvar.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
-        "alt": "Skärmdump av startsidan för pablodigtallvar.se"
+        "url": "http://alv.hemsida.eu/pablodigtallvar_list.jpg",
+        "alt": "Liten bild för pablodigtallvar.se"
       },
       "date": "Sep 2018",
       "tags": [ "Drupal" ],
@@ -31,10 +31,12 @@
       "what":"Webbapp",
       "info": "Hur känns din mensvärk? Huggande, pirrigt eller hjärtattack?",
       "description": "Quiz byggt i React.js med frågor om ens mens och mensvärk. Quizet består av olika typer av frågor såsom enkelval, flerval, slider och ja-eller-nej påståenden. I slutet får en en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt) samt ett mensvärksdjur som en kan dela på sociala medier. Svar skickas via RESTful API och sparas i ett backend byggt med Drupal 8. Lanseringsveckan gjorde över 10.000 personer testet.",
-      "github": "https://github.com/kinaya",
-      "link": "https://test.pablodigtallvar.se",
+      "link": {
+        "url": "https://test.pablodigtallvar.se",
+        "name": "test.pablodigtallvar.se"
+      },
       "img": {
-        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
+        "url": "http://alv.hemsida.eu/mensvarkstestet_list.jpg",
         "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
       },
       "date": "Sep 2018",
@@ -69,8 +71,10 @@
       "what":"Hemsida",
       "info": "Lär dig mer om sex och samlevnad på lätt svenska.",
       "description": "Webbplats med tillgänglig information om sex och samlevnad på enkel svenska. Till varje artikel finns en teckenspråksvideo. Svåra ord i artiklar kan markeras och samlas i en ordlista.",
-      "github": "https://github.com/kinaya",
-      "link": "https://safunkarsex.se",
+      "link": {
+        "url": "https://safunkarsex.se",
+        "name": "safunkarsex.se"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Skärmdump av startsidan för safunkarsex.se"
@@ -89,10 +93,12 @@
       "what":"Hemsida",
       "info": "Utbildningsmaterial med ett normkritiskt perspektiv på sexualitet och identitet.",
       "description": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför.",
-      "github": "https://github.com/kinaya",
-      "link": "https://patalomsex.se",
+      "link": {
+        "url": "https://patalomsex.",
+        "name": "patalomsex.se"
+      },
       "img": {
-        "url": "http://alv.hemsida.eu/filregion_list.jpg",
+        "url": "http://alv.hemsida.eu/patalomsex_list.jpg",
         "alt": "Skärmdump av startsidan för patalomsex.se"
       },
       "date": "Maj 2016",
@@ -109,8 +115,10 @@
       "what":"Hemsida",
       "info": "Utbildningsmaterial med ett normkritiskt perspektiv på sexualitet och identitet.",
       "description": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför.",
-      "github": "https://github.com/kinaya",
-      "link": "https://patalomsex.se",
+      "link": {
+        "url": "https://filmregionsydost.se",
+        "name": "filmregionsydost.se"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för filmregionsydost.se"
@@ -129,8 +137,6 @@
       "what":"Hemsida",
       "info": "Projekt inom RFSL som arbetar för unga nyanlända hbtq-personers rättigheter",
       "description": "Youth guide med information till unga, kalendarie, och verksamhet.",
-      "github": "https://github.com/kinaya",
-      "link": "https://newcomersyouth.se",
       "img": {
         "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
@@ -149,10 +155,12 @@
       "what":"Hemsida",
       "info": "För en rättssäker, inkluderande och djärv humanjuridik.",
       "description": "Hemsida till advokatbyrån specialiserad på migrationsrätt. Hemsidan består av en enda sida. Flerspråkig med översättning till fyra olika språk.",
-      "github": "https://github.com/kinaya",
-      "link": "https://fridhadvokatbyra.se",
+      "link": {
+        "url": "https://fridhadvokatbyra.se",
+        "name": "fridhadvokatbyra.se"
+      },
       "img": {
-        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
+        "url": "http://alv.hemsida.eu/fridhadvokatbyra_list.jpg",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
       },
       "date": "Mars 2016",
@@ -169,8 +177,10 @@
       "what":"Hemsida",
       "info": "En lesbisk guide till allt",
       "description": "En lesbisk guide till allt! Koppling till Facebook där events som Lesbisk makts profil gillar, automatiskt hämtas och läggs in som innehåll i Drupal. Integrering med Google Maps API - När en anger en stad för en artikel hämtas automatiskt geotaggning, län, kommun m.m. och sparas i artikeln för att artiklar sedan ska kunna sorteras och sökas med denna data.",
-      "github": "https://github.com/kinaya",
-      "link": "https://lesbiskmakt.nu",
+      "link": {
+        "url": "https://lesbiskmakt.nu",
+        "name": "lesbiskmakt.nu"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för lesbiskmakt.nu"
@@ -193,8 +203,10 @@
       "what":"Hemsida",
       "info": "Filmmaterial från den svenska djurindustrin - följ med in på drjufabriken",
       "description": "Filmmaterial från den svenska djurindustrin, visas i form av giffar.",
-      "github": "https://github.com/kinaya",
-      "link": "https://djurfabriken.se",
+      "link": {
+        "url": "https://djurfabriken.se",
+        "name": "djurfabriken.se"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för djurfabriken.se"
@@ -217,8 +229,10 @@
       "what":"Hemsida",
       "info": "En årlig folkfest i hjärtat av Luleå.",
       "description": "Program som år att filtrera enligt dag, kategori eller plats",
-      "github": "https://github.com/kinaya",
-      "link": "http://luleapride.se",
+      "link": {
+        "url": "https://luleapride.se",
+        "name": "luleapride.se"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för luleapride.se"
@@ -237,7 +251,10 @@
       "what":"Webbapp",
       "info": "Håll koll på ekonomin - för kollektiv och andra som handlar gemensamt.",
       "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
-      "github": "https://github.com/kinaya",
+      "github": {
+        "url": "https://github.com/kinaya/kollektivBudget",
+        "name": "github.com/kinaya/kollektivBudget"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Bild av startsidan för kollektivbudget"
@@ -251,13 +268,41 @@
       }
     },
     {
+      "id": "socialgames",
+      "title": "Social games",
+      "what":"Webbapp",
+      "info": "Spela enkelt tillsammans!",
+      "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
+      "github": {
+        "url": "https://github.com/kinaya/socialgames",
+        "name": "github.com/kinaya/socialgames"
+      },
+      "link": {
+        "url": "https://socialgamesapp.herokuapp.com",
+        "name": "socialgamesapp.herokuapp.com"
+      },
+      "img": {
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
+        "alt": "Bild av startsidan för social games"
+      },
+      "date": "Jan 2019",
+      "tags": ["Node.js", "React"],
+      "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"],
+      "image": {
+        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "alt": "Image alt"
+      }
+    },
+    {
       "id": "malinfors",
       "title": "Psykolog Malin Fors",
       "what":"Hemsida",
       "info": "Psykolog med intersektionell maktanalys i mötet mellan psykolog och patient.",
       "description": "Wordpress. Två språk ",
-      "github": "https://github.com/kinaya",
-      "link": "http://malinfors.no",
+      "link": {
+        "url": "http://malinfors.no",
+        "name": "malinfors.no"
+      },
       "img": {
         "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Bild av startsidan för malinfors.no"
