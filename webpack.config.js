@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    //filename: 'main.js',
+    filename: '[name].bundle.[hash].js',
     publicPath: '/'
   },
   module: {
@@ -50,7 +51,7 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.bundle.[hash].css')
   ],
   resolve: {
     extensions: ['.js','.jsx'],
