@@ -10,7 +10,7 @@
         "name": "pablodigtallvar.se"
       },
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/pba_list.jpg",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för pablodigtallvar.se"
       },
       "date": "Sep 2018",
@@ -21,7 +21,7 @@
         "name": "claespettersson.se"
       },
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -34,14 +34,14 @@
       "github": "https://github.com/kinaya",
       "link": "https://test.pablodigtallvar.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/newcomers_list.jpg",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
       },
       "date": "Sep 2018",
       "tags": ["React", "Drupal"],
       "extendedTags": ["React", "Redux", "Drupal 8"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -52,14 +52,14 @@
       "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer.",
       "description": "Detta projekt är under utveckling. Lansering i maj 2019. Webbplatsen kommer, förutom information, innehålla en interaktiv berättelse där besökaren väljer vad som händer. Berättelsen byggs med React.js som frontend och Drupal 8 som backend. Berättelsen varvas med frågor besökaren kan svara på, och som skickas via RESTful Api och sparas i Drupals databas.",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/pba_list.jpg",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
       "date": "Pågående",
       "tags": ["React", "Drupal"],
       "extendedTags": ["React", "Redux", "Drupal 8"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -72,14 +72,14 @@
       "github": "https://github.com/kinaya",
       "link": "https://safunkarsex.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/safunkarsex_list.jpg",
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Skärmdump av startsidan för safunkarsex.se"
       },
       "date": "April 2017",
       "tags": ["Drupal"],
       "extendedTags": ["Drupal 7", "Php", "MySQL"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -92,14 +92,14 @@
       "github": "https://github.com/kinaya",
       "link": "https://patalomsex.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/pba_list.jpg",
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för patalomsex.se"
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
       "extendedTags": ["Drupal 7", "Php"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -112,14 +112,14 @@
       "github": "https://github.com/kinaya",
       "link": "https://patalomsex.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/filregion_list.jpg",
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för filmregionsydost.se"
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
       "extendedTags": ["Drupal 7", "Php"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -132,14 +132,14 @@
       "github": "https://github.com/kinaya",
       "link": "https://newcomersyouth.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/newcomers_list.jpg",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
       },
       "date": "Mars 2017",
       "tags": [ "Wordpress" ],
       "extendedTags": ["Wordpress", "Php", "MariaDB"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -152,14 +152,14 @@
       "github": "https://github.com/kinaya",
       "link": "https://fridhadvokatbyra.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/safunkarsex_list.jpg",
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
       },
       "date": "Mars 2016",
       "tags": ["Drupal"],
       "extendedTags": ["Drupal 7", "Php", "MySQL"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -172,7 +172,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://lesbiskmakt.nu",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/filregion_list.jpg",
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för lesbiskmakt.nu"
       },
       "date": "Nov 2017",
@@ -183,7 +183,7 @@
         "name": "mayramfanni.se"
       },
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -196,7 +196,7 @@
       "github": "https://github.com/kinaya",
       "link": "https://djurfabriken.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/newcomers_list.jpg",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för djurfabriken.se"
       },
       "date": "Okt 2017",
@@ -207,7 +207,7 @@
         "name": "kaisaandersson.se"
       },
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -220,14 +220,14 @@
       "github": "https://github.com/kinaya",
       "link": "http://luleapride.se",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/filregion_list.jpg",
+        "url": "http://alv.hemsida.eu/filregion_list.jpg",
         "alt": "Skärmdump av startsidan för luleapride.se"
       },
       "date": "Juni 2016",
       "tags": ["Wordpress"],
       "extendedTags": ["Wordpress", "Php", "MariaDB"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -239,14 +239,14 @@
       "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
       "github": "https://github.com/kinaya",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/safunkarsex_list.jpg",
+        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
         "alt": "Bild av startsidan för kollektivbudget"
       },
       "date": "Okt 2018",
       "tags": ["Node.js", "React"],
       "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     },
@@ -259,14 +259,14 @@
       "github": "https://github.com/kinaya",
       "link": "http://malinfors.no",
       "img": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/newcomers_list.jpg",
+        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
         "alt": "Bild av startsidan för malinfors.no"
       },
       "date": "Okt 2018",
       "tags": ["Wordpress"],
       "extendedTags": ["Wordpress", "Php", "MariaDB"],
       "image": {
-        "url": "http://localhost/alvineandersson.se/public_html/dist/project_large.jpg",
+        "url": "http://alv.hemsida.eu/project_large.jpg",
         "alt": "Image alt"
       }
     }

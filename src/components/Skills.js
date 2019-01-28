@@ -7,7 +7,7 @@ const Skills = ({}) => {
     <div className="container skills">
 			<div className="inner">
 
-        <h2>Kunskaper</h2>
+        <h2>Tekniker</h2>
 
         <div className="stacks">
           <div className="stack">

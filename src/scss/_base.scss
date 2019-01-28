@@ -277,7 +277,7 @@ p {
 }
 
 .container.header {
-  background-image: url(../dist/aurora.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../../dist/bg_header.png), url(../../dist/header_three.jpg);
   background-size: cover;
   height: 100vh;
   padding: 0;
@@ -285,7 +285,7 @@ p {
 
 .container.projects {
 	background-color: $white;
-	background-image: url('../dist/bg_raster.png');
+	background-image: url('../../dist/bg_raster.png');
   background-size: 100%;
   background-repeat: repeat-y;
   .inner {
@@ -295,13 +295,13 @@ p {
 
 .container.skills {
   background-color: $turquoise;
-	background-image: url('../dist/bg_skills.png');
+	background-image: url('../../dist/bg_skills.png');
 	color: $black;
 }
 
 .container.matchmaking {
 	background-color: $white;
-	background-image: url('../dist/bg_raster.png');
+	background-image: url('../../dist/bg_raster.png');
   background-size: cover;
 	padding-top: 3rem;
 	@media(min-width: $mobile) {

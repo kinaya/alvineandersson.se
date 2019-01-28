@@ -1,5 +1,6 @@
 .footer {
-  background-image: url('../dist/footer_image.jpg');
+  background-image: url('../../dist/footer_image.jpg');
+  background-image: linear-gradient(to left, rgba(0,0,0,0.9),rgba(0,0,0,0.0)), url(../../dist/footer_image.jpg);
   background-repeat: no-repeat;
   background-size: auto 150%;
   background-position: -250px 0;

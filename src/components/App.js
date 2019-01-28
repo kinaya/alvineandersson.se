@@ -7,7 +7,7 @@ import Intro from "./Intro";
 import ProjectsContainer from "../containers/ProjectsContainer";
 import ProjectsContainerTwo from "../containers/ProjectsContainerTwo";
 import MatchmakingContainer from "../containers/MatchmakingContainer";
-import "../App.scss";
+import "../scss/App.scss";
 
 import Transition from 'react-transition-group/Transition';
 import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-router-dom";
