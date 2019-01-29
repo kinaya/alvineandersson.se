@@ -186,7 +186,7 @@ class ProjectPage extends React.Component {
         <div className="inner">
         {nextLink &&
           <div className="next project">
-            <div className="image"><img src={`${nextImageUrl}`} /></div>
+            <div className="image"><img src={require(`../../images/${nextImageUrl}`)} /></div>
             <div className="info">
               <div className="what"><span>Hemsida</span></div>
               <Link onClick={() => navigate('right')} to={nextLink} className="title">{nextTitle}</Link>
