@@ -5,87 +5,52 @@ class ProjectPage extends React.Component {
 
   constructor(props) {
     super(props)
-    this.handleScroll = this.handleScroll.bind(this)
-    this.state = {scrollTop: 0}
+    //this.handleScroll = this.handleScroll.bind(this)
+    //this.state = {scrollTop: 0}
   }
 
-  // Add scroll event listener
-  componentDidMount() {
-      window.addEventListener('scroll', this.handleScroll);
-  }
+  //componentDidMount() {
+  //  window.addEventListener('scroll', this.handleScroll);
+  //}
 
-  // Remove scroll event listener
-  componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
-  }
+  //componentWillUnmount() {
+  //  window.removeEventListener('scroll', this.handleScroll);
+  //}
 
   // Calculate a distance to move paralax background image
-  handleScroll(event) {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-    let itemTranslate = scrollTop / 3;
-    this.setState({
-      scrollTop: itemTranslate
-    });
-  }
+  //handleScroll(event) {
+  //  let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+  //  let itemTranslate = scrollTop / 3;
+  //  this.setState({
+  //    scrollTop: itemTranslate
+  //  });
+  //}
 
   render() {
 
-  const {project, projects, navigate} = this.props;
-  const {scrollTop} = this.state;
+  const {project, projects} = this.props;
+  //const {scrollTop} = this.state;
 
-  // Generate previous and next links
-  let nextLink = null;
-  let nextTitle = null;
-  let nextImageUrl = null;
-  let previousLink = null;
-  let previousTitle = null;
-  let previousImageUrl = null;
-  let navigationClass = '';
-  for(let i = 0; i < projects.length; i++) {
-    if(projects[i].id === project.id) {
-      // Add previousLink if not on first project
-      if(i != 0) {
-        previousLink = '/projects/' + projects[i-1].id
-        previousTitle = projects[i-1].title
-        previousImageUrl = projects[i-1].img.url
-      }
-      // Add nextLink if not on last project
-      if(i != projects.length -1) {
-        nextLink = '/projects/' + projects[i+1].id
-        nextTitle = projects[i+1].title
-        nextImageUrl = projects[i+1].img.url
-      }
-      if(i == 0) {
-        navigationClass = 'first'
-      }
-      if(i == projects.length -1) {
-        navigationClass = 'last'
-      }
-    }
+  // Get the next project
+  let nextProject = {}
+  let index = projects.indexOf(project);
+  if(index >= 0 && index < projects.length -1) {
+    nextProject = projects[index +1]
+  } else if(index >=0 && index == projects.length -1) {
+    nextProject = projects[0]
   }
 
   // Generate tags
-  let tags = [];
+  /*let tags = [];
   project.extendedTags.map((tag, i) => {
     {project.extendedTags.length -1 === i ? (
       tags.push(<span className="tag" key={i}>{tag}</span>)
     ) : (
       tags.push(<span className="tag" key={i}>{tag}, </span>)
     )}
-  });
-
-  // Generate title
-/*  let title = [];
-  let titlearray = project.title.split("");
-  titlearray.map((char, i) => {
-    let length = titlearray.length;
-    let interval = 800 / length;
-    if(char != " ") {
-      title.push(<span aria-hidden="true" style={{transition: `all calc(${i+1}*${interval}ms) ease-in-out 400ms` }} key={i}>{char}</span>)
-    } else {
-      title.push(<span key={i}>&#160;</span>)
-    }
   });*/
+
+
 
   // Generate title
   let title = ""
@@ -130,30 +95,20 @@ class ProjectPage extends React.Component {
   }
 
 
-  let style = {
-    backgroundPositionY: -scrollTop
-  }
+  //let style = {
+  //  backgroundPositionY: -scrollTop
+  //}
 
 //      <div className="parallax" ><div className="parallaxinner" style={style}></div></div>
 //       <p className="project-name" aria-label={project.title} dangerouslySetInnerHTML={{__html: info}}></p>
 
-/*{previousLink &&
-  <div className="previous project">
-    <div className="image"><img src={`${previousImageUrl}`} /></div>
-    <div className="info">
-      <div className="what"><span>Hemsida</span></div>
-      <Link onClick={() => navigate('left')} to={previousLink} className="title">{previousTitle}</Link>
-      <div className="tags">Mars 2017</div>
-    </div>
-  </div>
-}*/
-
-
+//               <Link onClick={() => navigate('right')} to={`/projects/${nextProject.id}`} className="title">{nextProject.title}</Link>
+//      <Link className="logo" to="/" onClick={() => navigate('left')}>
   return (
     <div className="projectPage" >
       <div className="container">
 
-      <Link className="logo" to="/" onClick={() => navigate('left')}>
+      <Link className="logo" to="/">
         <span>A</span>
       </Link>
 
@@ -167,30 +122,42 @@ class ProjectPage extends React.Component {
 
       </div>
 
-      <div className="featuredImage"><img src={project.image.url} /></div>
+      <div className="featuredImage"><img src={require(`../../images/${project.image.url}`)} /></div>
 
       <div className="inner">
+
+          {project.content &&
+            project.content.map((paragraph, i) => { return (
+              <div key={i}>
+                <h4>{paragraph.headline}</h4>
+                <p>{paragraph.paragraph}</p>
+              </div>
+            )})
+          }
+
         <p className="project-description">{project.description}</p>
 
         <div className="stats">
           <p><span>Datum:</span> {project.date}</p>
-          <p><span>Tekniker:</span> {tags}</p>
+          <p><span>Tekniker:</span>{project.extendedTags}</p>
           {project.designer && <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p>}
-          {project.github && <p><span>Github:</span> <a href={project.github}>{project.github}</a></p>}
+          {project.github && <p><span>Github:</span> <a href={project.github.url}>{project.github.name}</a></p>}
           {project.link && project.link.url && <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p>}
         </div>
 
       </div>
 
-      <div className={`navigation ${navigationClass}`}>
+      <div className="navigation">
         <div className="inner">
-        {nextLink &&
-          <div className="next project">
-            <div className="image"><img src={require(`../../images/${nextImageUrl}`)} /></div>
+        {nextProject &&
+          <div className="project">
+          <div className="inner-div">
+            <div className="image"><img src={require(`../../images/${nextProject.listimg.url}`)} /></div>
             <div className="info">
-              <div className="what"><span>Hemsida</span></div>
-              <Link onClick={() => navigate('right')} to={nextLink} className="title">{nextTitle}</Link>
-              <div className="tags">Mars 2017</div>
+              <div className="what"><span>{nextProject.what}</span></div>
+              <Link to={`/projects/${nextProject.id}`} className="title">{nextProject.title}</Link>
+              <div className="tags">{nextProject.date}</div>
+            </div>
             </div>
           </div>
         }

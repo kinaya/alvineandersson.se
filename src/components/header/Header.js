@@ -1,6 +1,5 @@
 import React, { Component} from "react";
 import { Link } from "react-router-dom";
-import VisibilitySensor from "react-visibility-sensor";
 
 const Header = ({}) => {
 

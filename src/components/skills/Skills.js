@@ -1,22 +1,21 @@
 import React, { Component} from "react";
-import VisibilitySensor from "react-visibility-sensor";
 
 const Skills = ({}) => {
 
   return (
-    <div className="container skills">
+    <div id="skills" className="container skills">
 			<div className="inner">
 
         <h2>Tekniker</h2>
 
         <div className="stacks">
           <div className="stack">
-            <h4>#1 MERN</h4>
+            <h4>Stack #1 MERN</h4>
             <p>Applikationer med <strong>React/Redux</strong> som frontend, backend API via <strong>Express</strong> byggt på <strong>node.js</strong> server och <strong>MongoDB</strong> databas. Routing, internalisering osv.</p>
           </div>
 
           <div className="stack">
-            <h4>#2 CMS</h4>
+            <h4>Stack #2 CMS</h4>
             <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Konfiguration, temautveckling och custom-made plugins. Standard eller med fristående frontend via REST Api</p>
           </div>
         </div>

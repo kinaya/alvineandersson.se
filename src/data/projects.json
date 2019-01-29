@@ -3,109 +3,119 @@
       "id":"pablodigallvar",
       "title":"På blodigt allvar",
       "what":"Hemsida",
-      "info": "Mensvärk ska inte hindra dig! Allt du inte visste du ville veta om mens",
-      "description": "Paragraphs i Drupal 8 var det perfekta verktyget för att ge redaktörerna frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt och samtidigt behålla ett enhetligt utseende. Hemsidan finns på fem olika språk, med möjlighet att översätta innehåll och gränssnitt.",
+      "info": "På blodigt allvar jobbar för att personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor. På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
+      "content": [
+        {
+          "headline": "Paragraphs för varierat innehåll",
+          "paragraph": "Organisationen bakom projektet ställde höga krav på ett varierat innehåll, där långa texten skulle göras visuellt tilltalande och tillgängliga för den unga målgruppen. Paragraphs i Drupal 8 valdes som verktyg för detta, vilket gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt och samtidigt behålla ett enhetligt utseende."
+        },
+        {
+          "headline": "Modul för avancerad listning",
+          "paragraph": "På blodigt allvar använder sig mycket av videos - media entities i Drupal. Ett krav var därför att videos och artiklar behövde listas om vartannat på kategorisidorna. Eftersom Drupals gränssnitt för Views inte klarar skapa vyer med blandade entity typer, utvecklades en egen modul för jobbet. Modulen pluggar in i Views query och skapar lista och filtreringar för att blanda node och media entities."
+        }
+      ],
       "link": {
         "url": "https://pablodigtallvar.se",
         "name": "pablodigtallvar.se"
       },
-      "img": {
-        "url": "pablodigtallvar_list.jpg",
-        "alt": "Liten bild för pablodigtallvar.se"
+      "listimg": {
+        "url": "pba_list.jpg",
+        "alt": "Bild från pablodigtallvar.se"
       },
       "date": "Sep 2018",
       "tags": [ "Drupal" ],
-      "extendedTags": ["Drupal 8", "Php", "MySQL"],
+      "extendedTags": "Drupal 8, Php, MySQL",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
       },
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
-        "alt": "Image alt"
+        "url": "pba.png",
+        "alt": "Bild från pablodigtallvar.se"
       }
     },
     {
-      "id":"mensvarkstestet",
-      "title": "Mensvärks-testet",
+      "id":"mensvarkstest",
+      "title": "Mensvärkstest",
       "what":"Webbapp",
-      "info": "Hur känns din mensvärk? Huggande, pirrigt eller hjärtattack?",
-      "description": "Quiz byggt i React.js med frågor om ens mens och mensvärk. Quizet består av olika typer av frågor såsom enkelval, flerval, slider och ja-eller-nej påståenden. I slutet får en en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt) samt ett mensvärksdjur som en kan dela på sociala medier. Svar skickas via RESTful API och sparas i ett backend byggt med Drupal 8. Lanseringsveckan gjorde över 10.000 personer testet.",
+      "info": "Hur känns din mensvärk? Mensvärkstestet hjälper besökare att sätta ord på var de själva ligger på en smärtskala, och ger skräddarsydda tips på vad de kan göra för att må bättre. Lanseringsveckan gjorde över 10.000 personer testet!",
+      "content": [
+        {
+          "headline": "Interaktivt quiz",
+          "paragraph": "Mensvärkstestet består av ett SPA ('Single page application') byggt med React.js/Redux, där de olika frågorna visas en i taget. Olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor. I slutet visas ens resultat och en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt)."
+        },
+        {
+          "headline": "Backend med Drupal 8",
+          "paragraph" : "Quizet körs helt i webbläsaren, men ett backend i Drupal 8 finns för att spara inskickade svar anonymt. Svaren skickas via Drupals REST Api, sparas som noder och kan enkelt användas för statistik. Den som vill kan även få sina svar mailade till sig, även detta går via Drupals mail funktionalitet."
+        }
+      ],
       "link": {
         "url": "https://test.pablodigtallvar.se",
         "name": "test.pablodigtallvar.se"
       },
-      "img": {
-        "url": "mensvarkstestet_list.jpg",
-        "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
+      "listimg": {
+        "url": "mensvarkstest_list.jpg",
+        "alt": "Bild från test.pablodigtallvar.se"
       },
       "date": "Sep 2018",
       "tags": ["React", "Drupal"],
-      "extendedTags": ["React", "Redux", "Drupal 8"],
+      "extendedTags": "React, Redux, Drupal 8",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
-        "alt": "Image alt"
+        "url": "mensvarkstest.png",
+        "alt": "Bild från test.pablodigtallvar.se"
       }
     },
     {
       "id":"nagotharhant",
       "title": "Något har hänt",
       "what":"Webbapp",
-      "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer.",
-      "description": "Detta projekt är under utveckling. Lansering i maj 2019. Webbplatsen kommer, förutom information, innehålla en interaktiv berättelse där besökaren väljer vad som händer. Berättelsen byggs med React.js som frontend och Drupal 8 som backend. Berättelsen varvas med frågor besökaren kan svara på, och som skickas via RESTful Api och sparas i Drupals databas.",
-      "img": {
+      "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer. Förutom tillgänglig, lättläst fakta innehåller webbplatsen ett Välj-ditt-eget-äventyr-spel",
+      "content": [
+        {
+          "headline": "Under utveckling",
+          "paragraph": "Detta projekt är under utveckling, och lanseras i maj 2019. Sajten byggs i Wordpress, och använder en mängd egna Gutenberg-block för att visa innehåll varierat och snyggt, men samtidigt enkelt för redaktörerna att underhålla."
+        },
+        {
+          "headline": "Välj ditt eget äventyr",
+          "paragraph": "Webbplatsen kommer innehålla ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Wordpress med dess RESTful Api."
+        }
+      ],
+      "listimg": {
         "url": "newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
       "date": "Pågående",
       "tags": ["React", "Drupal"],
-      "extendedTags": ["React", "Redux", "Drupal 8"],
+      "extendedTags": "React, Redux, Drupal 8, PHP, MySQL",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
-        "alt": "Image alt"
-      }
-    },
-    {
-      "id":"safunkarsex",
-      "title":"Så funkar sex",
-      "what":"Hemsida",
-      "info": "Lär dig mer om sex och samlevnad på lätt svenska.",
-      "description": "Webbplats med tillgänglig information om sex och samlevnad på enkel svenska. Till varje artikel finns en teckenspråksvideo. Svåra ord i artiklar kan markeras och samlas i en ordlista.",
-      "link": {
-        "url": "https://safunkarsex.se",
-        "name": "safunkarsex.se"
-      },
-      "img": {
-        "url": "safunkarsex_list.jpg",
-        "alt": "Skärmdump av startsidan för safunkarsex.se"
-      },
-      "date": "April 2017",
-      "tags": ["Drupal"],
-      "extendedTags": ["Drupal 7", "Php", "MySQL"],
-      "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
     {
       "id":"patalomsex",
-      "title":"På tal om sex",
+      "title":"På tal om 6",
       "what":"Hemsida",
-      "info": "Utbildningsmaterial med ett normkritiskt perspektiv på sexualitet och identitet.",
-      "description": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför.",
+      "info": "Det är viktigt att kunna snacka om känslor, lust, jämställdhet och sex! Det är utgångspunkten för På tal om 6 som är ett modernt normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet.",
+      "content": [
+        {
+          "headline": "Struktur för omfattande material",
+          "paragraph": "Projektets omfattande material består av 29 filmer med tillhörande övningar. Övningarna kan vara relevanta för flera filmer, men alla filmer har olika övningar för Högstadiet och Gymnasiet. Allt kategoriseras dessutom efter skolämne, och till det kommer utdrag ur läroplanen som är relevant för den aktuella filmen, skolämnet och övningen. Kort sagt fanns behov av att flexibelt kunna lista innehållet, och Drupal 7 valdes tack vare de de stora möjligheterna med Views."
+        }
+      ],
       "link": {
         "url": "https://patalomsex.",
         "name": "patalomsex.se"
       },
-      "img": {
+      "listimg": {
         "url": "patalom6_list.jpg",
         "alt": "Skärmdump av startsidan för patalomsex.se"
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": ["Drupal 7", "Php"],
+      "extendedTags": "Drupal 7, Php, MySQL",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -114,20 +124,25 @@
       "title":"Filmregion Sydost",
       "what":"Hemsida",
       "info": "Utbildningsmaterial med ett normkritiskt perspektiv på sexualitet och identitet.",
-      "description": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför.",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför."
+        }
+      ],
       "link": {
         "url": "https://filmregionsydost.se",
         "name": "filmregionsydost.se"
       },
-      "img": {
+      "listimg": {
         "url": "filmregion_list.jpg",
         "alt": "Skärmdump av startsidan för filmregionsydost.se"
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": ["Drupal 7", "Php"],
+      "extendedTags": "Drupal 7, Php",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -136,16 +151,21 @@
       "title": "Newcomers Youth",
       "what":"Hemsida",
       "info": "Projekt inom RFSL som arbetar för unga nyanlända hbtq-personers rättigheter",
-      "description": "Youth guide med information till unga, kalendarie, och verksamhet.",
-      "img": {
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet. Bio med projektets filmer, diskussionsfrågor och övningar, fortbildningsmaterial. För strukturen fanns behov av att flexibelt kunna visa innehåll såsom diskussionsfrågot, uttdrag ur läroplanen och filmer beroende på ämne och målgrupp. Drupal, med de avancerade möjligheterna att skapa flexibla listningar av innehåll med hjälp av View valdes därför."
+        }
+      ],
+      "listimg": {
         "url": "newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
       },
       "date": "Mars 2017",
       "tags": [ "Wordpress" ],
-      "extendedTags": ["Wordpress", "Php", "MariaDB"],
+      "extendedTags": "Wordpress, Php, MariaDB",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -154,20 +174,25 @@
       "title":"Fridh Advokatbyrå",
       "what":"Hemsida",
       "info": "För en rättssäker, inkluderande och djärv humanjuridik.",
-      "description": "Hemsida till advokatbyrån specialiserad på migrationsrätt. Hemsidan består av en enda sida. Flerspråkig med översättning till fyra olika språk.",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Hemsida till advokatbyrån specialiserad på migrationsrätt. Hemsidan består av en enda sida. Flerspråkig med översättning till fyra olika språk."
+        }
+      ],
       "link": {
         "url": "https://fridhadvokatbyra.se",
         "name": "fridhadvokatbyra.se"
       },
-      "img": {
+      "listimg": {
         "url": "fridhadvokatbyra_list.jpg",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
       },
       "date": "Mars 2016",
       "tags": ["Drupal"],
-      "extendedTags": ["Drupal 7", "Php", "MySQL"],
+      "extendedTags": "Drupal 7, Php, MySQL",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -176,24 +201,29 @@
       "title":"Lesbisk Makt",
       "what":"Hemsida",
       "info": "En lesbisk guide till allt",
-      "description": "En lesbisk guide till allt! Koppling till Facebook där events som Lesbisk makts profil gillar, automatiskt hämtas och läggs in som innehåll i Drupal. Integrering med Google Maps API - När en anger en stad för en artikel hämtas automatiskt geotaggning, län, kommun m.m. och sparas i artikeln för att artiklar sedan ska kunna sorteras och sökas med denna data.",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "En lesbisk guide till allt! Koppling till Facebook där events som Lesbisk makts profil gillar, automatiskt hämtas och läggs in som innehåll i Drupal. Integrering med Google Maps API - När en anger en stad för en artikel hämtas automatiskt geotaggning, län, kommun m.m. och sparas i artikeln för att artiklar sedan ska kunna sorteras och sökas med denna data."
+        }
+      ],
       "link": {
         "url": "https://lesbiskmakt.nu",
         "name": "lesbiskmakt.nu"
       },
-      "img": {
+      "listimg": {
         "url": "lesbiskmakt_list.png",
         "alt": "Skärmdump av startsidan för lesbiskmakt.nu"
       },
       "date": "Nov 2017",
       "tags": ["Drupal"],
-      "extendedTags": ["Drupal 7", "Php", "MySQL", "Facebook Api", "Google Maps Api"],
+      "extendedTags": "Drupal 7, Php, MySQL, Facebook Api, Google Maps Api",
       "designer": {
         "url": "http://maryamfanni.se",
         "name": "mayramfanni.se"
       },
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -202,24 +232,29 @@
       "title": "Djurfabriken",
       "what":"Hemsida",
       "info": "Filmmaterial från den svenska djurindustrin - följ med in på drjufabriken",
-      "description": "Filmmaterial från den svenska djurindustrin, visas i form av giffar.",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Filmmaterial från den svenska djurindustrin, visas i form av giffar."
+        }
+      ],
       "link": {
         "url": "https://djurfabriken.se",
         "name": "djurfabriken.se"
       },
-      "img": {
+      "listimg": {
         "url": "djurfabriken_list.png",
         "alt": "Skärmdump av startsidan för djurfabriken.se"
       },
       "date": "Okt 2017",
       "tags": [],
-      "extendedTags": ["HTML"],
+      "extendedTags": "HTML",
       "designer": {
         "url": "http://kaisaandersson.se",
         "name": "kaisaandersson.se"
       },
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -228,20 +263,25 @@
       "title": "Luleå Pride",
       "what":"Hemsida",
       "info": "En årlig folkfest i hjärtat av Luleå.",
-      "description": "Program som år att filtrera enligt dag, kategori eller plats",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Program som år att filtrera enligt dag, kategori eller plats"
+        }
+      ],
       "link": {
         "url": "https://luleapride.se",
         "name": "luleapride.se"
       },
-      "img": {
+      "listimg": {
         "url": "filmregion_list.jpg",
         "alt": "Skärmdump av startsidan för luleapride.se"
       },
       "date": "Juni 2016",
       "tags": ["Wordpress"],
-      "extendedTags": ["Wordpress", "Php", "MariaDB"],
+      "extendedTags": "Wordpress, Php, MariaDB",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -250,20 +290,25 @@
       "title": "Kollektiv-Budget",
       "what":"Webbapp",
       "info": "Håll koll på ekonomin - för kollektiv och andra som handlar gemensamt.",
-      "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI"
+        }
+      ],
       "github": {
         "url": "https://github.com/kinaya/kollektivBudget",
         "name": "github.com/kinaya/kollektivBudget"
       },
-      "img": {
+      "listimg": {
         "url": "safunkarsex_list.jpg",
         "alt": "Bild av startsidan för kollektivbudget"
       },
       "date": "Okt 2018",
       "tags": ["Node.js", "React"],
-      "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"],
+      "extendedTags": "Node.js, MongoDb, React, Redux, Material UI",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     },
@@ -272,7 +317,12 @@
       "title": "Social games",
       "what":"Webbapp",
       "info": "Spela enkelt tillsammans!",
-      "description": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI",
+      "content": [
+        {
+          "headline": "",
+          "paragraph": "Webbapp för att hantera budget i ett kollektiv. Authenticering med Google Auth. Front end i React.js och backend i Node.js. Design med Materal UI."
+        }
+      ],
       "github": {
         "url": "https://github.com/kinaya/socialgames",
         "name": "github.com/kinaya/socialgames"
@@ -281,37 +331,15 @@
         "url": "https://socialgamesapp.herokuapp.com",
         "name": "socialgamesapp.herokuapp.com"
       },
-      "img": {
+      "listimg": {
         "url": "safunkarsex_list.jpg",
         "alt": "Bild av startsidan för social games"
       },
       "date": "Jan 2019",
       "tags": ["Node.js", "React"],
-      "extendedTags": ["Node.js", "MongoDb", "React", "Redux", "Material UI"],
+      "extendedTags": "Node.js, MongoDb, React, Redux, Material UI",
       "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
-        "alt": "Image alt"
-      }
-    },
-    {
-      "id": "malinfors",
-      "title": "Psykolog Malin Fors",
-      "what":"Hemsida",
-      "info": "Psykolog med intersektionell maktanalys i mötet mellan psykolog och patient.",
-      "description": "Wordpress. Två språk ",
-      "link": {
-        "url": "http://malinfors.no",
-        "name": "malinfors.no"
-      },
-      "img": {
-        "url": "newcomers_list.jpg",
-        "alt": "Bild av startsidan för malinfors.no"
-      },
-      "date": "Okt 2018",
-      "tags": ["Wordpress"],
-      "extendedTags": ["Wordpress", "Php", "MariaDB"],
-      "image": {
-        "url": "http://alv.hemsida.eu/project_large.jpg",
+        "url": "mensvarkstest.png",
         "alt": "Image alt"
       }
     }
