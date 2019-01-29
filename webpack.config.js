@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -42,6 +43,9 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    new WebpackCleanupPlugin({
+      exclude: ["robots.txt"],
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
