@@ -10,7 +10,7 @@
         "name": "pablodigtallvar.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/pablodigtallvar_list.jpg",
+        "url": "pablodigtallvar_list.jpg",
         "alt": "Liten bild för pablodigtallvar.se"
       },
       "date": "Sep 2018",
@@ -36,7 +36,7 @@
         "name": "test.pablodigtallvar.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/mensvarkstestet_list.jpg",
+        "url": "mensvarkstestet_list.jpg",
         "alt": "Skärmdump av startsidan för test.pablodigtallvar.se"
       },
       "date": "Sep 2018",
@@ -54,7 +54,7 @@
       "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer.",
       "description": "Detta projekt är under utveckling. Lansering i maj 2019. Webbplatsen kommer, förutom information, innehålla en interaktiv berättelse där besökaren väljer vad som händer. Berättelsen byggs med React.js som frontend och Drupal 8 som backend. Berättelsen varvas med frågor besökaren kan svara på, och som skickas via RESTful Api och sparas i Drupals databas.",
       "img": {
-        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
+        "url": "newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
       "date": "Pågående",
@@ -76,7 +76,7 @@
         "name": "safunkarsex.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
+        "url": "safunkarsex_list.jpg",
         "alt": "Skärmdump av startsidan för safunkarsex.se"
       },
       "date": "April 2017",
@@ -98,7 +98,7 @@
         "name": "patalomsex.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/patalom6_list.jpg",
+        "url": "patalom6_list.jpg",
         "alt": "Skärmdump av startsidan för patalomsex.se"
       },
       "date": "Maj 2016",
@@ -120,7 +120,7 @@
         "name": "filmregionsydost.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/filregion_list.jpg",
+        "url": "filmregion_list.jpg",
         "alt": "Skärmdump av startsidan för filmregionsydost.se"
       },
       "date": "Maj 2016",
@@ -138,7 +138,7 @@
       "info": "Projekt inom RFSL som arbetar för unga nyanlända hbtq-personers rättigheter",
       "description": "Youth guide med information till unga, kalendarie, och verksamhet.",
       "img": {
-        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
+        "url": "newcomers_list.jpg",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
       },
       "date": "Mars 2017",
@@ -160,7 +160,7 @@
         "name": "fridhadvokatbyra.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/fridhadvokatbyra_list.jpg",
+        "url": "fridhadvokatbyra_list.jpg",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
       },
       "date": "Mars 2016",
@@ -182,7 +182,7 @@
         "name": "lesbiskmakt.nu"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/lesbiskmakt_list.png",
+        "url": "lesbiskmakt_list.png",
         "alt": "Skärmdump av startsidan för lesbiskmakt.nu"
       },
       "date": "Nov 2017",
@@ -208,7 +208,7 @@
         "name": "djurfabriken.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/djurfabriken_list.png",
+        "url": "djurfabriken_list.png",
         "alt": "Skärmdump av startsidan för djurfabriken.se"
       },
       "date": "Okt 2017",
@@ -234,7 +234,7 @@
         "name": "luleapride.se"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/filregion_list.jpg",
+        "url": "filmregion_list.jpg",
         "alt": "Skärmdump av startsidan för luleapride.se"
       },
       "date": "Juni 2016",
@@ -256,7 +256,7 @@
         "name": "github.com/kinaya/kollektivBudget"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
+        "url": "safunkarsex_list.jpg",
         "alt": "Bild av startsidan för kollektivbudget"
       },
       "date": "Okt 2018",
@@ -282,7 +282,7 @@
         "name": "socialgamesapp.herokuapp.com"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/safunkarsex_list.jpg",
+        "url": "safunkarsex_list.jpg",
         "alt": "Bild av startsidan för social games"
       },
       "date": "Jan 2019",
@@ -304,7 +304,7 @@
         "name": "malinfors.no"
       },
       "img": {
-        "url": "http://alv.hemsida.eu/newcomers_list.jpg",
+        "url": "newcomers_list.jpg",
         "alt": "Bild av startsidan för malinfors.no"
       },
       "date": "Okt 2018",

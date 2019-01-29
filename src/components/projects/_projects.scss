@@ -146,7 +146,7 @@
 /* ProjectPage */
 .projectPage {
   background-color: $turquoise;
-  background-image: url('../../dist/bg_header.png');
+  background-image: url('../images/bg_header.png');
   overflow: hidden;
   .container {
     @media(min-width: $tablet) {
@@ -259,7 +259,7 @@
   padding: 3em 0;
   clip-path: polygon(0% 100%, 20% 98%, 40% 97%, 60% 100%, 75% 98%, 100% 100%, 100% 0%, 75% 2%, 55% 3%, 40% 0%, 20% 1%, 0% 0%);
   .parallaxinner {
-    background-image: url('../dist/project_large.jpg');
+    background-image: url('../images/project_large.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;

@@ -325,6 +325,44 @@ p {
   .logo:hover, .logo:active, .logo:focus {
     background-color: #72baba; }
 
+.footer {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(/footer_image.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 150%;
+  background-position: -250px 0; }
+  @media (min-width: 480px) {
+    .footer {
+      background-position: -310px 0; } }
+  @media (min-width: 980px) {
+    .footer {
+      background-size: cover;
+      background-position: 0 0;
+      padding: 10rem 2rem; } }
+  .footer .contact {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    color: #F2F2F2; }
+    @media (min-width: 980px) {
+      .footer .contact {
+        margin: 0 0 0 auto;
+        text-align: left; } }
+  .footer a {
+    display: block;
+    color: #F2F2F2;
+    text-decoration: none;
+    margin: 0.5em 0; }
+    .footer a span {
+      border-bottom: 1px solid #F2F2F2;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    .footer a:hover, .footer a:active, .footer a:focus {
+      color: #7fc8bc; }
+      .footer a:hover span, .footer a:active span, .footer a:focus span {
+        border-bottom: 1px solid #7fc8bc; }
+
 .container.services .inner {
   max-width: 1100px; }
 
@@ -651,7 +689,7 @@ p {
   padding: 3em 0;
   clip-path: polygon(0% 100%, 20% 98%, 40% 97%, 60% 100%, 75% 98%, 100% 100%, 100% 0%, 75% 2%, 55% 3%, 40% 0%, 20% 1%, 0% 0%);
   .parallaxinner {
-    background-image: url('../dist/project_large.jpg');
+    background-image: url('../images/project_large.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -823,42 +861,3 @@ p {
   cursor: pointer; }
   .matchmaking .redo:hover, .matchmaking .redo:active, .matchmaking .redo:focus {
     color: #dc3545; }
-
-.footer {
-  background-image: url(/footer_image.jpg);
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(/footer_image.jpg);
-  background-repeat: no-repeat;
-  background-size: auto 150%;
-  background-position: -250px 0; }
-  @media (min-width: 480px) {
-    .footer {
-      background-position: -310px 0; } }
-  @media (min-width: 980px) {
-    .footer {
-      background-size: cover;
-      background-position: 0 0;
-      padding: 10rem 2rem; } }
-  .footer .contact {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
-    color: #F2F2F2; }
-    @media (min-width: 980px) {
-      .footer .contact {
-        margin: 0 0 0 auto;
-        text-align: left; } }
-  .footer a {
-    display: block;
-    color: #F2F2F2;
-    text-decoration: none;
-    margin: 0.5em 0; }
-    .footer a span {
-      border-bottom: 1px solid #F2F2F2;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s; }
-    .footer a:hover, .footer a:active, .footer a:focus {
-      color: #7fc8bc; }
-      .footer a:hover span, .footer a:active span, .footer a:focus span {
-        border-bottom: 1px solid #7fc8bc; }

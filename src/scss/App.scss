@@ -1,8 +1,7 @@
-
 @import '_base';
-@import '_header';
-@import '_services';
-@import '_projects';
-@import '_skills';
-@import '_matchmaking';
-@import '_footer';
+@import './../components/header/_header';
+@import './../components/footer/_footer';
+@import './../components/services/_services';
+@import './../components/projects/_projects';
+@import './../components/skills/_skills';
+@import './../components/matchmaking/_matchmaking';

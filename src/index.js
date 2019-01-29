@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App.js";
 import { Provider } from 'react-redux';
 import configureStore from './configureStore';
-import projects from "./projects.json";
-import matchitems from "./matchitems.json";
+import projects from "./data/projects.json";
+import matchitems from "./data/matchitems.json";
 import ScrollToTop from "./components/ScrollToTop";
-import AppContainer from "./containers/AppContainer";
+import AppContainer from "./components/AppContainer";
 //import { BrowserRouter} from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 //import createHistory from 'history/createBrowserHistory';

@@ -15,7 +15,7 @@ const Project = ({project, navigate}) => {
     return (
       <div className="project">
         <div className="image">
-          <img src={project.img.url} />
+          <img src={require(`../../images/${project.img.url}`)} />
         </div>
         <div className="info">
           <div className="what"><span>{project.what}</span></div>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import Matchmaking from '../components/Matchmaking'
-import { matchMaking } from '../actions'
+import Matchmaking from './Matchmaking'
+import { matchMaking } from '../../actions'
 
 function mapStateToProps(state) {
   return {

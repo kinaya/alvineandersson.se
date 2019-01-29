@@ -1,12 +1,10 @@
 import React, { Component} from "react";
-import Header from "./Header";
-import Skills from "./Skills";
-import Footer from "./Footer";
-import Services from "./Services";
-import Intro from "./Intro";
-import ProjectsContainer from "../containers/ProjectsContainer";
-import ProjectsContainerTwo from "../containers/ProjectsContainerTwo";
-import MatchmakingContainer from "../containers/MatchmakingContainer";
+import Header from "./header/Header";
+import Skills from "./skills/Skills";
+import Footer from "./footer/Footer";
+import Services from "./services/Services";
+import ProjectsContainer from "./projects/ProjectsContainer";
+import MatchmakingContainer from "./matchmaking/MatchmakingContainer";
 import "../scss/App.scss";
 
 import Transition from 'react-transition-group/Transition';
@@ -14,7 +12,7 @@ import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-
 
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
-import ProjectPage from "./ProjectPage";
+import ProjectPage from "./projects/ProjectPage";
 
 class App extends React.Component {
 

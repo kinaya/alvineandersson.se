@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import Projects from '../components/Projects'
-import { filterProjects, navigate } from '../actions'
+import Projects from './Projects'
+import { filterProjects, navigate } from '../../actions'
 
 function mapStateToProps(state) {
   return {
