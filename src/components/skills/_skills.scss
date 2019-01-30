@@ -67,18 +67,6 @@
   position: relative;
 }
 
-.circle {
-  width: 0px;
-  height: 0px;
-  border-radius: 50%;
-  background-color: $blue-dark;
-  opacity: 0.3;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  animation: grow 1000ms;
-}
 
 .container.skills {
   background: linear-gradient(102deg, #7fc8bc, #d3d3a5);
@@ -103,24 +91,3 @@
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}
 }
-
-@keyframes grow {
-/*  0%, 100% {
-     transform: translate(0,0); }
-  50% { transform: translate(0,10px); }*/
-  100% {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
-}
-
-
-/*.skills p.visible {
-	transform: translate(0,0);
-	transition: transform 1000ms;
-}
-.skills p.invisible {
-	transform: translate(-500px,0);
-}*/

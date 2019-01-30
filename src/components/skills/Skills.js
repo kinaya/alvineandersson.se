@@ -31,7 +31,14 @@ const Skills = ({}) => {
           <p>Grundläggande koll på Java/Android utveckling, samt Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, ofta bollplank för koncept och ux i projekt, van projektledare och en stjärna på att googla.</p>
         </div>
 
-        <div className="circle"></div>
+        <div className="bubbles large">
+          <span></span> <span></span> <span></span> <span></span> <span></span>
+        </div>
+
+        <div className="bubbles small">
+          <span></span> <span></span> <span></span> <span></span> <span></span>
+          <span></span> <span></span> <span></span> <span></span> <span></span>
+        </div>
 
 			</div>
     </div>
