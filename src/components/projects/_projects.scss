@@ -105,6 +105,39 @@
   }
 }
 
+// Project title heading
+.project-title span {
+	display: inline-block;
+}
+.project-title span.word:after {
+	content: "\00a0";
+}
+.slide-enter .project-title span {
+	transform: translate(500px,0);
+}
+.slide-enter-active .project-title span {
+	transform: translate(0,0);
+}
+// Animation description
+.description {
+  transition: transform 1000ms ease-in;
+}
+.slide-enter .description {
+  transform: translateX(100px)
+}
+.slide-enter-active .description {
+  transform: translateX(0px)
+}
+
+
+// Image
+/*.slide-enter .parallax .parallaxinner {
+	background-position: 100px 0;
+}
+.slide-enter-active .parallax .parallaxinner {
+	background-position: 0 0;
+	transition: all 800ms ease-in-out 400ms;
+}*/
 
 
 /* Animated blob images */

@@ -97,6 +97,8 @@ $wide: '1280px';
 
 
 
+
+
 /*.slide {
 	position: relative;
 	z-index: 1;
@@ -143,52 +145,6 @@ $wide: '1280px';
 	z-index: 999;
 }*/
 
-
-
-
-
-// Heading
-.project-heading span {
-	display: inline-block;
-}
-.project-heading span.word:after {
-	content: "\00a0";
-}
-.right .slide-enter .project-heading span {
-	transform: translate(500px,0);
-}
-.right .slide-enter-active .project-heading span {
-	transform: translate(0,0);
-}
-// Image
-.right .slide-enter .parallax .parallaxinner {
-	background-position: 100px 0;
-}
-.right .slide-enter-active .parallax .parallaxinner {
-	background-position: 0 0;
-	transition: all 800ms ease-in-out 400ms;
-}
-
-
-// Listanimate
-.listanimate-enter {
-	opacity: 0;
-}
-.listanimate-enter-active {
-	opacity: 1;
-	transition: all 500ms;
-}
-.listanimate-exit {
-	opacity: 1;
-	max-height: 1000px;
-	overflow: hidden;
-}
-.listanimate-exit-active {
-	opacity: 0;
-	max-height: 0;
-	overflow: hidden;
-	transition: all 500ms;
-}
 
 
 
