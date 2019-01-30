@@ -913,10 +913,6 @@ p {
   bottom: -25px;
   left: 0;
   right: 0; }
-  .bubbles span:nth-of-type(2n) {
-    border-color: #87f5fb; }
-  .bubbles span:nth-of-type(4n) {
-    border-color: #8be8cb; }
   .bubbles span {
     border-radius: 50%;
     display: inline-block; }
@@ -933,25 +929,29 @@ p {
   animation: up 6.5s infinite; }
 
 .large span:nth-child(2) {
-  animation: up 5.25s 250ms infinite; }
+  animation: up 5.25s 250ms infinite;
+  border-color: #87f5fb; }
 
 .large span:nth-child(3) {
   animation: up 6s 750ms infinite; }
 
 .large span:nth-child(4) {
-  animation: up 5.5s 1.5s infinite; }
+  animation: up 5.5s 1.5s infinite;
+  border-color: #8be8cb; }
 
 .large span:nth-child(5) {
   animation: up 6.5s 4s infinite; }
 
 .small span:nth-child(1) {
-  animation: up 5.25s infinite; }
+  animation: up 5.25s infinite;
+  border-color: #8be8cb; }
 
 .small span:nth-child(2) {
   animation: up 5.75s infinite; }
 
 .small span:nth-child(3) {
-  animation: up 5.25s 250ms infinite; }
+  animation: up 5.25s 250ms infinite;
+  border-color: #87f5fb; }
 
 .small span:nth-child(4) {
   animation: up 5.75s 325ms infinite; }
@@ -960,7 +960,8 @@ p {
   animation: up 6s 125ms infinite; }
 
 .small span:nth-child(6) {
-  animation: up 5.13s 250ms infinite; }
+  animation: up 5.13s 250ms infinite;
+  border-color: #8be8cb; }
 
 .small span:nth-child(7) {
   animation: up 6.25s 350ms infinite; }
@@ -969,246 +970,21 @@ p {
   animation: up 7s 200ms infinite; }
 
 .small span:nth-child(9) {
-  animation: up 6.25s 233ms infinite; }
+  animation: up 6.25s 233ms infinite;
+  border-color: #87f5fb; }
 
 .small span:nth-child(10) {
   animation: up 6s 900ms infinite; }
-
-@keyframes wobble {
-  33% {
-    transform: translateX(-50px); }
-  66% {
-    transform: translateX(50px); } }
 
 @keyframes up {
   0% {
     opacity: 0; }
   10%, 90% {
-    opacity: 1; }
+    opacity: 0.7; }
   100% {
     opacity: 0;
     transform: translateY(-1000px); } }
 
-/*
-.bubbles-large {
-	overflow: visible;
-
-	> g {
-		transform: translateY(2048px);
-		opacity: 0;
-		will-change: transform, opacity;
-	}
-
-	g:nth-of-type(1) {
-		animation: up 6.5s infinite;
-
-		g {
-			transform: translateX(350px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(2) {
-		animation: up 5.25s 250ms infinite;
-
-		g {
-			transform: translateX(450px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(3) {
-		animation: up 6s 750ms infinite;
-
-		g {
-			transform: translateX(700px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(4) {
-		animation: up 5.5s 1.5s infinite;
-
-		g {
-			transform: translateX(500px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(5) {
-		animation: up 6.5s 4s infinite;
-
-		g {
-			transform: translateX(675px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-}*/
-/*.bubbles-small {
-	overflow: visible;
-
-	> g {
-		transform: translateY(2048px);
-		opacity: 0;
-		will-change: transform, opacity;
-	}
-
-	g circle {
-		transform: scale(0);
-	}
-
-	g:nth-of-type(1) {
-		animation: up 5.25s infinite;
-
-		g {
-			transform: translateX(350px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(2) {
-		animation: up 5.75s infinite;
-
-		g {
-			transform: translateX(750px);
-		}
-
-		circle {
-			animation: wobble 3s infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(3) {
-		animation: up 5.25s 250ms infinite;
-
-		g {
-			transform: translateX(350px);
-		}
-
-		circle {
-			animation: wobble 3s 250ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(4) {
-		animation: up 5.75s 325ms infinite;
-
-		g {
-			transform: translateX(180px);
-		}
-
-		circle {
-			animation: wobble 3s 325ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(5) {
-		animation: up 6s 125ms infinite;
-
-		g {
-			transform: translateX(350px);
-		}
-
-		circle {
-			animation: wobble 3s 250ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(6) {
-		animation: up 5.13s 250ms infinite;
-
-		g {
-			transform: translateX(650px);
-		}
-
-		circle {
-			animation: wobble 3s 125ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(7) {
-		animation: up 6.25s 350ms infinite;
-
-		g {
-			transform: translateX(480px);
-		}
-
-		circle {
-			animation: wobble 3s 325ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(8) {
-		animation: up 7s 200ms infinite;
-
-		g {
-			transform: translateX(330px);
-		}
-
-		circle {
-			animation: wobble 3s 325ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(9) {
-		animation: up 6.25s 233ms infinite;
-
-		g {
-			transform: translateX(230px);
-		}
-
-		circle {
-			animation: wobble 3s 275ms infinite ease-in-out;
-		}
-
-	}
-
-	g:nth-of-type(10) {
-		animation: up 6s 900ms infinite;
-
-		g {
-			transform: translateX(730px);
-		}
-
-		circle {
-			animation: wobble 2s 905ms infinite ease-in-out;
-		}
-
-	}
-
-}*/
 .matchmaking {
   text-align: center; }
   .matchmaking .wrapper {
