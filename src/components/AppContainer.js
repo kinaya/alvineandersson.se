@@ -5,7 +5,8 @@ import {withRouter} from 'react-router-dom'
 function mapStateToProps(state) {
   return {
     projects: state.projects.projects,
-    animation: state.navigation.animation
+    //animation: state.navigation.animation,
+    animation: state.animation
   }
 }
 

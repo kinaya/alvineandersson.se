@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({}) => {
+const Header = ({onClick}) => {
 
   return (
     <div className="container header">
@@ -84,7 +84,7 @@ const Header = ({}) => {
 
       </div>
 
-      <div className="scrollarrow"></div>
+      <div onClick={onClick} className="scrollarrow"></div>
   </div>
 );
 }

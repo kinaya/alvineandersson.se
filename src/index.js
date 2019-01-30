@@ -16,6 +16,9 @@ const initialState = {
   match: {
     matchitems: matchitems
   },
+  animation: {
+    projects: true
+  },
   navigation: {
     animation: 'dont-animate'
   }

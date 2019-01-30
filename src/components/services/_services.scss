@@ -11,6 +11,17 @@
 }
 
 .service {
+	transition: all 1s;
+
+	&.visible {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	&.invisible {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
 	text-align: center;
 	max-width: 500px;
 	margin: 0 auto 1em auto;

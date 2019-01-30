@@ -17,16 +17,17 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.myRef = React.createRef();
+    this.projectsRef = React.createRef();
+    this.contentRef = React.createRef();
   }
 
   componentWillReceiveProps(nextProps) {
-    const position = this.myRef;
+    const projectsRef = this.projectsRef;
     if(nextProps.location.pathname != this.props.location.pathname) {
       if(nextProps.location.pathname == '/') {
-        if(position) {
+        if(projectsRef) {
           setTimeout(function(){
-            scrollIntoView(position.current,{time:500,align:{top:0}})
+            scrollIntoView(projectsRef.current,{time:500,align:{top:0}})
           }, 1200);
         } else {
           setTimeout(function(){
@@ -39,13 +40,18 @@ class App extends React.Component {
     }
   }
 
+  _scrollToContent() {
+    const contentRef = this.contentRef;
+    scrollIntoView(contentRef.current,{time:500,align:{top:0}});
+  }
+
   render() {
 
     const { projects, location, animation } = this.props
     const currentKey = location.pathname
 
     return (
-      <div className={`App ${animation}`}>
+      <div className={`App animate-projects-${animation.projects}`}>
 
         <TransitionGroup component="main" className="page-main">
           <CSSTransition key={currentKey} timeout={1200} classNames="slide" appear>
@@ -54,9 +60,10 @@ class App extends React.Component {
 
           <Route exact path="/" render={() => (
             <div className="docscroller">
-              <Header />
+              <Header onClick={() => this._scrollToContent()} />
+              <div ref={this.contentRef} />
               <Services />
-              <div ref={this.myRef} />
+              <div ref={this.projectsRef} />
               <ProjectsContainer />
               <Skills />
               <MatchmakingContainer />

@@ -1,5 +1,4 @@
 import React, { Component} from "react";
-import VisibilitySensor from "react-visibility-sensor";
 import Service from './Service'
 
 const Services = ({}) => {

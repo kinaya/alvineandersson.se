@@ -151,14 +151,16 @@ class ProjectPage extends React.Component {
         <div className="inner">
         {nextProject &&
           <div className="project">
-          <div className="inner-div">
+          <Link to={`/projects/${nextProject.id}`} className="inner-div">
             <div className="image"><img src={require(`../../images/${nextProject.listimg.url}`)} /></div>
             <div className="info">
               <div className="what"><span>{nextProject.what}</span></div>
-              <Link to={`/projects/${nextProject.id}`} className="title">{nextProject.title}</Link>
+              <div className="title">
+              {nextProject.title}
+              </div>
               <div className="tags">{nextProject.date}</div>
             </div>
-            </div>
+            </Link>
           </div>
         }
         </div>

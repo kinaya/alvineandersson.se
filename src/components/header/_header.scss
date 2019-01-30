@@ -95,7 +95,7 @@
 }
 
 .scrollarrow {
-	background: url(../images/arrow.png);
+	background: url(../images/arrow.svg);
 	height: 30px;
 	width: 30px;
 	display: block;
@@ -108,6 +108,7 @@
   bottom: 50px;
   left: 0;
   right: 0;
+  cursor: pointer;
 }
 @keyframes MoveUpDown {
   0%, 100% { transform: translate(0,0); }

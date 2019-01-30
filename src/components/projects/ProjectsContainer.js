@@ -5,7 +5,8 @@ import { filterProjects, navigate } from '../../actions'
 function mapStateToProps(state) {
   return {
     projects: state.projects.projects,
-    currentFilter: state.projects.currentFilter
+    currentFilter: state.projects.currentFilter,
+    animation: state.animation.projects
   }
 }
 

@@ -2,17 +2,43 @@
   h2 {
     text-align: center;
     margin-bottom: 1em;
+    span {
+      display: inline-block;
+    }
   }
   .project:last-child {
     border-bottom: 0;
   }
 }
 
+// Animate the projects title when it gets visible by scrolling
+.projects h2.visible {
+  span {
+    animation: jump 0.5s;
+  }
+  @for $i from 1 to 10 {
+    span:nth-child(#{$i}) {
+      animation-delay: calc(0.1s*#{$i});
+      animation-duration: calc(0.4s + 0.05s*#{$i});
+    }
+  }
+}
+@keyframes jump {
+  0% {transform: translateY(0px) scale(1)}
+  50% {transform: translateY(-20px) scale(1.1)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+
 .project .inner-div {
   border-bottom: 1px dashed $gray-2;
   margin: 2em 0 0 0;
   padding: 0 0 2em 0;
   text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  display: block;
 
   @media(min-width: $tablet) {
     display: flex;
@@ -21,17 +47,24 @@
     padding: 0 2em 2em 2em;
   }
 
-  /*.inner {
-    padding: 0 0 2em 0;
-    @media(min-width: $tablet) {
-      padding: 0 2em 2em 2em;
+  &:hover {
+    .image {
+      background-color: $green-dark;
+      transform: scale(1.05);
     }
-  }*/
+    .what span {
+      background-color: $green-dark;
+    }
+    .title {
+      color: #4d4d4d;
+    }
+  }
 
   .image {
     width: 120px;
     height: 120px;
     margin: 0 auto;
+    transition: all 0.3s;
     @media(min-width: $tablet) {
       margin: 0 2em 0 0;
     }
@@ -48,13 +81,12 @@
     }
   }
 
-  a.title {
+  .title {
     font-size: 2em;
     line-height: 1.2;
     color: $black;
     text-decoration: none;
     margin: 0.2em 0;
-    transition: border 0.5s ease;
     font-family: rig-solid-bold-reverse, sans-serif;
     font-weight: 700;
     display: block;
@@ -62,17 +94,20 @@
     @media(min-width: $tablet) {
       margin: 0.2em 0 -0.1em 0;
     }
-    &:hover, &:active, &:focus {
-      color: $blue-dark;
-    }
   }
 
   .tags {
     font-size: 1em;
+    text-decoration: none;
+    color: $black;
+    border-bottom: 0;
   }
 
   .what {
     display: none;
+    color: $black;
+    text-decoration: none;
+
     @media(min-width: $tablet) {
       display: block;
     }
@@ -83,7 +118,9 @@
       font-weight:700;
       letter-spacing: 1px;
       background-color: $green;
+      text-decoration: none;
       padding: 0.2em 0.5em;
+      transition: all 0.3s;
     }
   }
 }
@@ -152,7 +189,7 @@
 // Filter list
 .project {
   overflow: hidden;
-  transition: max-height 500ms ease-in, opacity 500ms ease-in;
+  transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
 }
 .filter-enter {
   opacity: 0;
@@ -170,6 +207,19 @@
   opacity: 0;
   max-height: 0;
 }
+
+// Animate projects when they get visible by scrolling
+.animate-projects-true .project .invisible {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.3s;
+}
+.animate-projects-true .project .visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+
 
 
 /* ProjectPage */
@@ -259,11 +309,22 @@
   }
   .project {
     border: 0;
+    .inner-div {
+      justify-content: center;
+    }
     .what span {
       background-color: $blue-dark;
     }
     .image {
       background-color: $blue-dark;
+    }
+    &:hover {
+      .what span {
+        background-color: #61b2b2;
+      }
+      .image {
+        background-color: #61b2b2;
+      }
     }
   }
 }
