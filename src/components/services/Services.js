@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import Service from './Service'
 
-const Services = ({}) => {
+const Services = () => {
 
   return (
     <div className="container services">

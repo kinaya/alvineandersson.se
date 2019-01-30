@@ -40,9 +40,9 @@ class App extends React.Component {
     }
   }
 
-  _scrollToContent() {
-    const contentRef = this.contentRef;
-    scrollIntoView(contentRef.current,{time:500,align:{top:0}});
+  _scrollToContent(ref) {
+    console.log(ref);
+    scrollIntoView(ref.current,{time:500,align:{top:0}});
   }
 
   render() {
@@ -60,7 +60,7 @@ class App extends React.Component {
 
           <Route exact path="/" render={() => (
             <div className="docscroller">
-              <Header onClick={() => this._scrollToContent()} />
+              <Header onClick={() => this._scrollToContent(this.contentRef)} />
               <div ref={this.contentRef} />
               <Services />
               <div ref={this.projectsRef} />

@@ -2,32 +2,12 @@
   h2 {
     text-align: center;
     margin-bottom: 1em;
-    span {
-      display: inline-block;
-    }
   }
   .project:last-child {
     border-bottom: 0;
   }
 }
 
-// Animate the projects title when it gets visible by scrolling
-.projects h2.visible {
-  span {
-    animation: jump 0.5s;
-  }
-  @for $i from 1 to 10 {
-    span:nth-child(#{$i}) {
-      animation-delay: calc(0.1s*#{$i});
-      animation-duration: calc(0.4s + 0.05s*#{$i});
-    }
-  }
-}
-@keyframes jump {
-  0% {transform: translateY(0px) scale(1)}
-  50% {transform: translateY(-20px) scale(1.1)}
-  100% {transform: translateY(0px) scale(1)}
-}
 
 
 .project .inner-div {

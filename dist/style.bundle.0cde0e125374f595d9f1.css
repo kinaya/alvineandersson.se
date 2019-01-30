@@ -224,6 +224,22 @@ p {
     .container.matchmaking {
       padding-top: 6rem; } }
 
+h2.jumpingTitle.visible span {
+  display: inline-block;
+  animation: jump 0.5s; }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px) scale(1); }
+  50% {
+    transform: translateY(-20px) scale(1.1); }
+  100% {
+    transform: translateY(0px) scale(1); } }
+
+.matchmaking h2.jumpingTitle span:nth-child(10) {
+  display: block;
+  font-size: 8px; }
+
 .header {
   position: relative;
   display: flex;
@@ -316,7 +332,8 @@ p {
   bottom: 50px;
   left: 0;
   right: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 999; }
 
 @keyframes MoveUpDown {
   0%, 100% {
@@ -388,6 +405,7 @@ p {
 
 @media (min-width: 980px) {
   .services .inner {
+    margin: 4em auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; } }
@@ -432,58 +450,9 @@ p {
 .projects h2 {
   text-align: center;
   margin-bottom: 1em; }
-  .projects h2 span {
-    display: inline-block; }
 
 .projects .project:last-child {
   border-bottom: 0; }
-
-.projects h2.visible span {
-  animation: jump 0.5s; }
-
-.projects h2.visible span:nth-child(1) {
-  animation-delay: calc(0.1s*1);
-  animation-duration: calc(0.4s + 0.05s*1); }
-
-.projects h2.visible span:nth-child(2) {
-  animation-delay: calc(0.1s*2);
-  animation-duration: calc(0.4s + 0.05s*2); }
-
-.projects h2.visible span:nth-child(3) {
-  animation-delay: calc(0.1s*3);
-  animation-duration: calc(0.4s + 0.05s*3); }
-
-.projects h2.visible span:nth-child(4) {
-  animation-delay: calc(0.1s*4);
-  animation-duration: calc(0.4s + 0.05s*4); }
-
-.projects h2.visible span:nth-child(5) {
-  animation-delay: calc(0.1s*5);
-  animation-duration: calc(0.4s + 0.05s*5); }
-
-.projects h2.visible span:nth-child(6) {
-  animation-delay: calc(0.1s*6);
-  animation-duration: calc(0.4s + 0.05s*6); }
-
-.projects h2.visible span:nth-child(7) {
-  animation-delay: calc(0.1s*7);
-  animation-duration: calc(0.4s + 0.05s*7); }
-
-.projects h2.visible span:nth-child(8) {
-  animation-delay: calc(0.1s*8);
-  animation-duration: calc(0.4s + 0.05s*8); }
-
-.projects h2.visible span:nth-child(9) {
-  animation-delay: calc(0.1s*9);
-  animation-duration: calc(0.4s + 0.05s*9); }
-
-@keyframes jump {
-  0% {
-    transform: translateY(0px) scale(1); }
-  50% {
-    transform: translateY(-20px) scale(1.1); }
-  100% {
-    transform: translateY(0px) scale(1); } }
 
 .project .inner-div {
   border-bottom: 1px dashed #a3a3a3;
@@ -997,8 +966,6 @@ p {
         font-size: 1.2rem; } }
   .matchmaking h2 {
     margin-bottom: 0.5rem; }
-    .matchmaking h2 span {
-      display: block; }
   .matchmaking p.intro {
     margin: 0; }
 

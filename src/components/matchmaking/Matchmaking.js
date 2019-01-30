@@ -1,15 +1,13 @@
 import React, { Component} from "react";
 import MatchItem from "./MatchItem";
+import JumpingTitle from '../common/JumpingTitle';
 
-class Matchmaking extends Component{
-  render(){
-
-    const {matchitems, matchMaking} = this.props;
+const Matchmaking = ({matchitems, matchMaking}) => {
 
     return(
       <div className="container matchmaking">
 				<div className="inner">
-          <h2><span>Lets play</span> <span>matchmaking!</span></h2>
+          <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
           <p className="intro">Välj ett alternativ för att starta</p>
           <div className="wrapper">
             {matchitems.map((item, i) => { return (
@@ -19,7 +17,7 @@ class Matchmaking extends Component{
 				</div>
       </div>
     );
-  }
+
 }
 
 export default Matchmaking;

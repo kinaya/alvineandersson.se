@@ -2,35 +2,15 @@ import React, { Component} from "react";
 import Project from "./Project";
 import Filters from './Filters';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import VisibilitySensor from "react-visibility-sensor";
+import JumpingTitle from '../common/JumpingTitle';
 
-class Projects extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {visible: false, projectvisible: false}
-    this.onChangeVisibility = this.onChangeVisibility.bind(this);
-  }
-
-  // Only trigger animation once
-  onChangeVisibility(isVisible) {
-    this.setState({visible: isVisible})
-  }
-
-  render() {
-
-    const { projects, filterProjects, currentFilter, navigate, animation} = this.props;
+const Projects = ({projects, filterProjects, currentFilter, navigate, animation}) => {
 
   return (
     <div className="container projects">
 			<div className="inner">
 
-      <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
-      {({isVisible}) =>
-        <h2 className={isVisible ? 'visible' : 'invisible'}><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></h2>
-      }
-      </VisibilitySensor>
-
+        <JumpingTitle title="Portfolio" />
 
         <Filters filterProjects={(filterItem) => filterProjects(filterItem)} projects={projects} currentFilter={currentFilter} />
 
@@ -51,7 +31,7 @@ class Projects extends React.Component {
 			</div>
     </div>
   );
-}
+
 }
 
 export default Projects;

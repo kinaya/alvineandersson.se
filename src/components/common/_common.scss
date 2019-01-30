@@ -1,0 +1,25 @@
+h2.jumpingTitle.visible {
+  span {
+    display: inline-block;
+    animation: jump 0.5s;
+  }
+  @for $i from 1 to 10 {
+    span:nth-child(#{$i}) {
+      //animation-delay: calc(0.1s*#{$i});
+      //animation-duration: calc(0.4s + 0.05s*#{$i});
+    }
+  }
+}
+@keyframes jump {
+  0% {transform: translateY(0px) scale(1)}
+  50% {transform: translateY(-20px) scale(1.1)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+// Fix for line break at MatchMaking title
+.matchmaking h2.jumpingTitle {
+  span:nth-child(10) {
+    display: block;
+    font-size: 8px;
+  }
+}

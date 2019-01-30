@@ -84,7 +84,7 @@ const Header = ({onClick}) => {
 
       </div>
 
-      <div onClick={onClick} className="scrollarrow"></div>
+      <div onClick={onClick} className="scrollarrow header"></div>
   </div>
 );
 }

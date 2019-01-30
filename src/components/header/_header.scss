@@ -109,6 +109,7 @@
   left: 0;
   right: 0;
   cursor: pointer;
+  z-index: 999;
 }
 @keyframes MoveUpDown {
   0%, 100% { transform: translate(0,0); }

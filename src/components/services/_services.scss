@@ -4,11 +4,13 @@
 
 .services .inner {
 	@media(min-width: $desktop) {
+		margin: 4em auto;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 }
+
 
 .service {
 	transition: all 1s;
