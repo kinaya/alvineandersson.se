@@ -865,14 +865,25 @@ h2.jumpingTitle.visible span {
     background-position: 0% 79%; } }
 
 .bubbles {
-  max-width: 500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-content: flex-end;
   position: absolute;
-  bottom: -25px;
-  left: 0;
-  right: 0; }
+  bottom: -20px;
+  right: 10px; }
+  @media (min-width: 736px) {
+    .bubbles {
+      width: 20%; } }
+  @media (min-width: 1400px) {
+    .bubbles {
+      right: 15%; } }
+  .bubbles.large {
+    background-image: url(/whale.png);
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0; }
   .bubbles span {
     border-radius: 50%;
     display: inline-block; }
