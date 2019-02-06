@@ -176,7 +176,11 @@ p {
 .container.skills {
   background-color: #a5d3d3;
   background-image: url(https://alvineandersson.se/bg_skills.png);
-  color: #333333; }
+  color: #333333;
+  padding: 3rem 1rem 5rem 1rem; }
+  @media (min-width: 480px) {
+    .container.skills {
+      padding: 6rem 2rem 10rem 2rem; } }
 
 .container.matchmaking {
   background-color: #F2F2F2;
@@ -706,7 +710,7 @@ h2.jumpingTitle.visible span {
     overflow: hidden; }
     @media (min-width: 980px) {
       .projectPage .featuredImage {
-        margin: 3em auto 3em auto;
+        margin: 3em auto 5em auto;
         transform: none;
         border: 1px solid #a3a3a3; } }
   .projectPage .stats {
@@ -791,6 +795,7 @@ h2.jumpingTitle.visible span {
   @media (min-width: 736px) {
     .skills .stacks {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between; } }
   .skills .stack {
     margin-top: 3rem; }
@@ -865,19 +870,20 @@ h2.jumpingTitle.visible span {
   align-content: flex-end;
   position: absolute;
   bottom: -20px;
-  right: 10px; }
+  right: 10px;
+  /*  &.large {
+    background-image: url(../images/whale.png);
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+  }*/ }
   @media (min-width: 736px) {
     .bubbles {
       width: 20%; } }
   @media (min-width: 1400px) {
     .bubbles {
       right: 15%; } }
-  .bubbles.large {
-    background-image: url(https://alvineandersson.se/whale.png);
-    height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 100% 0; }
   .bubbles span {
     border-radius: 50%;
     display: inline-block; }
@@ -949,6 +955,41 @@ h2.jumpingTitle.visible span {
   100% {
     opacity: 0;
     transform: translateY(-1000px); } }
+
+.ocean {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden; }
+
+.wave {
+  background: url(https://alvineandersson.se/wave.svg) repeat-x;
+  background-size: contain;
+  position: absolute;
+  bottom: -10px;
+  width: 200%;
+  height: 50px;
+  animation: wave 40s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0); }
+
+.wave:nth-of-type(2) {
+  bottom: 0px;
+  animation: wave 40s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 40s ease -1.25s infinite;
+  opacity: 1; }
+
+@keyframes wave {
+  0% {
+    margin-left: 0; }
+  100% {
+    margin-left: -1600px; } }
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, -3px, 0); }
+  50% {
+    transform: translate3d(0, 3px, 0); } }
 
 .matchmaking {
   text-align: center; }

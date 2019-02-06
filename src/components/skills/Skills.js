@@ -10,27 +10,39 @@ const Skills = ({}) => {
 
         <div className="stacks">
           <div className="stack">
-            <h4>Stack #1 MERN</h4>
-            <p>Applikationer med <strong>React/Redux</strong> som frontend, backend API via <strong>Express</strong> byggt på <strong>node.js</strong> server och <strong>MongoDB</strong> databas. Routing, internalisering osv.</p>
+            <h4>MERN-stack</h4>
+            <p>Applikationer med <strong>React/Redux</strong>, backend via <strong>Express</strong> och <strong>node.js</strong> med <strong>MongoDB</strong> databas. Routing, internalisering osv</p>
           </div>
 
           <div className="stack">
-            <h4>Stack #2 CMS</h4>
-            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Konfiguration, temautveckling och custom-made plugins. Standard eller med fristående frontend via REST Api</p>
+            <h4>Drupal & Wordpress</h4>
+            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Custom-made plugins med <strong>PHP</strong> och <strong>MySQL</strong>. Standard eller headless via <strong>REST Api</strong></p>
           </div>
+
+          <div className="stack">
+            <h4>Temautveckling</h4>
+            <p>15+ års med <strong>HTML</strong>, <strong>CSS/SASS</strong> och <strong>JavaScript</strong>. Frameworks som <strong>Bootstrap</strong> eller <strong>Materialize</strong>. Ofta bollplank för <strong>interkationsdesign</strong></p>
+          </div>
+
+          <div className="stack">
+            <h4>Performance</h4>
+            <p><strong>Progressive web apps</strong> som standard, test av kodbas med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong></p>
+          </div>
+
+          <div className="stack">
+            <h4>Distribuering</h4>
+            <p>Utveckling och distribuerng med <strong>Git</strong>, <strong>Webpack</strong>, <strong>Gulp</strong> och <strong>Docker</strong>. Servermiljö via <strong>Apache/Cpanel</strong>, <strong>Heroku</strong> eller <strong>Firebase</strong></p>
+          </div>
+
+          <div className="stack">
+            <h4>?</h4>
+            <p>Ständig vidareutveckling och nyfikenhet på nya tekniker. Vad är er stack?</p>
+          </div>
+
         </div>
 
         <div className="list">
-          <h4>Skillcloud</h4>
-          <p><span className="label">Språk/Frameworks:</span> HTML, Css/Sass, PHP, JavaScript, JQuery, React/Redux, Node.js, Express.js</p>
-          <p><span className="label">CMS:</span> Drupal, Wordpress</p>
-          <p><span className="label">Databaser:</span> MySQL/MariaDB, MongoDB</p>
-          <p><span className="label">Testning:</span> Jest, Mocha</p>
-          <p><span className="label">Tillgänglighet:</span> Accesibility guidelines, Wai-Aria</p>
-          <p><span className="label">APIs:</span> Facebook Api, Google Api</p>
-          <p><span className="label">Utveckling och distribuering:</span> git, webpack, Apache/Cpanel, Heroku, Docker</p>
-          <p><span className="label">Annat:</span> SPA, Progressive Web apps, Service Workers, OAuth, JWT, Bootstrap, Materialize, SVG animation</p>
-          <p>Grundläggande koll på Java/Android utveckling, samt Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, ofta bollplank för koncept och ux i projekt, van projektledare och en stjärna på att googla.</p>
+          <p>Grundläggande koll på Java/Android och Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, van projektledare och en stjärna på att googla.</p>
         </div>
 
         <div className="bubbles large">
@@ -40,6 +52,11 @@ const Skills = ({}) => {
         <div className="bubbles small">
           <span></span> <span></span> <span></span> <span></span> <span></span>
           <span></span> <span></span> <span></span> <span></span> <span></span>
+        </div>
+
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
         </div>
 
 			</div>

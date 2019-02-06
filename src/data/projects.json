@@ -81,14 +81,14 @@
         }
       ],
       "listimg": {
-        "url": "newcomersyouth_list.jpg",
+        "url": "mensvarkstestet_list.jpg",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
       "date": "Pågående",
       "tags": ["React", "Wordpress"],
       "extendedTags": "React, Redux, Wordpress, PHP, MySQL",
       "image": {
-        "url": "mensvarkstest.png",
+        "url": "mensvarkstestet.png",
         "alt": "Image alt"
       }
     },
