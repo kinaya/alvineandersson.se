@@ -34,7 +34,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg|svg|webp)$/,
         use: [
 					{
 	          loader: 'file-loader',
@@ -50,7 +50,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new ImageminWebpWebpackPlugin({
+    /*new ImageminWebpWebpackPlugin({
       config: [{
         test: /\.(jpe?g|png)/,
         options: {
@@ -60,7 +60,7 @@ module.exports = {
       overrideExtension: false,
       detailedLogs: false,
       strict: true
-    }),
+    }),*/
     new WebpackCleanupPlugin({
       exclude: ["robots.txt","service-worker.js"],
     }),

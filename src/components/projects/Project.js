@@ -33,7 +33,7 @@ class Project extends React.Component {
         <Link to={`/projects/${project.id}`} className="inner-div">
           <div className="image">
             <picture>
-              <source type="image/webp" srcSet={`https://alvineandersson.se/${project.listimg.url}.webp`} />
+              <source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} />
               <img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} />
             </picture>
           </div>
