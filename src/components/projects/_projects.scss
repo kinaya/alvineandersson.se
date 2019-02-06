@@ -3,7 +3,7 @@
     text-align: center;
     margin-bottom: 1em;
   }
-  .project:last-child {
+  .project:last-child .inner-div {
     border-bottom: 0;
   }
 }
@@ -161,7 +161,6 @@
 
 // Filter
 .filter {
-	margin-bottom: 2em;
   padding-bottom: 0.5em;
   font-family: "open-sans";
   font-size: 1.2em;
@@ -182,7 +181,7 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
   &.active,
-  &:active, &:focus, &:hover {
+  &:hover {
     color: $blue-dark;
   }
 }
@@ -222,14 +221,40 @@
 }
 
 
+/*Break titles with many words*/
+  .project.newcomersyouth .inner-div .title,
+  .projectPage.newcomersyouth h1,
+  .project.filmregionsydost .inner-div .title,
+  .projectPage.filmregionsydost h1,
+  .project.nagotharhant .inner-div .title,
+  .projectPage.nagotharhant h1,
+  .project.pablodigtallvar .inner-div .title,
+  .projectPage.pablodigtallvar h1{
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: $tablet) {
+      max-width: 500px;
+    }
+  }
+  .project.fridhadvokatbyra .inner-div .title,
+  .projectPage.fridhadvokatbyra h1 {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: $tablet) {
+      max-width: 500px;
+    }
+  }
+
 
 /* ProjectPage */
 .projectPage {
   overflow: hidden;
   .container {
-    padding-top: 4rem;
+    padding: 4rem 1rem 1rem 1rem;
     @media(min-width: $desktop) {
-      padding-top: 6rem;
+      padding: 6rem 2rem 2rem 2rem;
     }
   }
 	.inner {
@@ -256,21 +281,6 @@
       margin: 0.2em auto 0.5em auto;
 		}
 	}
-  h1.newcomersyouth,
-  h1.filmregionsydost,
-  h1.nagotharhant,
-  h1.pablodigtallvar {
-    max-width: 250px;
-    @media(min-width: $tablet) {
-      max-width: 500px;
-    }
-  }
-  h1.fridhadvokatbyra {
-    max-width: 300px;
-    @media(min-width: $tablet) {
-      max-width: 500px;
-    }
-  }
   h4 {
     font-size: 1.2rem;
     margin: 3rem 0 -0.8rem;
@@ -328,6 +338,9 @@
       margin-top: 6em;
     }
     border-top: 2px dotted $gray-2;
+    .inner-div {
+      border: 0;
+    }
   }
   .project {
     border: 0;

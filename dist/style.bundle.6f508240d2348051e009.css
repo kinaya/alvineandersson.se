@@ -421,7 +421,7 @@ h2.jumpingTitle.visible span {
   text-align: center;
   margin-bottom: 1em; }
 
-.projects .project:last-child {
+.projects .project:last-child .inner-div {
   border-bottom: 0; }
 
 .project .inner-div {
@@ -622,7 +622,6 @@ h2.jumpingTitle.visible span {
     border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } }
 
 .filter {
-  margin-bottom: 2em;
   padding-bottom: 0.5em;
   font-family: "open-sans";
   font-size: 1.2em;
@@ -642,7 +641,7 @@ h2.jumpingTitle.visible span {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  .filter span.select.active, .filter span.select:active, .filter span.select:focus, .filter span.select:hover {
+  .filter span.select.active, .filter span.select:hover {
     color: #72baba; }
 
 .project {
@@ -675,14 +674,47 @@ h2.jumpingTitle.visible span {
   transform: translateY(0);
   transition: all 0.3s; }
 
+/*Break titles with many words*/
+.project.newcomersyouth .inner-div .title,
+.projectPage.newcomersyouth h1,
+.project.filmregionsydost .inner-div .title,
+.projectPage.filmregionsydost h1,
+.project.nagotharhant .inner-div .title,
+.projectPage.nagotharhant h1,
+.project.pablodigtallvar .inner-div .title,
+.projectPage.pablodigtallvar h1 {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 736px) {
+    .project.newcomersyouth .inner-div .title,
+    .projectPage.newcomersyouth h1,
+    .project.filmregionsydost .inner-div .title,
+    .projectPage.filmregionsydost h1,
+    .project.nagotharhant .inner-div .title,
+    .projectPage.nagotharhant h1,
+    .project.pablodigtallvar .inner-div .title,
+    .projectPage.pablodigtallvar h1 {
+      max-width: 500px; } }
+
+.project.fridhadvokatbyra .inner-div .title,
+.projectPage.fridhadvokatbyra h1 {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 736px) {
+    .project.fridhadvokatbyra .inner-div .title,
+    .projectPage.fridhadvokatbyra h1 {
+      max-width: 500px; } }
+
 /* ProjectPage */
 .projectPage {
   overflow: hidden; }
   .projectPage .container {
-    padding-top: 4rem; }
+    padding: 4rem 1rem 1rem 1rem; }
     @media (min-width: 980px) {
       .projectPage .container {
-        padding-top: 6rem; } }
+        padding: 6rem 2rem 2rem 2rem; } }
   .projectPage .inner {
     max-width: 780px; }
   .projectPage .page-header {
@@ -703,22 +735,6 @@ h2.jumpingTitle.visible span {
       .projectPage h1 {
         font-size: 4.4em;
         margin: 0.2em auto 0.5em auto; } }
-  .projectPage h1.newcomersyouth,
-  .projectPage h1.filmregionsydost,
-  .projectPage h1.nagotharhant,
-  .projectPage h1.pablodigtallvar {
-    max-width: 250px; }
-    @media (min-width: 736px) {
-      .projectPage h1.newcomersyouth,
-      .projectPage h1.filmregionsydost,
-      .projectPage h1.nagotharhant,
-      .projectPage h1.pablodigtallvar {
-        max-width: 500px; } }
-  .projectPage h1.fridhadvokatbyra {
-    max-width: 300px; }
-    @media (min-width: 736px) {
-      .projectPage h1.fridhadvokatbyra {
-        max-width: 500px; } }
   .projectPage h4 {
     font-size: 1.2rem;
     margin: 3rem 0 -0.8rem; }
@@ -768,6 +784,8 @@ h2.jumpingTitle.visible span {
     @media (min-width: 736px) {
       .projectPage .navigation .inner {
         margin-top: 6em; } }
+    .projectPage .navigation .inner .inner-div {
+      border: 0; }
   .projectPage .project {
     border: 0; }
     .projectPage .project .inner-div {

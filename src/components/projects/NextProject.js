@@ -7,7 +7,7 @@ const NextProject = ({nextProject}) => {
       <div className="navigation">
         <div className="inner">
         {nextProject &&
-          <div className="project">
+          <div className={`project ${nextProject.id}`}>
           <Link to={`/projects/${nextProject.id}`} className="inner-div">
             <div className="image"><img src={require(`../../images/${nextProject.listimg.url}`)} /></div>
             <div className="info">

@@ -23,7 +23,7 @@ class Project extends React.Component {
     const { project, animation } = this.props;
 
   return (
-    <div className="project">
+    <div className={`project ${project.id}`}>
 
     <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
     {({isVisible}) =>
