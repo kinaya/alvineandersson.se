@@ -678,24 +678,37 @@ h2.jumpingTitle.visible span {
 /* ProjectPage */
 .projectPage {
   overflow: hidden; }
-  @media (min-width: 736px) {
-    .projectPage .container {
-      padding: 2rem 2rem; } }
+  .projectPage .container {
+    padding-top: 4rem; }
+    @media (min-width: 980px) {
+      .projectPage .container {
+        padding-top: 6rem; } }
   .projectPage .inner {
     max-width: 780px; }
+  .projectPage .page-header {
+    text-align: center; }
+  .projectPage .case {
+    background-color: #7fc8bc;
+    font-family: 'din-2014', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.2em 0.5em; }
   .projectPage h1 {
-    margin: 2em 0 0.5em 0;
+    margin: 0.3em 0 0.5em 0;
     max-width: 780px;
     text-align: center; }
     @media (min-width: 736px) {
       .projectPage h1 {
+        margin-top: 0.1em;
         font-size: 4.4em; } }
   .projectPage h4 {
     font-size: 1.2rem;
     margin: 3rem 0 -0.8rem; }
   .projectPage .description {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.2;
     font-family: 'din-2014', sans-serif; }
     @media (min-width: 736px) {
