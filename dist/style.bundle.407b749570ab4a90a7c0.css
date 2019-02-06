@@ -160,14 +160,14 @@ p {
     margin: 0 auto; }
 
 .container.header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/bg_header.png), url(/header_three.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://alvineandersson.se/bg_header.png), url(https://alvineandersson.se/header_three.jpg);
   background-size: cover;
   height: 100vh;
   padding: 0; }
 
 .container.projects {
   background-color: #F2F2F2;
-  background-image: url(/bg_raster.png);
+  background-image: url(https://alvineandersson.se/bg_raster.png);
   background-size: 100%;
   background-repeat: repeat-y; }
   .container.projects .inner {
@@ -175,12 +175,12 @@ p {
 
 .container.skills {
   background-color: #a5d3d3;
-  background-image: url(/bg_skills.png);
+  background-image: url(https://alvineandersson.se/bg_skills.png);
   color: #333333; }
 
 .container.matchmaking {
   background-color: #F2F2F2;
-  background-image: url(/bg_raster.png);
+  background-image: url(https://alvineandersson.se/bg_raster.png);
   background-size: cover;
   padding-top: 3rem; }
   @media (min-width: 480px) {
@@ -285,7 +285,7 @@ h2.jumpingTitle.visible span {
     opacity: 1; } }
 
 .scrollarrow {
-  background: url(/arrow.svg);
+  background: url(https://alvineandersson.se/arrow.svg);
   height: 30px;
   width: 30px;
   display: block;
@@ -329,7 +329,7 @@ h2.jumpingTitle.visible span {
     background-color: #72baba; }
 
 .footer {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(/footer_image.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(https://alvineandersson.se/footer_image.jpg);
   background-repeat: no-repeat;
   background-size: auto 150%;
   background-position: -250px 0; }
@@ -882,7 +882,7 @@ h2.jumpingTitle.visible span {
     .bubbles {
       right: 15%; } }
   .bubbles.large {
-    background-image: url(/whale.png);
+    background-image: url(https://alvineandersson.se/whale.png);
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;

@@ -6,15 +6,15 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-//const PUBLIC_PATH = 'https://alvineandersson.se/';
+const PUBLIC_PATH = 'https://alvineandersson.se/';
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.[hash].js',
-    publicPath: '/',
-    //publicPath: PUBLIC_PATH
+    //publicPath: '/',
+    publicPath: PUBLIC_PATH
   },
   module: {
     rules: [
