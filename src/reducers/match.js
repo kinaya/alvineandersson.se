@@ -33,10 +33,10 @@ const match = (state = [], action) => {
           }
         }
         // Mark the item to show as visible
-        // Set its arrowAlignment
+        // Set its alignment
         if(newState.matchitems[i].id === action.itemToShow) {
           newState.matchitems[i].visible = true
-          newState.matchitems[i].arrowAlignment = action.arrowAlignment
+          newState.matchitems[i].alignment = action.alignment
         }
       }
 

@@ -6,13 +6,13 @@ class Service extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = {visible: false}
+    this.state = {active: false}
     this.onChangeVisibility = this.onChangeVisibility.bind(this);
   }
 
   // Only trigger animation once
   onChangeVisibility(isVisible) {
-    this.setState({visible: isVisible})
+    this.setState({active: isVisible})
   }
 
   render() {
@@ -21,13 +21,14 @@ class Service extends React.Component {
 
     return (
 
-      <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
+      <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.active} partialVisibility={true} >
       {({isVisible}) =>
         <div className={isVisible ? `service ${id} visible` : `service ${id} invisible`}>
 
-          <h4>{headline}</h4>
+          {headline && <h4>{headline}</h4> }
 
-          <p>{text}</p>
+          {text && <p>{text}</p> }
+
         </div>
       }
       </VisibilitySensor>

@@ -104,7 +104,7 @@
 }
 
 // Project title heading
-.project-title span {
+/*.project-title span {
 	display: inline-block;
 }
 .project-title span.word:after {
@@ -115,7 +115,7 @@
 }
 .slide-enter-active .project-title span {
 	transform: translate(0,0);
-}
+}*/
 // Animation description
 .description {
   transition: transform 1000ms ease-in;
@@ -235,8 +235,9 @@
 
 /* ProjectPage */
 .projectPage {
-  background-color: $turquoise;
-  background-image: url('../images/bg_header.png');
+  //background-color: $turquoise;
+  //background-color: $white;
+  //background-image: url('../images/bg_header.png');
   overflow: hidden;
   .container {
     @media(min-width: $tablet) {
@@ -279,12 +280,6 @@
       border: 0;
     }
     overflow: hidden;
-    img {
-      width: calc(100% + 100px);
-      transform: translateX(-100px);
-      transition: transform 800ms ease-in-out 400ms;
-      display: block;
-    }
   }
   .stats {
     margin-top: 3rem;
@@ -340,11 +335,19 @@
   }
 }
 
+/* Animation featured image */
+.projectPage .featuredImage img {
+  width: calc(100% + 100px);
+  transform: translateX(-100px);
+  transition: transform 800ms ease-in-out 200ms;
+  display: block;
+}
+
 .slide-enter .projectPage .featuredImage img {
   transform: translateX(0);
 }
 .slide-enter-active .projectPage .featuredImage img {
-  transform: translate(-100px);
+  transform: translateX(-100px);
 }
 
 

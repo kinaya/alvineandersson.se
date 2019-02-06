@@ -19,11 +19,19 @@ class App extends React.Component {
     super(props);
     this.projectsRef = React.createRef();
     this.contentRef = React.createRef();
+    this.topRef = React.createRef();
+    //this.handleScroll = this.handleScroll.bind(this);
+    //this.state = {
+    //  scroll: 0
+    //}
   }
 
   componentWillReceiveProps(nextProps) {
     const projectsRef = this.projectsRef;
-    if(nextProps.location.pathname != this.props.location.pathname) {
+
+    setTimeout(function(){ window.scrollTo(0,0) }, 750);
+
+    /*if(nextProps.location.pathname != this.props.location.pathname) {
       if(nextProps.location.pathname == '/') {
         if(projectsRef) {
           setTimeout(function(){
@@ -37,13 +45,25 @@ class App extends React.Component {
       } else {
         setTimeout(function(){ window.scrollTo(0,0) }, 500);
       }
-    }
+    }*/
   }
 
   _scrollToContent(ref) {
-    console.log(ref);
     scrollIntoView(ref.current,{time:500,align:{top:0}});
   }
+
+//  componentDidMount() {
+//      window.addEventListener('scroll', this.handleScroll);
+//  }
+
+//  componentWillUnmount() {
+//      window.removeEventListener('scroll', this.handleScroll);
+//  }
+
+//  handleScroll(event) {
+//    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+//    this.setState({scroll: scroll});
+//  }
 
   render() {
 
@@ -51,15 +71,15 @@ class App extends React.Component {
     const currentKey = location.pathname
 
     return (
-      <div className={`App animate-projects-${animation.projects}`}>
+      <div ref={this.topRef} className={`App animate-projects-${animation.projects}`}>
 
         <TransitionGroup component="main" className="page-main">
-          <CSSTransition key={currentKey} timeout={1200} classNames="slide" appear>
-          <div className='slide'>
+          <CSSTransition key={currentKey} timeout={1000} classNames="slide" appear>
+          <div>
           <Switch location={location}>
 
           <Route exact path="/" render={() => (
-            <div className="docscroller">
+            <div>
               <Header onClick={() => this._scrollToContent(this.contentRef)} />
               <div ref={this.contentRef} />
               <Services />

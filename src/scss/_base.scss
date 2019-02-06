@@ -71,8 +71,11 @@ $wide: '1280px';
 }
 .slide-exit {
 	position: absolute;
-	top: 0;
+  //top: 0;
 	width: 100%;
+  top: var(--scroll);
+  //top: attr(data-scroll);
+
 }
 .slide-enter {
   top: 0;
@@ -80,13 +83,15 @@ $wide: '1280px';
 	z-index: 999;
 	transform: translate(100%, 0%);
 	position: fixed;
+  background-color: $turquoise;
 }
 .slide-enter-active {
 	transform: translate(0%,0%);
-	transition: transform 500ms;
+	transition: transform 500ms, background-color 750ms;
 	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
 	animation-name: sliding-in-from-right;
 	animation-duration: 750ms;
+  background-color: $white;
 }
 .slide-enter-done {
 	position: relative;
@@ -166,6 +171,7 @@ body {
 	font-family: "open-sans";
 	line-height: 1.4;
 	color: $black;
+  background-color: $white;
 }
 
 h1 {

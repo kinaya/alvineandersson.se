@@ -7,6 +7,8 @@ import matchitems from "./data/matchitems.json";
 import ScrollToTop from "./components/ScrollToTop";
 import AppContainer from "./components/AppContainer";
 import { BrowserRouter } from "react-router-dom";
+import registerServiceWorker from './registerServiceWorker';
+
 
 const initialState = {
   projects: {
@@ -34,3 +36,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+
+registerServiceWorker();

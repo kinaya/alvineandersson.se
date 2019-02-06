@@ -20,22 +20,24 @@
 
 .slide-exit {
   position: absolute;
-  top: 0;
-  width: 100%; }
+  width: 100%;
+  top: var(--scroll); }
 
 .slide-enter {
   top: 0;
   width: 100%;
   z-index: 999;
   transform: translate(100%, 0%);
-  position: fixed; }
+  position: fixed;
+  background-color: #a5d3d3; }
 
 .slide-enter-active {
   transform: translate(0%, 0%);
-  transition: transform 500ms;
+  transition: transform 500ms, background-color 750ms;
   transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
   animation-name: sliding-in-from-right;
-  animation-duration: 750ms; }
+  animation-duration: 750ms;
+  background-color: #F2F2F2; }
 
 .slide-enter-done {
   position: relative;
@@ -98,7 +100,8 @@ body {
   padding: 0;
   font-family: "open-sans";
   line-height: 1.4;
-  color: #333333; }
+  color: #333333;
+  background-color: #F2F2F2; }
 
 h1 {
   font-family: 'din-2014-narrow';
@@ -491,18 +494,18 @@ h2.jumpingTitle.visible span {
       padding: 0.2em 0.5em;
       transition: all 0.3s; }
 
-.project-title span {
-  display: inline-block; }
-
+/*.project-title span {
+	display: inline-block;
+}
 .project-title span.word:after {
-  content: "\A0"; }
-
+	content: "\00a0";
+}
 .slide-enter .project-title span {
-  transform: translate(500px, 0); }
-
+	transform: translate(500px,0);
+}
 .slide-enter-active .project-title span {
-  transform: translate(0, 0); }
-
+	transform: translate(0,0);
+}*/
 .description {
   transition: transform 1000ms ease-in; }
 
@@ -679,8 +682,6 @@ h2.jumpingTitle.visible span {
 
 /* ProjectPage */
 .projectPage {
-  background-color: #a5d3d3;
-  background-image: url(/bg_header.png);
   overflow: hidden; }
   @media (min-width: 736px) {
     .projectPage .container {
@@ -717,11 +718,6 @@ h2.jumpingTitle.visible span {
         margin: 3em auto 3em auto;
         transform: none;
         border: 0; } }
-    .projectPage .featuredImage img {
-      width: calc(100% + 100px);
-      transform: translateX(-100px);
-      transition: transform 800ms ease-in-out 400ms;
-      display: block; }
   .projectPage .stats {
     margin-top: 3rem; }
   .projectPage .stats > p {
@@ -761,11 +757,18 @@ h2.jumpingTitle.visible span {
     .projectPage .project:hover .image {
       background-color: #61b2b2; }
 
+/* Animation featured image */
+.projectPage .featuredImage img {
+  width: calc(100% + 100px);
+  transform: translateX(-100px);
+  transition: transform 800ms ease-in-out 200ms;
+  display: block; }
+
 .slide-enter .projectPage .featuredImage img {
   transform: translateX(0); }
 
 .slide-enter-active .projectPage .featuredImage img {
-  transform: translate(-100px); }
+  transform: translateX(-100px); }
 
 /*.parallax {
   position: relative;

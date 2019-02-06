@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Projects from './Projects'
-import { filterProjects, navigate } from '../../actions'
+import { filterProjects } from '../../actions'
 
 function mapStateToProps(state) {
   return {
@@ -12,8 +12,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    filterProjects: (filter) => dispatch(filterProjects(filter)),
-    navigate: (direction) => dispatch(navigate(direction))
+    filterProjects: (filter) => dispatch(filterProjects(filter))
   }
 }
 

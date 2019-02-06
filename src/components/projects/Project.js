@@ -18,7 +18,6 @@ class Project extends React.Component {
 //       <div className={!animation ? "project" : (isVisible ? "project visible" : "project invisible")}>
 //<div className={isVisible ? 'visible' : 'invisible'}>
 
-
   render() {
 
     const { project, animation } = this.props;
