@@ -5,6 +5,7 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 const PUBLIC_PATH = 'https://alvineandersson.se/';
 
@@ -49,6 +50,17 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    new ImageminWebpWebpackPlugin({
+      config: [{
+        test: /\.(jpe?g|png)/,
+        options: {
+          quality:  75
+        }
+      }],
+      overrideExtension: false,
+      detailedLogs: false,
+      strict: true
+    }),
     new WebpackCleanupPlugin({
       exclude: ["robots.txt","service-worker.js"],
     }),
