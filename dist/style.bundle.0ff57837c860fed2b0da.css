@@ -696,13 +696,29 @@ h2.jumpingTitle.visible span {
     letter-spacing: 1px;
     padding: 0.2em 0.5em; }
   .projectPage h1 {
-    margin: 0.3em 0 0.5em 0;
+    margin: 0.3em auto 0.5em auto;
     max-width: 780px;
     text-align: center; }
     @media (min-width: 736px) {
       .projectPage h1 {
-        margin-top: 0.1em;
-        font-size: 4.4em; } }
+        font-size: 4.4em;
+        margin: 0.2em auto 0.5em auto; } }
+  .projectPage h1.newcomersyouth,
+  .projectPage h1.filmregionsydost,
+  .projectPage h1.nagotharhant,
+  .projectPage h1.pablodigtallvar {
+    max-width: 250px; }
+    @media (min-width: 736px) {
+      .projectPage h1.newcomersyouth,
+      .projectPage h1.filmregionsydost,
+      .projectPage h1.nagotharhant,
+      .projectPage h1.pablodigtallvar {
+        max-width: 500px; } }
+  .projectPage h1.fridhadvokatbyra {
+    max-width: 300px; }
+    @media (min-width: 736px) {
+      .projectPage h1.fridhadvokatbyra {
+        max-width: 500px; } }
   .projectPage h4 {
     font-size: 1.2rem;
     margin: 3rem 0 -0.8rem; }

@@ -30,7 +30,7 @@ const ProjectPage = ({project, projects}) => {
 
         <div className="inner page-header">
           <span className="case">Case story</span>
-          <h1 className="project-title">{project.title}</h1>
+          <h1 className={`project-title ${project.id}`}>{project.title}</h1>
           <p className="description">{project.info}</p>
         </div>
 
