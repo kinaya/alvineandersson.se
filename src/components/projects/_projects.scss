@@ -66,6 +66,7 @@
     text-decoration: none;
     margin: 0.2em 0;
     font-family: rig-solid-bold-reverse, sans-serif;
+    font-display: auto;
     font-weight: 700;
     display: block;
     transition: all 0.3s;
@@ -91,6 +92,7 @@
     }
     span {
       font-family: 'din-2014', sans-serif;
+      font-display: auto;
       text-transform: uppercase;
       font-size: 0.8em;
       font-weight:700;
@@ -163,6 +165,7 @@
 .filter {
   padding-bottom: 0.5em;
   font-family: "open-sans";
+  font-display: auto;
   font-size: 1.2em;
   color: $black;
   text-align: center;
@@ -172,6 +175,7 @@
   margin: 0 0.5em;
   border-bottom: 2px solid transparent;
   font-family: 'din-2014', sans-serif;
+  font-display: auto;
   font-size: 0.9em;
 }
 .filter span.select {
@@ -266,6 +270,7 @@
   .case {
     background-color: $blue;
     font-family: 'din-2014', sans-serif;
+    font-display: auto;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 700;
@@ -293,6 +298,7 @@
       font-size: 1.8rem;
     }
     font-family: 'din-2014', sans-serif;
+    font-display: auto;
   }
   .featuredImage {
     max-width: 940px;
@@ -320,6 +326,7 @@
     letter-spacing: 1px;
     display: block;
     font-family: 'din-2014', sans-serif;
+    font-display: auto;
   }
   .stats a {
     color: $black;

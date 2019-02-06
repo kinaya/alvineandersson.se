@@ -99,14 +99,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: "open-sans";
+  font-display: auto;
   line-height: 1.4;
   color: #333333;
   background-color: #F2F2F2; }
 
 h1 {
-  font-family: 'din-2014-narrow';
-  font-family: 'cheap-pine', sans-serif;
   font-family: 'rig-solid-bold-fill', sans-serif;
+  font-display: auto;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2rem;
@@ -117,9 +117,8 @@ h1 {
       font-size: 2.5rem; } }
 
 h2 {
-  font-family: "din-2014-narrow";
-  font-family: 'cheap-pine', sans-serif;
   font-family: 'rig-solid-bold-fill', sans-serif;
+  font-display: auto;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2.5rem;
@@ -131,10 +130,8 @@ h2 {
       margin-bottom: 0.5rem; } }
 
 h3 {
-  font-family: "din-2014-narrow";
-  font-family: "cheap-pine", sans-serif;
-  font-family: 'rig-solid-bold-inline-solo', sans-serif;
   font-family: "rig-solid-bold-halftone", sans-serif;
+  font-display: auto;
   color: #333333;
   font-weight: 700;
   font-size: 1.2rem;
@@ -229,6 +226,8 @@ h2.jumpingTitle.visible span {
 .webb .text {
   fill: #F2F2F2;
   font-family: 'din-2014', sans-serif;
+  font-display: auto;
+  font-display: auto;
   text-transform: uppercase;
   font-size: 0.3em;
   letter-spacing: 1px;
@@ -247,6 +246,7 @@ h2.jumpingTitle.visible span {
 
 .utvecklare .text {
   font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-display: auto;
   text-transform: uppercase;
   display: block; }
 
@@ -271,6 +271,7 @@ h2.jumpingTitle.visible span {
 .alvine .text {
   text-transform: uppercase;
   display: block;
+  font-display: auto;
   font-family: 'din-2014', sans-serif;
   fill: #F2F2F2;
   letter-spacing: 2.9px;
@@ -278,6 +279,7 @@ h2.jumpingTitle.visible span {
 
 .medkod .text {
   font-family: fairwater-script, sans-serif;
+  font-display: auto;
   font-size: 0.54em;
   fill: #F2F2F2;
   animation: medkod 2s forwards;
@@ -315,6 +317,7 @@ h2.jumpingTitle.visible span {
   text-decoration: none;
   color: #333333;
   font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-display: auto;
   font-size: 2em;
   padding: 0;
   transition: all 300ms;
@@ -469,6 +472,7 @@ h2.jumpingTitle.visible span {
     text-decoration: none;
     margin: 0.2em 0;
     font-family: rig-solid-bold-reverse, sans-serif;
+    font-display: auto;
     font-weight: 700;
     display: block;
     transition: all 0.3s; }
@@ -489,6 +493,7 @@ h2.jumpingTitle.visible span {
         display: block; } }
     .project .inner-div .what span {
       font-family: 'din-2014', sans-serif;
+      font-display: auto;
       text-transform: uppercase;
       font-size: 0.8em;
       font-weight: 700;
@@ -624,6 +629,7 @@ h2.jumpingTitle.visible span {
 .filter {
   padding-bottom: 0.5em;
   font-family: "open-sans";
+  font-display: auto;
   font-size: 1.2em;
   color: #333333;
   text-align: center;
@@ -633,6 +639,7 @@ h2.jumpingTitle.visible span {
   margin: 0 0.5em;
   border-bottom: 2px solid transparent;
   font-family: 'din-2014', sans-serif;
+  font-display: auto;
   font-size: 0.9em; }
 
 .filter span.select {
@@ -722,6 +729,7 @@ h2.jumpingTitle.visible span {
   .projectPage .case {
     background-color: #7fc8bc;
     font-family: 'din-2014', sans-serif;
+    font-display: auto;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 700;
@@ -742,7 +750,8 @@ h2.jumpingTitle.visible span {
     text-align: center;
     font-size: 1.4rem;
     line-height: 1.2;
-    font-family: 'din-2014', sans-serif; }
+    font-family: 'din-2014', sans-serif;
+    font-display: auto; }
     @media (min-width: 736px) {
       .projectPage .description {
         font-size: 1.8rem; } }
@@ -768,7 +777,8 @@ h2.jumpingTitle.visible span {
     font-weight: 700;
     letter-spacing: 1px;
     display: block;
-    font-family: 'din-2014', sans-serif; }
+    font-family: 'din-2014', sans-serif;
+    font-display: auto; }
   .projectPage .stats a {
     color: #333333;
     border-bottom: 1px solid #333333;
@@ -852,6 +862,7 @@ h2.jumpingTitle.visible span {
     .skills .stack h4 {
       font-size: 1.2rem;
       font-family: 'din-2014', sans-serif;
+      font-display: auto;
       letter-spacing: 1px;
       background-color: #333333;
       color: #F2F2F2;
@@ -1044,6 +1055,7 @@ h2.jumpingTitle.visible span {
     max-width: 580px;
     margin: 2em auto 0;
     font-family: "Roboto Mono",monospace;
+    font-display: auto;
     font-size: 1rem; }
     @media (min-width: 736px) {
       .matchmaking .wrapper {
@@ -1104,6 +1116,7 @@ h2.jumpingTitle.visible span {
     border: 0;
     padding: 1em 1.5em;
     font-family: "Roboto Mono",monospace;
+    font-display: auto;
     font-size: 1rem;
     font-weight: 700;
     color: #333333;

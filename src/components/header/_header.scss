@@ -21,7 +21,8 @@
   .text {
     fill: $white;
     font-family: 'din-2014', sans-serif;
-    //font-family: trade-gothic-next, sans-serif;
+    font-display: auto;
+    font-display: auto;
     text-transform: uppercase;
     font-size: 0.3em;
     letter-spacing: 1px;
@@ -44,6 +45,7 @@
 .utvecklare {
   .text {
     font-family: "rig-solid-bold-inline-solo", sans-serif;
+    font-display: auto;
     text-transform: uppercase;
     display: block;
   }
@@ -71,7 +73,7 @@
   .text {
     text-transform: uppercase;
     display: block;
-    //font-family: trade-gothic-next, sans-serif;
+    font-display: auto;
     font-family: 'din-2014', sans-serif;
     fill: $white;
     letter-spacing: 2.9px;
@@ -81,6 +83,7 @@
 .medkod {
   .text {
     font-family: fairwater-script, sans-serif;
+    font-display: auto;
     font-size: 0.54em;
     fill: $white;
     animation: medkod 2s forwards;
@@ -120,6 +123,7 @@
 	text-decoration: none;
 	color: $black;
   font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-display: auto;
 	font-size: 2em;
 	padding: 0;
 	transition: all 300ms;

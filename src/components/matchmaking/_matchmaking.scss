@@ -5,6 +5,7 @@
     max-width: 580px;
     margin: 2em auto 0;
     font-family: "Roboto Mono",monospace;
+    font-display: auto;
     font-size: 1rem;
     @media(min-width: $tablet) {
       font-size: 1.2rem;
@@ -90,6 +91,7 @@
     border: 0;
     padding: 1em 1.5em;
     font-family: "Roboto Mono",monospace;
+    font-display: auto;
     font-size: 1rem;
     font-weight: 700;
     color: $black;
