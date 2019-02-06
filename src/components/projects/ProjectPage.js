@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 class ProjectPage extends React.Component {
 
@@ -106,6 +107,13 @@ class ProjectPage extends React.Component {
 //      <Link className="logo" to="/" onClick={() => navigate('left')}>
   return (
     <div className="projectPage" >
+
+      <Helmet>
+        <title>{project.title} | Alvine Andersson</title>
+        <meta name="description" content={project.info} />
+      </Helmet>
+
+
       <div className="container">
 
       <Link className="logo" to="/">
