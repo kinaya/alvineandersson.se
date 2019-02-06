@@ -130,7 +130,7 @@ class ProjectPage extends React.Component {
 
       </div>
 
-      <div className="featuredImage"><img src={require(`../../images/${project.image.url}`)} /></div>
+      <div className="featuredImage"><img alt={project.image.alt} src={require(`../../images/${project.image.url}`)} /></div>
 
       <div className="inner">
 

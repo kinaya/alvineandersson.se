@@ -32,7 +32,7 @@ class Project extends React.Component {
 
         <Link to={`/projects/${project.id}`} className="inner-div">
           <div className="image">
-            <img src={require(`../../images/${project.listimg.url}`)} />
+            <img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} />
           </div>
 
           <div className="info">
