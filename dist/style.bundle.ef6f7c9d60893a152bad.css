@@ -494,24 +494,15 @@ h2.jumpingTitle.visible span {
       padding: 0.2em 0.5em;
       transition: all 0.3s; }
 
-/*.project-title span {
-	display: inline-block;
-}
-.project-title span.word:after {
-	content: "\00a0";
-}
-.slide-enter .project-title span {
-	transform: translate(500px,0);
-}
-.slide-enter-active .project-title span {
-	transform: translate(0,0);
-}*/
+.project-title,
 .description {
   transition: transform 1000ms ease-in; }
 
+.slide-enter .project-title,
 .slide-enter .description {
   transform: translateX(100px); }
 
+.slide-enter-active .project-title,
 .slide-enter-active .description {
   transform: translateX(0px); }
 
@@ -713,11 +704,11 @@ h2.jumpingTitle.visible span {
     border-top: 10px solid #72baba;
     border-bottom: 10px solid #72baba;
     overflow: hidden; }
-    @media (min-width: 736px) {
+    @media (min-width: 980px) {
       .projectPage .featuredImage {
         margin: 3em auto 3em auto;
         transform: none;
-        border: 0; } }
+        border: 1px solid #a3a3a3; } }
   .projectPage .stats {
     margin-top: 3rem; }
   .projectPage .stats > p {

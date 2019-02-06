@@ -103,26 +103,16 @@
   }
 }
 
-// Project title heading
-/*.project-title span {
-	display: inline-block;
-}
-.project-title span.word:after {
-	content: "\00a0";
-}
-.slide-enter .project-title span {
-	transform: translate(500px,0);
-}
-.slide-enter-active .project-title span {
-	transform: translate(0,0);
-}*/
-// Animation description
+// Animation description and title
+.project-title,
 .description {
   transition: transform 1000ms ease-in;
 }
+.slide-enter .project-title,
 .slide-enter .description {
   transform: translateX(100px)
 }
+.slide-enter-active .project-title,
 .slide-enter-active .description {
   transform: translateX(0px)
 }
@@ -274,10 +264,10 @@
     transform: rotate(-1deg);
     border-top: 10px solid $blue-dark;
     border-bottom: 10px solid $blue-dark;
-    @media(min-width: $tablet) {
+    @media(min-width: $desktop) {
       margin: 3em auto 3em auto;
       transform: none;
-      border: 0;
+      border: 1px solid $gray-2;
     }
     overflow: hidden;
   }

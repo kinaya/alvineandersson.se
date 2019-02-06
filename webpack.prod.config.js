@@ -6,13 +6,15 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const PUBLIC_PATH = 'https://alvineandersson.se/';
+
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.[hash].js',
-    publicPath: '/',
+    publicPath: PUBLIC_PATH
   },
   module: {
     rules: [
@@ -61,10 +63,7 @@ module.exports = {
     new SWPrecacheWebpackPlugin({
       cacheId: 'Alvine Andersson',
       filename: 'service-worker.js',
-      //staticFileGlobs: ['dist/**/*.{js,css}', '/'],
       dontCacheBustUrlsMatching: /\.\w{8}\./,
-      //maximumFileSizeToCacheInBytes: 5194304,
-      //minify: true,
       navigateFallback: path.resolve(__dirname, 'dist') + 'index.html',
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
