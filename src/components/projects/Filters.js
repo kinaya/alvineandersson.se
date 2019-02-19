@@ -1,22 +1,41 @@
-import React, { Component} from "react";
+import React from "react";
+import { connect } from "react-redux";
+import { filterProjects } from '../../actions'
+import { getUniqueTags } from '../../helpers'
 
-const Filters = ({ projects, currentFilter, filterProjects }) => {
+// This is for the test of the action creator trigger!
+//const Filters = ({ projects, currentFilter, filterProjects }) => {
+export const UnconnectedFilters = ({ projects, currentFilter, filterProjects }) => {
 
-  // Loop through the projects and add all tags to filerArray
-  // Remove duplicates from the array using Set()
-  let filterArray = []
-  projects.map((project, i) => {
-    filterArray = [...project.tags, ...filterArray]
-  })
-  let filters = [...new Set(filterArray)]
+  let filters = getUniqueTags(projects)
 
-    return(
-      <div className="filter">
-        {filters.map((filterItem, i) => { return (
-          <span className={`select ${currentFilter.includes(filterItem) ? 'active' : 'unactive'}`} onClick={() => filterProjects(filterItem)} key={i}>{filterItem}</span>
-        )})}
-      </div>
-    );
+  return (
+    <div data-test="filter-component" className="filter">
+      {filters.map((filterItem, i) => { return (
+        <button
+          data-test="filter-button"
+          className={`select ${currentFilter.includes(filterItem) ? 'active' : 'unactive'}`}
+          onClick={() => filterProjects(filterItem)}
+          key={i}
+        >
+          {filterItem}
+        </button>
+      )})}
+    </div>
+  );
 }
 
-export default Filters;
+const mapStateToProps = (state) => {
+  return {
+    projects: state.projects.projects,
+    currentFilter: state.projects.currentFilter,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    filterProjects: (filter) => dispatch(filterProjects(filter))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedFilters);

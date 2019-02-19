@@ -1,46 +1,39 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
-import NextProject from './NextProject';
+import Project from './Project';
+import { getNextProject } from '../../helpers'
+import PropTypes from 'prop-types'
 
 const ProjectPage = ({project, projects}) => {
 
-  // Get the next project
-  let nextProject = {}
-  let index = projects.indexOf(project);
-  if(index >= 0 && index < projects.length -1) {
-    nextProject = projects[index +1]
-  } else if(index >=0 && index == projects.length -1) {
-    nextProject = projects[0]
-  }
+  const nextProject = getNextProject(projects, project)
 
   return (
-    <div className={`projectPage ${project.id}`} >
-
-      <Helmet>
-        <title>{project.title} | Alvine Andersson</title>
-        <meta name="description" content={project.info} />
-      </Helmet>
-
+    <div data-test="project-page-component" className={`projectPage ${project.id}`} >
       <div className="container">
 
-        <Link className="logo" to="/">
+        <Link data-test="project-page-logo" className="logo" to="/">
           <span>A</span>
         </Link>
 
-        <div className="inner page-header">
+        <div className="page-header">
           <span className="case">Case story</span>
-          <h1 className="project-title">{project.title}</h1>
+          <h1 data-test="project-page-title" className="project-title">{project.title}</h1>
           <p className="description">{project.info}</p>
         </div>
 
-        <div className="featuredImage"><img alt={project.image.alt} src={require(`../../images/${project.image.url}`)} /></div>
+        <div className="featuredImage">
+          <picture>
+            <source type="image/webp" srcSet={require(`../../images/${project.image.url}.webp`)} />
+            <img alt={project.image.alt} src={require(`../../images/${project.image.url}`)} />
+          </picture>
+        </div>
 
-        <div className="inner">
           {project.content &&
             project.content.map((paragraph, i) => { return (
               <div key={i}>
-                <h4>{paragraph.headline}</h4>
+                <h2>{paragraph.headline}</h2>
                 <p>{paragraph.paragraph}</p>
               </div>
             )})
@@ -54,13 +47,20 @@ const ProjectPage = ({project, projects}) => {
             {project.link && project.link.url && <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p>}
           </div>
 
+        <div className="navigation">
+          {nextProject &&
+            <Project animation={true} project={nextProject} />
+          }
         </div>
-
-        <NextProject nextProject={nextProject} />
 
       </div>
     </div>
   );
+}
+
+ProjectPage.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
+  project: PropTypes.object.isRequired
 }
 
 export default ProjectPage;

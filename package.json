@@ -6,12 +6,16 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --mode development",
     "build": "webpack --config webpack.prod.config.js --mode production",
-    "test": "jest"
+    "test": "jest --no-cache --coverage",
+    "test:watch": "jest --watch"
   },
   "author": "Alvine Andersson",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "babel-core": "^7.0.0-bridge.0",
     "history": "^4.7.2",
+    "prop-types": "^15.7.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
@@ -25,24 +29,32 @@
     "react-visibility-sensor": "^5.0.2",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.1",
     "scroll-into-view": "^1.9.3"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "babel-jest": "^24.0.0",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "check-prop-types": "^1.1.2",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.6.0",
     "imagemin-webp-webpack-plugin": "^3.1.0",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "node-sass": "^4.9.3",
     "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
@@ -55,9 +67,16 @@
     "webpack-manifest-plugin": "^2.0.4"
   },
   "jest": {
-    "transform": {
-      "^.+\\.jsx$": "babel-jest",
-      "^.+\\.js$": "babel-jest"
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>test/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
     }
   }
 }

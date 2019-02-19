@@ -1,49 +1,21 @@
 /* Colors */
-//$black: #222222;
 $black: #333333;
 $white: #fefefe;
-$greenLight: #28a745;
-$greenDark: #145322;
-$redLight: #dc3545;
-$redDark: #6e1a22;
-$grayInactive: #999999;
-$gray: #808080;
-$grayBackground: #DCDCDC;
-$graySubheading: #383838;
-$orangered: #E27D60;
-$yellow: #E8A87C;
-$purple: #C38D9E;
-$turquoise: #a5d3d3;
-$turquioseDark: #83c2c2;
-$turquioseHover: #689b9b;
 
-$white: #F2F2F2;
-$purpleDark: #61464f;
-$purpleInactive: #9c707e;
+$gray: #a3a3a3;
+$gray-1: #eeeeee;
+$gray-2: #7a7a7a;
+$gray-3: #808080;
 
-$red: #82363A;
-$red: #FF7E57;
-
-$black-gray: #38474e;
-
+//$turquoise: #a5d3d3;
 $blue: #7fc8bc;
 $blue-dark: #72baba;
 
-$red: #d3a5a5;
-$red-dark: #c28383;
-
 $green: #a5d3a5;
 $green-dark: #83c283;
-
-$green: #d3d3a5;
-$green-dark: #bdbd94;
-
-
-$gray-1: #eeeeee;
-$gray-2: #a3a3a3;
-$gray-3: #d6d6d6;
-$gray-4: #7a7a7a;
-
+$red: #d3a5a5;
+$redLight: #dc3545;
+$red-dark: #c28383;
 
 /* Breakpoints */
 $mobile: '480px';
@@ -51,121 +23,12 @@ $tablet: '736px';
 $desktop: '980px';
 $wide: '1280px';
 
-
-
-/* Layout */
-@keyframes sliding-in-from-right {
-  0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
-  50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 10vw 100vh, 0vw 0vh);}
-  100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
-}
-/*@keyframes sliding-in-from-left {
-  0%   {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
-  50%  {clip-path: polygon(0vw 0vh, 100vw 0vh, 90vw 100vh, 0vw 100vh, 0vw 0vh);}
-  100% {clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh, 0vw 0vh);}
-}*/
-
-.slide {
-	position: relative;
-	z-index: 1;
-}
-.slide-exit {
-	position: absolute;
-  //top: 0;
-	width: 100%;
-  top: var(--scroll);
-  //top: attr(data-scroll);
-
-}
-.slide-enter {
-  top: 0;
-  width: 100%;
-	z-index: 999;
-	transform: translate(100%, 0%);
-	position: fixed;
-  background-color: $turquoise;
-}
-.slide-enter-active {
-	transform: translate(0%,0%);
-	transition: transform 500ms, background-color 750ms;
-	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
-	animation-name: sliding-in-from-right;
-	animation-duration: 750ms;
-  background-color: $white;
-}
-.slide-enter-done {
-	position: relative;
-	z-index: 999;
-}
-
-
-
-
-
-
-
-/*.slide {
-	position: relative;
-	z-index: 1;
-}
-.slide-enter, .slide-exit {
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-.right .slide-enter {
-	z-index: 999;
-	transform: translate(100%, 0%);
-	position: fixed;
-}
-.right .slide-enter-active {
-	transform: translate(0%,0%);
-	transition: transform 500ms;
-	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
-	animation-name: sliding-in-from-right;
-	animation-duration: 750ms;
-}
-.right .slide-enter-done {
-	position: relative;
-	z-index: 999;
-}
-
-.left .slide-enter {
-	z-index: 999;
-	transform: translate(-100%, 0%);
-}
-.left .slide-exit-active {
-  position: relative;
-}
-.left .slide-enter-active {
-	transform: translate(0%,0%);
-	transition: transform 500ms;
-	transition-timing-function: cubic-bezier(0.4, 0.1, 0.7, 0.95);
-  position: fixed;
-  animation-name: sliding-in-from-left;
-  animation-duration: 750ms;
-}
-.left .slide-enter-done {
-	position: relative;
-	z-index: 999;
-}*/
-
-
-
-
-
-
-
-
-/* 100& height effect */
 html, body {
 	height: 100%;
 }
-body {
-	overflow-y:scroll !important;
-}
 
 body {
+  overflow-y:scroll !important;
 	margin: 0;
 	padding: 0;
 	font-family: "open-sans";
@@ -175,20 +38,26 @@ body {
   background-color: $white;
 }
 
-h1 {
+h1 { // ProjectPage
 	font-family: 'rig-solid-bold-fill', sans-serif;
   font-display: auto;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 2rem;
 	line-height: 1.1;
-	margin: 0;
+  margin: 0.3em auto 0.5em auto;
+  max-width: 780px;
+  text-align: center;
 	@media(min-width: $mobile) {
 		font-size: 2.5rem;
 	}
+  @media(min-width: $tablet) {
+    font-size: 4.4em;
+    margin: 0.2em auto 0.5em auto;
+  }
 }
 
-h2 {
+h2 { // Section headlines
 	font-family: 'rig-solid-bold-fill', sans-serif;
   font-display: auto;
 	text-transform: uppercase;
@@ -196,79 +65,90 @@ h2 {
 	font-size: 2.5rem;
 	line-height: 1.1;
 	margin-top: 0;
+  text-align: center;
 	@media(min-width: $tablet) {
 		font-size: 4rem;
 		margin-bottom: 0.5rem;
 	}
 }
 
-h3 {
-	font-family: "rig-solid-bold-halftone", sans-serif;
+h3 { // Contact
+	font-family: "rig-solid-bold-fill", sans-serif;
   font-display: auto;
-	color: $black;
+  text-transform: uppercase;
 	font-weight: 700;
 	font-size: 1.2rem;
 	line-height: 1.1;
+  margin: 0 0 0 0;
 	@media(min-width: $tablet) {
 		font-size: 3rem;
 	}
 }
 
+h4 { // Black background
+  font-size: 1.4rem;
+  font-family: 'din-2014', sans-serif;
+  font-display: auto;
+  letter-spacing: 1px;
+  background-color: $black;
+  color: $white;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  margin: 0.5rem 0 0;
+  transform: rotate(-3deg);
+  text-transform: uppercase;
+
+  @media(min-width: $tablet) {
+    font-size: 1.6rem;
+  }
+
+  @at-root .skills h4 {
+    font-size: 1.2rem;
+    @media(min-width: $tablet) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 p {
 	font-size: 1.2rem;
-  @media(min-width:$tablet) {
-    font-size: 1.2rem;
-  }
 }
 
-/* Containers */
-.container {
+section {
   padding: 3rem 1rem;
-	@media(min-width: $mobile) {
-    padding: 6rem 2rem 6rem 2rem;
-	}
-  .inner {
-    max-width: 940px;
-  	margin: 0 auto;
+  @media(min-width: $mobile) {
+    padding: 6rem 2rem;
   }
 }
 
-.container.header {
-  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/bg_header.png), url(../images/header_three.jpg);
-  background-size: cover;
-  height: 100vh;
-  padding: 0;
-}
-
-.container.projects {
-	background-color: $white;
-	background-image: url('../images/bg_raster.png');
-  background-size: 100%;
-  background-repeat: repeat-y;
-  .inner {
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+  &.wide {
+    max-width: 1100px;
+  }
+  &.narrow {
     max-width: 740px;
   }
 }
 
-.container.skills {
-  background-color: $turquoise;
-	background-image: url('../images/bg_skills.png');
-	color: $black;
-  padding: 3rem 1rem 5rem 1rem;
-	@media(min-width: $mobile) {
-    padding: 6rem 2rem 10rem 2rem;
-	}
+/* Router fade animation */
+.fading {
+	position: absolute;
+	width: 100%;
 }
-
-.container.matchmaking {
-	background-color: $white;
-	background-image: url('../images/bg_raster.png');
-  background-size: cover;
-	padding-top: 3rem;
-	@media(min-width: $mobile) {
-		padding-top: 5rem;
-	}
-	@media(min-width: $tablet) {
-		padding-top: 6rem;
-	}
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	transition: opacity 500ms 500ms;
+ 	opacity: 1;
+}
+.fade-exit {
+	opacity: 1;
+}
+.fade-exit-active {
+  transition: opacity 480ms;
+  opacity: 0;
 }

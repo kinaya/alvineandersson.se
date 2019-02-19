@@ -1,13 +1,8 @@
 h2.jumpingTitle.visible {
+  padding-top: 1rem;
   span {
     display: inline-block;
     animation: jump 0.5s;
-  }
-  @for $i from 1 to 10 {
-    span:nth-child(#{$i}) {
-      //animation-delay: calc(0.1s*#{$i});
-      //animation-duration: calc(0.4s + 0.05s*#{$i});
-    }
   }
 }
 @keyframes jump {

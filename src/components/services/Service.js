@@ -1,40 +1,23 @@
-import React, { Component} from "react";
-import { Link } from "react-router-dom";
-import VisibilitySensor from "react-visibility-sensor";
+import React from "react";
+import PropTypes from 'prop-types';
 
-class Service extends React.Component {
+const Service = ({headline, text, id, isVisible}) => {
 
-  constructor(props) {
-    super(props)
-    this.state = {active: false}
-    this.onChangeVisibility = this.onChangeVisibility.bind(this);
-  }
+  return (
 
-  // Only trigger animation once
-  onChangeVisibility(isVisible) {
-    this.setState({active: isVisible})
-  }
+    <div data-test="component-service" className={`service ${id} ${isVisible ? 'visible': 'invisible'}`} >
+      <h4 data-test="service-headline">{headline}</h4>
+      <p data-test="service-paragraph">{text}</p>
+    </div>
 
-  render() {
+  );
+}
 
-    const  {headline, text, id} = this.props;
-
-    return (
-
-      <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.active} partialVisibility={true} >
-      {({isVisible}) =>
-        <div className={isVisible ? `service ${id} visible` : `service ${id} invisible`}>
-
-          {headline && <h4>{headline}</h4> }
-
-          {text && <p>{text}</p> }
-
-        </div>
-      }
-      </VisibilitySensor>
-
-    );
-  }
+Service.propTypes = {
+  headline: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  isVisible: PropTypes.bool.isRequired
 }
 
 export default Service;

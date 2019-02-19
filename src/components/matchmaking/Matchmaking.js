@@ -1,23 +1,37 @@
 import React, { Component} from "react";
-import MatchItem from "./MatchItem";
 import JumpingTitle from '../common/JumpingTitle';
+import MatchItemAlternatives from "./MatchItemAlternatives";
+import MatchItemYesno from "./MatchItemYesno";
+import MatchItemMatch from "./MatchItemMatch";
 
-const Matchmaking = ({matchitems, matchMaking}) => {
+const Matchmaking = ({matchitems, matchMaking, resetGame}) => {
+  return (
+    <section className="matchmaking">
+			<div className="container">
 
-    return(
-      <div className="container matchmaking">
-				<div className="inner">
-          <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
-          <p className="intro">Välj ett alternativ för att starta</p>
-          <div className="wrapper">
-            {matchitems.map((item, i) => { return (
-              <MatchItem matchMaking={matchMaking} key={i} item={item} />
-            )})}
-          </div>
-				</div>
+        <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
+
+        <p className="intro">Välj ett alternativ för att starta</p>
+
+        <div className="game">
+          {matchitems.map((item, i) => (
+            <div key={i} className={`item visible-${item.visible}`}>
+              {item.type === 'alternatives' && (
+                <MatchItemAlternatives matchMaking={matchMaking} item={item} />
+              )}
+              {item.type === 'yesno' && (
+                <MatchItemYesno matchMaking={matchMaking} item={item} />
+              )}
+              {item.type === 'match' && (
+                <MatchItemMatch resetGame={resetGame} item={item} />
+              )}
+            </div>
+          ))}
+        </div>
+
       </div>
-    );
-
+    </section>
+  );
 }
 
 export default Matchmaking;

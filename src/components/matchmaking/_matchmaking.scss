@@ -1,21 +1,35 @@
 
 .matchmaking {
+	background-color: $white;
+	background-image: url('../images/bg_raster.png');
+  background-size: cover;
   text-align: center;
-  .wrapper {
-    max-width: 580px;
-    margin: 2em auto 0;
-    font-family: "Roboto Mono",monospace;
-    font-display: auto;
-    font-size: 1rem;
-    @media(min-width: $tablet) {
-      font-size: 1.2rem;
-    }
-  }
+/*	padding-top: 3rem;
+	@media(min-width: $mobile) {
+		padding-top: 5rem;
+	}
+	@media(min-width: $tablet) {
+		padding-top: 6rem;
+	}*/
+}
+
+.matchmaking {
   h2 {
     margin-bottom: 0.5rem;
   }
   p.intro {
     margin: 0;
+  }
+}
+
+.game {
+  max-width: 580px;
+  margin: 2em auto 0;
+  font-family: "Roboto Mono",monospace;
+  font-display: auto;
+  font-size: 1rem;
+  @media(min-width: $tablet) {
+    font-size: 1.2rem;
   }
 }
 
@@ -25,28 +39,56 @@
   max-height: 800px;
   overflow: hidden;
   opacity: 1;
-  transition: opacity 0.5s ease 0.5s, max-height 0.5s ease 0.5s;
-  //border: 1px solid pink;
+	transition: all 0.4s ease;
 }
 .item.visible-false {
   max-height: 0;
   opacity: 0;
 }
+.alternative.alternatives {
+	.text {
+		opacity: 1;
+		max-height: 200px;
+		overflow: hidden;
+		transition: all 0.4s ease;
+	}
+	.text.visible-false {
+		opacity: 0;
+		max-height: 0;
+	}
+	// Delay transition on alternatives when resetting
+	&.clickable-true .text.visible-true {
+		transition-delay: 0.5s;
+	}
+}
+// Don't delay transition on first item when resetting
+.game .item:first-child .alternative.alternatives.clickable-true .text.visible-true {
+	transition-delay: 0s;
+}
+
+.alternative.yesno {
+	button {
+		opacity: 1;
+		transition: all 0.4s ease;
+	}
+	button.visible-false {
+		opacity: 0;
+	}
+	// Delay transition on alternatives when resetting
+	&.clickable-true .text,
+	&.clickable-true button.visible-true {
+		transition-delay: 0.5s;
+	}
+}
 
 
-// Type alternatives
-.alternative-alternatives {
+
+
+// Alternative alternatives
+.alternative.alternatives {
   .text {
     display: block;
-    //margin: 0.5em 0;
     margin-bottom: 1em;
-    overflow: hidden;
-    opacity: 1;
-    max-height: 200px;
-    transition: opacity 0.5s ease, max-height 0.5s ease 0s;
-    //margin-bottom: 1em;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     span {
       display: block;
       padding: 1em;
@@ -55,33 +97,23 @@
   &.clickable-true .text {
     background-color: $green;
     cursor: pointer;
-    &:hover, &:active, &:focus {
-      background-color: $green-dark;
-    }
+		color: $black;
   }
   &.clickable-false .text {
-    //background-color: $gray-1;
-    color: $gray-2;
-  }
-  .text.visible-false {
-    opacity: 0;
-    max-height: 0;
+    color: $gray;
   }
 }
 
-.alternative-yesno {
-  background-color: transparent;
-  transition: background-color 0.5s ease;
+// Alternative yesno
+.alternative.yesno {
   margin-bottom: 2em;
   .text {
-    //padding: 1em;
     display: block;
-    //margin: 0.5em 0;
-    transition: color 0.5s ease;
+		color: $black;
   }
-  &.clickable-false {
-    //background-color: $gray-1;
-  }
+	&.clickable-false .text {
+		color: $gray;
+	}
   .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -96,7 +128,6 @@
     font-weight: 700;
     color: $black;
     text-transform: uppercase;
-    transition: background-color 0.5s ease, color 0.5s ease;
   }
   &.clickable-true button {
     cursor: pointer;
@@ -107,13 +138,6 @@
   }
   &.clickable-false button {
     background-color: $gray-1;
-    color: $gray-4;
-  }
-  &.clickable-false button.display-false {
-    background-color: transparent;
-    color: $gray-1;
-  }
-  &.clickable-false .text {
     color: $gray-2;
   }
 }
@@ -143,12 +167,12 @@
   }
 }
 
-.matchmaking .redo {
+.game .redo {
 	display: block;
 	max-width: 900px;
 	margin: 0 auto;
 	text-align: right;
-	color: $gray;
+	color: $gray-3;
 	text-decoration: underline;
 	padding: 1em 0;
 	cursor: pointer;

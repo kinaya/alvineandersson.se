@@ -1,94 +1,56 @@
-.skills {
+.stacks {
+  @media(min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.stack {
+  margin-top: 3rem;
   text-align: center;
 
+  @media(min-width: $tablet) {
+    width: 45%;
+  }
+
+}
+
+.list {
+  margin-top: 2rem;
+
   p {
-    //font-size: 1rem;
-  }
+    font-size: 0.9rem;
 
-  .stacks {
     @media(min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-
-  .stack {
-    @media(min-width: $tablet) {
-      width: 45%;
-    }
-    margin-top: 3rem;
-
-    p {
-      //font-size: 1.4rem;
-    }
-
-    h4 {
-      font-size: 1.2rem;
-      font-family: 'din-2014', sans-serif;
-      font-display: auto;
-      letter-spacing: 1px;
-      @media(min-width: $tablet) {
-        font-size: 1.4rem;
-      }
-      background-color: $black;
-      color: $white;
-      padding: 0.3rem 0.8rem;
-      display: inline-block;
-      margin: 0;
-      transform: rotate(-3deg);
+      font-size: 1rem;
     }
 
   }
-
-  .list {
-    margin-top: 2rem;
-
-    h4 {
-      display: inline-block;
-      border-bottom: 2px solid $black;
-      margin-bottom: 0;
-    }
-
-    p {
-      font-size: 0.9rem;
-      @media(min-width: $tablet) {
-        font-size: 1rem;
-      }
-    }
-
-    .label {
-      font-style: italic;
-    }
-
-  }
-
 }
 
-.container.skills {
+.skills {
   position: relative;
-}
-
-
-.container.skills {
   background: linear-gradient(102deg, #7fc8bc, #d3d3a5);
   background-size: 400% 400%;
+  -webkit-animation: Flow 28s ease infinite;
+  -moz-animation: Flow 28s ease infinite;
+  animation: Flow 28s ease infinite;
+}
 
-  -webkit-animation: AnimationName 28s ease infinite;
-  -moz-animation: AnimationName 28s ease infinite;
-  animation: AnimationName 28s ease infinite;
-}
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes Flow {
     0%{background-position:0% 79%}
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}
 }
-@-moz-keyframes AnimationName {
+
+@-moz-keyframes Flow {
     0%{background-position:0% 79%}
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}
 }
-@keyframes AnimationName {
+
+@keyframes Flow {
     0%{background-position:0% 79%}
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}

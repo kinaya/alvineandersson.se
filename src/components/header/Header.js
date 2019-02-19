@@ -1,12 +1,13 @@
 import React, { Component} from "react";
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 const Header = ({onClick}) => {
 
   return (
-    <div className="container header">
+    <section data-test="header-component" className="header">
 
-      <Link className="logo" to="/" onClick={() => navigate('left')}>
+      <Link data-test="header-logo" className="logo" to="/" >
         <span>A</span>
       </Link>
 
@@ -84,9 +85,14 @@ const Header = ({onClick}) => {
 
       </div>
 
-      <div onClick={onClick} className="scrollarrow header"></div>
-  </div>
+      <div data-test="header-scrollarrow" onClick={onClick} className="scrollarrow header"></div>
+
+  </section>
 );
+}
+
+Header.propTypes = {
+  onClick: PropTypes.func.isRequired
 }
 
 export default Header;

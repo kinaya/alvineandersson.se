@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Matchmaking from './Matchmaking'
-import { matchMaking } from '../../actions'
+import { matchMaking, resetGame } from '../../actions'
 
 function mapStateToProps(state) {
   return {
@@ -8,9 +8,11 @@ function mapStateToProps(state) {
   }
 }
 
+// They dont use this they just import matchMaking in connect()...?
 function mapDispatchToProps(dispatch) {
   return {
-    matchMaking: (clickedItem, clickedAlternative, itemToShow, arrowAlignment) => dispatch(matchMaking(clickedItem, clickedAlternative, itemToShow, arrowAlignment))
+    matchMaking: (clickedItem, clickedAlternative, itemToShow) => dispatch(matchMaking(clickedItem, clickedAlternative, itemToShow)),
+    resetGame: () => dispatch(resetGame())
   }
 }
 

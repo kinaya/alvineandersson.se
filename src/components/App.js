@@ -7,7 +7,8 @@ import Header from "./header/Header";
 import Skills from "./skills/Skills";
 import Footer from "./footer/Footer";
 import Services from "./services/Services";
-import ProjectsContainer from "./projects/ProjectsContainer";
+//import ProjectsContainer from "./projects/ProjectsContainer";
+import Projects from "./projects/Projects"
 import MatchmakingContainer from "./matchmaking/MatchmakingContainer";
 import ProjectPage from "./projects/ProjectPage";
 import NotFound from "./NotFound";
@@ -28,21 +29,19 @@ class App extends React.Component {
 
     if(nextProps.location.pathname != this.props.location.pathname) {
 
-      setTimeout(function(){ window.scrollTo(0,0) }, 750);
-
-      /*if(nextProps.location.pathname == '/') {
+      if(nextProps.location.pathname == '/') {
         if(projectsRef) {
           setTimeout(function(){
-            scrollIntoView(projectsRef.current,{time:500,align:{top:0}})
-          }, 1200);
+            scrollIntoView(projectsRef.current,{time:0,align:{top:0}})
+          }, 490);
         } else {
           setTimeout(function(){
             window.scrollTo(0,0)
-          }, 500);
+          }, 490);
         }
       } else {
-        setTimeout(function(){ window.scrollTo(0,0) }, 500);
-      }*/
+        setTimeout(function(){ window.scrollTo(0,0) }, 490);
+      }
     }
   }
 
@@ -59,17 +58,17 @@ class App extends React.Component {
       <div ref={this.topRef} className={`App animate-projects-${animation.projects}`}>
 
         <TransitionGroup component="main" className="page-main">
-          <CSSTransition key={currentKey} timeout={1000} classNames="slide" appear>
-          <div>
+          <CSSTransition key={currentKey} timeout={1000} classNames="fade" appear>
+          <div className="fading">
           <Switch location={location}>
 
           <Route exact path="/" render={() => (
-            <div>
+            <div className="front-page">
               <Header onClick={() => this._scrollToContent(this.contentRef)} />
               <div ref={this.contentRef} />
               <Services />
               <div ref={this.projectsRef} />
-              <ProjectsContainer />
+              <Projects />
               <Skills />
               <MatchmakingContainer />
               <Footer />

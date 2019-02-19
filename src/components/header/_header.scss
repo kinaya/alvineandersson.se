@@ -4,7 +4,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/bg_header.png), url(../images/header_three.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
 }
+
 
 .headerslogan {
   width: 200px;

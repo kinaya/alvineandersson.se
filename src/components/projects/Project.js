@@ -1,36 +1,31 @@
 import React, { Component} from "react";
 import { Link } from "react-router-dom";
 import VisibilitySensor from "react-visibility-sensor";
+import PropTypes from 'prop-types';
 
 class Project extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {visible: false}
-    this.onChangeVisibility = this.onChangeVisibility.bind(this);
-  }
-
   // Only trigger animation once
-  onChangeVisibility(isVisible) {
-    this.setState({visible: isVisible})
-  }
+  state = {visibilitySensorActive : false}
 
-//       <div className={!animation ? "project" : (isVisible ? "project visible" : "project invisible")}>
-//<div className={isVisible ? 'visible' : 'invisible'}>
+  onChangeVisibility = isVisible => {
+    this.setState({visibilitySensorActive: isVisible})
+  }
 
   render() {
 
     const { project, animation } = this.props;
 
-  return (
-    <div className={`project ${project.id}`}>
+    return (
+      <VisibilitySensor
+        onChange={this.onChangeVisibility}
+        active={!this.state.visibilitySensorActive}
+        partialVisibility={true}
+        data-test="project-component"
+      >
+        {({isVisible}) =>
 
-    <VisibilitySensor onChange={this.onChangeVisibility} active={!this.state.visible} partialVisibility={true} >
-    {({isVisible}) =>
-
-        <div className={isVisible ? 'visible' : 'invisible'}>
-
-        <Link to={`/projects/${project.id}`} className="inner-div">
+        <Link data-test="project-link" to={`/projects/${project.id}`} className={`project ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
           <div className="image">
             <picture>
               <source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} />
@@ -39,21 +34,22 @@ class Project extends React.Component {
           </div>
 
           <div className="info">
-            <div className="what"><span>{project.what}</span></div>
-            <div className="title" >{project.title}</div>
+            <div className="what">{project.what}</div>
+            <h3 className="project-title" >{project.title}</h3>
             <div className="tags">{project.date}</div>
           </div>
         </Link>
 
-      </div>
     }
     </VisibilitySensor>
 
-    </div>
-
-
   );
 }
+}
+
+Project.propTypes = {
+  project: PropTypes.object.isRequired,
+  animation: PropTypes.bool.isRequired
 }
 
 export default Project;

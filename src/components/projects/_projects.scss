@@ -1,41 +1,45 @@
 .projects {
-  h2 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .project:last-child .inner-div {
-    border-bottom: 0;
-  }
+	background-color: $white;
+	background-image: url('../images/bg_raster.png');
+  background-size: 100%;
+  background-repeat: repeat-y;
 }
 
-.project .inner-div {
-  border-bottom: 1px dashed $gray-2;
-  margin: 2em 0 0 0;
-  padding: 0 0 2em 0;
+.project {
+  border-bottom: 1px dashed $gray;
+  margin: 0;
+  padding: 2rem 0;
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease-in;
-  cursor: pointer;
   display: block;
 
   @media(min-width: $tablet) {
     display: flex;
     align-items: center;
     text-align: left;
-    padding: 0 2em 2em 2em;
+    padding: 2rem;
+  }
+
+  &:last-child {
+    border-bottom: 0;
   }
 
   &:hover {
+
     .image {
-      background-color: $green-dark;
+      background-color: $blue-dark;
       transform: scale(1.05);
     }
-    .what span {
-      background-color: $green-dark;
+
+    .what {
+      background-color: $blue-dark;
     }
-    .title {
+
+    .project-title {
       color: #4d4d4d;
     }
+
   }
 
   .image {
@@ -43,24 +47,29 @@
     height: 120px;
     margin: 0 auto;
     transition: all 0.3s;
+
     @media(min-width: $tablet) {
       margin: 0 2em 0 0;
     }
+
     img {
       width: 100%;
       height: auto;
     }
+
   }
 
   .info {
     margin-top: 1em;
+
     @media(min-width: $tablet) {
       margin-top: -0.5em;
     }
+
   }
 
-  .title {
-    font-size: 2em;
+  h3.project-title {
+    font-size: 2rem;
     line-height: 1.2;
     color: $black;
     text-decoration: none;
@@ -84,61 +93,35 @@
 
   .what {
     display: none;
+    font-family: 'din-2014', sans-serif;
+    font-display: auto;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: $blue;
     color: $black;
     text-decoration: none;
+    padding: 0.2em 0.5em;
+    transition: all 0.3s;
 
     @media(min-width: $tablet) {
-      display: block;
+      display: inline-block;
     }
-    span {
-      font-family: 'din-2014', sans-serif;
-      font-display: auto;
-      text-transform: uppercase;
-      font-size: 0.8em;
-      font-weight:700;
-      letter-spacing: 1px;
-      background-color: $green;
-      text-decoration: none;
-      padding: 0.2em 0.5em;
-      transition: all 0.3s;
-    }
+
   }
 }
 
-// Animation description and title
-.project-title,
-.description {
-  transition: transform 1000ms ease-in;
-}
-.slide-enter .project-title,
-.slide-enter .description {
-  transform: translateX(100px)
-}
-.slide-enter-active .project-title,
-.slide-enter-active .description {
-  transform: translateX(0px)
-}
-
-
-// Image
-/*.slide-enter .parallax .parallaxinner {
-	background-position: 100px 0;
-}
-.slide-enter-active .parallax .parallaxinner {
-	background-position: 0 0;
-	transition: all 800ms ease-in-out 400ms;
-}*/
-
-
 /* Animated blob images */
-.project .image img {
-  animation: transform 30s ease-in-out infinite both alternate;
-}
-
-.project .image {
-  background-color: $green;
-  padding: 5px;
-  animation: transform 30s ease-in-out infinite both alternate;
+.project {
+  .image {
+    background-color: $blue;
+    padding: 5px;
+    animation: blob 30s ease-in-out infinite both alternate;
+  }
+  img {
+    animation: blob 30s ease-in-out infinite both alternate;
+  }
 }
 
 @for $i from 0 to 13 {
@@ -150,7 +133,7 @@
   }
 }
 
-@keyframes transform {
+@keyframes blob {
     0%,
   100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
    14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
@@ -161,7 +144,7 @@
    84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }
 
-// Filter
+// Filter buttons
 .filter {
   padding-bottom: 0.5em;
   font-family: "open-sans";
@@ -169,20 +152,16 @@
   font-size: 1.2em;
   color: $black;
   text-align: center;
-  border-bottom: 1px dashed $gray-2;
+  border-bottom: 1px dashed $gray;
 }
-.filter span {
+.filter button {
   margin: 0 0.5em;
-  border-bottom: 2px solid transparent;
+  border: 0;
+  background-color: transparent;
   font-family: 'din-2014', sans-serif;
   font-display: auto;
   font-size: 0.9em;
-}
-.filter span.select {
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
   &.active,
   &:hover {
@@ -190,7 +169,7 @@
   }
 }
 
-// Filter list
+// Animation when filtering list
 .project {
   overflow: hidden;
   transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
@@ -212,58 +191,56 @@
   max-height: 0;
 }
 
-// Animate projects when they get visible by scrolling
-.animate-projects-true .project .invisible {
+// Animation  when project gets visible by scrolling
+/*.animate-projects-true .project.invisible {
   opacity: 0;
   transform: translateY(80px);
   transition: all 0.3s;
 }
-.animate-projects-true .project .visible {
+.animate-projects-true .project.visible {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.3s;
+}*/
+
+// Break titles with many words
+.project.newcomersyouth .project-title,
+.projectPage.newcomersyouth h1,
+.project.filmregionsydost .project-title,
+.projectPage.filmregionsydost h1,
+.project.nagotharhant .project-title,
+.projectPage.nagotharhant h1,
+.project.pablodigtallvar .project-title,
+.projectPage.pablodigtallvar h1 {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  @media(min-width: $tablet) {
+    max-width: 500px;
+  }
+}
+.project.fridhadvokatbyra .project-title,
+.projectPage.fridhadvokatbyra h1 {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  @media(min-width: $tablet) {
+    max-width: 500px;
+  }
 }
 
-
-/*Break titles with many words*/
-  .project.newcomersyouth .inner-div .title,
-  .projectPage.newcomersyouth h1,
-  .project.filmregionsydost .inner-div .title,
-  .projectPage.filmregionsydost h1,
-  .project.nagotharhant .inner-div .title,
-  .projectPage.nagotharhant h1,
-  .project.pablodigtallvar .inner-div .title,
-  .projectPage.pablodigtallvar h1{
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    @media(min-width: $tablet) {
-      max-width: 500px;
-    }
-  }
-  .project.fridhadvokatbyra .inner-div .title,
-  .projectPage.fridhadvokatbyra h1 {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    @media(min-width: $tablet) {
-      max-width: 500px;
-    }
-  }
-
-
-/* ProjectPage */
+// ProjectPage
 .projectPage {
   overflow: hidden;
+	background-color: $white;
   .container {
+    overflow: visible;
+    max-width: 780px;
     padding: 4rem 1rem 1rem 1rem;
     @media(min-width: $desktop) {
       padding: 6rem 2rem 2rem 2rem;
     }
   }
-	.inner {
-    max-width: 780px;
-	}
   .page-header {
     text-align: center;
   }
@@ -277,19 +254,6 @@
     letter-spacing: 1px;
     padding: 0.2em 0.5em;
   }
-  h1 {
-    margin: 0.3em auto 0.5em auto;
-    max-width: 780px;
-    text-align: center;
-		@media(min-width: $tablet) {
-			font-size: 4.4em;
-      margin: 0.2em auto 0.5em auto;
-		}
-	}
-  h4 {
-    font-size: 1.2rem;
-    margin: 3rem 0 -0.8rem;
-  }
   .description {
     text-align: center;
     font-size: 1.4rem;
@@ -301,25 +265,49 @@
     font-display: auto;
   }
   .featuredImage {
-    max-width: 940px;
-    margin: 2rem -3rem;
+    left: 50%;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    margin: 2rem -50vw;
     transform: rotate(-1deg);
-    border-top: 10px solid $blue-dark;
-    border-bottom: 10px solid $blue-dark;
-    @media(min-width: $desktop) {
-      margin: 3em auto 5em auto;
-      transform: none;
-      border: 1px solid $gray-2;
+    border-top: 10px solid $blue;
+    border-bottom: 10px solid $blue;
+
+    @media(min-width: $tablet) {
+      margin: 3rem -50vw 4rem;
     }
-    overflow: hidden;
+
+    @media(min-width: $desktop) {
+      transform: none;
+      border: 1px solid $gray;
+      width: calc(100% + 10rem);
+      margin: 3rem -5rem 5rem -5rem;
+      left: 0;
+      right: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
   }
-  .stats {
-    margin-top: 3rem;
+  h2 {
+    font-family: 'open-sans';
+    text-transform: none;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 3rem 0 -0.8rem;
   }
-  .stats > p {
+}
+
+.stats {
+  margin-top: 3rem;
+  > p {
     margin: 0 0 1em 0;
   }
-  .stats > p > span:first-child {
+  > p > span {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 700;
@@ -328,7 +316,7 @@
     font-family: 'din-2014', sans-serif;
     font-display: auto;
   }
-  .stats a {
+  a {
     color: $black;
     border-bottom: 1px solid $black;
     text-decoration: none;
@@ -339,80 +327,44 @@
       text-decoration: none;
     }
   }
-  .navigation .inner {
-    margin-top: 4em;
-    @media(min-width: $tablet) {
-      margin-top: 6em;
-    }
-    border-top: 2px dotted $gray-2;
-    .inner-div {
-      border: 0;
-    }
+}
+
+.navigation {
+  border-top: 2px dotted $gray;
+  margin-top: 4em;
+  @media(min-width: $tablet) {
+    margin-top: 6em;
   }
   .project {
     border: 0;
-    .inner-div {
-      justify-content: center;
-    }
-    .what span {
-      background-color: $blue-dark;
-    }
-    .image {
-      background-color: $blue-dark;
-    }
-    &:hover {
-      .what span {
-        background-color: #61b2b2;
-      }
-      .image {
-        background-color: #61b2b2;
-      }
-    }
+    justify-content: center;
   }
 }
 
-/* Animation featured image */
-.projectPage .featuredImage img {
-  width: calc(100% + 100px);
-  transform: translateX(-100px);
-  transition: transform 800ms ease-in-out 200ms;
-  display: block;
+// Animation description, title and featured image
+.project-title,
+.description {
+  transition: transform 1000ms ease-in;
 }
-
-.slide-enter .projectPage .featuredImage img {
-  transform: translateX(0);
+.fade-enter .project-title,
+.fade-enter .description {
+  transform: scale(0.8);
 }
-.slide-enter-active .projectPage .featuredImage img {
-  transform: translateX(-100px);
+.fade-enter-active .project-title,
+.fade-enter-active .description {
+  transform: scale(1);
 }
-
-
-
-
-
-
-/*.parallax {
-  position: relative;
-  height: 300px;
-  color: white;
-  overflow: hidden;
-  margin: 2em -50px;
-  @media(min-width: $tablet) {
-  margin: 6em -150px;
-  height: 600px;
-  }
-  transform: rotate(-1deg);
-  background-color: $turquioseDark;
-  padding: 3em 0;
-  clip-path: polygon(0% 100%, 20% 98%, 40% 97%, 60% 100%, 75% 98%, 100% 100%, 100% 0%, 75% 2%, 55% 3%, 40% 0%, 20% 1%, 0% 0%);
-  .parallaxinner {
-    background-image: url('../images/project_large.jpg');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: polygon(0% 98%, 20% 100%, 50% 97%, 75% 99%, 100% 100%, 100% 0%, 85% 1%, 65% 0%, 30% 3%, 10% 1%, 0% 0%);
-    width:100%;
-    height:100%;
-    display: block;
-  }
-}*/
+.featuredImage img {
+  //transition: transform 1000ms, width 1000ms;
+  //width: calc(100% + 200px);
+  //transform: translateX(-100px) scale(1.1);
+}
+.fade-enter .featuredImage img {
+  //transform: translateX(0px) scale(1);
+  //transform: translateX(0);
+}
+.fade-enter-active .featuredImage img {
+  //transform: translateX(-100px);
+  //width: calc(100% + 200px);
+  //transform: translateX(-100px) scale(1.1);
+}
