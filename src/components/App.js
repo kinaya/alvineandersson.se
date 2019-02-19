@@ -57,6 +57,10 @@ class App extends React.Component {
     return (
       <div ref={this.topRef} className={`App animate-projects-${animation.projects}`}>
 
+        <Link data-test="header-logo" className="logo" to="/" >
+          <span>A</span>
+        </Link>
+
         <TransitionGroup component="main" className="page-main">
           <CSSTransition key={currentKey} timeout={1000} classNames="fade" appear>
           <div className="fading">

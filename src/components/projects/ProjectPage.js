@@ -13,10 +13,6 @@ const ProjectPage = ({project, projects}) => {
     <div data-test="project-page-component" className={`projectPage ${project.id}`} >
       <div className="container">
 
-        <Link data-test="project-page-logo" className="logo" to="/">
-          <span>A</span>
-        </Link>
-
         <div className="page-header">
           <span className="case">Case story</span>
           <h1 data-test="project-page-title" className="project-title">{project.title}</h1>

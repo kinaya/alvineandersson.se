@@ -7,10 +7,6 @@ const Header = ({onClick}) => {
   return (
     <section data-test="header-component" className="header">
 
-      <Link data-test="header-logo" className="logo" to="/" >
-        <span>A</span>
-      </Link>
-
       <div className="headerslogan">
 
         <div className="alvine">
