@@ -199,11 +199,10 @@ h2.jumpingTitle.visible {
   fill: none;
   stroke: #72baba;
   stroke-width: 2.8px;
-  stroke-dashoffset: -100;
+  stroke-dashoffset: 0;
   stroke-dasharray: 100;
   stroke-linecap: butt;
-  stroke-linejoin: round;
-  animation: dash 2s ease-in-out 0s forwards; }
+  stroke-linejoin: round; }
 
 .utvecklare .text-stroke-2 {
   stroke: #fefefe;
