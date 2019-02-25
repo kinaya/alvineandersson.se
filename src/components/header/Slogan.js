@@ -44,6 +44,7 @@ const Slogan = () => {
 
     <div className="utvecklare">
       <svg viewBox="0 0 100 15" xmlns="http://www.w3.org/2000/svg">
+      <text className="text" x="1.5" y="12" className="text text-stroke" clipPath="url(#text1)">Utvecklare</text>      
       <text className="text" x="1.5" y="12" className="text text-stroke text-stroke-2" clipPath="url(#text1)">Utvecklare</text>
       <defs>
         <clipPath id="text1">

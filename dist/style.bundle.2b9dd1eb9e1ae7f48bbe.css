@@ -199,16 +199,26 @@ h2.jumpingTitle.visible {
   fill: none;
   stroke: #72baba;
   stroke-width: 2.8px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 100;
+  stroke-dashoffset: -100;
+  stroke-dasharray: 500;
   stroke-linecap: butt;
-  stroke-linejoin: round; }
+  stroke-linejoin: round;
+  -moz-animation: dash 2s ease-in-out 0s forwards;
+  animation: dash 2s ease-in-out 0s forwards; }
 
 .utvecklare .text-stroke-2 {
   stroke: #fefefe;
   animation-delay: 0.5s; }
 
+@-moz-keyframes dash {
+  0% {
+    stroke-dashoffset: -100; }
+  100% {
+    stroke-dashoffset: 0; } }
+
 @keyframes dash {
+  0% {
+    stroke-dashoffset: -100; }
   100% {
     stroke-dashoffset: 0; } }
 

@@ -1,6 +1,6 @@
 {
-  "main.js": "https://alvineandersson.se/main.bundle.a916fa5523f507d88bb2.js",
-  "main.css": "https://alvineandersson.se/style.bundle.a916fa5523f507d88bb2.css",
+  "main.js": "https://alvineandersson.se/main.bundle.2b9dd1eb9e1ae7f48bbe.js",
+  "main.css": "https://alvineandersson.se/style.bundle.2b9dd1eb9e1ae7f48bbe.css",
   "bg_skills.png": "https://alvineandersson.se/bg_skills.png",
   "bg_raster.png": "https://alvineandersson.se/bg_raster.png",
   "header_three.jpg": "https://alvineandersson.se/header_three.jpg",
@@ -68,9 +68,9 @@
   "apple-touch-icon.png": "https://alvineandersson.se/apple-touch-icon.png",
   "browserconfig.xml": "https://alvineandersson.se/browserconfig.xml",
   "favicon-16x16.png": "https://alvineandersson.se/favicon-16x16.png",
+  "favicon-32x32.png": "https://alvineandersson.se/favicon-32x32.png",
   "favicon.ico": "https://alvineandersson.se/favicon.ico",
   "mstile-150x150.png": "https://alvineandersson.se/mstile-150x150.png",
   "safari-pinned-tab.svg": "https://alvineandersson.se/safari-pinned-tab.svg",
-  "site.webmanifest": "https://alvineandersson.se/site.webmanifest",
-  "favicon-32x32.png": "https://alvineandersson.se/favicon-32x32.png"
+  "site.webmanifest": "https://alvineandersson.se/site.webmanifest"
 }
