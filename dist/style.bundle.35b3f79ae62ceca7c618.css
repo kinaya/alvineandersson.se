@@ -203,19 +203,13 @@ h2.jumpingTitle.visible {
   stroke-dasharray: 100;
   stroke-linecap: butt;
   stroke-linejoin: round;
-  -moz-animation: dash 2s ease-in-out 0s forwards;
-  -webkit-animation: dash 2s ease-in-out 0s forwards;
   animation: dash 2s ease-in-out 0s forwards; }
 
 .utvecklare .text-stroke-2 {
   stroke: #fefefe;
   animation-delay: 0.5s; }
 
-@-webkit-keyframes dash,
-@-moz-keyframes dash,
 @keyframes dash {
-  0% {
-    stroke-dashoffset: -100; }
   100% {
     stroke-dashoffset: 0; } }
 
