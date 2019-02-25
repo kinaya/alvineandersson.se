@@ -45,7 +45,7 @@
   max-height: 0;
   opacity: 0;
 }
-.alternative.alternatives {
+.alternative.select-item {
 	.text {
 		opacity: 1;
 		max-height: 200px;
@@ -62,11 +62,11 @@
 	}
 }
 // Don't delay transition on first item when resetting
-.game .item:first-child .alternative.alternatives.clickable-true .text.visible-true {
+.game .item:first-child .alternative.select-item.clickable-true .text.visible-true {
 	transition-delay: 0s;
 }
 
-.alternative.yesno {
+.alternative.boolean-item {
 	button {
 		opacity: 1;
 		transition: all 0.4s ease;
@@ -85,7 +85,7 @@
 
 
 // Alternative alternatives
-.alternative.alternatives {
+.alternative.select-item {
   .text {
     display: block;
     margin-bottom: 1em;
@@ -105,7 +105,7 @@
 }
 
 // Alternative yesno
-.alternative.yesno {
+.alternative.boolean-item {
   margin-bottom: 2em;
   .text {
     display: block;

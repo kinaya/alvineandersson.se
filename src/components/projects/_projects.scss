@@ -84,6 +84,7 @@
     }
   }
 
+	.date,
   .tags {
     font-size: 1em;
     text-decoration: none;
@@ -192,7 +193,7 @@
 }
 
 // Animation  when project gets visible by scrolling
-/*.animate-projects-true .project.invisible {
+.animate-projects-true .project.invisible {
   opacity: 0;
   transform: translateY(80px);
   transition: all 0.3s;
@@ -201,7 +202,7 @@
   opacity: 1;
   transform: translateY(0);
   transition: all 0.3s;
-}*/
+}
 
 // Break titles with many words
 .project.newcomersyouth .project-title,

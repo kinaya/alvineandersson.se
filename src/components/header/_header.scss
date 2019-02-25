@@ -22,15 +22,32 @@
   }
 }
 
+.slogan {
+  width: 200px;
+  margin: 0 3em 0 3em;
+  @media(min-height: 300px) {
+    width: 300px;
+  }
+  @media(min-height: 500px) {
+    width: 450px;
+  }
+  .st0 {
+    fill: #ffffff;
+  }
+  svg {
+    display: block;
+  }
+}
+
 .webb {
+  transform: translateY(-3px);
   .text {
     fill: $white;
-    font-family: 'din-2014', sans-serif;
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
     font-display: auto;
     font-display: auto;
     text-transform: uppercase;
-    font-size: 0.3em;
-    letter-spacing: 1px;
+    font-size: 0.44em;
     font-weight: 700;
   }
   .linetwo,
@@ -49,10 +66,11 @@
 }
 .utvecklare {
   .text {
-    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    font-family: "rig-solid-bold-halftone", sans-serif;
     font-display: auto;
     text-transform: uppercase;
     display: block;
+    font-size: 0.92em;
   }
   .text-stroke {
     fill: none;
@@ -62,7 +80,7 @@
     stroke-dasharray: 100;
     stroke-linecap: butt;
     stroke-linejoin: round;
-    animation: dash 2s ease-in-out forwards;
+    animation: dash 2s ease-in-out 0s forwards;
   }
   .text-stroke-2 {
     stroke: $white;
@@ -75,24 +93,27 @@
   }
 }
 .alvine {
+  svg {
+    display: block;
+
+  }
   .text {
     text-transform: uppercase;
     display: block;
     font-display: auto;
-    font-family: 'din-2014', sans-serif;
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
     fill: $white;
-    letter-spacing: 2.9px;
-    font-size: 0.6em;
+    font-size: 0.57em;
   }
 }
 .medkod {
   .text {
     font-family: fairwater-script, sans-serif;
     font-display: auto;
-    font-size: 0.54em;
+    font-size: 0.4em;
     fill: $white;
     animation: medkod 2s forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
     opacity: 0;
   }
 }

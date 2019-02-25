@@ -153,20 +153,34 @@ h2.jumpingTitle.visible {
     .headerslogan {
       width: 400px; } }
 
-.webb .text {
-  fill: #fefefe;
-  font-family: 'din-2014', sans-serif;
-  font-display: auto;
-  font-display: auto;
-  text-transform: uppercase;
-  font-size: 0.3em;
-  letter-spacing: 1px;
-  font-weight: 700; }
+.slogan {
+  width: 200px;
+  margin: 0 3em 0 3em; }
+  @media (min-height: 300px) {
+    .slogan {
+      width: 300px; } }
+  @media (min-height: 500px) {
+    .slogan {
+      width: 450px; } }
+  .slogan .st0 {
+    fill: #ffffff; }
+  .slogan svg {
+    display: block; }
 
-.webb .linetwo,
-.webb .lineone {
-  stroke: #fefefe;
-  stroke-width: 0.5px; }
+.webb {
+  transform: translateY(-3px); }
+  .webb .text {
+    fill: #fefefe;
+    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    font-display: auto;
+    font-display: auto;
+    text-transform: uppercase;
+    font-size: 0.44em;
+    font-weight: 700; }
+  .webb .linetwo,
+  .webb .lineone {
+    stroke: #fefefe;
+    stroke-width: 0.5px; }
 
 @keyframes webb {
   0% {
@@ -175,10 +189,11 @@ h2.jumpingTitle.visible {
     opacity: 1; } }
 
 .utvecklare .text {
-  font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-family: "rig-solid-bold-halftone", sans-serif;
   font-display: auto;
   text-transform: uppercase;
-  display: block; }
+  display: block;
+  font-size: 0.92em; }
 
 .utvecklare .text-stroke {
   fill: none;
@@ -188,7 +203,7 @@ h2.jumpingTitle.visible {
   stroke-dasharray: 100;
   stroke-linecap: butt;
   stroke-linejoin: round;
-  animation: dash 2s ease-in-out forwards; }
+  animation: dash 2s ease-in-out 0s forwards; }
 
 .utvecklare .text-stroke-2 {
   stroke: #fefefe;
@@ -198,22 +213,24 @@ h2.jumpingTitle.visible {
   100% {
     stroke-dashoffset: 0; } }
 
+.alvine svg {
+  display: block; }
+
 .alvine .text {
   text-transform: uppercase;
   display: block;
   font-display: auto;
-  font-family: 'din-2014', sans-serif;
+  font-family: "rig-solid-bold-inline-solo", sans-serif;
   fill: #fefefe;
-  letter-spacing: 2.9px;
-  font-size: 0.6em; }
+  font-size: 0.57em; }
 
 .medkod .text {
   font-family: fairwater-script, sans-serif;
   font-display: auto;
-  font-size: 0.54em;
+  font-size: 0.4em;
   fill: #fefefe;
   animation: medkod 2s forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
   opacity: 0; }
 
 @keyframes medkod {
@@ -385,6 +402,7 @@ h2.jumpingTitle.visible {
     @media (min-width: 736px) {
       .project h3.project-title {
         margin: 0.2em 0 -0.1em 0; } }
+  .project .date,
   .project .tags {
     font-size: 1em;
     text-decoration: none;
@@ -552,16 +570,16 @@ h2.jumpingTitle.visible {
   opacity: 0;
   max-height: 0; }
 
-/*.animate-projects-true .project.invisible {
+.animate-projects-true .project.invisible {
   opacity: 0;
   transform: translateY(80px);
-  transition: all 0.3s;
-}
+  transition: all 0.3s; }
+
 .animate-projects-true .project.visible {
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.3s;
-}*/
+  transition: all 0.3s; }
+
 .project.newcomersyouth .project-title,
 .projectPage.newcomersyouth h1,
 .project.filmregionsydost .project-title,
@@ -845,41 +863,6 @@ h2.jumpingTitle.visible {
     opacity: 0;
     transform: translateY(-1000px); } }
 
-.ocean {
-  height: 60px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  overflow: hidden; }
-
-.wave {
-  background: url(https://alvineandersson.se/wave.svg) repeat-x;
-  background-size: contain;
-  position: absolute;
-  bottom: -10px;
-  width: 200%;
-  height: 50px;
-  animation: wave 40s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0); }
-
-.wave:nth-of-type(2) {
-  bottom: 0px;
-  animation: wave 40s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 40s ease -1.25s infinite;
-  opacity: 1; }
-
-@keyframes wave {
-  0% {
-    margin-left: 0; }
-  100% {
-    margin-left: -1600px; } }
-
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0, -3px, 0); }
-  50% {
-    transform: translate3d(0, 3px, 0); } }
-
 .matchmaking {
   background-color: #fefefe;
   background-image: url(https://alvineandersson.se/bg_raster.png);
@@ -919,60 +902,60 @@ h2.jumpingTitle.visible {
   max-height: 0;
   opacity: 0; }
 
-.alternative.alternatives .text {
+.alternative.select-item .text {
   opacity: 1;
   max-height: 200px;
   overflow: hidden;
   transition: all 0.4s ease; }
 
-.alternative.alternatives .text.visible-false {
+.alternative.select-item .text.visible-false {
   opacity: 0;
   max-height: 0; }
 
-.alternative.alternatives.clickable-true .text.visible-true {
+.alternative.select-item.clickable-true .text.visible-true {
   transition-delay: 0.5s; }
 
-.game .item:first-child .alternative.alternatives.clickable-true .text.visible-true {
+.game .item:first-child .alternative.select-item.clickable-true .text.visible-true {
   transition-delay: 0s; }
 
-.alternative.yesno button {
+.alternative.boolean-item button {
   opacity: 1;
   transition: all 0.4s ease; }
 
-.alternative.yesno button.visible-false {
+.alternative.boolean-item button.visible-false {
   opacity: 0; }
 
-.alternative.yesno.clickable-true .text,
-.alternative.yesno.clickable-true button.visible-true {
+.alternative.boolean-item.clickable-true .text,
+.alternative.boolean-item.clickable-true button.visible-true {
   transition-delay: 0.5s; }
 
-.alternative.alternatives .text {
+.alternative.select-item .text {
   display: block;
   margin-bottom: 1em; }
-  .alternative.alternatives .text span {
+  .alternative.select-item .text span {
     display: block;
     padding: 1em; }
 
-.alternative.alternatives.clickable-true .text {
+.alternative.select-item.clickable-true .text {
   background-color: #a5d3a5;
   cursor: pointer;
   color: #333333; }
 
-.alternative.alternatives.clickable-false .text {
+.alternative.select-item.clickable-false .text {
   color: #a3a3a3; }
 
-.alternative.yesno {
+.alternative.boolean-item {
   margin-bottom: 2em; }
-  .alternative.yesno .text {
+  .alternative.boolean-item .text {
     display: block;
     color: #333333; }
-  .alternative.yesno.clickable-false .text {
+  .alternative.boolean-item.clickable-false .text {
     color: #a3a3a3; }
-  .alternative.yesno .buttons {
+  .alternative.boolean-item .buttons {
     display: flex;
     justify-content: space-evenly;
     margin-top: 1em; }
-  .alternative.yesno button {
+  .alternative.boolean-item button {
     border: 0;
     padding: 1em 1.5em;
     font-family: "Roboto Mono",monospace;
@@ -981,12 +964,12 @@ h2.jumpingTitle.visible {
     font-weight: 700;
     color: #333333;
     text-transform: uppercase; }
-  .alternative.yesno.clickable-true button {
+  .alternative.boolean-item.clickable-true button {
     cursor: pointer;
     background-color: #a5d3a5; }
-    .alternative.yesno.clickable-true button:hover, .alternative.yesno.clickable-true button:active, .alternative.yesno.clickable-true button:focus {
+    .alternative.boolean-item.clickable-true button:hover, .alternative.boolean-item.clickable-true button:active, .alternative.boolean-item.clickable-true button:focus {
       background-color: #83c283; }
-  .alternative.yesno.clickable-false button {
+  .alternative.boolean-item.clickable-false button {
     background-color: #eeeeee;
     color: #7a7a7a; }
 

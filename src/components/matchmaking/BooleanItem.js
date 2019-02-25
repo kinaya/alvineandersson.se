@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-const MatchItemYesno = ({item, matchMaking}) => {
+const BooleanItem = ({item, matchMaking}) => {
   return (
-    <div className={`alternative yesno clickable-${item.clickable}`}>
+    <div data-test="boolean-item-component" className={`alternative boolean-item clickable-${item.clickable}`}>
 
       <span className="text">{item.text}</span>
 
@@ -21,4 +22,9 @@ const MatchItemYesno = ({item, matchMaking}) => {
   )
 }
 
-export default MatchItemYesno;
+BooleanItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  matchMaking: PropTypes.func.isRequired
+}
+
+export default BooleanItem;

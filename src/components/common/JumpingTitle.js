@@ -15,28 +15,24 @@ class JumpingTitle extends React.Component {
     const { title } = this.props;
 
     return (
-      <div data-test="jumping-title-component" className="jumping-title">
+      <VisibilitySensor
+        onChange={this.onChangeVisibility}
+        active={!this.state.visibilitySensorActive}
+        partialVisibility={true} >
+        {({isVisible}) =>
 
-        <VisibilitySensor
-          onChange={this.onChangeVisibility}
-          active={!this.state.visibilitySensorActive}
-          partialVisibility={true} >
-          {({isVisible}) =>
-
-            <h2 data-test="jumping-title-title" className={isVisible ? 'jumpingTitle visible' : 'jumpingTitle invisible'}>
-              {title.split('').map((letter, i) => {
-                const delay = 0.1*i;
-                const duration = 0.4 + 0.05*i;
-                const style = {animationDuration: `${duration}s`, animationDelay: `${delay}s`}
-                return (
-                  <span key={i} style={style}>{letter}</span>
-                )
-              })}
-            </h2>
-          }
-        </VisibilitySensor>
-
-      </div>
+          <h2 data-test="jumping-title-component" className={isVisible ? 'jumpingTitle visible' : 'jumpingTitle invisible'}>
+            {title.split('').map((letter, i) => {
+              const delay = 0.1*i;
+              const duration = 0.4 + 0.05*i;
+              const style = {animationDuration: `${duration}s`, animationDelay: `${delay}s`}
+              return (
+                <span key={i} style={style}>{letter}</span>
+              )
+            })}
+          </h2>
+        }
+      </VisibilitySensor>
     );
   }
 }

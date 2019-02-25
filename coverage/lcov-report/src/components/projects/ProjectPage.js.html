@@ -107,13 +107,7 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,11 +115,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,9 +135,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,9 +168,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 import Project from './Project';
 import { getNextProject } from '../../helpers'
 import PropTypes from 'prop-types'
@@ -193,17 +182,13 @@ const ProjectPage = ({project, projects}) =&gt; {
     &lt;div data-test="project-page-component" className={`projectPage ${project.id}`} &gt;
       &lt;div className="container"&gt;
 &nbsp;
-        &lt;Link data-test="project-page-logo" className="logo" to="/"&gt;
-          &lt;span&gt;A&lt;/span&gt;
-        &lt;/Link&gt;
-&nbsp;
-        &lt;div className="page-header"&gt;
+        &lt;div data-test="project-page-header" className="page-header"&gt;
           &lt;span className="case"&gt;Case story&lt;/span&gt;
-          &lt;h1 data-test="project-page-title" className="project-title"&gt;{project.title}&lt;/h1&gt;
+          &lt;h1 className="project-title"&gt;{project.title}&lt;/h1&gt;
           &lt;p className="description"&gt;{project.info}&lt;/p&gt;
         &lt;/div&gt;
 &nbsp;
-        &lt;div className="featuredImage"&gt;
+        &lt;div data-test="project-featured-image" className="featuredImage"&gt;
           &lt;picture&gt;
             &lt;source type="image/webp" srcSet={require(`../../images/${project.image.url}.webp`)} /&gt;
             &lt;img alt={project.image.alt} src={require(`../../images/${project.image.url}`)} /&gt;
@@ -212,14 +197,14 @@ const ProjectPage = ({project, projects}) =&gt; {
 &nbsp;
           {project.content &amp;&amp;
             project.content.map((paragraph, i) =&gt; { return (
-              &lt;div key={i}&gt;
+              &lt;div data-test="project-content" key={i}&gt;
                 &lt;h2&gt;{paragraph.headline}&lt;/h2&gt;
                 &lt;p&gt;{paragraph.paragraph}&lt;/p&gt;
               &lt;/div&gt;
             )})
           }
 &nbsp;
-          &lt;div className="stats"&gt;
+          &lt;div data-test="project-stats" className="stats"&gt;
             &lt;p&gt;&lt;span&gt;Datum:&lt;/span&gt; {project.date}&lt;/p&gt;
             &lt;p&gt;&lt;span&gt;Tekniker:&lt;/span&gt;{project.extendedTags}&lt;/p&gt;
             {project.designer &amp;&amp; &lt;p&gt;&lt;span&gt;Form:&lt;/span&gt; &lt;a href={project.designer.url}&gt;{project.designer.name}&lt;/a&gt;&lt;/p&gt;}
@@ -227,9 +212,9 @@ const ProjectPage = ({project, projects}) =&gt; {
             {project.link &amp;&amp; project.link.url &amp;&amp; &lt;p&gt;&lt;span&gt;Url:&lt;/span&gt; &lt;a href={project.link.url}&gt;{project.link.name}&lt;/a&gt;&lt;/p&gt;}
           &lt;/div&gt;
 &nbsp;
-        &lt;div className="navigation"&gt;
+        &lt;div data-test="project-navigation" className="navigation"&gt;
           {nextProject &amp;&amp;
-            &lt;Project animation={true} project={nextProject} /&gt;
+            &lt;Project animation={false} project={nextProject} /&gt;
           }
         &lt;/div&gt;
 &nbsp;
@@ -250,7 +235,7 @@ export default ProjectPage;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 14 2019 07:13:37 GMT+0100 (CET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 20 2019 15:42:38 GMT+0100 (CET)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

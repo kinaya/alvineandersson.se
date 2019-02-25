@@ -1,111 +1,112 @@
-import React from 'react';
-import { configure, mount, shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import configureStore from 'redux-mock-store';
-import {matchMaking,filterProjects} from './';
-import thunk from 'redux-thunk';
-import matchitems from '../data/matchitems.json';
-import {FILTER_PROJECTS, MATCHMAKING} from './types';
+import { storeFactory } from '../../test/testUtils';
+import { filterProjects, matchMaking, resetGame } from './';
+import projects from '../data/projects';
+import matchitems from "../data/matchitems";
 
-const mockStore = configureStore([thunk]);
-const store = mockStore({});
+describe('`matchMaking` action dispatcher', () => {
 
-// ------- MatchMaking -------- //
-describe("MatchMaking projects", () => {
-
-/*  beforeEach(() => {
-    store.clearActions();
-  });
-
-  it('Works when clicking first item', async () => {
-
-    const dispatch = jest.fn();
-    const getState = () => ({
+  it('Updates state correctly when a textButton is selected', () => {
+    const initialState = {
       match: {
         matchitems: matchitems
       }
-    });
-
-    await matchMaking('varfor', 'anstalla', 'byggahemsida', 'left')(dispatch, getState);
-
-    expect(dispatch.mock.calls[0][0].matchitems[0].clickable).toEqual(false);
-    expect(dispatch.mock.calls[0][0].matchitems[0].alternatives[0].active).toEqual(true);
-    expect(dispatch.mock.calls[0][0].matchitems[2].visible).toEqual(true);
-  });*/
-});
-
-
-// ------- FilterProjects -------- //
-describe("Filter projects", () => {
-
-  it('returns an action with type `FILTER_PROJECTS`', () => {
-    // Not working, since async action
-    //const action = filterProjects();
-    //expect(action).toEqual({type: FILTER_PROJECTS});
-  })
-
-/*  beforeEach(() => {
-    store.clearActions();
+    }
+    const store = storeFactory(initialState)
+    store.dispatch(matchMaking(1,1.1,2))
+    const newState = store.getState().match
+    expect(newState.matchitems[0].clickable).toBe(false)
+    expect(newState.matchitems[0].alternatives[0].visible).toBe(true)
+    expect(newState.matchitems[0].alternatives[1].visible).toBe(false)
+    expect(newState.matchitems[1].visible).toBe(true)
   });
 
-  it('Works when the first item is selected', async () => {
-    const expectedActions = [{
-      currentFilter: ['wordpress'],
-      type: 'FILTER_PROJECTS'
-    }]
-    const dispatch = jest.fn();
-    const getState = () => ({
+})
+
+describe('`resetGame` action dispatcher', () => {
+
+  it('Resets the match state when selected', () => {
+
+    let matchitemsCopy = [...matchitems];
+    matchitemsCopy[0].visible = false
+
+    const initialState = {
+      match: {
+        matchitems: matchitemsCopy
+      }
+    }
+
+    const store = storeFactory(initialState)
+    const oldState = store.getState().match
+
+    store.dispatch(resetGame())
+    const newState = store.getState().match
+
+    expect(newState.matchitems[0].visible).toBe(true)
+    expect(oldState).not.toBe(newState)
+  })
+
+})
+
+describe('filterProject action dispatcher', () => {
+
+  it('Updates state correctly when the first item is selected', () => {
+    const initialState = {
       projects: {
         currentFilter: []
       }
-    });
-    await filterProjects('wordpress')(dispatch, getState);
-    expect(dispatch.mock.calls[0]).toEqual(expectedActions);
+    }
+    const store = storeFactory(initialState)
+    store.dispatch(filterProjects('drupal'))
+    const newState = store.getState().projects
+    const expectedState = {
+      currentFilter: ['drupal']
+    }
+    expect(newState).toEqual(expectedState)
   });
 
-  it('Works when an item is selected', async () => {
-    const expectedActions = [{
-      currentFilter: ['wordpress','drupal'],
-      type: 'FILTER_PROJECTS'
-    }]
-    const dispatch = jest.fn();
-    const getState = () => ({
+  it('Updates state correctly when another item is selected', () => {
+    const initialState = {
       projects: {
-        currentFilter: ['wordpress']
+        currentFilter: ['drupal']
       }
-    });
-    await filterProjects('drupal')(dispatch, getState);
-    expect(dispatch.mock.calls[0]).toEqual(expectedActions);
+    }
+    const store = storeFactory(initialState)
+    store.dispatch(filterProjects('wordpress'))
+    const newState = store.getState().projects
+    const expectedState = {
+      currentFilter: ['drupal','wordpress']
+    }
+    expect(newState).toEqual(expectedState)
   });
 
-  it('Works when an item is unselected', async () => {
-    const expectedActions = [{
-      currentFilter: ['drupal'],
-      type: 'FILTER_PROJECTS'
-    }]
-    const dispatch = jest.fn();
-    const getState = () => ({
+  it('Updates state correctly when an item is unselected', () => {
+    const initialState = {
       projects: {
-        currentFilter: ['wordpress','drupal']
+        currentFilter: ['nodejs','drupal','wordpress']
       }
-    });
-    await filterProjects('wordpress')(dispatch, getState);
-    expect(dispatch.mock.calls[0]).toEqual(expectedActions);
+    }
+    const store = storeFactory(initialState)
+    store.dispatch(filterProjects('drupal'))
+    const newState = store.getState().projects
+    const expectedState = {
+      currentFilter: ['nodejs','wordpress']
+    }
+    expect(newState).toEqual(expectedState)
   });
 
-  it('Works when all items are unselected', async () => {
-    const expectedActions = [{
-      currentFilter: [],
-      type: 'FILTER_PROJECTS'
-    }]
-    const dispatch = jest.fn();
-    const getState = () => ({
+  it('Updates state correctly when all items are unselected', () => {
+    const initialState = {
       projects: {
-        currentFilter: ['wordpress']
+        currentFilter: ['drupal']
       }
-    });
-    await filterProjects('wordpress')(dispatch, getState);
-    expect(dispatch.mock.calls[0]).toEqual(expectedActions);
-  })*/
+    }
+    const store = storeFactory(initialState)
+    store.dispatch(filterProjects('drupal'))
+    const newState = store.getState().projects
+    const expectedState = {
+      currentFilter: []
+    }
+    expect(newState).toEqual(expectedState)
+  });
 
-});
+})

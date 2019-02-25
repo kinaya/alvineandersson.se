@@ -7,11 +7,11 @@ import Header from "./header/Header";
 import Skills from "./skills/Skills";
 import Footer from "./footer/Footer";
 import Services from "./services/Services";
-//import ProjectsContainer from "./projects/ProjectsContainer";
 import Projects from "./projects/Projects"
-import MatchmakingContainer from "./matchmaking/MatchmakingContainer";
+import Matchmaking from "./matchmaking/Matchmaking";
 import ProjectPage from "./projects/ProjectPage";
 import NotFound from "./NotFound";
+import {connect} from 'react-redux';
 
 import "../scss/App.scss";
 
@@ -52,18 +52,16 @@ class App extends React.Component {
   render() {
 
     const { projects, location, animation } = this.props
-    const currentKey = location.pathname
 
     return (
-      <div ref={this.topRef} className={`App animate-projects-${animation.projects}`}>
+      <div data-test="app-component" ref={this.topRef} className={`App animate-projects-${animation.projects}`}>
 
-        <Link data-test="header-logo" className="logo" to="/" >
+        <Link data-test="app-logo" className="logo" to="/" >
           <span>A</span>
         </Link>
 
         <TransitionGroup component="main" className="page-main">
-          <CSSTransition key={currentKey} timeout={1000} classNames="fade" appear>
-          <div className="fading">
+          <CSSTransition key={location.pathname} timeout={1000} classNames="fade" appear>
           <Switch location={location}>
 
           <Route exact path="/" render={() => (
@@ -74,7 +72,7 @@ class App extends React.Component {
               <div ref={this.projectsRef} />
               <Projects />
               <Skills />
-              <MatchmakingContainer />
+              <Matchmaking />
               <Footer />
             </div>
           )} />
@@ -88,7 +86,6 @@ class App extends React.Component {
           <Route component={NotFound} />
 
           </Switch>
-          </div>
           </CSSTransition>
         </TransitionGroup>
       </div>
@@ -96,4 +93,14 @@ class App extends React.Component {
   }
 }
 
-export default withRouter(App);
+function mapStateToProps(state) {
+  return {
+    projects: state.projects.projects,
+    animation: state.animation
+  }
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  null
+)(App))

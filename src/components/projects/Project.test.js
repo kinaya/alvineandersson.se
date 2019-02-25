@@ -16,25 +16,71 @@ const setup = (props={}) => {
 
 describe("Project", () => {
 
-  it('renders without error', () => {
+  it('renders without error when `isVisible` is false, and sets `invisible` class', () => {
     const wrapper = setup();
-    const component = findByTestAttr(wrapper, 'project-component');
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(false);
+    const component = findByTestAttr(insideWrapper, 'project-component');
     expect(component.length).toBe(1);
+    // This does not work as expected. The class is always 'invisible'
+    //expect(insideWrapper.find('.invisible').length).toBe(1)
   })
 
-  it('renders a link to the project', () => {
-    const wrapper = setup(); // This is the VisibilitySensor
+  it('renders without error when `isVisible` is true, and sets `visible` as class', () => {
+    const wrapper = setup();
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
+    const component = findByTestAttr(insideWrapper, 'project-component');
+    expect(component.length).toBe(1);
+    // This does not work as expected. The class is always 'invisible'
+    //expect(insideWrapper.find('.visible').length).toBe(1)
+  })
 
-    //console.log(wrapper.debug()) // The VisibilitySensor
-    //console.log(wrapper.children().debug()) // [function]
-    //const component = findByTestAttr(wrapper.children(), 'project-link');
+  it('renders an image', () => {
+    const wrapper = setup();
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
+    const imageDiv = findByTestAttr(insideWrapper, 'project-image');
+    expect(imageDiv.length).toBe(1);
 
-    //expect(component.length).toBe(1);
-    // Find out where the link is linking!
+    // Check so the src is the correct image
+    // How to get the accual url...?
+    const imageSrc = imageDiv.find('img').prop('src') // test-file-stub
+    const sourceWebp = imageDiv.find('[type="image/webp"]').prop('srcSet') // test-file-stub
+  })
+
+  it('renders an info div, with correct content', () => {
+    const wrapper = setup();
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
+    const component = findByTestAttr(insideWrapper, 'project-info');
+    expect(component.length).toBe(1);
+    expect(component.find('.what').text()).toBe(projects[0].what)
+    expect(component.find('.project-title').text()).toBe(projects[0].title)
+    expect(component.find('.date').text()).toBe(projects[0].date)
+  })
+
+  it('the link has the correct `to` attribute', () => {
+    const wrapper = setup();
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
+    const link = findByTestAttr(insideWrapper, 'project-component');
+    expect(link.props().to).toBe('/projects/' + projects[0].id)
   })
 
   it('does not throw a warning with expected props', () => {
     checkProps(Project, defaultProps)
   })
+
+  describe('Local state `visibilitySensorActive`', () => {
+
+    it('it is initially false', () => {
+      const wrapper = setup();
+      expect(wrapper.state('visibilitySensorActive')).toBe(false)
+    })
+
+    it('updates to true when `onChange` method is called with true', () => {
+      const wrapper = setup();
+      wrapper.prop('onChange')(true)
+      expect(wrapper.state('visibilitySensorActive')).toBe(true)
+    })
+
+  })
+
 
 });

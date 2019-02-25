@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/5</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/5</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -97,11 +97,7 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,17 +106,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -128,8 +121,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,18 +148,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component} from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import { Link } from "react-router-dom";
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 &nbsp;
 class Project extends React.Component {
 &nbsp;
-  // Only trigger animation once
-  state = {visibilitySensorActive : false}
-&nbsp;
-  onChangeVisibility = <span class="fstat-no" title="function not covered" >is</span>Visible =&gt; {
-<span class="cstat-no" title="statement not covered" >    this.setState({visibilitySensorActive: isVisible})</span>
+  state = {visibilitySensorActive: false}
+  onChangeVisibility = isVisible =&gt; {
+    this.setState({visibilitySensorActive: isVisible})
   }
 &nbsp;
   render() {
@@ -179,30 +169,28 @@ class Project extends React.Component {
         onChange={this.onChangeVisibility}
         active={!this.state.visibilitySensorActive}
         partialVisibility={true}
-        data-test="project-component"
-      &gt;
-        {<span class="fstat-no" title="function not covered" >({</span>isVisible}) =&gt;
+        &gt;
+        {({isVisible}) =&gt;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        &lt;Link data-test="project-link" to={`/projects/${project.id}`} className={`project ${project.id} ${isVisible ? 'visible' : 'invisible'}`}&gt;</span>
-          &lt;div className="image"&gt;
-            &lt;picture&gt;
-              &lt;source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} /&gt;
-              &lt;img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} /&gt;
-            &lt;/picture&gt;
-          &lt;/div&gt;
+          &lt;Link data-test="project-component" to={`/projects/${project.id}`} className={`project ${project.id} ${isVisible ? <span class="branch-0 cbranch-no" title="branch not covered" >'visible' </span>: 'invisible'}`}&gt;
+            &lt;div data-test="project-image" className="image"&gt;
+              &lt;picture&gt;
+                &lt;source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} /&gt;
+                &lt;img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} /&gt;
+              &lt;/picture&gt;
+            &lt;/div&gt;
 &nbsp;
-          &lt;div className="info"&gt;
-            &lt;div className="what"&gt;{project.what}&lt;/div&gt;
-            &lt;h3 className="project-title" &gt;{project.title}&lt;/h3&gt;
-            &lt;div className="tags"&gt;{project.date}&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/Link&gt;
+            &lt;div data-test="project-info" className="info"&gt;
+              &lt;div className="what"&gt;{project.what}&lt;/div&gt;
+              &lt;h3 className="project-title" &gt;{project.title}&lt;/h3&gt;
+              &lt;div className="date"&gt;{project.date}&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/Link&gt;
 &nbsp;
-    }
-    &lt;/VisibilitySensor&gt;
-&nbsp;
-  );
-}
+        }
+      &lt;/VisibilitySensor&gt;
+    );
+  }
 }
 &nbsp;
 Project.propTypes = {
@@ -217,7 +205,7 @@ export default Project;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 14 2019 07:13:37 GMT+0100 (CET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 20 2019 15:42:38 GMT+0100 (CET)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

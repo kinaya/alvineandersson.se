@@ -1,12 +1,14 @@
-import React, { Component} from "react";
+import React from "react";
 import JumpingTitle from '../common/JumpingTitle';
-import MatchItemAlternatives from "./MatchItemAlternatives";
-import MatchItemYesno from "./MatchItemYesno";
-import MatchItemMatch from "./MatchItemMatch";
+import SelectItem from "./SelectItem";
+import BooleanItem from "./BooleanItem";
+import MatchItem from "./MatchItem";
+import { connect } from 'react-redux'
+import { matchMaking, resetGame } from '../../actions'
 
-const Matchmaking = ({matchitems, matchMaking, resetGame}) => {
+export const UnconnectedMatchmaking = ({matchitems, matchMaking, resetGame}) => {
   return (
-    <section className="matchmaking">
+    <section data-test="matchmaking-component" className="matchmaking">
 			<div className="container">
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
@@ -15,15 +17,15 @@ const Matchmaking = ({matchitems, matchMaking, resetGame}) => {
 
         <div className="game">
           {matchitems.map((item, i) => (
-            <div key={i} className={`item visible-${item.visible}`}>
+            <div data-test="matchmaking-item" key={i} className={`item visible-${item.visible}`}>
               {item.type === 'alternatives' && (
-                <MatchItemAlternatives matchMaking={matchMaking} item={item} />
+                <SelectItem matchMaking={matchMaking} item={item} />
               )}
               {item.type === 'yesno' && (
-                <MatchItemYesno matchMaking={matchMaking} item={item} />
+                <BooleanItem matchMaking={matchMaking} item={item} />
               )}
               {item.type === 'match' && (
-                <MatchItemMatch resetGame={resetGame} item={item} />
+                <MatchItem resetGame={resetGame} item={item} />
               )}
             </div>
           ))}
@@ -34,4 +36,20 @@ const Matchmaking = ({matchitems, matchMaking, resetGame}) => {
   );
 }
 
-export default Matchmaking;
+function mapStateToProps(state) {
+  return {
+    matchitems: state.match.matchitems
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    matchMaking: (clickedItem, clickedAlternative, itemToShow) => dispatch(matchMaking(clickedItem, clickedAlternative, itemToShow)),
+    resetGame: () => dispatch(resetGame())
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(UnconnectedMatchmaking)

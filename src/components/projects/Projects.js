@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 import Project from "./Project";
-import Filters from './Filters';
+import Filter from './Filter';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import JumpingTitle from '../common/JumpingTitle';
 
@@ -12,7 +12,7 @@ const Projects = ({projects, currentFilter, animation}) => {
 
         <JumpingTitle title="Portfolio" />
 
-        <Filters />
+        <Filter />
 
         <TransitionGroup className="project-list">
           {projects.map((project, i) => {
@@ -46,5 +46,3 @@ export default connect(
   mapStateToProps,
   null,
 )(Projects)
-
-//export default Projects;

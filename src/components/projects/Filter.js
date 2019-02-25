@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import { filterProjects } from '../../actions'
 import { getUniqueTags } from '../../helpers'
 
-// This is for the test of the action creator trigger!
-//const Filters = ({ projects, currentFilter, filterProjects }) => {
-export const UnconnectedFilters = ({ projects, currentFilter, filterProjects }) => {
+export const UnconnectedFilter = ({ projects, currentFilter, filterProjects }) => {
 
   let filters = getUniqueTags(projects)
 
@@ -38,4 +36,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedFilters);
+export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedFilter);

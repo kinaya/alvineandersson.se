@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../../test/testUtils.js';
+import { findByTestAttr } from '../../../test/testUtils.js';
 
 const setup = () => {
   return shallow(<Footer />)

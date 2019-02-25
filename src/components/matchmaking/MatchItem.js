@@ -1,8 +1,9 @@
-import React, { Component} from "react";
+import React from "react";
+import PropTypes from 'prop-types'
 
-const MatchItemMatch = ({item, resetGame}) => {
+const MatchItem = ({item, resetGame}) => {
   return (
-    <div>
+    <div data-test="match-item-component">
 
       <div className={`result ${item.id}`}>
         <div className="headline">{item.headline}</div>
@@ -15,4 +16,9 @@ const MatchItemMatch = ({item, resetGame}) => {
   )
 }
 
-export default MatchItemMatch;
+MatchItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  resetGame: PropTypes.func.isRequired
+}
+
+export default MatchItem;

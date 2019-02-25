@@ -1,7 +1,7 @@
 import { RESET_GAME, MATCHMAKING } from '../actions/types'
-import matchitems from "../data/matchitems.json";
+import matchitemsList from "../data/matchitems.json";
 
-const initialState = { matchitems: matchitems }
+const initialState = { matchitems: matchitemsList }
 
 const matchReducer = (state = initialState, action) => {
 
