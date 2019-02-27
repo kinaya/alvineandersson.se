@@ -5,8 +5,12 @@ import Slogan from './Slogan'
 
 const Header = ({onClick}) => {
 
+  // Set the header to full height on all screens. Css-only not working on for example ipad
+  let vh = window.innerHeight;
+  const style = { 'height': `${vh}px`}
+
   return (
-    <section data-test="header-component" className="header">
+    <section data-test="header-component" className="header" style={style}>
 
       <Slogan />
 

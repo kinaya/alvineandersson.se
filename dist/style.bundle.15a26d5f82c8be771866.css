@@ -188,37 +188,6 @@ h2.jumpingTitle.visible {
   100% {
     opacity: 1; } }
 
-/*.utvecklare {
-  .text {
-    font-family: "rig-solid-bold-halftone", sans-serif;
-    font-display: auto;
-    text-transform: uppercase;
-    display: block;
-    font-size: 0.92em;
-  }
-  .text-stroke {
-    fill: transparent;
-    stroke: #72baba;
-    stroke-width: 2.8px;
-    stroke-dashoffset: -100;
-    stroke-dasharray: 100;
-    stroke-linecap: butt;
-    stroke-linejoin: round;
-    animation: dash 2s ease-in-out 0s forwards;
-  }
-  .text-stroke-2 {
-    stroke: $white;
-    animation-delay: 0.5s;
-  }
-}
-@keyframes dash {
-  0% {
-    stroke-dashoffset: -100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}*/
 .developer .text {
   font-family: "rig-solid-bold-halftone", sans-serif;
   font-display: auto;
@@ -232,34 +201,34 @@ h2.jumpingTitle.visible {
   opacity: 0; }
 
 .developer .wrapper:nth-child(1) {
-  animation-delay: 524ms; }
+  animation-delay: 549ms; }
 
 .developer .wrapper:nth-child(2) {
-  animation-delay: 692ms; }
+  animation-delay: 576ms; }
 
 .developer .wrapper:nth-child(3) {
-  animation-delay: 536ms; }
+  animation-delay: 827ms; }
 
 .developer .wrapper:nth-child(4) {
-  animation-delay: 505ms; }
+  animation-delay: 831ms; }
 
 .developer .wrapper:nth-child(5) {
-  animation-delay: 876ms; }
+  animation-delay: 856ms; }
 
 .developer .wrapper:nth-child(6) {
-  animation-delay: 741ms; }
+  animation-delay: 677ms; }
 
 .developer .wrapper:nth-child(7) {
-  animation-delay: 555ms; }
+  animation-delay: 750ms; }
 
 .developer .wrapper:nth-child(8) {
-  animation-delay: 517ms; }
+  animation-delay: 884ms; }
 
 .developer .wrapper:nth-child(9) {
-  animation-delay: 666ms; }
+  animation-delay: 863ms; }
 
 .developer .wrapper:nth-child(10) {
-  animation-delay: 894ms; }
+  animation-delay: 820ms; }
 
 @-moz-keyframes developer {
   0% {
@@ -300,16 +269,31 @@ h2.jumpingTitle.visible {
   font-display: auto;
   font-family: "rig-solid-bold-inline-solo", sans-serif;
   fill: #fefefe;
-  font-size: 0.57em; }
+  font-size: 0.57em;
+  opacity: 0;
+  animation: alvine 1s forwards 0.5s; }
+
+@keyframes alvine {
+  100% {
+    opacity: 1; } }
 
 .medkod .text {
   font-family: fairwater-script, sans-serif;
   font-display: auto;
   font-size: 0.4em;
   fill: #fefefe;
-  animation: medkod 2s forwards;
-  animation-delay: 2s;
+  -moz-animation: medkod 1.5s forwards 1.5s;
+  -webkit-animation: medkod 1.5s forwards 1.5s;
+  animation: medkod 1.5s forwards 1.5s;
   opacity: 0; }
+
+@-moz-keyframes medkod {
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes medkod {
+  100% {
+    opacity: 1; } }
 
 @keyframes medkod {
   100% {
