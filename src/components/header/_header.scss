@@ -64,7 +64,7 @@
     opacity: 1;
   }
 }
-.utvecklare {
+/*.utvecklare {
   .text {
     font-family: "rig-solid-bold-halftone", sans-serif;
     font-display: auto;
@@ -73,14 +73,13 @@
     font-size: 0.92em;
   }
   .text-stroke {
-    fill: none;
+    fill: transparent;
     stroke: #72baba;
     stroke-width: 2.8px;
     stroke-dashoffset: -100;
-    stroke-dasharray: 500;
+    stroke-dasharray: 100;
     stroke-linecap: butt;
     stroke-linejoin: round;
-    -moz-animation: dash 2s ease-in-out 0s forwards;
     animation: dash 2s ease-in-out 0s forwards;
   }
   .text-stroke-2 {
@@ -88,15 +87,6 @@
     animation-delay: 0.5s;
   }
 }
-@-moz-keyframes dash {
-  0% {
-    stroke-dashoffset: -100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes dash {
   0% {
     stroke-dashoffset: -100;
@@ -104,7 +94,42 @@
   100% {
     stroke-dashoffset: 0;
   }
+}*/
+
+.developer {
+  .text {
+    font-family: "rig-solid-bold-halftone", sans-serif;
+    font-display: auto;
+    text-transform: uppercase;
+    display: block;
+    font-size: 0.92em;
+    fill: $white;
+    display: block;
+    animation: developer 0.7s forwards;
+    opacity: 0;
+  }
+  @for $i from 1 to 11 {
+    .text:nth-child(#{$i}) {
+      animation-delay: #{random(500)+500}ms;
+    }
+  }
 }
+
+@keyframes developer {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 .alvine {
   svg {
     display: block;
@@ -135,6 +160,7 @@
     opacity: 1;
   }
 }
+
 
 .scrollarrow {
 	background: url(../images/arrow.svg);

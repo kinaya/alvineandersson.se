@@ -189,7 +189,6 @@ h2.jumpingTitle.visible {
     opacity: 1; } }
 
 .utvecklare .text {
-  font-family: "rig-solid-bold-halftone", sans-serif;
   font-display: auto;
   text-transform: uppercase;
   display: block;
@@ -197,20 +196,17 @@ h2.jumpingTitle.visible {
 
 .utvecklare .text-stroke {
   fill: none;
-  stroke: #72baba;
-  stroke-width: 2.8px;
-  stroke-dashoffset: -100;
-  stroke-dasharray: 500;
-  stroke-linecap: butt;
-  stroke-linejoin: round;
-  -moz-animation: dash 2s ease-in-out 0s forwards;
-  animation: dash 2s ease-in-out 0s forwards; }
+  stroke: #72baba; }
 
 .utvecklare .text-stroke-2 {
   stroke: #fefefe;
   animation-delay: 0.5s; }
 
-@-moz-keyframes dash {
+@keyframes test {
+  100% {
+    stroke: green; } }
+
+@-webkit-keyframes dash {
   0% {
     stroke-dashoffset: -100; }
   100% {
