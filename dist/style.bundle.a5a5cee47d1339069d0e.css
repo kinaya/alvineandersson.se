@@ -222,43 +222,64 @@ h2.jumpingTitle.visible {
 .developer .text {
   font-family: "rig-solid-bold-halftone", sans-serif;
   font-display: auto;
-  text-transform: uppercase;
-  display: block;
   font-size: 0.92em;
-  fill: #fefefe;
-  display: block;
-  animation: developer 0.7s forwards;
+  fill: #fefefe; }
+
+.developer .wrapper {
+  -moz-animation: developer 0.7s ease-in-out forwards;
+  -webkit-animation: developer 1s ease-in-out forwards;
+  animation: developer 1s ease-in-out forwards;
   opacity: 0; }
 
-.developer .text:nth-child(1) {
-  animation-delay: 891ms; }
+.developer .wrapper:nth-child(1) {
+  animation-delay: 524ms; }
 
-.developer .text:nth-child(2) {
-  animation-delay: 575ms; }
+.developer .wrapper:nth-child(2) {
+  animation-delay: 692ms; }
 
-.developer .text:nth-child(3) {
-  animation-delay: 680ms; }
+.developer .wrapper:nth-child(3) {
+  animation-delay: 536ms; }
 
-.developer .text:nth-child(4) {
-  animation-delay: 610ms; }
+.developer .wrapper:nth-child(4) {
+  animation-delay: 505ms; }
 
-.developer .text:nth-child(5) {
-  animation-delay: 589ms; }
+.developer .wrapper:nth-child(5) {
+  animation-delay: 876ms; }
 
-.developer .text:nth-child(6) {
-  animation-delay: 746ms; }
+.developer .wrapper:nth-child(6) {
+  animation-delay: 741ms; }
 
-.developer .text:nth-child(7) {
-  animation-delay: 890ms; }
+.developer .wrapper:nth-child(7) {
+  animation-delay: 555ms; }
 
-.developer .text:nth-child(8) {
-  animation-delay: 821ms; }
+.developer .wrapper:nth-child(8) {
+  animation-delay: 517ms; }
 
-.developer .text:nth-child(9) {
-  animation-delay: 862ms; }
+.developer .wrapper:nth-child(9) {
+  animation-delay: 666ms; }
 
-.developer .text:nth-child(10) {
-  animation-delay: 527ms; }
+.developer .wrapper:nth-child(10) {
+  animation-delay: 894ms; }
+
+@-moz-keyframes developer {
+  0% {
+    -moz-transform: translateY(0);
+    opacity: 0; }
+  50% {
+    -moz-transform: translateY(-2px); }
+  100% {
+    -moz-transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes developer {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: translateY(-2px); }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1; } }
 
 @keyframes developer {
   0% {

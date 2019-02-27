@@ -58,16 +58,16 @@ const Slogan = () => {
 
     <div className="developer">
       <svg viewBox="0 0 100 15" xmlns="http://www.w3.org/2000/svg">
-        <text className="text" x="1.5" y="12">U</text>
-        <text className="text" x="12" y="12">T</text>
-        <text className="text" x="21" y="12">V</text>
-        <text className="text" x="31.5" y="12">E</text>
-        <text className="text" x="40" y="12">C</text>
-        <text className="text" x="50" y="12">K</text>
-        <text className="text" x="60.5" y="12">L</text>
-        <text className="text" x="70" y="12">A</text>
-        <text className="text" x="80" y="12">R</text>
-        <text className="text" x="89" y="12">E</text>
+        <g className="wrapper"><text className="text" x="1.5" y="12">U</text></g>
+        <g className="wrapper"><text className="text" x="12" y="12">T</text></g>
+        <g className="wrapper"><text className="text" x="21" y="12">V</text></g>
+        <g className="wrapper"><text className="text" x="31.5" y="12">E</text></g>
+        <g className="wrapper"><text className="text" x="40" y="12">C</text></g>
+        <g className="wrapper"><text className="text" x="50" y="12">K</text></g>
+        <g className="wrapper"><text className="text" x="60.5" y="12">L</text></g>
+        <g className="wrapper"><text className="text" x="70" y="12">A</text></g>
+        <g className="wrapper"><text className="text" x="80" y="12">R</text></g>
+        <g className="wrapper"><text className="text" x="89" y="12">E</text></g>
       </svg>
     </div>
 
