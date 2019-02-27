@@ -1,6 +1,6 @@
 {
-  "main.js": "https://alvineandersson.se/main.bundle.f3093532f9bb4f3c4ef4.js",
-  "main.css": "https://alvineandersson.se/style.bundle.f3093532f9bb4f3c4ef4.css",
+  "main.js": "https://alvineandersson.se/main.bundle.8e80f411d6089a318dbd.js",
+  "main.css": "https://alvineandersson.se/style.bundle.8e80f411d6089a318dbd.css",
   "bg_skills.png": "https://alvineandersson.se/bg_skills.png",
   "bg_raster.png": "https://alvineandersson.se/bg_raster.png",
   "header_three.jpg": "https://alvineandersson.se/header_three.jpg",
@@ -66,11 +66,11 @@
   "android-chrome-192x192.png": "https://alvineandersson.se/android-chrome-192x192.png",
   "android-chrome-512x512.png": "https://alvineandersson.se/android-chrome-512x512.png",
   "apple-touch-icon.png": "https://alvineandersson.se/apple-touch-icon.png",
-  "browserconfig.xml": "https://alvineandersson.se/browserconfig.xml",
   "favicon-16x16.png": "https://alvineandersson.se/favicon-16x16.png",
+  "browserconfig.xml": "https://alvineandersson.se/browserconfig.xml",
   "favicon-32x32.png": "https://alvineandersson.se/favicon-32x32.png",
-  "mstile-150x150.png": "https://alvineandersson.se/mstile-150x150.png",
   "favicon.ico": "https://alvineandersson.se/favicon.ico",
+  "mstile-150x150.png": "https://alvineandersson.se/mstile-150x150.png",
   "safari-pinned-tab.svg": "https://alvineandersson.se/safari-pinned-tab.svg",
   "site.webmanifest": "https://alvineandersson.se/site.webmanifest"
 }
