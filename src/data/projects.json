@@ -42,7 +42,7 @@
       "content": [
         {
           "headline": "Interaktivt quiz",
-          "paragraph": "Mensvärkstestet består av ett SPA ('Single page application') byggt med React.js/Redux, där de olika frågorna visas en i taget. Olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor. I slutet visas ens resultat och en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt)."
+          "paragraph": "Mensvärkstestet är en interaktiv webbapp byggt med React.js. Olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor. I slutet visas ens resultat och en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt)."
         },
         {
           "headline": "Backend med Drupal 8",
@@ -59,7 +59,11 @@
       },
       "date": "Sep 2018",
       "tags": ["React", "Drupal"],
-      "extendedTags": "React, Redux, Drupal 8",
+      "extendedTags": "React.js, Drupal 8",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
       "image": {
         "url": "mensvarkstestet.png",
         "alt": "Bild från test.pablodigtallvar.se"
@@ -72,24 +76,36 @@
       "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer. Förutom tillgänglig, lättläst fakta innehåller webbplatsen ett Välj-ditt-eget-äventyr-spel",
       "content": [
         {
-          "headline": "Under utveckling",
-          "paragraph": "Detta projekt är under utveckling, och lanseras i maj 2019. Sajten byggs i Wordpress, och använder en mängd egna Gutenberg-block för att visa innehåll varierat och snyggt, men samtidigt enkelt för redaktörerna att underhålla."
+          "headline": "Varierat innehåll för maximal tillgänglighet",
+          "paragraph": "Projektets målgrupp ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången. För att vara åtkomligt för alla finns en inbyggd uppläsningsfunktion och alla artiklar finns i teckenspråksversion."
         },
         {
-          "headline": "Välj ditt eget äventyr",
-          "paragraph": "Webbplatsen kommer innehålla ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Wordpress med dess RESTful Api."
+          "headline": "Webbserie i egen biograf",
+          "paragraph": "Hemsidan innehåller förutom artiklar en biograf med en webbserie i 8 delar. Varje avsnitt finns i en version utan tolkning, som teckentolkad och som syntolkad."
+        },
+        {
+          "headline": "Välj-ditt-eget-äventyr spel",
+          "paragraph": "Webbplatsen innehåller ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Drupal 8 via REST."
         }
       ],
+      "link": {
+        "url": "https://nagotharhant.se",
+        "name": "nagotharhant.se"
+      },
       "listimg": {
         "url": "mensvarkstestet_list.jpg",
         "alt": "Skärmdump av startsidan för nagotharahant.se"
       },
-      "date": "Pågående",
-      "tags": ["React", "Wordpress"],
-      "extendedTags": "React, Redux, Wordpress, PHP, MySQL",
+      "date": "Oktober 2019",
+      "tags": ["React", "Drupal"],
+      "extendedTags": "React.js, Drupal, PHP, MySQL, HTML, CSS/SASS",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
       "image": {
-        "url": "mensvarkstestet.png",
-        "alt": "Image alt"
+        "url": "nagotharhant.png",
+        "alt": "Startsidan från nagotharhant.se"
       }
     },
     {

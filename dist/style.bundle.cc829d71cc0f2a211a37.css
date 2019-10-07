@@ -201,34 +201,34 @@ h2.jumpingTitle.visible {
   opacity: 0; }
 
 .developer .wrapper:nth-child(1) {
-  animation-delay: 549ms; }
+  animation-delay: 958ms; }
 
 .developer .wrapper:nth-child(2) {
-  animation-delay: 576ms; }
+  animation-delay: 933ms; }
 
 .developer .wrapper:nth-child(3) {
-  animation-delay: 827ms; }
+  animation-delay: 951ms; }
 
 .developer .wrapper:nth-child(4) {
-  animation-delay: 831ms; }
+  animation-delay: 929ms; }
 
 .developer .wrapper:nth-child(5) {
-  animation-delay: 856ms; }
+  animation-delay: 835ms; }
 
 .developer .wrapper:nth-child(6) {
-  animation-delay: 677ms; }
+  animation-delay: 699ms; }
 
 .developer .wrapper:nth-child(7) {
-  animation-delay: 750ms; }
+  animation-delay: 900ms; }
 
 .developer .wrapper:nth-child(8) {
-  animation-delay: 884ms; }
+  animation-delay: 899ms; }
 
 .developer .wrapper:nth-child(9) {
-  animation-delay: 863ms; }
+  animation-delay: 830ms; }
 
 .developer .wrapper:nth-child(10) {
-  animation-delay: 820ms; }
+  animation-delay: 720ms; }
 
 @-moz-keyframes developer {
   0% {

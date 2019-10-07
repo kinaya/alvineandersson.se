@@ -5,7 +5,7 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+//const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 const PUBLIC_PATH = 'https://alvineandersson.se/';
 
