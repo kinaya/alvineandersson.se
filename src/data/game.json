@@ -1,0 +1,62 @@
+[
+  {
+    "clickable": true,
+    "alternatives": [
+      {
+        "text": "Vi drivs av att lösa problem och ta fram produkter som är bra för människor, miljö och samhälle.",
+        "visible": true,
+        "match": null
+      },
+      {
+        "text": "Vi har som främsta mål att tjäna sjukt mycket pengar! Hur vi gör det spelar mindre roll",
+        "visible": true,
+        "match": false
+      }
+    ]
+  },
+  {
+    "clickable": true,
+    "alternatives": [
+      {
+        "text": "Hos oss finns plats att växa och utvecklas. Vi värdesätter nyfikenhet, eget ansvar och vilja att lära",
+        "visible": true,
+        "match": null
+      },
+      {
+        "text": "Vi letar efter en person som under lång tid kommer ha en och samma smala, specifika uppgift.",
+        "visible": true,
+        "match": false
+      }
+    ]
+  },
+  {
+    "clickable": true,
+    "alternatives": [
+      {
+        "text": "Vi arbetar aktivt mot rasism, sexism och andra former av förtryck på vår arbetsplats",
+        "visible": true,
+        "match": null
+      },
+      {
+        "text": "Alla utvecklare på vår byrå är män. Det ser inte bra ut, vi måste anställa någon annan!",
+        "visible": true,
+        "match": false
+      }
+    ]
+  },
+  {
+    "clickable": true,
+    "alternatives": [
+      {
+        "text": "Vi har en arbetsmiljö där vi samarbetar, lyfter varandra och jobbar mot samma mål.",
+        "visible": true,
+        "match": true
+      },
+      {
+        "text": "Hos oss tävlar vi - alla mot alla! Hur ska vi annars veta vem som är bäst?",
+        "visible": true,
+        "match": false
+      }
+    ]
+  }
+]

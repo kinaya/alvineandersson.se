@@ -7,8 +7,16 @@ export const UnconnectedFilter = ({ projects, currentFilter, filterProjects }) =
 
   let filters = getUniqueTags(projects)
 
+  console.log(currentFilter)
+
   return (
     <div data-test="filter-component" className="filter">
+        <button
+          className={`select ${currentFilter.length == 0 ? 'active' : 'unactive' }`}
+          onClick={() => filterProjects(null)}
+        >
+        Visa alla
+        </button>
       {filters.map((filterItem, i) => { return (
         <button
           data-test="filter-button"

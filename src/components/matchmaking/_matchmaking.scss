@@ -4,13 +4,6 @@
 	background-image: url('../images/bg_raster.png');
   background-size: cover;
   text-align: center;
-/*	padding-top: 3rem;
-	@media(min-width: $mobile) {
-		padding-top: 5rem;
-	}
-	@media(min-width: $tablet) {
-		padding-top: 6rem;
-	}*/
 }
 
 .matchmaking {
@@ -66,7 +59,7 @@
 	transition-delay: 0s;
 }
 
-.alternative.boolean-item {
+/*.alternative.boolean-item {
 	button {
 		opacity: 1;
 		transition: all 0.4s ease;
@@ -79,10 +72,7 @@
 	&.clickable-true button.visible-true {
 		transition-delay: 0.5s;
 	}
-}
-
-
-
+}*/
 
 // Alternative alternatives
 .alternative.select-item {
@@ -98,6 +88,9 @@
     background-color: $green;
     cursor: pointer;
 		color: $black;
+		&:hover, &:active, &:focus {
+			background-color: #94cb94;
+		}
   }
   &.clickable-false .text {
     color: $gray;
@@ -105,7 +98,7 @@
 }
 
 // Alternative yesno
-.alternative.boolean-item {
+/*.alternative.boolean-item {
   margin-bottom: 2em;
   .text {
     display: block;
@@ -140,7 +133,7 @@
     background-color: $gray-1;
     color: $gray-2;
   }
-}
+}*/
 
 .result {
   padding: 0 2em 3em;
@@ -153,6 +146,13 @@
     transform: rotate(-5deg);
     margin: -1em 0 1.5em;
   }
+	.text {
+		text-align: left;
+	}
+	ul {
+		font-size: 1em;
+		padding-left: 1em;
+	}
   &.match {
     background-color: $green;
     .headline {
@@ -165,6 +165,22 @@
       background-color: $red-dark;
     }
   }
+}
+
+.game button.start {
+	border: 0;
+	background-color: #c87f8b;
+	padding: 1em 1.5em;
+	font-size: 1em;
+	border-radius: 5px;
+	color: $white;
+	transition: all 0.3s;
+	text-transform: uppercase;
+	font-weight: 900;
+	cursor: pointer;
+	&:hover, &:active, &:focus {
+		background-color: #c06d6d;
+	}
 }
 
 .game .redo {

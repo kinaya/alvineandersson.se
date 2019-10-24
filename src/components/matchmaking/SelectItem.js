@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-const SelectItem = ({item, matchMaking}) => {
+const SelectItem = ({item, chooseItem}) => {
+
+  console.log('The select item:', item)
+
   return (
     <div data-test="select-item-component" className={`alternative select-item clickable-${item.clickable}`}>
       {item.alternatives.map((alt, i) => { return (
         <div
           className={`text visible-${alt.visible}`}
-          onClick={item.clickable ? () => matchMaking(item.id, alt.id, alt.link) : null}
+          onClick={item.clickable ? () => chooseItem(i, alt.match) : null}
           key={i}>
           <span>{alt.text}</span>
         </div>
@@ -18,7 +21,7 @@ const SelectItem = ({item, matchMaking}) => {
 
 SelectItem.propTypes = {
   item: PropTypes.object.isRequired,
-  matchMaking: PropTypes.func.isRequired
+  chooseItem: PropTypes.func.isRequired
 }
 
 export default SelectItem;

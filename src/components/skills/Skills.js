@@ -11,27 +11,27 @@ const Skills = () => {
         <div className="stacks">
           <div data-test="skills-skill" className="stack">
             <h4>MERN-stack</h4>
-            <p>Applikationer med <strong>React/Redux</strong>, backend via <strong>Express</strong> och <strong>node.js</strong> med <strong>MongoDB</strong> databas. Routing, internalisering osv</p>
+            <p>Applikationer med <strong>React/Redux</strong>, backend via <strong>Node.js</strong> och <strong>Express</strong> med <strong>MongoDB</strong> databas.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Drupal & Wordpress</h4>
-            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Custom-made plugins med <strong>PHP</strong> och <strong>MySQL</strong>. Standard eller headless via <strong>REST Api</strong></p>
+            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Plugins med <strong>PHP</strong> och <strong>MySQL</strong>. Standard eller "headless" via <strong>REST</strong></p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Temautveckling</h4>
-            <p>15+ års med <strong>HTML</strong>, <strong>CSS/SASS</strong> och <strong>JavaScript</strong>. Frameworks som <strong>Bootstrap</strong> eller <strong>Materialize</strong>. Ofta bollplank för <strong>interkationsdesign</strong></p>
+            <p><strong>Interaktionsdesign</strong>, <strong>HTML</strong>, <strong>CSS/SASS</strong> och <strong>JavaScript</strong>. Frameworks som <strong>Bootstrap</strong>, <strong>Semantic UI</strong> eller <strong>Materialize</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Performance</h4>
-            <p><strong>Progressive web apps</strong> som standard, test av kodbas med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong></p>
+            <p><strong>Progressive web apps</strong>, test av kodbas med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong></p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Distribuering</h4>
-            <p>Utveckling och distribuerng med <strong>Git</strong>, <strong>Webpack</strong>, <strong>Gulp</strong> och <strong>Docker</strong>. Servermiljö via <strong>Apache/Cpanel</strong>, <strong>Heroku</strong> eller <strong>Firebase</strong></p>
+            <p>Utveckling med <strong>Git</strong>, <strong>Webpack</strong>, <strong>Gulp</strong> och <strong>Docker</strong>. Distribuering via <strong>Apache/Cpanel</strong>, <strong>AWS</strong> eller <strong>Heroku</strong></p>
           </div>
 
           <div data-test="skills-skill" className="stack">

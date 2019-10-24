@@ -201,34 +201,34 @@ h2.jumpingTitle.visible {
   opacity: 0; }
 
 .developer .wrapper:nth-child(1) {
-  animation-delay: 958ms; }
+  animation-delay: 637ms; }
 
 .developer .wrapper:nth-child(2) {
-  animation-delay: 933ms; }
+  animation-delay: 593ms; }
 
 .developer .wrapper:nth-child(3) {
-  animation-delay: 951ms; }
+  animation-delay: 700ms; }
 
 .developer .wrapper:nth-child(4) {
-  animation-delay: 929ms; }
+  animation-delay: 544ms; }
 
 .developer .wrapper:nth-child(5) {
-  animation-delay: 835ms; }
+  animation-delay: 842ms; }
 
 .developer .wrapper:nth-child(6) {
-  animation-delay: 699ms; }
+  animation-delay: 986ms; }
 
 .developer .wrapper:nth-child(7) {
-  animation-delay: 900ms; }
+  animation-delay: 824ms; }
 
 .developer .wrapper:nth-child(8) {
-  animation-delay: 899ms; }
+  animation-delay: 952ms; }
 
 .developer .wrapper:nth-child(9) {
-  animation-delay: 830ms; }
+  animation-delay: 682ms; }
 
 .developer .wrapper:nth-child(10) {
-  animation-delay: 720ms; }
+  animation-delay: 717ms; }
 
 @-moz-keyframes developer {
   0% {
@@ -345,17 +345,20 @@ h2.jumpingTitle.visible {
     background-color: #72baba; }
 
 .footer {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(https://alvineandersson.se/footer_image.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://alvineandersson.se/footer_image.jpg);
   background-repeat: no-repeat;
   background-size: auto 150%;
-  background-position: -250px 0; }
+  background-position: 0 0, -250px 0; }
   @media (min-width: 480px) {
     .footer {
-      background-position: -310px 0; } }
+      background-position: 0 0, -310px 0; } }
+  @media (min-width: 736px) {
+    .footer {
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(https://alvineandersson.se/footer_image.jpg); } }
   @media (min-width: 980px) {
     .footer {
       background-size: cover;
-      background-position: 0 0;
+      background-position: 0 0, 0 0;
       padding: 10rem 2rem; } }
   .footer .contact {
     max-width: 400px;
@@ -929,14 +932,7 @@ h2.jumpingTitle.visible {
   background-color: #fefefe;
   background-image: url(https://alvineandersson.se/bg_raster.png);
   background-size: cover;
-  text-align: center;
-  /*	padding-top: 3rem;
-	@media(min-width: $mobile) {
-		padding-top: 5rem;
-	}
-	@media(min-width: $tablet) {
-		padding-top: 6rem;
-	}*/ }
+  text-align: center; }
 
 .matchmaking h2 {
   margin-bottom: 0.5rem; }
@@ -980,17 +976,20 @@ h2.jumpingTitle.visible {
 .game .item:first-child .alternative.select-item.clickable-true .text.visible-true {
   transition-delay: 0s; }
 
-.alternative.boolean-item button {
-  opacity: 1;
-  transition: all 0.4s ease; }
-
-.alternative.boolean-item button.visible-false {
-  opacity: 0; }
-
-.alternative.boolean-item.clickable-true .text,
-.alternative.boolean-item.clickable-true button.visible-true {
-  transition-delay: 0.5s; }
-
+/*.alternative.boolean-item {
+	button {
+		opacity: 1;
+		transition: all 0.4s ease;
+	}
+	button.visible-false {
+		opacity: 0;
+	}
+	// Delay transition on alternatives when resetting
+	&.clickable-true .text,
+	&.clickable-true button.visible-true {
+		transition-delay: 0.5s;
+	}
+}*/
 .alternative.select-item .text {
   display: block;
   margin-bottom: 1em; }
@@ -1002,39 +1001,48 @@ h2.jumpingTitle.visible {
   background-color: #a5d3a5;
   cursor: pointer;
   color: #333333; }
+  .alternative.select-item.clickable-true .text:hover, .alternative.select-item.clickable-true .text:active, .alternative.select-item.clickable-true .text:focus {
+    background-color: #94cb94; }
 
 .alternative.select-item.clickable-false .text {
   color: #a3a3a3; }
 
-.alternative.boolean-item {
-  margin-bottom: 2em; }
-  .alternative.boolean-item .text {
+/*.alternative.boolean-item {
+  margin-bottom: 2em;
+  .text {
     display: block;
-    color: #333333; }
-  .alternative.boolean-item.clickable-false .text {
-    color: #a3a3a3; }
-  .alternative.boolean-item .buttons {
+		color: $black;
+  }
+	&.clickable-false .text {
+		color: $gray;
+	}
+  .buttons {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1em; }
-  .alternative.boolean-item button {
+    margin-top: 1em;
+  }
+  button {
     border: 0;
     padding: 1em 1.5em;
     font-family: "Roboto Mono",monospace;
     font-display: auto;
     font-size: 1rem;
     font-weight: 700;
-    color: #333333;
-    text-transform: uppercase; }
-  .alternative.boolean-item.clickable-true button {
+    color: $black;
+    text-transform: uppercase;
+  }
+  &.clickable-true button {
     cursor: pointer;
-    background-color: #a5d3a5; }
-    .alternative.boolean-item.clickable-true button:hover, .alternative.boolean-item.clickable-true button:active, .alternative.boolean-item.clickable-true button:focus {
-      background-color: #83c283; }
-  .alternative.boolean-item.clickable-false button {
-    background-color: #eeeeee;
-    color: #7a7a7a; }
-
+    background-color: $green;
+    &:hover, &:active, &:focus {
+      background-color: $green-dark;
+    }
+  }
+  &.clickable-false button {
+    background-color: $gray-1;
+    color: $gray-2;
+  }
+}*/
 .result {
   padding: 0 2em 3em;
   margin-top: 3em; }
@@ -1045,6 +1053,11 @@ h2.jumpingTitle.visible {
     padding: 0.5em 2em;
     transform: rotate(-5deg);
     margin: -1em 0 1.5em; }
+  .result .text {
+    text-align: left; }
+  .result ul {
+    font-size: 1em;
+    padding-left: 1em; }
   .result.match {
     background-color: #a5d3a5; }
     .result.match .headline {
@@ -1053,6 +1066,20 @@ h2.jumpingTitle.visible {
     background-color: #d3a5a5; }
     .result.no-match .headline {
       background-color: #c28383; }
+
+.game button.start {
+  border: 0;
+  background-color: #c87f8b;
+  padding: 1em 1.5em;
+  font-size: 1em;
+  border-radius: 5px;
+  color: #fefefe;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer; }
+  .game button.start:hover, .game button.start:active, .game button.start:focus {
+    background-color: #c06d6d; }
 
 .game .redo {
   display: block;

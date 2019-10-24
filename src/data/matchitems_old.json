@@ -7,13 +7,13 @@
     "alternatives": [
       {
         "id": 1.1,
-        "text": "Jag vill anställa en utvecklare på vårt företag",
+        "text": "Vi vill anställa en utvecklare på vårt företag",
         "link": 2,
         "visible": true
       },
       {
         "id": 1.2,
-        "text": "Jag behöver någon som bygger min hemsida",
+        "text": "Vi vill anlita en frilansare för ett uppdrag",
         "link": 3,
         "visible": true
       }

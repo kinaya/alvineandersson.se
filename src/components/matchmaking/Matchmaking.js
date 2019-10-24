@@ -1,34 +1,37 @@
 import React from "react";
 import JumpingTitle from '../common/JumpingTitle';
 import SelectItem from "./SelectItem";
-import BooleanItem from "./BooleanItem";
 import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
-import { matchMaking, resetGame } from '../../actions'
+import { chooseItem, startGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({matchitems, matchMaking, resetGame}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame}) => {
+
+  console.log('game',game)
+
   return (
     <section data-test="matchmaking-component" className="matchmaking">
 			<div className="container">
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
 
-        <p className="intro">Välj ett alternativ för att starta</p>
+        <p className="intro">Välj det som passar bäst in på er, för att se om vi skulle passa ihop.</p>
 
         <div className="game">
-          {matchitems.map((item, i) => (
-            <div data-test="matchmaking-item" key={i} className={`item visible-${item.visible}`}>
-              {item.type === 'alternatives' && (
-                <SelectItem matchMaking={matchMaking} item={item} />
-              )}
-              {item.type === 'yesno' && (
-                <BooleanItem matchMaking={matchMaking} item={item} />
-              )}
-              {item.type === 'match' && (
-                <MatchItem resetGame={resetGame} item={item} />
-              )}
+          {game.active ? (
+            <div>
+            {game.items.map((item, i) => (
+              <div data-test="matchmaking-item" key={i} className='item'>
+                  <SelectItem chooseItem={chooseItem} item={item} />
+              </div>
+            ))}
+            {game.match != null && (
+              <MatchItem startGame={startGame} match={game.match} />
+            )}
             </div>
-          ))}
+          ) : (
+            <button className="start" onClick={() => startGame()}>Starta</button>
+          )}
         </div>
 
       </div>
@@ -38,14 +41,14 @@ export const UnconnectedMatchmaking = ({matchitems, matchMaking, resetGame}) => 
 
 function mapStateToProps(state) {
   return {
-    matchitems: state.match.matchitems
+    game: state.game
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    matchMaking: (clickedItem, clickedAlternative, itemToShow) => dispatch(matchMaking(clickedItem, clickedAlternative, itemToShow)),
-    resetGame: () => dispatch(resetGame())
+    chooseItem: (clickedItem, clickedAlternative, itemToShow) => dispatch(chooseItem(clickedItem, clickedAlternative, itemToShow)),
+    startGame: () => dispatch(startGame())
   }
 }
 

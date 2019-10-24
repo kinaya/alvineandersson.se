@@ -5,7 +5,6 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-//const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -72,18 +71,6 @@ module.exports = {
     new CopyWebpackPlugin([
       'pwa'
     ]),
-/*    new ImageminWebpWebpackPlugin({
-      config: [{
-        test: /\.(jpe?g|png)/,
-        options: {
-          quality:  75
-        }
-      }],
-      overrideExtension: false,
-      detailedLogs: true,
-      silent: false,
-      strict: true
-    })*/
   ],
   resolve: {
     extensions: ['.js','.jsx'],

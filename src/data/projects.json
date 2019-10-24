@@ -1,4 +1,43 @@
 [
+  {
+    "id":"nagotharhant",
+    "title": "Något har hänt",
+    "what":"Hemsida",
+    "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer. Förutom tillgänglig, lättläst fakta innehåller webbplatsen ett Välj-ditt-eget-äventyr-spel",
+    "content": [
+      {
+        "headline": "Varierat innehåll för maximal tillgänglighet",
+        "paragraph": "Projektets målgrupp ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången. För att vara åtkomligt för alla finns en inbyggd uppläsningsfunktion och alla artiklar finns i teckenspråksversion."
+      },
+      {
+        "headline": "Webbserie i egen biograf",
+        "paragraph": "Hemsidan innehåller förutom artiklar en biograf med en webbserie i 8 delar. Varje avsnitt finns i en version utan tolkning, som teckentolkad och som syntolkad."
+      },
+      {
+        "headline": "Välj-ditt-eget-äventyr spel",
+        "paragraph": "Webbplatsen innehåller ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Drupal 8 via REST."
+      }
+    ],
+    "link": {
+      "url": "https://nagotharhant.se",
+      "name": "nagotharhant.se"
+    },
+    "listimg": {
+      "url": "nagotharhant_list.png",
+      "alt": "Utklipp från startsidan för nagotharahant.se"
+    },
+    "date": "Oktober 2019",
+    "tags": ["React", "Drupal"],
+    "extendedTags": "React/Redux, Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "nagotharhant.png",
+      "alt": "Startsidan från nagotharhant.se"
+    }
+  },
     {
       "id":"pablodigtallvar",
       "title":"På blodigt allvar",
@@ -20,18 +59,18 @@
       },
       "listimg": {
         "url": "pba_list.jpg",
-        "alt": "Bild från pablodigtallvar.se"
+        "alt": "Bild på klistermärken från projektet På blodigt allvar"
       },
       "date": "Sep 2018",
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal 8, Php, MySQL",
+      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
       },
       "image": {
         "url": "pba.png",
-        "alt": "Bild från pablodigtallvar.se"
+        "alt": "Startsidan från pablodigtallvar.se"
       }
     },
     {
@@ -55,57 +94,18 @@
       },
       "listimg": {
         "url": "mensvarkstestet_list.jpg",
-        "alt": "Bild från test.pablodigtallvar.se"
+        "alt": "Utklipp från startsidan av Mensvärkstestet"
       },
       "date": "Sep 2018",
       "tags": ["React", "Drupal"],
-      "extendedTags": "React.js, Drupal 8",
+      "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
       },
       "image": {
         "url": "mensvarkstestet.png",
-        "alt": "Bild från test.pablodigtallvar.se"
-      }
-    },
-    {
-      "id":"nagotharhant",
-      "title": "Något har hänt",
-      "what":"Webbapp",
-      "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer. Förutom tillgänglig, lättläst fakta innehåller webbplatsen ett Välj-ditt-eget-äventyr-spel",
-      "content": [
-        {
-          "headline": "Varierat innehåll för maximal tillgänglighet",
-          "paragraph": "Projektets målgrupp ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången. För att vara åtkomligt för alla finns en inbyggd uppläsningsfunktion och alla artiklar finns i teckenspråksversion."
-        },
-        {
-          "headline": "Webbserie i egen biograf",
-          "paragraph": "Hemsidan innehåller förutom artiklar en biograf med en webbserie i 8 delar. Varje avsnitt finns i en version utan tolkning, som teckentolkad och som syntolkad."
-        },
-        {
-          "headline": "Välj-ditt-eget-äventyr spel",
-          "paragraph": "Webbplatsen innehåller ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Drupal 8 via REST."
-        }
-      ],
-      "link": {
-        "url": "https://nagotharhant.se",
-        "name": "nagotharhant.se"
-      },
-      "listimg": {
-        "url": "mensvarkstestet_list.jpg",
-        "alt": "Skärmdump av startsidan för nagotharahant.se"
-      },
-      "date": "Oktober 2019",
-      "tags": ["React", "Drupal"],
-      "extendedTags": "React.js, Drupal, PHP, MySQL, HTML, CSS/SASS",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "nagotharhant.png",
-        "alt": "Startsidan från nagotharhant.se"
+        "alt": "Bild från resultatsidan av Mensvärkstestet"
       }
     },
     {
@@ -137,14 +137,14 @@
       },
       "listimg": {
         "url": "socialgames_list.jpg",
-        "alt": "Bild från webbappen social games"
+        "alt": "Utklipp från startsidan för Sociala spel"
       },
       "date": "Jan 2019",
       "tags": ["Node.js", "React"],
-      "extendedTags": "Node.js, Express, MongoDb, React/Redux, Websockets",
+      "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, Semantic UI, JavaScript",
       "image": {
         "url": "socialgames.png",
-        "alt": "Skärmdump från webbappen social games"
+        "alt": "Skärmdump från Sociala spel"
       }
     },
     {
@@ -164,14 +164,18 @@
       },
       "listimg": {
         "url": "patalom6_list.jpg",
-        "alt": "Skärmdump av startsidan för patalomsex.se"
+        "alt": "Skärmdump från På tal om 6"
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal 7, Php, MySQL",
+      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
       "image": {
         "url": "patalom6.png",
-        "alt": "Image alt"
+        "alt": "Bild från På tal om 6"
       }
     },
     {
@@ -195,11 +199,15 @@
       },
       "listimg": {
         "url": "filmregionsydost_list.jpg",
-        "alt": "Skärmdump av startsidan för filmregionsydost.se"
+        "alt": "Skärmdump från filmregionsydost.se"
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal 7, Php, MySQL",
+      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
       "image": {
         "url": "filmregionsydost.png",
         "alt": "Skärmdump av startsidan för filmregionsydost.se"
@@ -216,13 +224,21 @@
           "paragraph": ""
         }
       ],
+      "link": {
+        "url": "https://newcomersyouth.se",
+        "name": "newcomersyouth.se"
+      },
       "listimg": {
         "url": "newcomersyouth_list.jpg",
-        "alt": "Skärmdump av startsidan för newcomersyouth.se"
+        "alt": "Skärmdump från newcomersyouth.se"
       },
       "date": "Mars 2017",
       "tags": [ "Wordpress" ],
-      "extendedTags": "Wordpress, Php, MariaDB",
+      "extendedTags": "Wordpress, PHP, MariaDB, CSS/SASS, JavaScript",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
       "image": {
         "url": "newcomersyouth.png",
         "alt": "Skärmdump av startsidan för newcomersyouth.se"
@@ -245,11 +261,15 @@
       },
       "listimg": {
         "url": "fridhadvokatbyra_list.jpg",
-        "alt": "Liten bild från fridhadvokatbyra.se"
+        "alt": "Bild från fridhadvokatbyra.se"
       },
       "date": "Mars 2016",
       "tags": ["Drupal"],
-      "extendedTags": "Drupal 7, Php, MySQL",
+      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
       "image": {
         "url": "fridhadvokatbyra.png",
         "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
@@ -284,11 +304,11 @@
       },
       "listimg": {
         "url": "lesbiskmakt_list.png",
-        "alt": "Liten bild från lesbiskmakt.nu"
+        "alt": "Skärmdump från lesbiskmakt.nu"
       },
       "date": "Nov 2017",
       "tags": ["Drupal"],
-      "extendedTags": "Drupal 7, Php, MySQL, Facebook Api, Google Api",
+      "extendedTags": "Drupal, PHP, MySQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://maryamfanni.se",
         "name": "mayramfanni.se"
@@ -315,11 +335,11 @@
       },
       "listimg": {
         "url": "luleapride_list.jpg",
-        "alt": "Liten bild från luleapride.se"
+        "alt": "Skärmbild från luleapride.se"
       },
       "date": "Juni 2016",
       "tags": ["Wordpress"],
-      "extendedTags": "Wordpress, Php, MariaDB",
+      "extendedTags": "Wordpress, PHP, MariaDB, CSS/SASS, JavaScript",
       "image": {
         "url": "luleapride.png",
         "alt": "Skärmdump av startsidan för luleapride.se"
@@ -350,14 +370,14 @@
       },
       "listimg": {
         "url": "kollektivbudget_list.jpg",
-        "alt": "Liten bild från webbappen kollektivbudget"
+        "alt": "Skärmbild från Kollektivbudget"
       },
       "date": "Feb 2019",
       "tags": ["Node.js", "React"],
-      "extendedTags": "Node.js, Express, MongoDb, React/Redux, Material UI, Google Api",
+      "extendedTags": "Node.js, Express, MongoDb, React/Redux, Material UI, Google Api, CSS/SASS, JavaScript",
       "image": {
         "url": "kollektivbudget.png",
-        "alt": "Skärmdump från webbappen kollektivbudget"
+        "alt": "Skärmdump från Kollektivbudget"
       }
     }
   ]
