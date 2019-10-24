@@ -16,7 +16,7 @@ const Skills = () => {
 
           <div data-test="skills-skill" className="stack">
             <h4>Drupal & Wordpress</h4>
-            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Plugins med <strong>PHP</strong> och <strong>MySQL</strong>. Standard eller "headless" via <strong>REST</strong></p>
+            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Plugins med <strong>PHP</strong> och <strong>SQL</strong>. Standard eller "headless" via <strong>REST</strong></p>
           </div>
 
           <div data-test="skills-skill" className="stack">
@@ -42,7 +42,7 @@ const Skills = () => {
         </div>
 
         <div className="list">
-          <p>Grundläggande koll på Java/Android och Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, van projektledare och en stjärna på att googla.</p>
+          <p>Linux som utvecklingsmiljö. Grundläggande koll på Java/Android och Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, van projektledare och en stjärna på att googla.</p>
         </div>
 
         <div className="bubbles large">
