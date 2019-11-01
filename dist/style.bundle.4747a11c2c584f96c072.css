@@ -226,54 +226,54 @@ h2.jumpingTitle.visible {
   opacity: 0; }
 
 .developer .wrapper:nth-child(1) {
-  -moz-animation-delay: 988ms;
-  -webkit-animation-delay: 988ms;
-  animation-delay: 988ms; }
+  -moz-animation-delay: 905ms;
+  -webkit-animation-delay: 905ms;
+  animation-delay: 905ms; }
 
 .developer .wrapper:nth-child(2) {
-  -moz-animation-delay: 935ms;
-  -webkit-animation-delay: 935ms;
-  animation-delay: 935ms; }
+  -moz-animation-delay: 856ms;
+  -webkit-animation-delay: 856ms;
+  animation-delay: 856ms; }
 
 .developer .wrapper:nth-child(3) {
-  -moz-animation-delay: 834ms;
-  -webkit-animation-delay: 834ms;
-  animation-delay: 834ms; }
+  -moz-animation-delay: 569ms;
+  -webkit-animation-delay: 569ms;
+  animation-delay: 569ms; }
 
 .developer .wrapper:nth-child(4) {
-  -moz-animation-delay: 721ms;
-  -webkit-animation-delay: 721ms;
-  animation-delay: 721ms; }
+  -moz-animation-delay: 501ms;
+  -webkit-animation-delay: 501ms;
+  animation-delay: 501ms; }
 
 .developer .wrapper:nth-child(5) {
-  -moz-animation-delay: 995ms;
-  -webkit-animation-delay: 995ms;
-  animation-delay: 995ms; }
+  -moz-animation-delay: 526ms;
+  -webkit-animation-delay: 526ms;
+  animation-delay: 526ms; }
 
 .developer .wrapper:nth-child(6) {
-  -moz-animation-delay: 875ms;
-  -webkit-animation-delay: 875ms;
-  animation-delay: 875ms; }
+  -moz-animation-delay: 883ms;
+  -webkit-animation-delay: 883ms;
+  animation-delay: 883ms; }
 
 .developer .wrapper:nth-child(7) {
-  -moz-animation-delay: 898ms;
-  -webkit-animation-delay: 898ms;
-  animation-delay: 898ms; }
+  -moz-animation-delay: 741ms;
+  -webkit-animation-delay: 741ms;
+  animation-delay: 741ms; }
 
 .developer .wrapper:nth-child(8) {
-  -moz-animation-delay: 898ms;
-  -webkit-animation-delay: 898ms;
-  animation-delay: 898ms; }
+  -moz-animation-delay: 816ms;
+  -webkit-animation-delay: 816ms;
+  animation-delay: 816ms; }
 
 .developer .wrapper:nth-child(9) {
-  -moz-animation-delay: 962ms;
-  -webkit-animation-delay: 962ms;
-  animation-delay: 962ms; }
+  -moz-animation-delay: 755ms;
+  -webkit-animation-delay: 755ms;
+  animation-delay: 755ms; }
 
 .developer .wrapper:nth-child(10) {
-  -moz-animation-delay: 863ms;
-  -webkit-animation-delay: 863ms;
-  animation-delay: 863ms; }
+  -moz-animation-delay: 947ms;
+  -webkit-animation-delay: 947ms;
+  animation-delay: 947ms; }
 
 @-moz-keyframes developer {
   0% {

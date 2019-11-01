@@ -254,7 +254,7 @@
       },
       "date": "Mars 2017",
       "tags": [ "Wordpress" ],
-      "extendedTags": "Wordpress, PHP, MariaDB, CSS/SASS, JavaScript",
+      "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
@@ -356,7 +356,7 @@
       },
       "date": "Juni 2016",
       "tags": ["Wordpress"],
-      "extendedTags": "Wordpress, PHP, MariaDB, CSS/SASS, JavaScript",
+      "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
       "image": {
         "url": "luleapride.png",
         "alt": "Skärmdump av startsidan för luleapride.se"
