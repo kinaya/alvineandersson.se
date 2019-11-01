@@ -12,10 +12,6 @@
       {
         "headline": "Webbserie i egen biograf",
         "paragraph": "Hemsidan innehåller förutom artiklar en biograf med en webbserie i 8 delar. Varje avsnitt finns i en version utan tolkning, som teckentolkad och som syntolkad."
-      },
-      {
-        "headline": "Välj-ditt-eget-äventyr spel",
-        "paragraph": "Webbplatsen innehåller ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Drupal 8 via REST."
       }
     ],
     "link": {
@@ -27,8 +23,8 @@
       "alt": "Utklipp från startsidan för nagotharahant.se"
     },
     "date": "Oktober 2019",
-    "tags": ["React", "Drupal"],
-    "extendedTags": "React/Redux, Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+    "tags": ["Drupal"],
+    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -38,6 +34,38 @@
       "alt": "Startsidan från nagotharhant.se"
     }
   },
+
+    {
+      "id":"dubestammer",
+      "title": "Du bestämmer!",
+      "what":"Webbapp",
+      "info": "Ett välj-ditt-eget-äventyr-spel om motstånd mot övergrepp, för personer med intellektuella funktionsvariationer.",
+      "content": [
+        {
+          "headline": "Välj-ditt-eget-äventyr spel",
+          "paragraph": "Ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Drupal 8 via REST."
+        }
+      ],
+      "link": {
+        "url": "https://nagotharhant.se/spela",
+        "name": "nagotharhant.se/spela"
+      },
+      "listimg": {
+        "url": "dubestammer_list.jpg",
+        "alt": "Utklipp från startsidan för spelet"
+      },
+      "date": "Oktober 2019",
+      "tags": ["React", "Drupal"],
+      "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
+      "designer": {
+        "url": "http://claespettersson.se",
+        "name": "claespettersson.se"
+      },
+      "image": {
+        "url": "dubestammer.jpg",
+        "alt": "Startsidan från spelet"
+      }
+    },
     {
       "id":"pablodigtallvar",
       "title":"På blodigt allvar",
@@ -63,7 +91,7 @@
       },
       "date": "Sep 2018",
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
@@ -168,7 +196,7 @@
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
@@ -203,7 +231,7 @@
       },
       "date": "Maj 2016",
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
@@ -265,7 +293,7 @@
       },
       "date": "Mars 2016",
       "tags": ["Drupal"],
-      "extendedTags": "Drupal, PHP, MySQL, CSS/SASS, JavaScript",
+      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
@@ -308,7 +336,7 @@
       },
       "date": "Nov 2017",
       "tags": ["Drupal"],
-      "extendedTags": "Drupal, PHP, MySQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
+      "extendedTags": "Drupal, PHP, SQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://maryamfanni.se",
         "name": "mayramfanni.se"

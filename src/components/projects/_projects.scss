@@ -13,10 +13,9 @@
   text-decoration: none;
   transition: all 0.3s ease-in;
   display: block;
-
   @media(min-width: $tablet) {
-    display: flex;
-    align-items: center;
+		@include flexbox();
+		@include align-items(center);
     text-align: left;
     padding: 2rem;
   }
@@ -26,27 +25,23 @@
   }
 
   &:hover {
-
     .image {
       background-color: $blue-dark;
-      transform: scale(1.05);
+      @include transform(scale(1.05));
     }
-
     .what {
       background-color: $blue-dark;
     }
-
     .project-title {
       color: #4d4d4d;
     }
-
   }
 
   .image {
     width: 120px;
     height: 120px;
     margin: 0 auto;
-    transition: all 0.3s;
+    @include transition(all 0.3s);
 
     @media(min-width: $tablet) {
       margin: 0 2em 0 0;
@@ -74,11 +69,11 @@
     color: $black;
     text-decoration: none;
     margin: 0.2em 0;
-    font-family: rig-solid-bold-reverse, sans-serif;
+		font-family: $rig-solid-bold-reverse;
     font-display: auto;
     font-weight: 700;
     display: block;
-    transition: all 0.3s;
+    @include transition(all 0.3s);
     @media(min-width: $tablet) {
       margin: 0.2em 0 -0.1em 0;
     }
@@ -94,7 +89,7 @@
 
   .what {
     display: none;
-    font-family: 'din-2014', sans-serif;
+    font-family: $din-2014;
     font-display: auto;
     text-transform: uppercase;
     font-size: 0.8em;
@@ -104,7 +99,7 @@
     color: $black;
     text-decoration: none;
     padding: 0.2em 0.5em;
-    transition: all 0.3s;
+    @include transition(all 0.3s);
 
     @media(min-width: $tablet) {
       display: inline-block;
@@ -118,22 +113,42 @@
   .image {
     background-color: $blue;
     padding: 5px;
-    animation: blob 30s ease-in-out infinite both alternate;
+    @include animation(blob 30s ease-in-out infinite both alternate);
   }
   img {
-    animation: blob 30s ease-in-out infinite both alternate;
+    @include animation(blob 30s ease-in-out infinite both alternate);
   }
 }
 
 @for $i from 0 to 13 {
   .projects .project:nth-child(#{$i}) .image img {
-    animation-delay: calc(-5s*#{$i});
+    @include animation-delay(calc(-5s*#{$i}));
   }
   .projects .project:nth-child(#{$i}) .image {
-    animation-delay: calc(-5s*#{$i});
+    @include animation-delay(calc(-5s*#{$i}));
   }
 }
 
+@-moz-keyframes blob {
+    0%,
+  100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+   14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+   28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+   42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+   56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+   70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
+@-webkit-keyframes blob {
+    0%,
+  100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+   14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+   28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+   42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+   56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+   70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
 @keyframes blob {
     0%,
   100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
@@ -148,7 +163,7 @@
 // Filter buttons
 .filter {
   padding-bottom: 0.5em;
-  font-family: "open-sans";
+  font-family: $open-sans;
   font-display: auto;
   font-size: 1.2em;
   color: $black;
@@ -159,11 +174,11 @@
   margin: 0 0.5em;
   border: 0;
   background-color: transparent;
-  font-family: 'din-2014', sans-serif;
+  font-family: $din-2014;
   font-display: auto;
   font-size: 0.9em;
   cursor: pointer;
-  transition: all 0.3s;
+  @include transition(all 0.3s);
   &.active,
   &:hover {
     color: $blue-dark;
@@ -173,6 +188,10 @@
 // Animation when filtering list
 .project {
   overflow: hidden;
+	-webkit-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
+	-moz-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
+	-o-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
+	transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
   transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
 }
 .filter-enter {
@@ -195,13 +214,13 @@
 // Animation  when project gets visible by scrolling
 .animate-projects-true .project.invisible {
   opacity: 0;
-  transform: translateY(80px);
-  transition: all 0.3s;
+  @include transform(translateY(80px));
+  @include transition(all 0.3s);
 }
 .animate-projects-true .project.visible {
   opacity: 1;
-  transform: translateY(0);
-  transition: all 0.3s;
+  @include transform(translateY(0));
+  @include transition(all 0.3s);
 }
 
 // Break titles with many words
@@ -247,7 +266,7 @@
   }
   .case {
     background-color: $blue;
-    font-family: 'din-2014', sans-serif;
+    font-family: $din-2014;
     font-display: auto;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -262,7 +281,7 @@
     @media(min-width: $tablet) {
       font-size: 1.8rem;
     }
-    font-family: 'din-2014', sans-serif;
+    font-family: $din-2014;
     font-display: auto;
   }
   .featuredImage {
@@ -272,7 +291,7 @@
     right: 50%;
     width: 100vw;
     margin: 2rem -50vw;
-    transform: rotate(-1deg);
+    @include transform(rotate(-1deg));
     border-top: 10px solid $blue;
     border-bottom: 10px solid $blue;
 
@@ -281,7 +300,7 @@
     }
 
     @media(min-width: $desktop) {
-      transform: none;
+      @include transform(none);
       border: 1px solid $gray;
       width: calc(100% + 10rem);
       margin: 3rem -5rem 5rem -5rem;
@@ -295,7 +314,7 @@
     }
   }
   h2 {
-    font-family: 'open-sans';
+    font-family: $open-sans;
     text-transform: none;
     text-align: left;
     font-size: 1.2rem;
@@ -314,14 +333,14 @@
     font-weight: 700;
     letter-spacing: 1px;
     display: block;
-    font-family: 'din-2014', sans-serif;
+    font-family: $din-2014;
     font-display: auto;
   }
   a {
     color: $black;
     border-bottom: 1px solid $black;
     text-decoration: none;
-    transition: all 0.3s;
+    @include transition(all 0.3s);
     &:hover, &:active, &:focus {
       color: $blue-dark;
       border-bottom: 1px solid $blue-dark;
@@ -338,34 +357,37 @@
   }
   .project {
     border: 0;
-    justify-content: center;
+    @include justify-content(center);
   }
 }
 
 // Animation description, title and featured image
 .project-title,
 .description {
-  transition: transform 1000ms ease-in;
+  @include transition(transform 1000ms ease-in);
 }
 .fade-enter .project-title,
 .fade-enter .description {
-  transform: scale(0.8);
+  @include transform(scale(0.8));
 }
 .fade-enter-active .project-title,
 .fade-enter-active .description {
-  transform: scale(1);
+  @include transform(scale(1));
 }
 .featuredImage img {
+	//-webkit-transition: -webkit-transform 1000ms, width 1000ms;operty;
+	//-moz-transition: -moz-transform 1000ms, width 1000ms;
+	//-o-transition: -o-transform 1000ms, width 1000ms;
   //transition: transform 1000ms, width 1000ms;
   //width: calc(100% + 200px);
-  //transform: translateX(-100px) scale(1.1);
+  //@include transform(translateX(-100px) scale(1.1));
 }
 .fade-enter .featuredImage img {
   //transform: translateX(0px) scale(1);
-  //transform: translateX(0);
+  //@include transform(translateX(0));
 }
 .fade-enter-active .featuredImage img {
-  //transform: translateX(-100px);
+  //@include transform(translateX(-100px));
   //width: calc(100% + 200px);
-  //transform: translateX(-100px) scale(1.1);
+  //@uinclude transform(translateX(-100px) scale(1.1));
 }

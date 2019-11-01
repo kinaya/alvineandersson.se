@@ -1,52 +1,115 @@
 import { storeFactory } from '../../test/testUtils';
-import { filterProjects, matchMaking, resetGame } from './';
+import { filterProjects, chooseItem, startGame } from './';
 import projects from '../data/projects';
-import matchitems from "../data/matchitems";
+import game from "../data/game.json";
 
-describe('`matchMaking` action dispatcher', () => {
+// Integration tests for Redux
 
-  it('Updates state correctly when a textButton is selected', () => {
+// chooseItem
+describe('chooseItem action dispatcher', () => {
+
+  test('updates state correctly when match is null', () => {
+
+    // Define the initial state and factor the store
     const initialState = {
-      match: {
-        matchitems: matchitems
+      game: {
+        active: true,
+        match: null,
+        items: game
       }
     }
     const store = storeFactory(initialState)
-    store.dispatch(matchMaking(1,1.1,2))
-    const newState = store.getState().match
-    expect(newState.matchitems[0].clickable).toBe(false)
-    expect(newState.matchitems[0].alternatives[0].visible).toBe(true)
-    expect(newState.matchitems[0].alternatives[1].visible).toBe(false)
-    expect(newState.matchitems[1].visible).toBe(true)
+
+    // Dispatch the action
+    store.dispatch(chooseItem(0, 0, null));
+
+    // Get the new state
+    const newState = store.getState().game
+
+    // Define expected state and assert a few test
+    expect(newState.items[0].alternatives[0].visible).toEqual(true);
+    expect(newState.items[1].visible).toEqual(true);
+
+  });
+
+  test('updates state correctly when match is not null', () => {
+
+    // Define the initial state and factor the store
+    const initialState = {
+      game: {
+        active: true,
+        match: null,
+        items: game
+      }
+    }
+    const store = storeFactory(initialState)
+
+    // Dispatch the action
+    store.dispatch(chooseItem(0, 1, false));
+
+    // Get the new state
+    const newState = store.getState().game
+
+    // Define expected state and assert a few test
+    expect(newState.items[0].alternatives[1].visible).toEqual(true);
+    expect(newState.match).toEqual(false);
+
+
+  });
+})
+
+
+// startGame
+describe('startGame action dispatcher', () => {
+
+  it('Updates state correctly when run first time', () => {
+    const initialState = {
+      game: {
+        active: false,
+        match: null,
+        items: []
+      }
+    }
+    const store = storeFactory(initialState)
+    store.dispatch(startGame())
+    const newState = store.getState().game
+    const expectedState = {
+      active: true,
+      match: null,
+      items: game
+    }
+    expect(newState).toEqual(expectedState);
+  })
+
+
+  it('Updates state correctly when runt as restart', () => {
+
+    // Create an state thats changed
+    const initialState = {
+      game: {
+        active: false,
+        match: null,
+        items: game
+      }
+    }
+    initialState.game.items[2].clickable = false;
+    initialState.game.items[2].visible = true;
+
+    const store = storeFactory(initialState)
+    store.dispatch(startGame())
+    const newState = store.getState().game
+    const expectedState = {
+      active: true,
+      match: null,
+      items: game
+    }
+
+    expect(newState).toEqual(expectedState)
   });
 
 })
 
-describe('`resetGame` action dispatcher', () => {
-
-  it('Resets the match state when selected', () => {
-
-    let matchitemsCopy = [...matchitems];
-    matchitemsCopy[0].visible = false
-
-    const initialState = {
-      match: {
-        matchitems: matchitemsCopy
-      }
-    }
-
-    const store = storeFactory(initialState)
-    const oldState = store.getState().match
-
-    store.dispatch(resetGame())
-    const newState = store.getState().match
-
-    expect(newState.matchitems[0].visible).toBe(true)
-    expect(oldState).not.toBe(newState)
-  })
-
-})
-
+// filterProject
 describe('filterProject action dispatcher', () => {
 
   it('Updates state correctly when the first item is selected', () => {

@@ -3,6 +3,10 @@ import Footer from './Footer';
 import { shallow } from 'enzyme';
 import { findByTestAttr } from '../../../test/testUtils.js';
 
+/**
+ * Factory function to create a ShallowWrapper for the Footer component
+ * @returns {ShallowWrapper}
+ */
 const setup = () => {
   return shallow(<Footer />)
 }
@@ -15,22 +19,16 @@ describe("Footer", () => {
     expect(component.length).toBe(1);
   })
 
-  it('always renders a headline', () => {
-    const wrapper = setup();
-    const component = findByTestAttr(wrapper, 'footer-headline');
-    expect(component.length).not.toBeLessThan(1);
-  });
-
-  it('alwayes displayes 3 links', () => {
+  it('always displays 3 links', () => {
     const wrapper = setup();
     const a = findByTestAttr(wrapper, 'footer-link');
     expect(a.length).toBe(3);
   })
 
-  it('displayes the correct link href', () => {
+  it('displays the correct link href', () => {
     const wrapper = setup();
     const a = findByTestAttr(wrapper, 'footer-link');
-    // Todo: Does this always work? Can I test if the links are valid?
+    // Todo: Test if the links are valid
     expect(a.at(0).prop('href')).toEqual('mailto:hej@alvineandersson.se');
     expect(a.at(1).prop('href')).toEqual('https://github.com/kinaya');
     expect(a.at(2).prop('href')).toEqual('https://tamkin.se');

@@ -2,23 +2,35 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { findByTestAttr, storeFactory } from '../../../test/testUtils';
 import Matchmaking, { UnconnectedMatchmaking } from './Matchmaking';
-import SelectItem from './SelectItem';
-import BooleanItem from './BooleanItem';
-import MatchItem from './MatchItem';
-import matchitems from "../../data/matchitems.json";
+import game from "../../data/game.json";
 
+// Set up the default initial state
 const defaultInitialState = {
-  match: {
-    matchitems: matchitems
+  game: {
+    active: false,
+    match: null,
+    items: game
   }
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Matchmaking component
+ * Using dive() to get from the higher-order component to the component
+ * that has the values we need to test.
+ * @param {object} initialState - Component initial state specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setup = (initialState={}) => {
   const store = storeFactory(initialState)
   const wrapper = shallow(<Matchmaking store={store} />).dive()
   return wrapper;
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Matchmaking component
+ * @param {object} initialState - Component initial state specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setupWithoutDive = (initialState={}) => {
   const store = storeFactory(initialState)
   const wrapper = shallow(<Matchmaking store={store} />)
@@ -33,86 +45,91 @@ describe('Matchmaking', () => {
     expect(component.length).toBe(1)
   })
 
-  it('renders a series of items', () => {
+  it('renders a game container', () => {
     const wrapper = setup(defaultInitialState)
-    const component = findByTestAttr(wrapper, 'matchmaking-item')
+    const component = wrapper.find('.game')
     expect(component.length).not.toBeLessThan(1)
   })
 
-  it('renders the same number of items as items', () => {
+  it('game-button is visible-true and game-items is visible-false if `active` is false', () => {
     const wrapper = setup(defaultInitialState)
-    const component = findByTestAttr(wrapper, 'matchmaking-item')
-    expect(component.length).toBe(matchitems.length)
+    const game_button = wrapper.find('.game-button.visible-true')
+    expect(game_button.length).toEqual(1)
+    const game_items = wrapper.find('.game-items.visible-false')
+    expect(game_items.length).toBe(1)
   })
 
-  it('renders SelectItem, BooleanItem and MatchItem components', () => {
-    const wrapper = setup(defaultInitialState)
-    const SelectItem = wrapper.find('SelectItem')
-    expect(SelectItem.length).not.toBeLessThan(1)
-    const BooleanItem = wrapper.find('BooleanItem')
-    expect(BooleanItem.length).not.toBeLessThan(1)
-    const MatchItem = wrapper.find('MatchItem')
-    expect(MatchItem.length).toBe(2)
-  })
-
-})
-
-describe('Has correct props from Redux', () => {
-  test('has matchitems piece of state as prop', () => {
+  it('game-button is visible-false and game-items is visible-true `active` is true', () => {
     const state = {
-      match: {
-        matchitems: matchitems
+      game: {
+        active: true,
+        match: null,
+        items: game
       }
     }
-    const wrapper = setupWithoutDive(state)
-    const matchitemsProps = wrapper.prop('matchitems');
-    expect(matchitemsProps).toBe(state.match.matchitems);
-  })
-  test('`matchMaking` action trigger is a function prop', () => {
-    const wrapper = setupWithoutDive(defaultInitialState)
-    const matchMakingProps = wrapper.prop('matchMaking');
-    expect(matchMakingProps).toBeInstanceOf(Function)
-  })
-  it('`resetGame` action trigger is a function prop', () => {
-    const wrapper = setupWithoutDive(defaultInitialState)
-    const resetGameProps = wrapper.prop('resetGame');
-    expect(resetGameProps).toBeInstanceOf(Function)
-  })
-})
-
-describe('`matchMaking` and `resetGame` action trigger', () => {
-  let matchMakingMock;
-  let resetGameMock;
-  let wrapper;
-  let tagButton;
-
-  beforeEach(() => {
-    matchMakingMock = jest.fn();
-    resetGameMock = jest.fn();
-    const props = {
-      matchitems: matchitems,
-      matchMaking: matchMakingMock,
-      resetGame: resetGameMock
-    }
-
-    wrapper = shallow(<UnconnectedMatchmaking {...props} />)
-
-    // Run the functions
-    wrapper.find('SelectItem').first().prop('matchMaking')('a','b','c');
-    wrapper.find('MatchItem').first().prop('resetGame')();
+    const wrapper = setup(state)
+    const component = wrapper.find('.game-button.visible-false')
+    expect(component.length).toBe(1)
   })
 
-  // What am i testing here?
-  test('`matchMaking` runs', () => {
-    expect(matchMakingMock.mock.calls.length).toBe(1);
+  // Testing redux props, using prop()
+  describe('Matchmaking redux props', () => {
+
+    test('has game as prop', () => {
+      // todo
+    })
+
+    test('`chooseItem` action creator is a function prop', () => {
+      const wrapper = setupWithoutDive(defaultInitialState)
+      const chooseItemProps = wrapper.prop('chooseItem');
+      expect(chooseItemProps).toBeInstanceOf(Function)
+    })
+
+    test('`startGame` action creator is a function prop', () => {
+      const wrapper = setupWithoutDive(defaultInitialState)
+      const startGameProps = wrapper.prop('startGame');
+      expect(startGameProps).toBeInstanceOf(Function)
+    })
+
   })
 
-  test('`matchMaking` runs with correct arguments', () => {
-    expect(matchMakingMock.mock.calls[0][0]).toBe('a', 'b', 'c');
-  })
+  // Testing action creator calls, using the unconnected component and a mock action function
+  describe('`chooseItem` action creator', () => {
+    let chooseItemMock;
+    let startGameMock;
+    let wrapper;
+    let alternative;
 
-  it('`resetGame` runs', () => {
-    expect(resetGameMock.mock.calls.length).toBe(1);
+    beforeEach(() => {
+      chooseItemsMock = jest.fn();
+      startGameMock = jest.fn();
+      const props = {
+        game: {
+          active: true,
+          match: null,
+          items: game
+        },
+        chooseItems: chooseItemsMock,
+        startGame: startGameMock
+      }
+
+      wrapper = shallow(<UnconnectedMatchmaking {...props} />)
+
+      // Find the first alternative and simulate a click on it
+      // The dom being clicked is in the child. But this does not work
+      wrapper.find('SelectItem').first().props().chooseItem.simulate(click);
+    })
+
+    /*test('`chooseItem` runs when an alternative is clicked', () => {
+      const chooseItemCallCount = chooseItemMock.mock.calls.length;
+      expect(chooseItemCallCount).toBe(1);
+    })
+
+    test('`chooseItem` runs with correct arguments', () => {
+      const chooseItemCallArg = chooseItemMock.mock.calls[0][0];
+      expect(chooseItemCallArg).toBe(0,0,null);
+    })*/
+
   })
 
 })

@@ -6,8 +6,9 @@ import Project from './Project';
 import { getUniqueTags } from '../../helpers'
 import projects from "../../data/projects.json";
 import JumpingTitle from '../common/JumpingTitle';
-import Filter from './Filter';
+import UnconnectedFilter from './Filter';
 
+// The default initial state
 const defaultInitialState = {
   projects: {
     currentFilter: [],
@@ -18,12 +19,24 @@ const defaultInitialState = {
   }
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Projects component
+ * Using dive() to get from the higher-order component to the component
+ * that has the values we need to test.
+ * @param {object} initialState - Component initial state specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setup = (initialState={}) => {
   const store = storeFactory(initialState)
   const wrapper = shallow(<Projects store={store} />).dive();
   return wrapper;
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Projects component
+ * @param {object} initialState - Component initial state specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setupWithoutDive = (initialState={}) => {
   const store = storeFactory(initialState)
   const wrapper = shallow(<Projects store={store} />);
@@ -45,12 +58,12 @@ describe('Projects', () => {
     expect(jumpingTitle.length).toBe(1)
   })
 
-  it('renders a Filter component', () => {
+  // Todo: This does not work. Is it because the Filter component exports an connected and an unconnected version?
+  /*it('renders a Filter component', () => {
     const wrapper = setup(defaultInitialState)
-    const component = wrapper.find('Filter')
-    //This does not work since the component is "UnconnectedFilter"...?
-    //expect(component.length).toBe(1)
-  })
+    const component = wrapper.find('Filter') // ShallowWrapper
+    expect(component.length).toBe(1)
+  })*/
 
   describe('renders the list of project depending on current filter', () => {
 
@@ -70,6 +83,7 @@ describe('Projects', () => {
       }
       const wrapper = setup(state)
       const projectItems = wrapper.find('Project')
+
       // Get the number of projects tagged with 'Drupal'
       const numberOfItems = projects.filter(project => project.tags.includes('Drupal')).length
       expect(projectItems.length).toBe(numberOfItems)
@@ -92,7 +106,6 @@ describe('Projects', () => {
       expect(wrapper.prop('currentFilter')).toBe(defaultInitialState.projects.currentFilter)
       expect(wrapper.prop('animation')).toBe(defaultInitialState.animation.projects)
     })
-
   })
 
 

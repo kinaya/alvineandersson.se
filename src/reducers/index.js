@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import projectsReducer from './projectsReducer';
-import gameReducer from './gameReducer';
-import animationReducer from './animationReducer';
+import projects from './projectsReducer';
+import game from './gameReducer';
+import animation from './animationReducer';
 
 export default combineReducers({
-  projects: projectsReducer,
-  game: gameReducer,
-  animation: animationReducer
+  projects,
+  game,
+  animation
 });

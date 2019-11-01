@@ -3,9 +3,15 @@ import { Link } from "react-router-dom";
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 
+/**
+ * Component for displaying a project
+ * @param {object} props.project - The project
+ * @param {bool} props.animation - If animation is true or false
+ */
 class Project extends React.Component {
 
   state = {visibilitySensorActive: false}
+
   onChangeVisibility = isVisible => {
     this.setState({visibilitySensorActive: isVisible})
   }

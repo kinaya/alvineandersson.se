@@ -4,11 +4,17 @@ import { shallow } from 'enzyme';
 import { findByTestAttr, checkProps } from '../../../test/testUtils.js';
 import projects from "../../data/projects.json";
 
+// The default props
 const defaultProps = {
   project: projects[0],
   animation: true
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Project component
+ * @param {object} props - Component props specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setup = (props={}) => {
   const setupProps = {...defaultProps, ...props}
   return shallow(<Project {...setupProps} />)
@@ -18,20 +24,18 @@ describe("Project", () => {
 
   it('renders without error when `isVisible` is false, and sets `invisible` class', () => {
     const wrapper = setup();
-    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(false);
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')({isVisible: false});
     const component = findByTestAttr(insideWrapper, 'project-component');
     expect(component.length).toBe(1);
-    // This does not work as expected. The class is always 'invisible'
-    //expect(insideWrapper.find('.invisible').length).toBe(1)
+    expect(insideWrapper.find('.invisible').length).toBe(1)
   })
 
   it('renders without error when `isVisible` is true, and sets `visible` as class', () => {
     const wrapper = setup();
-    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
+    const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')({isVisible: true});
     const component = findByTestAttr(insideWrapper, 'project-component');
     expect(component.length).toBe(1);
-    // This does not work as expected. The class is always 'invisible'
-    //expect(insideWrapper.find('.visible').length).toBe(1)
+    expect(insideWrapper.find('.visible').length).toBe(1)
   })
 
   it('renders an image', () => {
@@ -39,11 +43,6 @@ describe("Project", () => {
     const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
     const imageDiv = findByTestAttr(insideWrapper, 'project-image');
     expect(imageDiv.length).toBe(1);
-
-    // Check so the src is the correct image
-    // How to get the accual url...?
-    const imageSrc = imageDiv.find('img').prop('src') // test-file-stub
-    const sourceWebp = imageDiv.find('[type="image/webp"]').prop('srcSet') // test-file-stub
   })
 
   it('renders an info div, with correct content', () => {

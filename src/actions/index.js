@@ -1,102 +1,82 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, STOP_GAME, START_GAME } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, START_GAME } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
-
-// Choose item
-export const chooseItem = (i, match) => (dispatch, getState) => {
+/**
+ * Append a new item to the tems array, or display a match/non-match.
+ * Runs when the user selects an item.
+ *
+ * @function chooseItem
+ * @param i The alternative that was choosen
+ * @param match If a match (true or false) should be shown
+ * @returns {object} - Action object with type 'CHOOSE_ITEM' or 'FINISH_GAME'
+ */
+export const chooseItem = (itemNumber, alternativeNumber, match) => (dispatch, getState) => {
 
   let currentItems = getState().game.items;
 
-  // Set the clicked item as clickable false and mark selected alternative
-  let lastItem = currentItems[currentItems.length -1];
-  lastItem.clickable = false;
-  lastItem.alternatives[0].visible = false;
-  lastItem.alternatives[1].visible = false;
-  lastItem.alternatives[i].visible = true;
+  // Set the clicked item as clickable false, and mark selected alternative
+  currentItems[itemNumber].clickable = false;
+  currentItems[itemNumber].alternatives[0].visible = false;
+  currentItems[itemNumber].alternatives[1].visible = false;
+  currentItems[itemNumber].alternatives[alternativeNumber].visible = true;
 
+  // If no match, make the next item visible
   if(match == null) {
-
-    currentItems.push(game[currentItems.length]);
-
+    currentItems[itemNumber + 1].visible = true;
     dispatch({
       type: CHOOSE_ITEM,
       items: currentItems
     })
-
   }
 
+  // If match, display match/non-match
   if(match != null) {
-
     dispatch({
       type: FINISH_GAME,
       match: match
     })
-
   }
 
 }
 
-// Choose item
-/*export function chooseItem(clickedItem, clickedAlternative, itemToShow) {
-  return async (dispatch, getState) => {
-
-    // Copy the matchItems into a new array so we can change them
-    let currentMatchItems = getState().game.items;
-    let nextMatchItems = [...currentMatchItems];
-
-    nextMatchItems.map(item => {
-      item.id === clickedItem && (
-        item.clickable = false,
-        item.alternatives.map(alt => {
-          alt.id != clickedAlternative && (alt.visible = false)
-        })
-      )
-      item.id === itemToShow && ( item.visible = true )
-    })
-
-    dispatch({
-      type: CHOOSE_ITEM,
-      items: nextMatchItems
-    })
-
-  }
-}*/
-
-// Start game
+/**
+ * Start the game.
+ * Runs when the user clicks the start game button
+ */
 export const startGame = () => dispatch => {
 
-  let items = []
+  // Make a deep copy so we don't change the original json data
+  let gameItems = JSON.parse(JSON.stringify(game));
 
-  // Make a deep copy
-  //let gameItems = [...game] // Shallow copy
-
-  let gameItems = JSON.parse(JSON.stringify(game)); // deep copy
-  items.push(gameItems[0])
+  // Add the first item of the game to an items array
+  //let items = []
+  //items.push(gameItems[0])
 
   dispatch({
     type: START_GAME,
-    items: items,
+    items: gameItems,
     match: null
   })
 }
 
-// This is an async action, not using a plain object
-// Why did this have return async (distp.... ????
-export function filterProjects(filterItem) {
-  return (dispatch, getState) => {
+/**
+ * Filter the visible projects. Runs when the user clicks a filter
+ * @param filterItem The clicked item to filter by. If false the display all was clicked
+ */
+export const filterProjects = (filterItem) => (dispatch, getState) => {
 
-    let filterArray = [];
+  let filterArray = [];
 
-    if(filterItem) {
-      const currentFilter = getState().projects.currentFilter;
-      filterArray = addOrRemoveFilter(currentFilter, filterItem);
-    }
-
-    dispatch({
-      type: FILTER_PROJECTS,
-      currentFilter: filterArray
-    })
-
+  // Add or remove a filter item with helper function
+  if(filterItem) {
+    const currentFilter = getState().projects.currentFilter;
+    filterArray = addOrRemoveFilter(currentFilter, filterItem);
   }
+
+  dispatch({
+    type: FILTER_PROJECTS,
+    currentFilter: filterArray
+  })
+
 }

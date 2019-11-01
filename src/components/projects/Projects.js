@@ -3,7 +3,14 @@ import Project from "./Project";
 import Filter from './Filter';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import JumpingTitle from '../common/JumpingTitle';
+import { connect } from 'react-redux';
 
+/**
+ * Component that displays projects
+ * @param {array} props.projects - A list of projects
+ * @param {array} props.currentFilter - The current filter
+ * @param {bool} props.animation - If the animation is true or false
+ */
 const Projects = ({projects, currentFilter, animation}) => {
 
   return (
@@ -31,8 +38,6 @@ const Projects = ({projects, currentFilter, animation}) => {
   );
 
 }
-
-import { connect } from 'react-redux'
 
 function mapStateToProps(state) {
   return {

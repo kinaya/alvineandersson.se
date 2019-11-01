@@ -1,15 +1,14 @@
 .stacks {
   @media(min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
   }
 }
 
 .stack {
   margin-top: 3rem;
   text-align: center;
-
   @media(min-width: $tablet) {
     width: 45%;
   }
@@ -18,14 +17,11 @@
 
 .list {
   margin-top: 2rem;
-
   p {
     font-size: 0.9rem;
-
     @media(min-width: $tablet) {
       font-size: 1rem;
     }
-
   }
 }
 
@@ -33,24 +29,22 @@
   position: relative;
   background: linear-gradient(102deg, #7fc8bc, #d3d3a5);
   background-size: 400% 400%;
-  -webkit-animation: Flow 28s ease infinite;
-  -moz-animation: Flow 28s ease infinite;
-  animation: Flow 28s ease infinite;
+  @include animation(flow 28s ease infinite);
 }
 
-@-webkit-keyframes Flow {
+@-webkit-keyframes flow {
     0%{background-position:0% 79%}
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}
 }
 
-@-moz-keyframes Flow {
+@-moz-keyframes flow {
     0%{background-position:0% 79%}
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}
 }
 
-@keyframes Flow {
+@keyframes flow {
     0%{background-position:0% 79%}
     50%{background-position:100% 22%}
     100%{background-position:0% 79%}

@@ -1,251 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1550673758773" clover="3.2.0">
-  <project timestamp="1550673758773" name="All files">
-    <metrics statements="141" coveredstatements="136" conditionals="61" coveredconditionals="55" methods="62" coveredmethods="58" elements="264" coveredelements="249" complexity="0" loc="141" ncloc="141" packages="12" files="23" classes="23"/>
+<coverage generated="1572387012400" clover="3.2.0">
+  <project timestamp="1572387012401" name="All files">
+    <metrics statements="136" coveredstatements="132" conditionals="58" coveredconditionals="53" methods="53" coveredmethods="50" elements="247" coveredelements="235" complexity="0" loc="136" ncloc="136" packages="12" files="23" classes="23"/>
     <package name="src">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="configureStore.js" path="/var/www/html/alvineandersson.se/public_html/src/configureStore.js">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="23" count="15" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="9" count="15" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.actions">
-      <metrics statements="26" coveredstatements="26" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="10"/>
+      <metrics statements="24" coveredstatements="24" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
       <file name="index.js" path="/var/www/html/alvineandersson.se/public_html/src/actions/index.js">
-        <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="10"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="8" type="stmt"/>
-        <line num="38" count="8" type="stmt"/>
-        <line num="39" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="40" count="6" type="stmt"/>
-        <line num="41" count="12" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="58" count="4" type="stmt"/>
-        <line num="60" count="4" type="stmt"/>
-        <line num="61" count="4" type="stmt"/>
-        <line num="63" count="4" type="stmt"/>
+        <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="69" count="4" type="stmt"/>
+        <line num="72" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="73" count="4" type="stmt"/>
+        <line num="74" count="4" type="stmt"/>
+        <line num="77" count="4" type="stmt"/>
       </file>
       <file name="types.js" path="/var/www/html/alvineandersson.se/public_html/src/actions/types.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="15" type="stmt"/>
         <line num="2" count="15" type="stmt"/>
         <line num="3" count="15" type="stmt"/>
+        <line num="4" count="15" type="stmt"/>
       </file>
     </package>
     <package name="src.components.common">
-      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="JumpingTitle.js" path="/var/www/html/alvineandersson.se/public_html/src/components/common/JumpingTitle.js">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="24" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="26" count="45" type="stmt"/>
-        <line num="27" count="45" type="stmt"/>
-        <line num="28" count="45" type="stmt"/>
-        <line num="29" count="45" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="28" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="45" type="stmt"/>
+        <line num="31" count="45" type="stmt"/>
+        <line num="32" count="45" type="stmt"/>
+        <line num="33" count="45" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.footer">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Footer.js" path="/var/www/html/alvineandersson.se/public_html/src/components/footer/Footer.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.header">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="Header.js" path="/var/www/html/alvineandersson.se/public_html/src/components/header/Header.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="90" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+      <file name="Slogan.js" path="/var/www/html/alvineandersson.se/public_html/src/components/header/Slogan.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.matchmaking">
-      <metrics statements="21" coveredstatements="19" conditionals="10" coveredconditionals="10" methods="14" coveredmethods="12"/>
-      <file name="BooleanItem.js" path="/var/www/html/alvineandersson.se/public_html/src/components/matchmaking/BooleanItem.js">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="14" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="2" type="stmt"/>
-      </file>
+      <metrics statements="14" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="9" coveredmethods="8"/>
       <file name="MatchItem.js" path="/var/www/html/alvineandersson.se/public_html/src/components/matchmaking/MatchItem.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
       </file>
       <file name="Matchmaking.js" path="/var/www/html/alvineandersson.se/public_html/src/components/matchmaking/Matchmaking.js">
-        <metrics statements="7" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="4"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="20" count="56" type="stmt"/>
-        <line num="40" count="7" type="stmt"/>
-        <line num="46" count="7" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
+        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="16" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
       </file>
       <file name="SelectItem.js" path="/var/www/html/alvineandersson.se/public_html/src/components/matchmaking/SelectItem.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="10" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.projects">
-      <metrics statements="25" coveredstatements="24" conditionals="19" coveredconditionals="17" methods="15" coveredmethods="14"/>
+      <metrics statements="23" coveredstatements="22" conditionals="21" coveredconditionals="20" methods="14" coveredmethods="13"/>
       <file name="Filter.js" path="/var/www/html/alvineandersson.se/public_html/src/components/projects/Filter.js">
-        <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="12" count="28" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="7" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="34" count="7" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="4"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="28" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
       </file>
       <file name="Project.js" path="/var/www/html/alvineandersson.se/public_html/src/components/projects/Project.js">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="25" count="5" type="cond" truecount="1" falsecount="1"/>
-        <line num="46" count="3" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="31" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="3" type="stmt"/>
       </file>
       <file name="ProjectPage.js" path="/var/www/html/alvineandersson.se/public_html/src/components/projects/ProjectPage.js">
         <metrics statements="5" coveredstatements="5" conditionals="11" coveredconditionals="10" methods="2" coveredmethods="2"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="29" count="13" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="34" count="13" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
       </file>
       <file name="Projects.js" path="/var/www/html/alvineandersson.se/public_html/src/components/projects/Projects.js">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="19" count="66" type="cond" truecount="4" falsecount="0"/>
-        <line num="20" count="61" type="stmt"/>
-        <line num="38" count="7" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="26" count="60" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="56" type="stmt"/>
+        <line num="43" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.components.services">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="Service.js" path="/var/www/html/alvineandersson.se/public_html/src/components/services/Service.js">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="17" count="7" type="stmt"/>
-        <line num="25" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="36" count="2" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="30" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="2" type="stmt"/>
       </file>
       <file name="Services.js" path="/var/www/html/alvineandersson.se/public_html/src/components/services/Services.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.skills">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Skills.js" path="/var/www/html/alvineandersson.se/public_html/src/components/skills/Skills.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.helpers">
       <metrics statements="20" coveredstatements="19" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="5"/>
       <file name="index.js" path="/var/www/html/alvineandersson.se/public_html/src/helpers/index.js">
         <metrics statements="20" coveredstatements="19" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="5"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
         <line num="8" count="8" type="stmt"/>
-        <line num="9" count="88" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="10" count="96" type="stmt"/>
         <line num="12" count="8" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="8" type="stmt"/>
-        <line num="27" count="8" type="stmt"/>
-        <line num="28" count="8" type="cond" truecount="4" falsecount="0"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="30" count="2" type="cond" truecount="2" falsecount="2"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="33" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="43" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="45" count="2" type="cond" truecount="2" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="9" type="stmt"/>
       </file>
     </package>
     <package name="src.reducers">
-      <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+      <metrics statements="17" coveredstatements="17" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
       <file name="animationReducer.js" path="/var/www/html/alvineandersson.se/public_html/src/reducers/animationReducer.js">
         <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="3" count="15" type="stmt"/>
-        <line num="5" count="15" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="63" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="16" count="59" type="stmt"/>
+        <line num="11" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="65" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="22" count="61" type="stmt"/>
+      </file>
+      <file name="gameReducer.js" path="/var/www/html/alvineandersson.se/public_html/src/reducers/gameReducer.js">
+        <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="3" count="15" type="stmt"/>
+        <line num="15" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="65" type="cond" truecount="4" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="61" type="stmt"/>
       </file>
       <file name="index.js" path="/var/www/html/alvineandersson.se/public_html/src/reducers/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="matchReducer.js" path="/var/www/html/alvineandersson.se/public_html/src/reducers/matchReducer.js">
-        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="4" count="15" type="stmt"/>
-        <line num="6" count="15" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="63" type="cond" truecount="3" falsecount="0"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="23" count="61" type="stmt"/>
-      </file>
       <file name="projectsReducer.js" path="/var/www/html/alvineandersson.se/public_html/src/reducers/projectsReducer.js">
         <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="4" count="15" type="stmt"/>
-        <line num="9" count="15" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="63" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="20" count="59" type="stmt"/>
+        <line num="15" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="65" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="26" count="61" type="stmt"/>
       </file>
     </package>
     <package name="test">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="testUtils.js" path="/var/www/html/alvineandersson.se/public_html/test/testUtils.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="7" count="15" type="stmt"/>
-        <line num="8" count="27" type="stmt"/>
-        <line num="9" count="27" type="stmt"/>
-        <line num="12" count="15" type="stmt"/>
-        <line num="13" count="41" type="stmt"/>
-        <line num="16" count="15" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="18" count="8" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+        <line num="14" count="27" type="stmt"/>
+        <line num="15" count="27" type="stmt"/>
+        <line num="24" count="15" type="stmt"/>
+        <line num="25" count="38" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="34" count="7" type="stmt"/>
+        <line num="35" count="7" type="stmt"/>
       </file>
     </package>
   </project>

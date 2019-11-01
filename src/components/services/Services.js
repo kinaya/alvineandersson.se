@@ -1,6 +1,9 @@
 import React from "react";
 import Service from './Service'
 
+/**
+ * Component for displaying services.
+ */
 const Services = () => {
 
   return (

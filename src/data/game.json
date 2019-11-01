@@ -1,6 +1,7 @@
 [
   {
     "clickable": true,
+    "visible": true,
     "alternatives": [
       {
         "text": "Vi drivs av att lösa problem och ta fram produkter som är bra för människor, miljö och samhälle.",
@@ -16,6 +17,7 @@
   },
   {
     "clickable": true,
+    "visible": false,
     "alternatives": [
       {
         "text": "Hos oss finns plats att växa och utvecklas. Vi värdesätter nyfikenhet, eget ansvar och vilja att lära",
@@ -31,6 +33,7 @@
   },
   {
     "clickable": true,
+    "visible": false,
     "alternatives": [
       {
         "text": "Vi arbetar aktivt mot rasism, sexism och andra former av förtryck på vår arbetsplats",
@@ -46,6 +49,7 @@
   },
   {
     "clickable": true,
+    "visible": false,
     "alternatives": [
       {
         "text": "Vi har en arbetsmiljö där vi samarbetar, lyfter varandra och jobbar mot samma mål.",

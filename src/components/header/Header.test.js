@@ -3,12 +3,19 @@ import { shallow } from 'enzyme'
 import { checkProps, findByTestAttr } from '../../../test/testUtils'
 import Header from './Header'
 
-
+// Define mock function
 const onClickMock = jest.fn();
+
+// Define default props
 const defaultProps = {
   onClick: onClickMock
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Header component
+ * @param {object} props - Component props specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setup = (props={}) => {
   const setupProps = {...defaultProps, ...props}
   return shallow(<Header {...setupProps} />)

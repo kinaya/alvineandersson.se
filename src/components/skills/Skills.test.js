@@ -3,6 +3,10 @@ import { shallow } from 'enzyme';
 import { findByTestAttr } from '../../../test/testUtils.js';
 import Skills from './Skills'
 
+/**
+ * Factory function to create a ShallowWrapper for the Skills component
+ * @returns {ShallowWrapper}
+ */
 const setup = () => {
   return shallow(<Skills />)
 }

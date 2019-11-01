@@ -2,8 +2,18 @@ h2.jumpingTitle.visible {
   padding-top: 1rem;
   span {
     display: inline-block;
-    animation: jump 0.5s;
+    @include animation(jump 0.5s);
   }
+}
+@-moz-keyframes jump {
+  0% {-moz-transform: translateY(0px) scale(1)}
+  50% {-moz-transform: translateY(-20px) scale(1.1)}
+  100% {-moz-transform: translateY(0px) scale(1)}
+}
+@-webkit-keyframes jump {
+  0% {-webkit-transform: translateY(0px) scale(1)}
+  50% {-webkit-transform: translateY(-20px) scale(1.1)}
+  100% {-webkit-transform: translateY(0px) scale(1)}
 }
 @keyframes jump {
   0% {transform: translateY(0px) scale(1)}
@@ -11,7 +21,6 @@ h2.jumpingTitle.visible {
   100% {transform: translateY(0px) scale(1)}
 }
 
-// Fix for line break at MatchMaking title
 .matchmaking h2.jumpingTitle {
   span:nth-child(10) {
     display: block;

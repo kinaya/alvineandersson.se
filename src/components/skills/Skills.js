@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Component for displaying skills.
+ */
 const Skills = () => {
 
   return (
@@ -11,7 +14,7 @@ const Skills = () => {
         <div className="stacks">
           <div data-test="skills-skill" className="stack">
             <h4>MERN-stack</h4>
-            <p>Applikationer med <strong>React/Redux</strong>, backend via <strong>Node.js</strong> och <strong>Express</strong> med <strong>MongoDB</strong> databas.</p>
+            <p>Applikationer med <strong>React/Redux</strong>. Junior backend via <strong>Node.js</strong> och <strong>Express</strong> med <strong>MongoDB</strong> databas.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
@@ -26,12 +29,12 @@ const Skills = () => {
 
           <div data-test="skills-skill" className="stack">
             <h4>Performance</h4>
-            <p><strong>Progressive web apps</strong>, test av kodbas med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong></p>
+            <p><strong>PWA's</strong>, TDD med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong></p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Distribuering</h4>
-            <p>Utveckling med <strong>Git</strong>, <strong>Webpack</strong>, <strong>Gulp</strong> och <strong>Docker</strong>. Distribuering via <strong>Apache/Cpanel</strong>, <strong>AWS</strong> eller <strong>Heroku</strong></p>
+            <p>Utveckling med <strong>Git</strong>, <strong>Webpack</strong>, <strong>Gulp</strong> och <strong>Heroku</strong>. Leker med <strong>Docker</strong> och <strong>AWS</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
@@ -43,15 +46,6 @@ const Skills = () => {
 
         <div className="list">
           <p>Linux som utvecklingsmiljö. Grundläggande koll på Java/Android och Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, van projektledare och en stjärna på att googla.</p>
-        </div>
-
-        <div className="bubbles large">
-          <span></span> <span></span> <span></span> <span></span> <span></span>
-        </div>
-
-        <div className="bubbles small">
-          <span></span> <span></span> <span></span> <span></span> <span></span>
-          <span></span> <span></span> <span></span> <span></span> <span></span>
         </div>
 
 			</div>

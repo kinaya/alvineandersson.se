@@ -6,6 +6,12 @@ const defaultState = {
   items: []
 }
 
+/**
+ * @function gameReducer
+ * @param {array} state - the current state
+ * @param {object} action - action to be reduced
+ * @returns {array} - new game state
+ */
 const gameReducer = (state = defaultState, action) => {
 
   switch (action.type) {

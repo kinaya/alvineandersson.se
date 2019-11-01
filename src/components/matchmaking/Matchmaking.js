@@ -7,8 +7,6 @@ import { chooseItem, startGame } from '../../actions'
 
 export const UnconnectedMatchmaking = ({game, chooseItem, startGame}) => {
 
-  console.log('game',game)
-
   return (
     <section data-test="matchmaking-component" className="matchmaking">
 			<div className="container">
@@ -18,20 +16,20 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame}) => {
         <p className="intro">Välj det som passar bäst in på er, för att se om vi skulle passa ihop.</p>
 
         <div className="game">
-          {game.active ? (
-            <div>
+
+          <div className={`game-button visible-${!game.active}`}>
+            <button className="start" onClick={() => startGame()}>Starta</button>
+          </div>
+
+          <div className={`game-items visible-${game.active}`}>
             {game.items.map((item, i) => (
-              <div data-test="matchmaking-item" key={i} className='item'>
-                  <SelectItem chooseItem={chooseItem} item={item} />
-              </div>
+              <SelectItem key={i} itemNumber={i} chooseItem={chooseItem} item={item} />
             ))}
             {game.match != null && (
               <MatchItem startGame={startGame} match={game.match} />
             )}
-            </div>
-          ) : (
-            <button className="start" onClick={() => startGame()}>Starta</button>
-          )}
+          </div>
+
         </div>
 
       </div>
@@ -45,14 +43,7 @@ function mapStateToProps(state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    chooseItem: (clickedItem, clickedAlternative, itemToShow) => dispatch(chooseItem(clickedItem, clickedAlternative, itemToShow)),
-    startGame: () => dispatch(startGame())
-  }
-}
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  {chooseItem, startGame}
 )(UnconnectedMatchmaking)

@@ -1,30 +1,17 @@
-
 .header {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/bg_header.png), url(../images/header_three.jpg);
   background-size: cover;
   height: 100vh;
   padding: 0;
 }
 
-
-.headerslogan {
-  width: 200px;
-  margin: 0 3em 0 3em;
-  @media(min-height: 300px) {
-    width: 300px;
-  }
-  @media(min-height: 500px) {
-    width: 400px;
-  }
-}
-
 .slogan {
-  width: 200px;
   margin: 0 3em 0 3em;
+  width: 200px;
   @media(min-height: 300px) {
     width: 300px;
   }
@@ -40,11 +27,10 @@
 }
 
 .webb {
-  transform: translateY(-3px);
+  @include transform(translateY(-3px));
   .text {
     fill: $white;
-    font-family: "rig-solid-bold-inline-solo", sans-serif;
-    font-display: auto;
+    font-family: $rig-solid-bold-inline-solo;
     font-display: auto;
     text-transform: uppercase;
     font-size: 0.44em;
@@ -56,31 +42,21 @@
     stroke-width: 0.5px;
   }
 }
-@keyframes webb {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 .developer {
   .text {
-    font-family: "rig-solid-bold-halftone", sans-serif;
+    font-family: $rig-solid-bold-halftone;
     font-display: auto;
     font-size: 0.92em;
     fill: $white;
   }
   .wrapper {
-    -moz-animation: developer 0.7s ease-in-out forwards;
-    -webkit-animation: developer 1s ease-in-out forwards;
-    animation: developer 1s ease-in-out forwards;
+    @include animation(developer 1s ease-in-out forwards);
     opacity: 0;
   }
   @for $i from 1 to 11 {
     .wrapper:nth-child(#{$i}) {
-      animation-delay: #{random(500)+500}ms;
+      @include animation-delay(#{random(500)+500}ms);
     }
   }
 }
@@ -134,56 +110,55 @@
     text-transform: uppercase;
     display: block;
     font-display: auto;
-    font-family: "rig-solid-bold-inline-solo", sans-serif;
+    font-family: $rig-solid-bold-inline-solo;
     fill: $white;
     font-size: 0.57em;
     opacity: 0;
-    animation: alvine 1s forwards 0.5s;
+    @include animation(alvine 1s forwards 0.5s);
   }
 }
-@keyframes alvine {
-  100% {opacity: 1}
-}
+@-moz-keyframes alvine { 100% {opacity: 1} }
+@-webkit-keyframes alvine { 100% {opacity: 1} }
+@keyframes alvine { 100% {opacity: 1} }
 
 .medkod {
   .text {
-    font-family: fairwater-script, sans-serif;
+    font-family: $fairwater-script;
     font-display: auto;
     font-size: 0.4em;
     fill: $white;
-    -moz-animation: medkod 1.5s forwards 1.5s;
-    -webkit-animation: medkod 1.5s forwards 1.5s;
-    animation: medkod 1.5s forwards 1.5s;
+    @include animation(medkod 1.5s forwards 1.5s);
     opacity: 0;
   }
 }
-@-moz-keyframes medkod {
-  100% { opacity: 1;}
-}
-@-webkit-keyframes medkod {
-  100% {opacity: 1;}
-}
-@keyframes medkod {
-  100% {opacity: 1;}
-}
-
+@-moz-keyframes medkod { 100% { opacity: 1;} }
+@-webkit-keyframes medkod { 100% {opacity: 1;} }
+@keyframes medkod { 100% {opacity: 1;} }
 
 .scrollarrow {
 	background: url(../images/arrow.svg);
+  background-size: contain;
+	background-repeat: no-repeat;
 	height: 30px;
 	width: 30px;
 	display: block;
-	background-size: contain;
-	background-repeat: no-repeat;
 	margin: 2em auto 0 auto;
 	opacity: 0.7;
-	animation: MoveUpDown 3s linear infinite;
+	@include animation(MoveUpDown 3s linear infinite);
   position: absolute;
   bottom: 50px;
   left: 0;
   right: 0;
   cursor: pointer;
   z-index: 999;
+}
+@-moz-keyframes MoveUpDown {
+  0%, 100% { -moz-transform: translate(0,0); }
+  50% { -moz-transform: translate(0,10px); }
+}
+@-webkit-keyframes MoveUpDown {
+  0%, 100% { -webkit-transform: translate(0,0); }
+  50% { -webkit-transform: translate(0,10px); }
 }
 @keyframes MoveUpDown {
   0%, 100% { transform: translate(0,0); }
@@ -193,26 +168,22 @@
 .logo {
 	text-decoration: none;
 	color: $black;
-  font-family: "rig-solid-bold-inline-solo", sans-serif;
+  font-family: $rig-solid-bold-inline-solo;
   font-display: auto;
 	font-size: 2em;
 	padding: 0;
-	transition: all 300ms;
   background-color: $black;
   color: $white;
 	border-radius: 25px;
-	display: flex;
+	@include flexbox();
 	padding: 0.3em 0.45em 0.2em;
 	line-height: 1;
 	position: fixed;
   top: 1rem;
   left: 1rem;
 	z-index: 999;
-  transition: all 0.3s;
+  @include transition(all 0.3s);
 	&:hover, &:active, &:focus {
     background-color: $blue-dark;
 	}
-}
-.header .logo {
-  //margin: 1em 0 0 1em;
 }

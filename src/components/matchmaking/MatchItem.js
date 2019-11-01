@@ -1,6 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
+/**
+ * Component for displaying a match
+ * @param {boolean} props.match - If the match is true or false
+ * @param {function} props.startGame - Callback function to (re)start the game
+ */
 const MatchItem = ({match, startGame}) => {
 
   return (

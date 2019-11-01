@@ -2,6 +2,10 @@ import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types'
 
+/**
+ * Component for displaying a `jumping` title.
+ * @params {string} props.title - The title
+ */
 class JumpingTitle extends React.Component {
 
   state = {visibilitySensorActive: false}

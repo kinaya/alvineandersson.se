@@ -6,6 +6,12 @@ const initialState = {
   projects: projects
 }
 
+/**
+ * @function projectsReducer
+ * @param {array} state - the current state
+ * @param {object} action - action to be reduced
+ * @returns {array} - new projects state
+ */
 const projectsReducer = (state = initialState, action) => {
 
   switch (action.type) {

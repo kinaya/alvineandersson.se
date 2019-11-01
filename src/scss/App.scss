@@ -1,3 +1,5 @@
+@import '_variables';
+@import '_mixins';
 @import '_base';
 @import './../components/common/_common';
 @import './../components/header/_header';
@@ -5,5 +7,4 @@
 @import './../components/services/_services';
 @import './../components/projects/_projects';
 @import './../components/skills/_skills';
-@import './../components/skills/_bubbles';
 @import './../components/matchmaking/_matchmaking';

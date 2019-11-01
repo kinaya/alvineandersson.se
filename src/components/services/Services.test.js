@@ -4,6 +4,10 @@ import Service from './Service';
 import { shallow } from 'enzyme';
 import { findByTestAttr } from '../../../test/testUtils.js';
 
+/**
+ * Factory function to create a ShallowWrapper for the Services component
+ * @returns {ShallowWrapper}
+ */
 const setup = () => {
   return shallow(<Services />)
 }

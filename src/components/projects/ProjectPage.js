@@ -4,6 +4,11 @@ import Project from './Project';
 import { getNextProject } from '../../helpers'
 import PropTypes from 'prop-types'
 
+/**
+ * Component for displaying a project page.
+ * @params {object} props.project - The project
+ * @params {array} props.projects - The array of projects
+ */
 const ProjectPage = ({project, projects}) => {
 
   const nextProject = getNextProject(projects, project)

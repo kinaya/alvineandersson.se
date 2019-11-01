@@ -1,8 +1,9 @@
 
-
-// Loop through the projects and add all tags to filerArray
-// Remove duplicates from the array using Set()
-
+/**
+ * Get unique tags from all projects
+ * @param projects An array of projects
+ * @return An array with the unique tags
+ */
 export const getUniqueTags = (projects) => {
   let filterArray = []
   projects.map((project, i) => {
@@ -12,6 +13,13 @@ export const getUniqueTags = (projects) => {
   return filters
 }
 
+/**
+ * Add or remove a filter item from an array of filters.
+ * Add the item if it is not already in the array, remove it if it is.
+ * @param currentFilter The current array of filters
+ * @param filterItem The filter item to add or remove
+ * @return An array with the filter item removed or added
+ */
 export const addOrRemoveFilter = (currentFilter, filterItem) => {
   let filterArray = []
   if(currentFilter.includes(filterItem)) {
@@ -22,6 +30,13 @@ export const addOrRemoveFilter = (currentFilter, filterItem) => {
   return filterArray;
 }
 
+/**
+ * Get the next project from an array of projects.
+ * If the current project is the last one, the next of is the first one.
+ * @param projects The array of projects
+ * @param project The current project
+ * @return The next project in the array
+ */
 export const getNextProject = (projects, project) => {
   let nextProject = {}
   let index = projects.indexOf(project);

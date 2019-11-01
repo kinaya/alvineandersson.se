@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Component for displaying a footer.
+ */
 const Footer = () => {
 
   return (
@@ -14,7 +17,7 @@ const Footer = () => {
           <a data-test="footer-link" href="https://tamkin.se"><span>tamkin.se</span></a>
         </div>
 
-			</div>
+      </div>
     </section>
   );
 

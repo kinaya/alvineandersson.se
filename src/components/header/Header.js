@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
 import Slogan from './Slogan'
 
+/**
+ * Component for displaying a `jumping` title.
+ * @params {function} onClick - OnClick callback function
+ */
 const Header = ({onClick}) => {
 
-  // Set the header to full height on all screens. Css-only not working on for example ipad
-  let vh = window.innerHeight;
+  let vh = window.innerHeight; // Fix for full height
   const style = { 'height': `${vh}px`}
 
   return (
@@ -16,7 +18,7 @@ const Header = ({onClick}) => {
 
       <div data-test="header-scrollarrow" onClick={onClick} className="scrollarrow header"></div>
 
-  </section>
+    </section>
   );
 }
 

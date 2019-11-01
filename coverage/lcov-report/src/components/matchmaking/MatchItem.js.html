@@ -27,7 +27,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -70,11 +70,59 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -97,24 +145,48 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import PropTypes from 'prop-types'
 &nbsp;
-const MatchItem = ({item, resetGame}) =&gt; {
+/**
+ * Component for displaying a match
+ * @param {boolean} props.match - If the match is true or false
+ * @param {function} props.startGame - Callback function to (re)start the game
+ */
+const MatchItem = ({match, startGame}) =&gt; {
+&nbsp;
   return (
     &lt;div data-test="match-item-component"&gt;
 &nbsp;
-      &lt;div className={`result ${item.id}`}&gt;
-        &lt;div className="headline"&gt;{item.headline}&lt;/div&gt;
-        &lt;div className="text"&gt;{item.text}&lt;/div&gt;
-      &lt;/div&gt;
+      {match ? (
+        &lt;div className='result match'&gt;
 &nbsp;
-      &lt;span onClick={() =&gt; resetGame()} className="redo"&gt;Gör ny matchmaking&lt;/span&gt;
+          &lt;div className="headline"&gt;Match!&lt;/div&gt;
+          &lt;div className="text"&gt;
+            &lt;p&gt;Ni verkar ha det jag letar efter: &lt;/p&gt;
+            &lt;ul&gt;&lt;li&gt;En jysst arbetsplats&lt;/li&gt;
+                &lt;li&gt;Möjlighet att utvecklas&lt;/li&gt;
+                &lt;li&gt;Produkter som gör skillnad&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;Har jag det ni letar efter? Hör av er på hej@alvineandersson.se så pratar vi mer&lt;/p&gt;
+          &lt;/div&gt;
+&nbsp;
+        &lt;/div&gt;
+      ):(
+        &lt;div className="result no-match"&gt;
+          &lt;div className="headline"&gt;No match!&lt;/div&gt;
+          &lt;div className="text"&gt;
+            &lt;p&gt;It's not you it's me... just kidding it's you!&lt;/p&gt; &lt;p&gt;Det verkar inte som att vi skulle passa särskilt bra ihop :(&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )}
+&nbsp;
+      &lt;span onClick={() =&gt; startGame()} className="redo"&gt;Gör ny matchmaking&lt;/span&gt;
 &nbsp;
     &lt;/div&gt;
   )
 }
 &nbsp;
 MatchItem.propTypes = {
-  item: PropTypes.object.isRequired,
-  resetGame: PropTypes.func.isRequired
+  match: PropTypes.bool.isRequired,
+  startGame: PropTypes.func.isRequired
 }
 &nbsp;
 export default MatchItem;
@@ -124,7 +196,7 @@ export default MatchItem;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 20 2019 15:42:38 GMT+0100 (CET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 29 2019 23:10:12 GMT+0100 (Central European Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

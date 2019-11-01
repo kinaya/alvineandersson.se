@@ -1,8 +1,12 @@
 import React from 'react'
 
+/**
+ * Component for displaying an animated slogan
+ */
 const Slogan = () => {
+
   return (
-    <div className="slogan">
+    <div data-test="slogan-component" className="slogan">
 
     <div className="alvine">
       <svg viewBox="0 0 150 23" xmlns="http://www.w3.org/2000/svg">

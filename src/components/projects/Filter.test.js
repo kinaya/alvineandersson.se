@@ -5,6 +5,7 @@ import Filter, { UnconnectedFilter } from './Filter';
 import { getUniqueTags } from '../../helpers'
 import projects from "../../data/projects.json";
 
+// Set up the default initial state
 const defaultInitialState = {
   projects: {
     currentFilter: [],
@@ -12,12 +13,24 @@ const defaultInitialState = {
   }
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Filter component
+ * Using dive() to get from the higher-order component to the component
+ * that has the values we need to test.
+ * @param {object} initialState - Component initial state specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setup = (initialState={}) => {
   const store = storeFactory(initialState)
   const wrapper = shallow(<Filter store={store} />).dive()
   return wrapper;
 }
 
+/**
+ * Factory function to create a ShallowWrapper for the Filter component
+ * @param {object} initialState - Component initial state specific to this setup
+ * @returns {ShallowWrapper}
+ */
 const setupWithoutDive = (initialState={}) => {
   const store = storeFactory(initialState)
   const wrapper = shallow(<Filter store={store} />)
@@ -71,7 +84,9 @@ describe('Filter', () => {
 
 })
 
+// Testing redux props, using prop()
 describe('Filter redux props', () => {
+
   test('has currentFilter and projects piece of state as prop', () => {
     const state = {
       projects: {
@@ -85,37 +100,44 @@ describe('Filter redux props', () => {
     expect(currentFilterProps).toBe(state.projects.currentFilter);
     expect(projectsProps).toEqual(state.projects.projects);
   })
+
   test('`filterProjects` action creator is a function prop', () => {
     const wrapper = setupWithoutDive(defaultInitialState)
     const filterProjectsProps = wrapper.prop('filterProjects');
     expect(filterProjectsProps).toBeInstanceOf(Function)
   })
+
 })
 
-describe('`filterProject` action trigger', () => {
+// Testing action creator calls, using the unconnected component and a mock action function
+describe('`filterProject` action creator', () => {
   let filterProjectsMock;
   let wrapper;
   let tagButton;
 
   beforeEach(() => {
-    filterProjectsMock = jest.fn();
+    filterProjectsMock = jest.fn(); // Mock function for filterProjects
     const props = {
       projects: projects,
       currentFilter: [],
       filterProjects: filterProjectsMock
     }
+
     wrapper = shallow(<UnconnectedFilter {...props} />)
 
+    // Find the first filter button and simulate a click on it
     tagButton = findByTestAttr(wrapper, 'filter-button');
     tagButton.first().simulate('click');
   })
 
-  test('`filterProject` runs when tag is clicked', () => {
+  test('`filterProject` runs when a filter is clicked', () => {
+    // Get the number of calls from the mock action creation
     const filterProjectsCallCount = filterProjectsMock.mock.calls.length;
     expect(filterProjectsCallCount).toBe(1);
   })
 
   test('`filterProject` runs with correct arguments', () => {
+    // Get the argument from the moch action creation
     const filterProjectsCallArg = filterProjectsMock.mock.calls[0][0];
     expect(filterProjectsCallArg).toBe(tagButton.first().text());
   })
