@@ -109,10 +109,15 @@ section {
 }
 
 /* Router fade animation */
-.fading {
+.projectPage,
+.front-page {
 	position: absolute;
 	width: 100%;
 }
+/*.fading {
+	position: absolute;
+	width: 100%;
+}*/
 .fade-enter {
 	opacity: 0;
 }
