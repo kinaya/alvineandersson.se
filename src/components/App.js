@@ -26,22 +26,18 @@ class App extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const projectsRef = this.projectsRef;
+    const topRef = this.topRef;
 
     if(nextProps.location.pathname != this.props.location.pathname) {
 
-      if(nextProps.location.pathname == '/') {
-        if(projectsRef) {
-          setTimeout(function(){
-            scrollIntoView(projectsRef.current,{time:0,align:{top:0}})
-          }, 490);
+      setTimeout(function() {
+        if(nextProps.location.pathname == '/' && projectsRef) {
+          scrollIntoView(projectsRef.current,{time:0, align:{top:0}})
         } else {
-          setTimeout(function(){
-            window.scrollTo(0,0)
-          }, 490);
+          scrollIntoView(topRef.current,{time:0, align:{top:0}})
         }
-      } else {
-        setTimeout(function(){ window.scrollTo(0,0) }, 490);
-      }
+      }.bind(this), 500);
+
     }
   }
 

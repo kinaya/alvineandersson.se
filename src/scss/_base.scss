@@ -124,6 +124,6 @@ section {
 	opacity: 1;
 }
 .fade-exit-active {
-  transition: opacity 480ms;
+  transition: opacity 500ms 0ms;
   opacity: 0;
 }

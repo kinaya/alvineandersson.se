@@ -116,7 +116,7 @@ section {
   opacity: 1; }
 
 .fade-exit-active {
-  transition: opacity 480ms;
+  transition: opacity 500ms 0ms;
   opacity: 0; }
 
 h2.jumpingTitle.visible {
@@ -221,54 +221,54 @@ h2.jumpingTitle.visible {
   opacity: 0; }
 
 .developer .wrapper:nth-child(1) {
-  -moz-animation-delay: 519ms;
-  -webkit-animation-delay: 519ms;
-  animation-delay: 519ms; }
+  -moz-animation-delay: 943ms;
+  -webkit-animation-delay: 943ms;
+  animation-delay: 943ms; }
 
 .developer .wrapper:nth-child(2) {
-  -moz-animation-delay: 978ms;
-  -webkit-animation-delay: 978ms;
-  animation-delay: 978ms; }
+  -moz-animation-delay: 946ms;
+  -webkit-animation-delay: 946ms;
+  animation-delay: 946ms; }
 
 .developer .wrapper:nth-child(3) {
-  -moz-animation-delay: 689ms;
-  -webkit-animation-delay: 689ms;
-  animation-delay: 689ms; }
+  -moz-animation-delay: 921ms;
+  -webkit-animation-delay: 921ms;
+  animation-delay: 921ms; }
 
 .developer .wrapper:nth-child(4) {
-  -moz-animation-delay: 557ms;
-  -webkit-animation-delay: 557ms;
-  animation-delay: 557ms; }
+  -moz-animation-delay: 711ms;
+  -webkit-animation-delay: 711ms;
+  animation-delay: 711ms; }
 
 .developer .wrapper:nth-child(5) {
-  -moz-animation-delay: 974ms;
-  -webkit-animation-delay: 974ms;
-  animation-delay: 974ms; }
+  -moz-animation-delay: 965ms;
+  -webkit-animation-delay: 965ms;
+  animation-delay: 965ms; }
 
 .developer .wrapper:nth-child(6) {
-  -moz-animation-delay: 934ms;
-  -webkit-animation-delay: 934ms;
-  animation-delay: 934ms; }
+  -moz-animation-delay: 839ms;
+  -webkit-animation-delay: 839ms;
+  animation-delay: 839ms; }
 
 .developer .wrapper:nth-child(7) {
-  -moz-animation-delay: 657ms;
-  -webkit-animation-delay: 657ms;
-  animation-delay: 657ms; }
+  -moz-animation-delay: 748ms;
+  -webkit-animation-delay: 748ms;
+  animation-delay: 748ms; }
 
 .developer .wrapper:nth-child(8) {
-  -moz-animation-delay: 708ms;
-  -webkit-animation-delay: 708ms;
-  animation-delay: 708ms; }
+  -moz-animation-delay: 634ms;
+  -webkit-animation-delay: 634ms;
+  animation-delay: 634ms; }
 
 .developer .wrapper:nth-child(9) {
-  -moz-animation-delay: 814ms;
-  -webkit-animation-delay: 814ms;
-  animation-delay: 814ms; }
+  -moz-animation-delay: 619ms;
+  -webkit-animation-delay: 619ms;
+  animation-delay: 619ms; }
 
 .developer .wrapper:nth-child(10) {
-  -moz-animation-delay: 585ms;
-  -webkit-animation-delay: 585ms;
-  animation-delay: 585ms; }
+  -moz-animation-delay: 790ms;
+  -webkit-animation-delay: 790ms;
+  animation-delay: 790ms; }
 
 @-moz-keyframes developer {
   0% {
@@ -537,7 +537,7 @@ h2.jumpingTitle.visible {
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05); }
-  .project:hover .what {
+  .project:hover .date {
     background-color: #72baba; }
   .project:hover .project-title {
     color: #4d4d4d; }
@@ -577,13 +577,12 @@ h2.jumpingTitle.visible {
     @media (min-width: 736px) {
       .project h3.project-title {
         margin: 0.2em 0 -0.1em 0; } }
-  .project .date,
   .project .tags {
     font-size: 1em;
     text-decoration: none;
     color: #333333;
     border-bottom: 0; }
-  .project .what {
+  .project .date {
     display: none;
     font-family: "din-2014", sans-serif;
     font-display: auto;
@@ -600,7 +599,7 @@ h2.jumpingTitle.visible {
     -o-transition: all 0.3s;
     transition: all 0.3s; }
     @media (min-width: 736px) {
-      .project .what {
+      .project .date {
         display: inline-block; } }
 
 /* Animated blob images */
@@ -911,15 +910,6 @@ h2.jumpingTitle.visible {
         padding: 6rem 2rem 2rem 2rem; } }
   .projectPage .page-header {
     text-align: center; }
-  .projectPage .case {
-    background-color: #7fc8bc;
-    font-family: "din-2014", sans-serif;
-    font-display: auto;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 0.2em 0.5em; }
   .projectPage .description {
     text-align: center;
     font-size: 1.4rem;

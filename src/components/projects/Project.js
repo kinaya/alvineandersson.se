@@ -37,9 +37,8 @@ class Project extends React.Component {
             </div>
 
             <div data-test="project-info" className="info">
-              <div className="what">{project.what}</div>
-              <h3 className="project-title" >{project.title}</h3>
               <div className="date">{project.date}</div>
+              <h3 className="project-title" >{project.title}</h3>
             </div>
           </Link>
 

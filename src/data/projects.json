@@ -2,7 +2,6 @@
   {
     "id":"nagotharhant",
     "title": "Något har hänt",
-    "what":"Hemsida",
     "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer. Förutom tillgänglig, lättläst fakta innehåller webbplatsen ett Välj-ditt-eget-äventyr-spel",
     "content": [
       {
@@ -38,7 +37,6 @@
     {
       "id":"dubestammer",
       "title": "Du bestämmer!",
-      "what":"Webbapp",
       "info": "Ett välj-ditt-eget-äventyr-spel om motstånd mot övergrepp, för personer med intellektuella funktionsvariationer.",
       "content": [
         {
@@ -69,7 +67,6 @@
     {
       "id":"pablodigtallvar",
       "title":"På blodigt allvar",
-      "what":"Hemsida",
       "info": "På blodigt allvar jobbar för att personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor. På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
       "content": [
         {
@@ -104,7 +101,6 @@
     {
       "id":"mensvarkstestet",
       "title": "Mensvärkstestet",
-      "what":"Webbapp",
       "info": "Hur känns din mensvärk? Mensvärkstestet hjälper besökare att sätta ord på var de själva ligger på en smärtskala, och ger skräddarsydda tips på vad de kan göra för att må bättre. Lanseringsveckan gjorde över 10.000 personer testet!",
       "content": [
         {
@@ -139,7 +135,6 @@
     {
       "id": "socialaspel",
       "title": "Sociala spel",
-      "what":"Webbapp",
       "info": "Alla dina sociala favortspel samlade på ett ställe. Alltid tillgängligt, alltid gratis, alltid roligt!",
       "content": [
         {
@@ -178,7 +173,6 @@
     {
       "id":"patalomsex",
       "title":"På tal om 6",
-      "what":"Hemsida",
       "info": "Det är viktigt att kunna snacka om känslor, lust, jämställdhet och sex! Det är utgångspunkten för På tal om 6 som är ett modernt normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet.",
       "content": [
         {
@@ -209,7 +203,6 @@
     {
       "id":"filmregionsydost",
       "title":"Filmregion Sydost",
-      "what":"Hemsida",
       "info": "Filmregion Sydost hjälper filmare och filmälskare i Växjöregionen att skapa film och filmkultur. Webbplatsen samlar material för de olika målgrupperna och innehåller plattformen för en årlig filmfestival.",
       "content": [
         {
@@ -244,7 +237,6 @@
     {
       "id": "newcomersyouth",
       "title": "Newcomers Youth",
-      "what":"Hemsida",
       "info": "Projekt inom RFSL som arbetar för unga nyanlända hbtq-personers rättigheter",
       "content": [
         {
@@ -275,7 +267,6 @@
     {
       "id":"fridhadvokatbyra",
       "title":"Fridh Advokatbyrå",
-      "what":"Hemsida",
       "info": "Advokatbyrå specialiserad på migrationsrätt. För en rättssäker, inkluderande och djärv humanjuridik.",
       "content": [
         {
@@ -306,7 +297,6 @@
     {
       "id":"lesbiskmakt",
       "title":"Lesbisk Makt",
-      "what":"Hemsida",
       "info": "Lesbisk Makt finns för att skapa, sprida och bevara lesbisk kultur och historia i hela landet. Föreningen driver projekt och organiserar lesbiska frukostar och andra evenemang.",
       "content": [
         {
@@ -349,7 +339,6 @@
     {
       "id": "luleapride",
       "title": "Luleå Pride",
-      "what":"Hemsida",
       "info": "Luleå Pride är en årlig folkfest i hjärtat av Luleå. Festival arrangeras av RFSL Luleå och norra Norrbottens län.",
       "content": [
         {
@@ -376,7 +365,6 @@
     {
       "id": "kollektivbudget",
       "title": "Kollektivbudget",
-      "what":"Webbapp",
       "info": "Plattform för kollektiv och andra som delar budget att hålla koll på ekonomin. Enkelt gränssnitt med avancerade funktioner.",
       "content": [
         {
