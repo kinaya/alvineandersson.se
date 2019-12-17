@@ -45,7 +45,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "check-prop-types": "^1.1.2",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^1.0.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -64,7 +64,8 @@
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
-    "webpack-manifest-plugin": "^2.2.0"
+    "webpack-manifest-plugin": "^2.2.0",
+    "workbox-webpack-plugin": "^4.3.1"
   },
   "jest": {
     "verbose": true,

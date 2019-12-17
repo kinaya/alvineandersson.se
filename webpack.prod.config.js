@@ -3,8 +3,9 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+//const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const PUBLIC_PATH = 'https://alvineandersson.se/';
 
@@ -60,12 +61,16 @@ module.exports = {
     new ManifestPlugin({
       fileName: 'asset-manifest.json',
     }),
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'Alvine Andersson',
-      filename: 'service-worker.js',
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      navigateFallback: path.resolve(__dirname, 'dist') + 'index.html',
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+//    new SWPrecacheWebpackPlugin({
+//      cacheId: 'Alvine Andersson',
+//      filename: 'service-worker.js',
+//      dontCacheBustUrlsMatching: /\.\w{8}\./,
+//      navigateFallback: path.resolve(__dirname, 'dist') + 'index.html',
+//      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+//    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
     }),
     new CopyWebpackPlugin([
       'pwa'
