@@ -1,3 +1,11 @@
+// Node_modules
 node_modules
+
+// .htaccess for Apache
 dist/.htaccess
+
+// Project planning
 todo.txt
+
+// Coverage reports from Jest
+coverage
