@@ -22,7 +22,7 @@ export const UnconnectedFilter = ({ projects, currentFilter, filterProjects }) =
           className={`select ${currentFilter.length == 0 ? 'active' : 'unactive' }`}
           onClick={() => filterProjects(null)}
         >
-        Visa alla
+        Utvalda
         </button>
       {filters.map((filterItem, i) => { return (
         <button

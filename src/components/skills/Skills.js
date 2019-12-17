@@ -13,18 +13,18 @@ const Skills = () => {
 
         <div className="stacks">
           <div data-test="skills-skill" className="stack">
-            <h4>MERN-stack</h4>
-            <p>Applikationer med <strong>React/Redux</strong>. Junior backend via <strong>Node.js</strong> och <strong>Express</strong> med <strong>MongoDB</strong> databas.</p>
+            <h4>Frontend</h4>
+            <p><strong>HTML</strong>, <strong>CSS/SASS</strong> och <strong>JavaScript</strong>, gärna <strong>React</strong>. Frameworks som <strong>Bootstrap</strong>, <strong>Semantic UI</strong> eller <strong>Materialize</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Drupal & Wordpress</h4>
-            <p>Hemsidor med <strong>Drupal</strong> eller <strong>Wordpress</strong>. Plugins med <strong>PHP</strong> och <strong>SQL</strong>. Standard eller "headless" via <strong>REST</strong></p>
+            <p>Konfigurering, temautveckling och plugins/moduler. Standard eller "headless" via <strong>RESTApi</strong></p>
           </div>
 
           <div data-test="skills-skill" className="stack">
-            <h4>Temautveckling</h4>
-            <p><strong>Interaktionsdesign</strong>, <strong>HTML</strong>, <strong>CSS/SASS</strong> och <strong>JavaScript</strong>. Frameworks som <strong>Bootstrap</strong>, <strong>Semantic UI</strong> eller <strong>Materialize</strong>.</p>
+            <h4>MERN-stack</h4>
+            <p>Applikationer med <strong>React/Redux</strong>. Backend via <strong>Node.js</strong> och <strong>Express</strong> med <strong>MongoDB</strong> databas.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">

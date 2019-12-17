@@ -44,7 +44,7 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   plugins: [
     new WebpackCleanupPlugin({
@@ -60,6 +60,6 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js','.jsx'],
+    extensions: ['.js','.jsx']
   },
 };

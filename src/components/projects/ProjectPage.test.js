@@ -35,7 +35,6 @@ describe('ProjectPage', () => {
     const wrapper = setup();
     const component = findByTestAttr(wrapper, 'project-page-header');
     expect(component.length).toBe(1);
-    expect(component.find('span').text()).toBe('Case story')
     expect(component.find('h1').text()).toBe(projects[0].title)
     expect(component.find('p').text()).toBe(projects[0].info)
   });

@@ -23,7 +23,7 @@ const Projects = ({projects, currentFilter, animation}) => {
 
         <TransitionGroup className="project-list">
           {projects.map((project, i) => {
-            if(currentFilter.length == 0 || project.tags.some(r => currentFilter.indexOf(r) >= 0)) {
+            if(currentFilter.length == 0 && project.pinned || project.tags.some(r => currentFilter.indexOf(r) >= 0)) {
               return (
                 <CSSTransition key={i} timeout={500} classNames="filter">
                   <Project animation={animation} project={project} />

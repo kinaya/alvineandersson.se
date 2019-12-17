@@ -22,6 +22,7 @@
       "alt": "Utklipp från startsidan för nagotharahant.se"
     },
     "date": "Oktober 2019",
+    "pinned": true,
     "tags": ["Drupal"],
     "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
     "designer": {
@@ -53,6 +54,7 @@
         "alt": "Utklipp från startsidan för spelet"
       },
       "date": "Oktober 2019",
+      "pinned": true,
       "tags": ["React", "Drupal"],
       "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
       "designer": {
@@ -87,6 +89,7 @@
         "alt": "Bild på klistermärken från projektet På blodigt allvar"
       },
       "date": "Sep 2018",
+      "pinned": true,
       "tags": [ "Drupal" ],
       "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
@@ -121,6 +124,7 @@
         "alt": "Utklipp från startsidan av Mensvärkstestet"
       },
       "date": "Sep 2018",
+      "pinned": true,
       "tags": ["React", "Drupal"],
       "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
       "designer": {
@@ -163,6 +167,7 @@
         "alt": "Utklipp från startsidan för Sociala spel"
       },
       "date": "Jan 2019",
+      "pinned": true,
       "tags": ["Node.js", "React"],
       "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, Semantic UI, JavaScript",
       "image": {
@@ -189,6 +194,7 @@
         "alt": "Skärmdump från På tal om 6"
       },
       "date": "Maj 2016",
+      "pinned": false,
       "tags": [ "Drupal" ],
       "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
@@ -223,6 +229,7 @@
         "alt": "Skärmdump från filmregionsydost.se"
       },
       "date": "Maj 2016",
+      "pinned": false,
       "tags": [ "Drupal" ],
       "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
@@ -253,6 +260,7 @@
         "alt": "Skärmdump från newcomersyouth.se"
       },
       "date": "Mars 2017",
+      "pinned": false,
       "tags": [ "Wordpress" ],
       "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
@@ -283,6 +291,7 @@
         "alt": "Bild från fridhadvokatbyra.se"
       },
       "date": "Mars 2016",
+      "pinned": false,
       "tags": ["Drupal"],
       "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
       "designer": {
@@ -325,6 +334,7 @@
         "alt": "Skärmdump från lesbiskmakt.nu"
       },
       "date": "Nov 2017",
+      "pinned": false,
       "tags": ["Drupal"],
       "extendedTags": "Drupal, PHP, SQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
       "designer": {
@@ -355,6 +365,7 @@
         "alt": "Skärmbild från luleapride.se"
       },
       "date": "Juni 2016",
+      "pinned": false,
       "tags": ["Wordpress"],
       "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
       "image": {
@@ -389,6 +400,7 @@
         "alt": "Skärmbild från Kollektivbudget"
       },
       "date": "Feb 2019",
+      "pinned": false,
       "tags": ["Node.js", "React"],
       "extendedTags": "Node.js, Express, MongoDb, React/Redux, Material UI, Google Api, CSS/SASS, JavaScript",
       "image": {

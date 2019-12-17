@@ -50,7 +50,6 @@ describe("Project", () => {
     const insideWrapper = wrapper.find('VisibilitySensor').renderProp('children')(true);
     const component = findByTestAttr(insideWrapper, 'project-info');
     expect(component.length).toBe(1);
-    expect(component.find('.what').text()).toBe(projects[0].what)
     expect(component.find('.project-title').text()).toBe(projects[0].title)
     expect(component.find('.date').text()).toBe(projects[0].date)
   })

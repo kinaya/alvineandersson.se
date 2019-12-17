@@ -67,10 +67,11 @@ describe('Projects', () => {
 
   describe('renders the list of project depending on current filter', () => {
 
-    it('renders all projects when no filter is selected', () => {
+    it('renders pinned projects when no filter is selected', () => {
       const wrapper = setup(defaultInitialState)
       const projectItems = wrapper.find('Project')
-      expect(projectItems.length).toBe(projects.length)
+      const pinnedProjects = projects.filter(project => project.pinned);
+      expect(projectItems.length).toBe(pinnedProjects.length)
     })
 
     it('renders according to filter', () => {
