@@ -19,7 +19,7 @@ const Skills = () => {
 
           <div data-test="skills-skill" className="stack">
             <h4>Drupal & Wordpress</h4>
-            <p>Konfigurering, temautveckling och plugins/moduler. Standard eller "headless" via <strong>RESTApi</strong></p>
+            <p>Konfigurering, temautveckling och plugins/moduler. Standard eller "headless" via <strong>RESTApi</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
@@ -29,7 +29,7 @@ const Skills = () => {
 
           <div data-test="skills-skill" className="stack">
             <h4>Performance</h4>
-            <p><strong>PWA's</strong>, TDD med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong></p>
+            <p><strong>PWA's</strong>, TDD med <strong>Jest</strong> och <strong>Enzyme</strong>, användartester mot <strong>Accesibility guidelines</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">

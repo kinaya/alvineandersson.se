@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://alvineandersson.se/precache-manifest.95ab3407031029b177c84ea1dd2d4c54.js"
+  "https://alvineandersson.se/precache-manifest.ecb311b708b6b88c31eebb49935a0229.js"
 );
 
 workbox.core.skipWaiting();

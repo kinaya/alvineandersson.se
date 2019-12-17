@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8a896ee0bd4511525fb83f8046d188e",
+    "revision": "0bda151ff223aac9fe338a167846d7c7",
     "url": "https://alvineandersson.se/./index.html"
   },
   {
@@ -168,7 +168,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://alvineandersson.se/luleapride_list.jpg.webp"
   },
   {
-    "url": "https://alvineandersson.se/main.bundle.e0ae35b7370acd13bc99.js"
+    "url": "https://alvineandersson.se/main.bundle.b58cba29f7822261cdfe.js"
   },
   {
     "revision": "4474b218c74ec2428b5018fa1adcc898",
@@ -279,7 +279,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://alvineandersson.se/socialgames_list.jpg.webp"
   },
   {
-    "url": "https://alvineandersson.se/style.bundle.e0ae35b7370acd13bc99.css"
+    "url": "https://alvineandersson.se/style.bundle.b58cba29f7822261cdfe.css"
   },
   {
     "revision": "79246cb838047a95ece14a2168b4b2ce",
