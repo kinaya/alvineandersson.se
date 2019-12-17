@@ -58,19 +58,6 @@ module.exports = {
     new ManifestPlugin({
       fileName: 'asset-manifest.json',
     }),
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'Alvine Andersson',
-      filename: 'service-worker.js',
-      //staticFileGlobs: ['dist/**/*.{js,css}', '/'],
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      //maximumFileSizeToCacheInBytes: 5194304,
-      //minify: true,
-      navigateFallback: path.resolve(__dirname, 'dist') + 'index.html',
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-    }),
-    new CopyWebpackPlugin([
-      'pwa'
-    ]),
   ],
   resolve: {
     extensions: ['.js','.jsx'],
