@@ -4,11 +4,11 @@ import { checkProps, findByTestAttr } from '../../../test/testUtils'
 import Header from './Header'
 
 // Define mock function
-const onClickMock = jest.fn();
+const scrollToContentMock = jest.fn();
 
 // Define default props
 const defaultProps = {
-  onClick: onClickMock
+  scrollToContent: scrollToContentMock
 }
 
 /**
@@ -43,7 +43,7 @@ describe('Header', () => {
     const wrapper = setup()
     const scrollArrowButton = findByTestAttr(wrapper, 'header-scrollarrow');
     scrollArrowButton.simulate('click');
-    expect(onClickMock.mock.calls.length).toBe(1);
+    expect(scrollToContentMock.mock.calls.length).toBe(1);
   })
 
 })

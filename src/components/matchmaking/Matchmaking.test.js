@@ -39,7 +39,7 @@ const setupWithoutDive = (initialState={}) => {
 
 describe('Matchmaking', () => {
 
-  it('renders component without error', () => {
+  it('renders component without error', () => {    
     const wrapper = setup(defaultInitialState)
     const component = findByTestAttr(wrapper, 'matchmaking-component')
     expect(component.length).toBe(1)

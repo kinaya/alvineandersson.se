@@ -16,7 +16,7 @@ const Header = ({scrollToContent}) => {
 
       <Slogan />
 
-      <div data-test="header-scrollarrow" onClick={() => scrollToContent()} className="scrollarrow header"></div>
+      <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow header"></div>
 
     </section>
   );

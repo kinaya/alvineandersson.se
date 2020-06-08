@@ -85,7 +85,7 @@ describe('Filter', () => {
 })
 
 // Testing redux props, using prop()
-describe('Filter redux props', () => {
+/*describe('Filter redux props', () => {
 
   test('has currentFilter and projects piece of state as prop', () => {
     const state = {
@@ -142,4 +142,4 @@ describe('`filterProject` action creator', () => {
     expect(filterProjectsCallArg).toBe(tagButton.first().text());
   })
 
-})
+})*/

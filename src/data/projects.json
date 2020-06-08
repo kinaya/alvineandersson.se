@@ -1,29 +1,5 @@
 [
   {
-    "id":"varldenfinnshar",
-    "title": "Världen finns här",
-    "info": "...",
-    "content": [
-
-    ],
-    "listimg": {
-      "url": "varldenfinnshar_list.png",
-      "alt": "Logotyp för Världen finns här"
-    },
-    "date": "Maj 2020",
-    "pinned": true,
-    "tags": ["Wordpress"],
-    "extendedTags": "Wordpress, PHP, CSS/SASS, JavaScript",
-    "designer": {
-      "url": "http://claespettersson.se",
-      "name": "claespettersson.se"
-    },
-    "image": {
-      "url": "varldenfinnshar.png",
-      "alt": "Startsidan från varldenfinnshar.se"
-    }
-  },
-  {
     "id":"nagotharhant",
     "title": "Något har hänt",
     "info": "Webbaserat metodmaterial om sexuellt våld och rättigheter. Lättlästa artiklar, en webbserie och ett välj-ditt-eget-äventyr spel, tillgängligt på många olika språk",
@@ -99,353 +75,387 @@
     }
   },
 
-    {
-      "id":"pablodigtallvar",
-      "title":"På blodigt allvar",
-      "info": "Personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor! På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
-      "content": [
-        {
-          "headline": "Varierat innehåll med enhetligt utseende",
-          "paragraph": "För den unga målgruppen ställdes höga krav på ett varierat innehåll, där långa texter behövde göras visuellt tilltalande och tillgängliga. Som verktyg för detta valdes Paragraphs i Drupal 8. Detta gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt."
-        },
-        {
-          "headline": "Listor med blandat innehåll",
-          "paragraph": "Ett krav för hemsidan var att videos och artiklar behövde listas om vartannat för att göra innehållet varierat. Eftersom det i Drupal gränssnitt inte går att konfigurera listor med blandade typer av innehåll, utvecklades en egen plugin för jobbet. Modulen ändrar i views query och skapar listor och filtreringar där node och media entities blandas."
-        }
-      ],
-      "link": {
-        "url": "https://pablodigtallvar.se",
-        "name": "pablodigtallvar.se"
+  {
+    "id":"pablodigtallvar",
+    "title":"På blodigt allvar",
+    "info": "Personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor! På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
+    "content": [
+      {
+        "headline": "Varierat innehåll med enhetligt utseende",
+        "paragraph": "För den unga målgruppen ställdes höga krav på ett varierat innehåll, där långa texter behövde göras visuellt tilltalande och tillgängliga. Som verktyg för detta valdes Paragraphs i Drupal 8. Detta gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt."
       },
-      "listimg": {
-        "url": "pba_list.jpg",
-        "alt": "Bild på klistermärken från projektet På blodigt allvar"
-      },
-      "date": "Sep 2018",
-      "pinned": true,
-      "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "pba.png",
-        "alt": "Startsidan från pablodigtallvar.se"
+      {
+        "headline": "Listor med blandat innehåll",
+        "paragraph": "Ett krav för hemsidan var att videos och artiklar behövde listas om vartannat för att göra innehållet varierat. Eftersom det i Drupal gränssnitt inte går att konfigurera listor med blandade typer av innehåll, utvecklades en egen plugin för jobbet. Modulen ändrar i views query och skapar listor och filtreringar där node och media entities blandas."
       }
+    ],
+    "link": {
+      "url": "https://pablodigtallvar.se",
+      "name": "pablodigtallvar.se"
     },
-
-    {
-      "id":"mensvarkstestet",
-      "title": "Mensvärkstestet",
-      "info": "Hur känns din mensvärk? Mensvärkstestet hjälper besökare att sätta ord på var de själva ligger på en smärtskala, och ger skräddarsydda tips på vad de kan göra för att må bättre.",
-      "content": [
-        {
-          "headline": "Populärt quiz",
-          "paragraph": "Lanseringsveckan slutförde över 10.000 personer mensvärkstestet, där olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor, samtidigt som en del frågor kan hoppas över."
-        },
-        {
-          "headline": "Personligt resultat",
-          "paragraph": "Testet ger ett översiktligt resultat på en allvarsskala, samt hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt). Olika frågor väger olika tungt och beräkningsalgoritmerna är framtagna i samarbete med sjukvårdspersonal."
-        },
-        {
-          "headline": "Drupal som backend",
-          "paragraph" : "Quizet är byggt med React och körs helt i webbläsaren, med backend i Drupal 8 för att anonymt spara inskickade svar. Svaren skickas via Drupals konfigurerbara REST server, sparas som noder och kan enkelt användas för statistik. Den som vill kan även få sina svar mailade till sig, även detta går via Drupals mailfunktionalitet."
-        }
-      ],
-      "link": {
-        "url": "https://test.pablodigtallvar.se",
-        "name": "test.pablodigtallvar.se"
-      },
-      "listimg": {
-        "url": "mensvarkstestet_list.jpg",
-        "alt": "Utklipp från startsidan av Mensvärkstestet"
-      },
-      "date": "Sep 2018",
-      "pinned": true,
-      "tags": ["React", "Drupal"],
-      "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "mensvarkstestet.png",
-        "alt": "Bild från resultatsidan av Mensvärkstestet"
-      }
+    "listimg": {
+      "url": "pba_list.jpg",
+      "alt": "Bild på klistermärken från projektet På blodigt allvar"
     },
-
-    {
-      "id": "socialaspel",
-      "title": "Sociala spel",
-      "info": "Samling sociala spel där rollspel, diskussion och skratt står i fokus. Gör spelkorten alltid tillgängliga, hjälper till att slumpa roller och ser till att fokus är på det sociala spelandet.",
-      "content": [
-        {
-          "headline": "Online eller på samma plats",
-          "paragraph": "Webappen kan antingen användas som ett hjälpmedel när spelarna befinner sig på samma ställe, eller som en online spelplattform för distansspel via videolänk. I vissa spel kan en och samma skärm användas och skickas runt bland spelarna, andra spel kräver varsin skärm där varje spelare får tillgång till olika information."
-        },
-        {
-          "headline": "Fullstack JavaScript",
-          "paragraph": "Webbappen är byggd helt i JavaScript med React som frontend och Node.js som backend. Websockets används för att skicka uppdateringar och tillhandahåller interaktiviteten mellan spelarna."
-        },
-        {
-          "headline": "Video med Jitsi Meet",
-          "paragraph": "Plattformen utökades med video för distansspel när Corona gjorde det svårare att ses i verkligheten. För videofunktionalitet används Jitsi Meet och videoytan kan förstoras eller förminskas av spelare för att optimera upplevelsen."
-        }
-      ],
-      "github": {
-        "url": "https://github.com/kinaya/socialgames",
-        "name": "github.com/kinaya/socialgames"
-      },
-      "link": {
-        "url": "https://socialgamesapp.herokuapp.com",
-        "name": "socialgamesapp.herokuapp.com"
-      },
-      "listimg": {
-        "url": "socialaspel_list.png",
-        "alt": "Utklipp från startsidan för Sociala spel"
-      },
-      "date": "Våren 2020",
-      "pinned": true,
-      "tags": ["Node.js", "React"],
-      "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Socket.io, Jitsi Meet, Heroku",
-      "image": {
-        "url": "socialgames.png",
-        "alt": "Skärmdump från Sociala spel"
-      }
+    "date": "Sep 2018",
+    "pinned": true,
+    "tags": [ "Drupal" ],
+    "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
     },
-
-    {
-      "id": "everything",
-      "title": "Everything",
-      "info": "Samlingsplats för saker som skänks bort eller lånas ut. Låna det du behöver, och låna ut sånt du själv inte använder så ofta. Bra för dig, miljön och världen. Tillsammana har vi allt!",
-      "content": [
-        {
-          "headline": "Geotaggade gratissaker",
-          "paragraph": "En samlingsplats för allt gratis - saker som skänks bort, lånas ut av privatpersoner eller görs tillgängliga via offentliga resurser som t.ex bibliotek. Allt kan geotaggas vilket gör det möjligt att hitta saker nära en själv, och se hur långt bort den sak en är intresserad av finns."
-        },
-        {
-          "headline": "Fullstack JavaScript och bilder på S3",
-          "paragraph": "Med frontend i React och backend i Node.js utnyttjas det modern JavaScript kan erbjuda. Tex en intuitiv bilduppladdningskomponent, där bilder sparas och visas från Amazon S3 eller omedelbar sök- och filtrering via fritext, kategori eller avstånd."
-        },
-        {
-          "headline": "Google Auth och SendGrid",
-          "paragraph": "För att göra authenticeringen så enkel som möjligt används Google Auth, och användare loggar snabbt in med ett klick. För enkel kommunikation mellan användare skickas meddelanden som epost med hjälp av SendGrid."
-        }
-      ],
-      "github": {
-        "url": "https://github.com/kinaya/everything",
-        "name": "github.com/kinaya/everything"
-      },
-      "link": {
-        "url": "https://everythingproject.herokuapp.com",
-        "name": "everythingproject.herokuapp.com"
-      },
-      "listimg": {
-        "url": "socialaspel_list.png",
-        "alt": "Utklipp från startsidan för Sociala spel"
-      },
-      "date": "April 2020",
-      "pinned": true,
-      "tags": ["Node.js", "React"],
-      "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Google Auth, AWS S3, SendGrid, Heroku",
-      "image": {
-        "url": "socialgames.png",
-        "alt": "Skärmdump från Sociala spel"
-      }
-    },
-    {
-      "id":"patalomsex",
-      "title":"På tal om 6",
-      "info": "Det är viktigt att kunna snacka om känslor, lust, jämställdhet och sex! Det är utgångspunkten för På tal om 6 som är ett modernt normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet.",
-      "content": [
-        {
-          "headline": "Struktur för omfattande material",
-          "paragraph": "Projektets omfattande material består av 29 filmer med tillhörande övningar. Övningarna kan vara relevanta för flera filmer, men alla filmer har olika övningar för Högstadiet och Gymnasiet. Allt kategoriseras dessutom efter skolämne, och till det kommer utdrag ur läroplanen som är relevant för den aktuella filmen, skolämnet och övningen. Kort sagt fanns behov av att flexibelt kunna lista innehållet, och Drupal 7 valdes tack vare de de stora möjligheterna med Views."
-        }
-      ],
-      "link": {
-        "url": "https://patalomsex.se",
-        "name": "patalomsex.se"
-      },
-      "listimg": {
-        "url": "patalom6_list.jpg",
-        "alt": "Skärmdump från På tal om 6"
-      },
-      "date": "Maj 2016",
-      "pinned": false,
-      "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "patalom6.png",
-        "alt": "Bild från På tal om 6"
-      }
-    },
-    {
-      "id":"filmregionsydost",
-      "title":"Filmregion Sydost",
-      "info": "Filmregion Sydost hjälper filmare och filmälskare i Växjöregionen att skapa film och filmkultur. Webbplatsen samlar material för de olika målgrupperna och innehåller plattformen för en årlig filmfestival.",
-      "content": [
-        {
-          "headline": "",
-          "paragraph": "Webbplatsens innehåll struktureras genom ingångar för de tre mångrupperna: filmare, pedagoger och arrangörer. Drupals views används för att filtrera fram relevant material beroende på ingång. Filmregion Sydost jobbar med film, och naturligtvis är det lätt och smidigt att visa film på webbplatsen. Drupals Media modul gör att videos lätt hämtas från YouTube eller Vimeo och visas i blogginlägg och på sidor. I bloggen finns förutom filmer av alla dess slag inspiration, guider och mycket mer. På webbplatsen finns ett flertal fomulär byggda på Webforms, bland annat bokningsformulär för att låna utrustning."
-        },
-        {
-          "headline": "Filmfestivalen TellUs",
-          "paragraph": "Inom hemsidan ryms plattformen för den årliga filmfestivalen TellUs. Här kan filmskapare ladda upp sina egna filmer för att vara med och tävla. Besökare röstar sedan fram vinnarna i tre olika kategorier. Filmerna publicerar de tävlande på YouTube eller Vimeo, varpå de hämtas till Drupal med Media modulen. Röstningen är byggd på Entityforms och använder Drupals Session Api för att se till så det inte går att rösta mer än en gång."
-        }
-      ],
-      "link": {
-        "url": "https://filmregionsydost.se",
-        "name": "filmregionsydost.se"
-      },
-      "listimg": {
-        "url": "filmregionsydost_list.jpg",
-        "alt": "Skärmdump från filmregionsydost.se"
-      },
-      "date": "Maj 2016",
-      "pinned": false,
-      "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "filmregionsydost.png",
-        "alt": "Skärmdump av startsidan för filmregionsydost.se"
-      }
-    },
-    {
-      "id": "newcomersyouth",
-      "title": "Newcomers Youth",
-      "info": "Projekt inom RFSL som arbetar för unga nyanlända hbtq-personers rättigheter",
-      "content": [
-        {
-          "headline": "",
-          "paragraph": ""
-        }
-      ],
-      "link": {
-        "url": "https://newcomersyouth.se",
-        "name": "newcomersyouth.se"
-      },
-      "listimg": {
-        "url": "newcomersyouth_list.jpg",
-        "alt": "Skärmdump från newcomersyouth.se"
-      },
-      "date": "Mars 2017",
-      "pinned": false,
-      "tags": [ "Wordpress" ],
-      "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "newcomersyouth.png",
-        "alt": "Skärmdump av startsidan för newcomersyouth.se"
-      }
-    },
-    {
-      "id":"fridhadvokatbyra",
-      "title":"Fridh Advokatbyrå",
-      "info": "Advokatbyrå specialiserad på migrationsrätt. För en rättssäker, inkluderande och djärv humanjuridik.",
-      "content": [
-      ],
-      "link": {
-        "url": "https://fridhadvokatbyra.se",
-        "name": "fridhadvokatbyra.se"
-      },
-      "listimg": {
-        "url": "fridhadvokatbyra_list.jpg",
-        "alt": "Bild från fridhadvokatbyra.se"
-      },
-      "date": "Mars 2016",
-      "pinned": false,
-      "tags": ["Drupal"],
-      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "fridhadvokatbyra.png",
-        "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
-      }
-    },
-    {
-      "id":"lesbiskmakt",
-      "title":"Lesbisk Makt",
-      "info": "Lesbisk Makt finns för att skapa, sprida och bevara lesbisk kultur och historia i hela landet. Föreningen driver projekt och organiserar lesbiska frukostar och andra evenemang.",
-      "content": [
-        {
-          "headline": "",
-          "paragraph": "Webbplatsen består av en omfattande 'lesbisk guide till allt', sök- och filtrerbar enligt kategori, typ av innehåll och plats. Besökare kan lägga till egna artiklar eller händelser som, efter granskning, visas i guiden. Drupals Views utnyttjas för listningar enligt kategori, relaterat till den aktuella sidan, via geotaggning m.m."
-        },
-        {
-          "headline": "Automatiska anmälningsformulär",
-          "paragraph": "Med hjälp av Drupals Webform och Webform template, kan föreningens lokalgrupper enkelt koppla anmälningsformulär till sina evenemang. Detta utnyttjas t.ex för de populära lesbiska frukostarna över hela landet."
-        },
-        {
-          "headline": "Facebook Api",
-          "paragraph": "Med hjälp av modulen Feed och Feed import, är hemsidan konfigurerad för att automatiskt hämta händelser som gillas av Lesbisk makts sida på Facebook. Händelserna läggs in som noder i Drupal, och visas i kalendariet. Kalendariet är därför sällan tomt och behöver minimalt med underhåll."
-        },
-        {
-          "headline": "Google Api",
-          "paragraph": "Även Googles API används på webbplatsen. När en stad anges i en artikel eller händelse, hämtas geotaggning från google och koordinater, län, kommun m.m. sparas och gör att innehåll kan sorteras och sökas med denna data. Även de händelser som hämtas från Facebook körs genom Googles Api och geodata kompletteras."
-        }
-      ],
-      "link": {
-        "url": "https://lesbiskmakt.nu",
-        "name": "lesbiskmakt.nu"
-      },
-      "listimg": {
-        "url": "lesbiskmakt_list.png",
-        "alt": "Skärmdump från lesbiskmakt.nu"
-      },
-      "date": "Nov 2017",
-      "pinned": false,
-      "tags": ["Drupal"],
-      "extendedTags": "Drupal, PHP, SQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://maryamfanni.se",
-        "name": "mayramfanni.se"
-      },
-      "image": {
-        "url": "lesbiskmakt.png",
-        "alt": "Skärmdump från startsidan för lesbiskmakt.nu"
-      }
-    },
-    {
-      "id": "luleapride",
-      "title": "Luleå Pride",
-      "info": "Luleå Pride är en årlig folkfest i hjärtat av Luleå. Festival arrangeras av RFSL Luleå och norra Norrbottens län.",
-      "content": [
-        {
-          "headline": "",
-          "paragraph": "Inbjudande webbplats där pride-besökare hittar all information de behöver om festivalen och Luleå stad. Wordpress gör webbplatsen enkel att uppdatera för festivalens volontärer. Programmet är filtrerbart per dag, kategori och/eller plats, så det är enkelt att hitta det som en är intresserad av!"
-        }
-      ],
-      "link": {
-        "url": "https://luleapride.se",
-        "name": "luleapride.se"
-      },
-      "listimg": {
-        "url": "luleapride_list.jpg",
-        "alt": "Skärmbild från luleapride.se"
-      },
-      "date": "Juni 2016",
-      "pinned": false,
-      "tags": ["Wordpress"],
-      "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
-      "image": {
-        "url": "luleapride.png",
-        "alt": "Skärmdump av startsidan för luleapride.se"
-      }
+    "image": {
+      "url": "pba.png",
+      "alt": "Startsidan från pablodigtallvar.se"
     }
-  ]
+  },
+
+  {
+    "id":"mensvarkstestet",
+    "title": "Mensvärkstestet",
+    "info": "Hur känns din mensvärk? Mensvärkstestet hjälper besökare att sätta ord på var de själva ligger på en smärtskala, och ger skräddarsydda tips på vad de kan göra för att må bättre.",
+    "content": [
+      {
+        "headline": "Populärt quiz",
+        "paragraph": "Lanseringsveckan slutförde över 10.000 personer mensvärkstestet, där olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor, samtidigt som en del frågor kan hoppas över."
+      },
+      {
+        "headline": "Personligt resultat",
+        "paragraph": "Testet ger ett översiktligt resultat på en allvarsskala, samt hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt). Olika frågor väger olika tungt och beräkningsalgoritmerna är framtagna i samarbete med sjukvårdspersonal."
+      },
+      {
+        "headline": "Drupal som backend",
+        "paragraph" : "Quizet är byggt med React och körs helt i webbläsaren, med backend i Drupal 8 för att anonymt spara inskickade svar. Svaren skickas via Drupals konfigurerbara REST server, sparas som noder och kan enkelt användas för statistik. Den som vill kan även få sina svar mailade till sig, även detta går via Drupals mailfunktionalitet."
+      }
+    ],
+    "link": {
+      "url": "https://test.pablodigtallvar.se",
+      "name": "test.pablodigtallvar.se"
+    },
+    "listimg": {
+      "url": "mensvarkstestet_list.jpg",
+      "alt": "Utklipp från startsidan av Mensvärkstestet"
+    },
+    "date": "Sep 2018",
+    "pinned": true,
+    "tags": ["React", "Drupal"],
+    "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "mensvarkstestet.png",
+      "alt": "Bild från resultatsidan av Mensvärkstestet"
+    }
+  },
+
+  {
+    "id":"varldenfinnshar",
+    "title": "Världen finns här",
+    "info": "Lektionsbank och matchningstjänst mellan elever inom grundskola/gymnasieskola och vuxna som studerar SFI.",
+    "content": [
+      {
+        "heading": "Under utveckling",
+        "paragraph": "Lansering sommaren 2020."
+      }
+    ],
+    "listimg": {
+      "url": "varldenfinnshar_list.png",
+      "alt": "Logotyp för Världen finns här"
+    },
+    "date": "Juni 2020",
+    "pinned": true,
+    "tags": ["Wordpress"],
+    "extendedTags": "Wordpress, PHP, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "varldenfinnshar.png",
+      "alt": "Startsidan från varldenfinnshar.se"
+    }
+  },
+
+  {
+    "id": "socialaspel",
+    "title": "Sociala spel",
+    "info": "Samling sociala spel där rollspel, diskussion och skratt står i fokus. Gör spelkorten alltid tillgängliga, hjälper till att slumpa roller och ser till att fokus är på det sociala spelandet.",
+    "content": [
+      {
+        "headline": "Online eller på samma plats",
+        "paragraph": "Webappen kan antingen användas som ett hjälpmedel när spelarna befinner sig på samma ställe, eller som en online spelplattform för distansspel via videolänk. I vissa spel kan en och samma skärm användas och skickas runt bland spelarna, andra spel kräver varsin skärm där varje spelare får tillgång till olika information."
+      },
+      {
+        "headline": "Fullstack JavaScript",
+        "paragraph": "Webbappen är byggd helt i JavaScript med React som frontend och Node.js som backend. Websockets används för att skicka uppdateringar och tillhandahåller interaktiviteten mellan spelarna."
+      },
+      {
+        "headline": "Video med Jitsi Meet",
+        "paragraph": "Plattformen utökades med video för distansspel när Corona gjorde det svårare att ses i verkligheten. För videofunktionalitet används Jitsi Meet och videoytan kan förstoras eller förminskas av spelare för att optimera upplevelsen."
+      }
+    ],
+    "github": {
+      "url": "https://github.com/kinaya/socialgames",
+      "name": "github.com/kinaya/socialgames"
+    },
+    "link": {
+      "url": "https://socialgamesapp.herokuapp.com",
+      "name": "socialgamesapp.herokuapp.com"
+    },
+    "listimg": {
+      "url": "socialaspel_list.png",
+      "alt": "Utklipp från startsidan för Sociala spel"
+    },
+    "date": "Våren 2020",
+    "pinned": true,
+    "tags": ["Node.js", "React"],
+    "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Socket.io, Jitsi Meet, Heroku",
+    "image": {
+      "url": "socialgames.png",
+      "alt": "Skärmdump från Sociala spel"
+    }
+  },
+
+  {
+    "id": "everything",
+    "title": "Everything",
+    "info": "Samlingsplats för saker som skänks bort eller lånas ut. Låna det du behöver, och låna ut sånt du själv inte använder så ofta. Bra för dig, miljön och världen. Tillsammana har vi allt!",
+    "content": [
+      {
+        "headline": "Geotaggade gratissaker",
+        "paragraph": "En samlingsplats för allt gratis - saker som skänks bort, lånas ut av privatpersoner eller görs tillgängliga via offentliga resurser som t.ex bibliotek. Allt kan geotaggas vilket gör det möjligt att hitta saker nära en själv, och se hur långt bort den sak en är intresserad av finns."
+      },
+      {
+        "headline": "Fullstack JavaScript och bilder på S3",
+        "paragraph": "Med frontend i React och backend i Node.js utnyttjas det modern JavaScript kan erbjuda. Tex en intuitiv bilduppladdningskomponent, där bilder sparas och visas från Amazon S3 eller omedelbar sök- och filtrering via fritext, kategori eller avstånd."
+      },
+      {
+        "headline": "Google Auth och SendGrid",
+        "paragraph": "För att göra authenticeringen så enkel som möjligt används Google Auth, och användare loggar snabbt in med ett klick. För enkel kommunikation mellan användare skickas meddelanden som epost med hjälp av SendGrid."
+      }
+    ],
+    "github": {
+      "url": "https://github.com/kinaya/everything",
+      "name": "github.com/kinaya/everything"
+    },
+    "link": {
+      "url": "https://everythingproject.herokuapp.com",
+      "name": "everythingproject.herokuapp.com"
+    },
+    "listimg": {
+      "url": "socialaspel_list.png",
+      "alt": "Utklipp från startsidan för Sociala spel"
+    },
+    "date": "April 2020",
+    "pinned": true,
+    "tags": ["Node.js", "React"],
+    "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Google Auth, AWS S3, SendGrid, Heroku",
+    "image": {
+      "url": "socialgames.png",
+      "alt": "Skärmdump från Sociala spel"
+    }
+  },
+
+  {
+    "id":"patalomsex",
+    "title":"På tal om 6",
+    "info": "Det är viktigt att kunna snacka om känslor, lust, jämställdhet och sex! Det är utgångspunkten för På tal om 6 som är ett modernt normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet.",
+    "content": [
+      {
+        "headline": "Struktur för omfattande material",
+        "paragraph": "Projektets omfattande material består av 29 filmer med tillhörande övningar. Övningarna kan vara relevanta för flera filmer, men alla filmer har olika övningar för Högstadiet och Gymnasiet. Allt kategoriseras dessutom efter skolämne, och till det kommer utdrag ur läroplanen som är relevant för den aktuella filmen, skolämnet och övningen. Kort sagt fanns behov av att flexibelt kunna lista innehållet, och Drupal 7 valdes tack vare de de stora möjligheterna med Views."
+      }
+    ],
+    "link": {
+      "url": "https://patalomsex.se",
+      "name": "patalomsex.se"
+    },
+    "listimg": {
+      "url": "patalom6_list.jpg",
+      "alt": "Skärmdump från På tal om 6"
+    },
+    "date": "Maj 2016",
+    "pinned": false,
+    "tags": [ "Drupal" ],
+    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "patalom6.png",
+      "alt": "Bild från På tal om 6"
+    }
+  },
+
+  {
+    "id":"filmregionsydost",
+    "title":"Filmregion Sydost",
+    "info": "Filmregion Sydost hjälper filmare och filmälskare i Växjöregionen att skapa film och filmkultur. Webbplatsen samlar material för de olika målgrupperna och innehåller plattformen för en årlig filmfestival.",
+    "content": [
+      {
+        "headline": "",
+        "paragraph": "Webbplatsens innehåll struktureras genom ingångar för de tre mångrupperna: filmare, pedagoger och arrangörer. Drupals views används för att filtrera fram relevant material beroende på ingång. Filmregion Sydost jobbar med film, och naturligtvis är det lätt och smidigt att visa film på webbplatsen. Drupals Media modul gör att videos lätt hämtas från YouTube eller Vimeo och visas i blogginlägg och på sidor. I bloggen finns förutom filmer av alla dess slag inspiration, guider och mycket mer. På webbplatsen finns ett flertal fomulär byggda på Webforms, bland annat bokningsformulär för att låna utrustning."
+      },
+      {
+        "headline": "Filmfestivalen TellUs",
+        "paragraph": "Inom hemsidan ryms plattformen för den årliga filmfestivalen TellUs. Här kan filmskapare ladda upp sina egna filmer för att vara med och tävla. Besökare röstar sedan fram vinnarna i tre olika kategorier. Filmerna publicerar de tävlande på YouTube eller Vimeo, varpå de hämtas till Drupal med Media modulen. Röstningen är byggd på Entityforms och använder Drupals Session Api för att se till så det inte går att rösta mer än en gång."
+      }
+    ],
+    "link": {
+      "url": "https://filmregionsydost.se",
+      "name": "filmregionsydost.se"
+    },
+    "listimg": {
+      "url": "filmregionsydost_list.jpg",
+      "alt": "Skärmdump från filmregionsydost.se"
+    },
+    "date": "Maj 2016",
+    "pinned": false,
+    "tags": [ "Drupal" ],
+    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "filmregionsydost.png",
+      "alt": "Skärmdump av startsidan för filmregionsydost.se"
+    }
+  },
+
+  {
+    "id": "newcomersyouth",
+    "title": "Newcomers Youth",
+    "info": "Projekt inom RFSL som arbetar för unga nyanlända hbtq-personers rättigheter",
+    "content": [
+      {
+        "headline": "",
+        "paragraph": ""
+      }
+    ],
+    "link": {
+      "url": "https://newcomersyouth.se",
+      "name": "newcomersyouth.se"
+    },
+    "listimg": {
+      "url": "newcomersyouth_list.jpg",
+      "alt": "Skärmdump från newcomersyouth.se"
+    },
+    "date": "Mars 2017",
+    "pinned": false,
+    "tags": [ "Wordpress" ],
+    "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "newcomersyouth.png",
+      "alt": "Skärmdump av startsidan för newcomersyouth.se"
+    }
+  },
+
+  {
+    "id":"fridhadvokatbyra",
+    "title":"Fridh Advokatbyrå",
+    "info": "Advokatbyrå specialiserad på migrationsrätt. För en rättssäker, inkluderande och djärv humanjuridik.",
+    "content": [
+    ],
+    "link": {
+      "url": "https://fridhadvokatbyra.se",
+      "name": "fridhadvokatbyra.se"
+    },
+    "listimg": {
+      "url": "fridhadvokatbyra_list.jpg",
+      "alt": "Bild från fridhadvokatbyra.se"
+    },
+    "date": "Mars 2016",
+    "pinned": false,
+    "tags": ["Drupal"],
+    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "fridhadvokatbyra.png",
+      "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
+    }
+  },
+
+  {
+    "id":"lesbiskmakt",
+    "title":"Lesbisk Makt",
+    "info": "Lesbisk Makt finns för att skapa, sprida och bevara lesbisk kultur och historia i hela landet. Föreningen driver projekt och organiserar lesbiska frukostar och andra evenemang.",
+    "content": [
+      {
+        "headline": "",
+        "paragraph": "Webbplatsen består av en omfattande 'lesbisk guide till allt', sök- och filtrerbar enligt kategori, typ av innehåll och plats. Besökare kan lägga till egna artiklar eller händelser som, efter granskning, visas i guiden. Drupals Views utnyttjas för listningar enligt kategori, relaterat till den aktuella sidan, via geotaggning m.m."
+      },
+      {
+        "headline": "Automatiska anmälningsformulär",
+        "paragraph": "Med hjälp av Drupals Webform och Webform template, kan föreningens lokalgrupper enkelt koppla anmälningsformulär till sina evenemang. Detta utnyttjas t.ex för de populära lesbiska frukostarna över hela landet."
+      },
+      {
+        "headline": "Facebook Api",
+        "paragraph": "Med hjälp av modulen Feed och Feed import, är hemsidan konfigurerad för att automatiskt hämta händelser som gillas av Lesbisk makts sida på Facebook. Händelserna läggs in som noder i Drupal, och visas i kalendariet. Kalendariet är därför sällan tomt och behöver minimalt med underhåll."
+      },
+      {
+        "headline": "Google Api",
+        "paragraph": "Även Googles API används på webbplatsen. När en stad anges i en artikel eller händelse, hämtas geotaggning från google och koordinater, län, kommun m.m. sparas och gör att innehåll kan sorteras och sökas med denna data. Även de händelser som hämtas från Facebook körs genom Googles Api och geodata kompletteras."
+      }
+    ],
+    "link": {
+      "url": "https://lesbiskmakt.nu",
+      "name": "lesbiskmakt.nu"
+    },
+    "listimg": {
+      "url": "lesbiskmakt_list.png",
+      "alt": "Skärmdump från lesbiskmakt.nu"
+    },
+    "date": "Nov 2017",
+    "pinned": false,
+    "tags": ["Drupal"],
+    "extendedTags": "Drupal, PHP, SQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://maryamfanni.se",
+      "name": "mayramfanni.se"
+    },
+    "image": {
+      "url": "lesbiskmakt.png",
+      "alt": "Skärmdump från startsidan för lesbiskmakt.nu"
+    }
+  },
+
+  {
+    "id": "luleapride",
+    "title": "Luleå Pride",
+    "info": "Luleå Pride är en årlig folkfest i hjärtat av Luleå. Festival arrangeras av RFSL Luleå och norra Norrbottens län.",
+    "content": [
+      {
+        "headline": "",
+        "paragraph": "Inbjudande webbplats där pride-besökare hittar all information de behöver om festivalen och Luleå stad. Wordpress gör webbplatsen enkel att uppdatera för festivalens volontärer. Programmet är filtrerbart per dag, kategori och/eller plats, så det är enkelt att hitta det som en är intresserad av!"
+      }
+    ],
+    "link": {
+      "url": "https://luleapride.se",
+      "name": "luleapride.se"
+    },
+    "listimg": {
+      "url": "luleapride_list.jpg",
+      "alt": "Skärmbild från luleapride.se"
+    },
+    "date": "Juni 2016",
+    "pinned": false,
+    "tags": ["Wordpress"],
+    "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
+    "image": {
+      "url": "luleapride.png",
+      "alt": "Skärmdump av startsidan för luleapride.se"
+    }
+  }
+]
