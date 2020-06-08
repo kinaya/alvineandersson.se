@@ -12,7 +12,7 @@ const Services = () => {
 
         <Service
           headline="Webb"
-          text="Webbsidor och interaktiva applikationer, med användarvänliga system och de senaste teknikerna."
+          text="Webbsidor och interaktiva applikationer, med användarvänliga system och moderna tekniker."
         />
 
         <Service

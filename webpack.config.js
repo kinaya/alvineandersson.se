@@ -1,9 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
   mode: 'development',
@@ -23,11 +23,10 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader!sass-loader",
-        })
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, {
+          loader: "css-loader"
+        }, 'sass-loader'],
       },
       {
         test: /\.(png|jpg|svg|webp)$/,
@@ -36,6 +35,7 @@ module.exports = {
 	          loader: 'file-loader',
 						options: {
 							name: '[name].[ext]',
+              esModule: false
 						},
 					},
         ],
@@ -53,13 +53,15 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     }),
-    new ExtractTextPlugin('style.bundle.[hash].css'),
+    new MiniCssExtractPlugin('style.bundle.[hash].css'),
     new ManifestPlugin({
       fileName: 'asset-manifest.json',
     }),
-    new CopyWebpackPlugin([
-      'pwa'
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'pwa', to: 'pwa'}
+      ]
+    })
   ],
   resolve: {
     extensions: ['.js','.jsx']

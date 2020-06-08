@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -7,35 +7,32 @@ import VisibilitySensor from "react-visibility-sensor";
  * @param {string} props.headline - A headline for the service
  * @param {string} props.text - A text for the service
  */
-class Service extends React.Component {
+const Service = ({headline, text}) => {
 
-  state = {visibilitySensorActive: false}
+  const [visibilitySensorActive, setVisibilitySensorActive] = useState(false)
 
-  onChangeVisibility = isVisible => {
-    this.setState({visibilitySensorActive: isVisible})
+  const _onChangeVisibility = isVisible => {
+    setVisibilitySensorActive(isVisible)
   }
 
-  render() {
+  return (
+    
+    <VisibilitySensor
+      onChange={_onChangeVisibility}
+      active={!visibilitySensorActive}
+      partialVisibility={true}
+    >
 
-    const { headline, text } = this.props;
+    {({isVisible}) =>
+      <div data-test="component-service" className={`service ${isVisible} ${isVisible ? 'visible': 'invisible'}`} >
+        <h4 data-test="service-headline">{headline}</h4>
+        <p data-test="service-paragraph">{text}</p>
+      </div>
+    }
 
-    return (
-      <VisibilitySensor
-        onChange={this.onChangeVisibility}
-        active={!this.state.visibilitySensorActive}
-        partialVisibility={true}
-      >
+    </VisibilitySensor>
+  );
 
-      {({isVisible}) =>
-        <div data-test="component-service" className={`service ${isVisible} ${isVisible ? 'visible': 'invisible'}`} >
-          <h4 data-test="service-headline">{headline}</h4>
-          <p data-test="service-paragraph">{text}</p>
-        </div>
-      }
-
-      </VisibilitySensor>
-    );
-  }
 }
 
 Service.propTypes = {

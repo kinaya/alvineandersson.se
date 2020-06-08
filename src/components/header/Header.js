@@ -8,7 +8,7 @@ import Slogan from './Slogan'
  */
 const Header = ({onClick}) => {
 
-  let vh = window.innerHeight; // Fix for full height
+  let vh = window.innerHeight;
   const style = { 'height': `${vh}px`}
 
   return (
@@ -16,7 +16,7 @@ const Header = ({onClick}) => {
 
       <Slogan />
 
-      <div data-test="header-scrollarrow" onClick={onClick} className="scrollarrow header"></div>
+      <div data-test="header-scrollarrow" onClick={() => onClick()} className="scrollarrow header"></div>
 
     </section>
   );

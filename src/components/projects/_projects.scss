@@ -178,10 +178,24 @@
   font-size: 0.9em;
   cursor: pointer;
   @include transition(all 0.3s);
+	position: relative;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
   &.active,
   &:hover {
     color: $blue-dark;
   }
+	&.active {
+		padding-left: 1.2em;
+		padding-right: 0;
+		&:before {
+			content: "\2713";
+			font-size: 1.8em;
+			position: absolute;
+			left: 0;
+			bottom: -6px;
+		}
+	}
 }
 
 // Animation when filtering list

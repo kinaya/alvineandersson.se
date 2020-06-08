@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
@@ -8,44 +8,41 @@ import PropTypes from 'prop-types';
  * @param {object} props.project - The project
  * @param {bool} props.animation - If animation is true or false
  */
-class Project extends React.Component {
+const Project = ({project, animation}) => {
 
-  state = {visibilitySensorActive: false}
+  const [visibilitySensorActive, setVisibilitySensorActive] = useState(false)
 
-  onChangeVisibility = isVisible => {
-    this.setState({visibilitySensorActive: isVisible})
+  const _onChangeVisibility = isVisible => {
+    setVisibilitySensorActive(isVisible)
   }
 
-  render() {
+  return (
+    <VisibilitySensor
+      onChange={_onChangeVisibility}
+      active={!visibilitySensorActive}
+      partialVisibility={true}
+      >
 
-    const { project, animation } = this.props;
+      {({isVisible}) =>
 
-    return (
-      <VisibilitySensor
-        onChange={this.onChangeVisibility}
-        active={!this.state.visibilitySensorActive}
-        partialVisibility={true}
-        >
-        {({isVisible}) =>
+        <Link data-test="project-component" to={`/projects/${project.id}`} className={`project ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
+          <div data-test="project-image" className="image">
+            <picture>
+              <source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} />
+              <img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} />
+            </picture>
+          </div>
 
-          <Link data-test="project-component" to={`/projects/${project.id}`} className={`project ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
-            <div data-test="project-image" className="image">
-              <picture>
-                <source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} />
-                <img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} />
-              </picture>
-            </div>
+          <div data-test="project-info" className="info">
+            <div className="date">{project.date}</div>
+            <h3 className="project-title" >{project.title}</h3>
+          </div>
+        </Link>
 
-            <div data-test="project-info" className="info">
-              <div className="date">{project.date}</div>
-              <h3 className="project-title" >{project.title}</h3>
-            </div>
-          </Link>
+      }
+    </VisibilitySensor>
+  );
 
-        }
-      </VisibilitySensor>
-    );
-  }
 }
 
 Project.propTypes = {

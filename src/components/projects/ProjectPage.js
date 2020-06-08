@@ -29,22 +29,20 @@ const ProjectPage = ({project, projects}) => {
           </picture>
         </div>
 
-          {project.content &&
-            project.content.map((paragraph, i) => { return (
-              <div data-test="project-content" key={i}>
-                <h2>{paragraph.headline}</h2>
-                <p>{paragraph.paragraph}</p>
-              </div>
-            )})
-          }
-
-          <div data-test="project-stats" className="stats">
-            <p><span>Datum:</span> {project.date}</p>
-            <p><span>Tekniker:</span>{project.extendedTags}</p>
-            {project.designer && <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p>}
-            {project.github && <p><span>Github:</span> <a href={project.github.url}>{project.github.name}</a></p>}
-            {project.link && project.link.url && <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p>}
+        {project.content && project.content.map((paragraph, i) => { return (
+          <div data-test="project-content" key={i}>
+            <h2>{paragraph.headline}</h2>
+            <p>{paragraph.paragraph}</p>
           </div>
+        )})}
+
+        <div data-test="project-stats" className="stats">
+          <p><span>Datum:</span> {project.date}</p>
+          <p><span>Tekniker:</span>{project.extendedTags}</p>
+          {project.designer && <p><span>Form:</span> <a href={project.designer.url}>{project.designer.name}</a></p>}
+          {project.github && <p><span>Github:</span> <a href={project.github.url}>{project.github.name}</a></p>}
+          {project.link && project.link.url && <p><span>Url:</span> <a href={project.link.url}>{project.link.name}</a></p>}
+        </div>
 
         <div data-test="project-navigation" className="navigation">
           {nextProject &&

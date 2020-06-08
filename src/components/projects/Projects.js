@@ -1,9 +1,10 @@
-import React, { Component} from "react";
+import React from "react";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { connect } from 'react-redux';
+
 import Project from "./Project";
 import Filter from './Filter';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import JumpingTitle from '../common/JumpingTitle';
-import { connect } from 'react-redux';
 
 /**
  * Component that displays projects
@@ -39,7 +40,7 @@ const Projects = ({projects, currentFilter, animation}) => {
 
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return {
     projects: state.projects.projects,
     currentFilter: state.projects.currentFilter,

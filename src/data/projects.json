@@ -1,16 +1,44 @@
 [
   {
+    "id":"varldenfinnshar",
+    "title": "Världen finns här",
+    "info": "...",
+    "content": [
+
+    ],
+    "listimg": {
+      "url": "varldenfinnshar_list.png",
+      "alt": "Logotyp för Världen finns här"
+    },
+    "date": "Maj 2020",
+    "pinned": true,
+    "tags": ["Wordpress"],
+    "extendedTags": "Wordpress, PHP, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "varldenfinnshar.png",
+      "alt": "Startsidan från varldenfinnshar.se"
+    }
+  },
+  {
     "id":"nagotharhant",
     "title": "Något har hänt",
-    "info": "Projekt om sexuellt våld, för personer med intellektuella funktionsvariationer. Förutom tillgänglig, lättläst fakta innehåller webbplatsen ett Välj-ditt-eget-äventyr-spel",
+    "info": "Webbaserat metodmaterial om sexuellt våld och rättigheter. Lättlästa artiklar, en webbserie och ett välj-ditt-eget-äventyr spel, tillgängligt på många olika språk",
     "content": [
       {
-        "headline": "Varierat innehåll för maximal tillgänglighet",
-        "paragraph": "Projektets målgrupp ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången. För att vara åtkomligt för alla finns en inbyggd uppläsningsfunktion och alla artiklar finns i teckenspråksversion."
+        "headline": "Fokus på tillgänglighet",
+        "paragraph": "Projektets målgrupp, personer med intelektuella funktionsvariationer, ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången."
       },
       {
         "headline": "Webbserie i egen biograf",
-        "paragraph": "Hemsidan innehåller förutom artiklar en biograf med en webbserie i 8 delar. Varje avsnitt finns i en version utan tolkning, som teckentolkad och som syntolkad."
+        "paragraph": "En del av hemsidan utgörs av en biograf med egen form. Här finns en webbserie i 5 delar om utsatthet och motstånd. Varje avsnitt finns i en version utan tolkning, med teckentolkning och med syntolkning."
+      },
+      {
+        "headline": "Översättning till flera språk",
+        "paragraph": "Allt innehåll finns översatt till engelska, finska, spanska, arabiska, sorani och bosniska/kroatiska/serbiska. De svenska artiklarna finns dessutom på teckenspåk, och det går att få dem upplästa med en inbyggd lyssna-funktion."
       }
     ],
     "link": {
@@ -21,10 +49,10 @@
       "url": "nagotharhant_list.png",
       "alt": "Utklipp från startsidan för nagotharahant.se"
     },
-    "date": "Oktober 2019",
+    "date": "Våren 2020",
     "pinned": true,
     "tags": ["Drupal"],
-    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -35,49 +63,54 @@
     }
   },
 
-    {
-      "id":"dubestammer",
-      "title": "Du bestämmer!",
-      "info": "Ett välj-ditt-eget-äventyr-spel om motstånd mot övergrepp, för personer med intellektuella funktionsvariationer.",
-      "content": [
-        {
-          "headline": "Välj-ditt-eget-äventyr spel",
-          "paragraph": "Ett interaktivt spel, där besökaren bestämmer hur karaktärerna agerar. Spelet byggs med React.js som frontend, och hämtar data från Drupal 8 via REST."
-        }
-      ],
-      "link": {
-        "url": "https://nagotharhant.se/spela",
-        "name": "nagotharhant.se/spela"
+  {
+    "id":"dubestammer",
+    "title": "Du bestämmer!",
+    "info": "Ett välj-ditt-eget-äventyr spel om att göra motstånd mot sexuellt våld. Välj vem du vill spela om, bestäm hur din karakär agerar och se hur berättelsen utvecklas.",
+    "content": [
+      {
+        "headline": "Spela om och om igen",
+        "paragraph": "Byggt för att kunna spelas många gånger och göra olika val, ger spelet besökaren förståelse för hur sexuellt våld kan se ut. Hen får uppleva hur karaktärerna bemöter det som händer, och berättelsen varvas med faktarutor och tips."
       },
-      "listimg": {
-        "url": "dubestammer_list.jpg",
-        "alt": "Utklipp från startsidan för spelet"
-      },
-      "date": "Oktober 2019",
-      "pinned": true,
-      "tags": ["React", "Drupal"],
-      "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
-      "designer": {
-        "url": "http://claespettersson.se",
-        "name": "claespettersson.se"
-      },
-      "image": {
-        "url": "dubestammer.jpg",
-        "alt": "Startsidan från spelet"
+      {
+        "headline": "Headless Drupal",
+        "paragraph": "Spelet är byggt med React och gränssnittet finns översatt till 7 olika språk. Som backend använda Drupal där data och bilder hämtas via systemets konfigurerbara REST server."
       }
+    ],
+    "link": {
+      "url": "https://nagotharhant.se/spela",
+      "name": "nagotharhant.se/spela"
     },
+    "listimg": {
+      "url": "dubestammer_list.jpg",
+      "alt": "Utklipp från startsidan för spelet"
+    },
+    "date": "Våren 2020",
+    "pinned": true,
+    "tags": ["React", "Drupal"],
+    "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "dubestammer.jpg",
+      "alt": "Startsidan från spelet"
+    }
+  },
+
     {
       "id":"pablodigtallvar",
       "title":"På blodigt allvar",
-      "info": "På blodigt allvar jobbar för att personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor. På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
+      "info": "Personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor! På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
       "content": [
         {
-          "headline": "Paragraphs för varierat innehåll",
-          "paragraph": "Organisationen bakom projektet ställde höga krav på ett varierat innehåll, där långa texten skulle göras visuellt tilltalande och tillgängliga för den unga målgruppen. Paragraphs i Drupal 8 valdes som verktyg för detta, vilket gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt och samtidigt behålla ett enhetligt utseende."
+          "headline": "Varierat innehåll med enhetligt utseende",
+          "paragraph": "För den unga målgruppen ställdes höga krav på ett varierat innehåll, där långa texter behövde göras visuellt tilltalande och tillgängliga. Som verktyg för detta valdes Paragraphs i Drupal 8. Detta gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt."
         },
         {
-          "headline": "Modul för avancerad listning",
-          "paragraph": "På blodigt allvar använder sig mycket av videos - media entities i Drupal. Ett krav var därför att videos och artiklar behövde listas om vartannat på kategorisidorna. Eftersom Drupals gränssnitt för Views inte klarar skapa vyer med blandade entity typer, utvecklades en egen modul för jobbet. Modulen pluggar in i Views query och skapar lista och filtreringar för att blanda node och media entities."
+          "headline": "Listor med blandat innehåll",
+          "paragraph": "Ett krav för hemsidan var att videos och artiklar behövde listas om vartannat för att göra innehållet varierat. Eftersom det i Drupal gränssnitt inte går att konfigurera listor med blandade typer av innehåll, utvecklades en egen plugin för jobbet. Modulen ändrar i views query och skapar listor och filtreringar där node och media entities blandas."
         }
       ],
       "link": {
@@ -91,7 +124,7 @@
       "date": "Sep 2018",
       "pinned": true,
       "tags": [ "Drupal" ],
-      "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+      "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
       "designer": {
         "url": "http://claespettersson.se",
         "name": "claespettersson.se"
@@ -101,18 +134,23 @@
         "alt": "Startsidan från pablodigtallvar.se"
       }
     },
+
     {
       "id":"mensvarkstestet",
       "title": "Mensvärkstestet",
-      "info": "Hur känns din mensvärk? Mensvärkstestet hjälper besökare att sätta ord på var de själva ligger på en smärtskala, och ger skräddarsydda tips på vad de kan göra för att må bättre. Lanseringsveckan gjorde över 10.000 personer testet!",
+      "info": "Hur känns din mensvärk? Mensvärkstestet hjälper besökare att sätta ord på var de själva ligger på en smärtskala, och ger skräddarsydda tips på vad de kan göra för att må bättre.",
       "content": [
         {
-          "headline": "Interaktivt quiz",
-          "paragraph": "Mensvärkstestet är en interaktiv webbapp byggt med React.js. Olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor. I slutet visas ens resultat och en sammanfattning av hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt)."
+          "headline": "Populärt quiz",
+          "paragraph": "Lanseringsveckan slutförde över 10.000 personer mensvärkstestet, där olika typer av frågor - enkelval, flerval, slider och ja/nej påståenden varvas. Beroende på hur en svarar kan en få ett par extra frågor, samtidigt som en del frågor kan hoppas över."
         },
         {
-          "headline": "Backend med Drupal 8",
-          "paragraph" : "Quizet körs helt i webbläsaren, men ett backend i Drupal 8 finns för att spara inskickade svar anonymt. Svaren skickas via Drupals REST Api, sparas som noder och kan enkelt användas för statistik. Den som vill kan även få sina svar mailade till sig, även detta går via Drupals mail funktionalitet."
+          "headline": "Personligt resultat",
+          "paragraph": "Testet ger ett översiktligt resultat på en allvarsskala, samt hur mens påverkar ens liv på tre olika områden (socialt, mentalt och fysiskt). Olika frågor väger olika tungt och beräkningsalgoritmerna är framtagna i samarbete med sjukvårdspersonal."
+        },
+        {
+          "headline": "Drupal som backend",
+          "paragraph" : "Quizet är byggt med React och körs helt i webbläsaren, med backend i Drupal 8 för att anonymt spara inskickade svar. Svaren skickas via Drupals konfigurerbara REST server, sparas som noder och kan enkelt användas för statistik. Den som vill kan även få sina svar mailade till sig, även detta går via Drupals mailfunktionalitet."
         }
       ],
       "link": {
@@ -136,22 +174,23 @@
         "alt": "Bild från resultatsidan av Mensvärkstestet"
       }
     },
+
     {
       "id": "socialaspel",
       "title": "Sociala spel",
-      "info": "Alla dina sociala favortspel samlade på ett ställe. Alltid tillgängligt, alltid gratis, alltid roligt!",
+      "info": "Samling sociala spel där rollspel, diskussion och skratt står i fokus. Gör spelkorten alltid tillgängliga, hjälper till att slumpa roller och ser till att fokus är på det sociala spelandet.",
       "content": [
         {
-          "headline": "",
-          "paragraph": "Samling med sociala spel där webbappen utgör ett hjälpmedel för att spela tillsammans. Vissa spel används en skärm, som skickas runt bland spelarna. Andra spel har alla varsin skärm och får olika information."
+          "headline": "Online eller på samma plats",
+          "paragraph": "Webappen kan antingen användas som ett hjälpmedel när spelarna befinner sig på samma ställe, eller som en online spelplattform för distansspel via videolänk. I vissa spel kan en och samma skärm användas och skickas runt bland spelarna, andra spel kräver varsin skärm där varje spelare får tillgång till olika information."
         },
         {
-          "headline": "Med andra ord",
-          "paragraph": "Ordlista med ord som slumpas. En kan välja hur lång tid varje omgång är, och om en vill köra med förbjudna ord eller inte."
+          "headline": "Fullstack JavaScript",
+          "paragraph": "Webbappen är byggd helt i JavaScript med React som frontend och Node.js som backend. Websockets används för att skicka uppdateringar och tillhandahåller interaktiviteten mellan spelarna."
         },
         {
-          "headline": "Fake artist",
-          "paragraph": "Alla ritar tillsammans, men en av er vet inte vad ni ritar. Lyckas ni avslöja vem som är the fake artist? En spelare startar ett spel och bjuder in de övriga med en kod. När spelet startas slumpas ett ord, en kategori och en av er utses till fake artist. Byggd med hjälp av WebSockets för att skicka uppdateringar mellan spelare."
+          "headline": "Video med Jitsi Meet",
+          "paragraph": "Plattformen utökades med video för distansspel när Corona gjorde det svårare att ses i verkligheten. För videofunktionalitet används Jitsi Meet och videoytan kan förstoras eller förminskas av spelare för att optimera upplevelsen."
         }
       ],
       "github": {
@@ -163,13 +202,53 @@
         "name": "socialgamesapp.herokuapp.com"
       },
       "listimg": {
-        "url": "socialgames_list.jpg",
+        "url": "socialaspel_list.png",
         "alt": "Utklipp från startsidan för Sociala spel"
       },
-      "date": "Jan 2019",
+      "date": "Våren 2020",
       "pinned": true,
       "tags": ["Node.js", "React"],
-      "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, Semantic UI, JavaScript",
+      "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Socket.io, Jitsi Meet, Heroku",
+      "image": {
+        "url": "socialgames.png",
+        "alt": "Skärmdump från Sociala spel"
+      }
+    },
+
+    {
+      "id": "everything",
+      "title": "Everything",
+      "info": "Samlingsplats för saker som skänks bort eller lånas ut. Låna det du behöver, och låna ut sånt du själv inte använder så ofta. Bra för dig, miljön och världen. Tillsammana har vi allt!",
+      "content": [
+        {
+          "headline": "Geotaggade gratissaker",
+          "paragraph": "En samlingsplats för allt gratis - saker som skänks bort, lånas ut av privatpersoner eller görs tillgängliga via offentliga resurser som t.ex bibliotek. Allt kan geotaggas vilket gör det möjligt att hitta saker nära en själv, och se hur långt bort den sak en är intresserad av finns."
+        },
+        {
+          "headline": "Fullstack JavaScript och bilder på S3",
+          "paragraph": "Med frontend i React och backend i Node.js utnyttjas det modern JavaScript kan erbjuda. Tex en intuitiv bilduppladdningskomponent, där bilder sparas och visas från Amazon S3 eller omedelbar sök- och filtrering via fritext, kategori eller avstånd."
+        },
+        {
+          "headline": "Google Auth och SendGrid",
+          "paragraph": "För att göra authenticeringen så enkel som möjligt används Google Auth, och användare loggar snabbt in med ett klick. För enkel kommunikation mellan användare skickas meddelanden som epost med hjälp av SendGrid."
+        }
+      ],
+      "github": {
+        "url": "https://github.com/kinaya/everything",
+        "name": "github.com/kinaya/everything"
+      },
+      "link": {
+        "url": "https://everythingproject.herokuapp.com",
+        "name": "everythingproject.herokuapp.com"
+      },
+      "listimg": {
+        "url": "socialaspel_list.png",
+        "alt": "Utklipp från startsidan för Sociala spel"
+      },
+      "date": "April 2020",
+      "pinned": true,
+      "tags": ["Node.js", "React"],
+      "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Google Auth, AWS S3, SendGrid, Heroku",
       "image": {
         "url": "socialgames.png",
         "alt": "Skärmdump från Sociala spel"
@@ -277,10 +356,6 @@
       "title":"Fridh Advokatbyrå",
       "info": "Advokatbyrå specialiserad på migrationsrätt. För en rättssäker, inkluderande och djärv humanjuridik.",
       "content": [
-        {
-          "headline": "",
-          "paragraph": "Lättanvänd och stilren webbplats, som finns tillgänglig på fyra olika språk. Byggd med Drupal 7, vilket gör det enkelt att redigera materialet som enskilda sidor, men med hjälp av Views visa det för besökare i sektioner på en och samma sida."
-        }
       ],
       "link": {
         "url": "https://fridhadvokatbyra.se",
@@ -371,41 +446,6 @@
       "image": {
         "url": "luleapride.png",
         "alt": "Skärmdump av startsidan för luleapride.se"
-      }
-    },
-    {
-      "id": "kollektivbudget",
-      "title": "Kollektivbudget",
-      "info": "Plattform för kollektiv och andra som delar budget att hålla koll på ekonomin. Enkelt gränssnitt med avancerade funktioner.",
-      "content": [
-        {
-          "headline": "",
-          "paragraph": "Användare fyller enkelt i summa och datum för sina inköp, och webbappen för statistik, räknar ut hur mycket en handlat för per månad och talar om vem som är skyldig vem pengar! En kan ställa in en budget per månad, och om en vill ha påminnelse att fylla i sina utgifter."
-        },
-        {
-          "headline": "Material UI",
-          "paragraph": "Googles Material Design, implementerad via Material UI för React."
-        },
-        {
-          "headline": "Authenticering via Google",
-          "paragraph": "För authenticering används Google Auth, med hjälp av Passport för Node.js."
-        }
-      ],
-      "github": {
-        "url": "https://github.com/kinaya/kollektivBudget",
-        "name": "github.com/kinaya/kollektivBudget"
-      },
-      "listimg": {
-        "url": "kollektivbudget_list.jpg",
-        "alt": "Skärmbild från Kollektivbudget"
-      },
-      "date": "Feb 2019",
-      "pinned": false,
-      "tags": ["Node.js", "React"],
-      "extendedTags": "Node.js, Express, MongoDb, React/Redux, Material UI, Google Api, CSS/SASS, JavaScript",
-      "image": {
-        "url": "kollektivbudget.png",
-        "alt": "Skärmdump från Kollektivbudget"
       }
     }
   ]
