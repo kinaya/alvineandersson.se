@@ -66,7 +66,17 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'pwa', to: 'pwa'}
+        { from: 'pwa', to: 'pwa'},
+        { from: 'src/site.webmanifest', to: 'site.webmanifest'},
+        { from: 'src/browserconfig.xml', to: 'browserconfig.xml'},
+        { from: 'src/android-chrome-192x192.png', to: 'android-chrome-192x192.png'},
+        { from: 'src/android-chrome-512x512.png', to: 'android-chrome-512x512.png'},
+        { from: 'src/apple-touch-icon.png', to: 'apple-touch-icon.png'},
+        { from: 'src/favicon-16x16.png', to: 'favicon-16x16.png'},
+        { from: 'src/favicon-32x32.png', to: 'favicon-32x32.png'},
+        { from: 'src/favicon.ico', to: 'favicon.ico'},
+        { from: 'src/mstile-150x150.png', to: 'mstile-150x150.png'},
+        { from: 'src/safari-pinned-tab.svg', to: 'safari-pinned-tab.svg'}
       ]
     })
   ],

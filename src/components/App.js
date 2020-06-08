@@ -20,15 +20,20 @@ const App = ({projects, location, animation}) => {
   const projectsRef = useRef(null);
   const contentRef = useRef(null);
   const topRef = useRef(null);
+  const didMountRef = useRef(false);
 
   useEffect(() => {
-    setTimeout(function() {
-      if(location.pathname == '/' && projectsRef) {
-        scrollIntoView(projectsRef.current,{time:0, align:{top:0}})
-      } else {
-        scrollIntoView(topRef.current,{time:0, align:{top:0}})
-      }
-    }.bind(this), 500);
+    if(didMountRef.current) {
+      setTimeout(function() {
+        if(location.pathname == '/' && projectsRef) {
+          scrollIntoView(projectsRef.current,{time:0, align:{top:0}})
+        } else {
+          scrollIntoView(topRef.current,{time:0, align:{top:0}})
+        }
+      }.bind(this), 500);
+    } else {
+      didMountRef.current = true;
+    }
   }, [location.pathname])
 
   const _scrollToContent = (ref) => {
@@ -50,7 +55,7 @@ const App = ({projects, location, animation}) => {
 
           <Route exact path="/" render={() => (
             <div className="front-page">
-              <Header onClick={() => _scrollToContent(contentRef)} />
+              <Header scrollToContent={() => _scrollToContent(contentRef)} />
               <div ref={contentRef} />
               <Services />
               <div ref={projectsRef} />
