@@ -6,7 +6,7 @@ import Project from './Project';
 import { getUniqueTags } from '../../helpers'
 import projects from "../../data/projects.json";
 import JumpingTitle from '../common/JumpingTitle';
-import UnconnectedFilter from './Filter';
+//import UnconnectedFilter from './Filter';
 
 // The default initial state
 const defaultInitialState = {
@@ -28,7 +28,8 @@ const defaultInitialState = {
  */
 const setup = (initialState={}) => {
   const store = storeFactory(initialState)
-  const wrapper = shallow(<Projects store={store} />).dive();
+  // todo: Why do I need 2 dives?
+  const wrapper = shallow(<Projects store={store} />).dive().dive();
   return wrapper;
 }
 
@@ -102,7 +103,7 @@ describe('Projects', () => {
 
   describe('Has correct props from Redux', () => {
     it('has `projects`, `currentFilter` and `animation` piece of state as prop', () => {
-      const wrapper = setupWithoutDive(defaultInitialState)
+      const wrapper = setupWithoutDive(defaultInitialState).dive();
       expect(wrapper.prop('projects')).toBe(defaultInitialState.projects.projects)
       expect(wrapper.prop('currentFilter')).toBe(defaultInitialState.projects.currentFilter)
       expect(wrapper.prop('animation')).toBe(defaultInitialState.animation.projects)

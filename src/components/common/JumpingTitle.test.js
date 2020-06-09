@@ -56,7 +56,6 @@ describe("JumpingTitle", () => {
 
     it('is initially false', () => {
       const wrapper = setup();
-      console.log(wrapper.state('visibilitySensorActive'));
       expect(wrapper.state('visibilitySensorActive')).toBe(false)
     })
 

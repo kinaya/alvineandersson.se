@@ -22,7 +22,8 @@ const defaultInitialState = {
  */
 const setup = (initialState={}) => {
   const store = storeFactory(initialState)
-  const wrapper = shallow(<Filter store={store} />).dive()
+  // Todo: Why two dive()?
+  const wrapper = shallow(<Filter store={store} />).dive().dive();
   return wrapper;
 }
 

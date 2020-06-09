@@ -22,7 +22,8 @@ const defaultInitialState = {
  */
 const setup = (initialState={}) => {
   const store = storeFactory(initialState)
-  const wrapper = shallow(<Matchmaking store={store} />).dive()
+  // todo: why the extra diev()?
+  const wrapper = shallow(<Matchmaking store={store} />).dive().dive()
   return wrapper;
 }
 
@@ -39,7 +40,7 @@ const setupWithoutDive = (initialState={}) => {
 
 describe('Matchmaking', () => {
 
-  it('renders component without error', () => {    
+  it('renders component without error', () => {
     const wrapper = setup(defaultInitialState)
     const component = findByTestAttr(wrapper, 'matchmaking-component')
     expect(component.length).toBe(1)
@@ -80,13 +81,13 @@ describe('Matchmaking', () => {
     })
 
     test('`chooseItem` action creator is a function prop', () => {
-      const wrapper = setupWithoutDive(defaultInitialState)
+      const wrapper = setupWithoutDive(defaultInitialState).dive();
       const chooseItemProps = wrapper.prop('chooseItem');
       expect(chooseItemProps).toBeInstanceOf(Function)
     })
 
     test('`startGame` action creator is a function prop', () => {
-      const wrapper = setupWithoutDive(defaultInitialState)
+      const wrapper = setupWithoutDive(defaultInitialState).dive();
       const startGameProps = wrapper.prop('startGame');
       expect(startGameProps).toBeInstanceOf(Function)
     })
