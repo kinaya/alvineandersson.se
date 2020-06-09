@@ -50,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new WebpackCleanupPlugin({
-      exclude: ["robots.txt","service-worker.js"],
+      exclude: [],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -61,12 +61,15 @@ module.exports = {
       fileName: 'asset-manifest.json',
     }),
     new WorkboxPlugin.GenerateSW({
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
       clientsClaim: true,
       skipWaiting: true
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'pwa', to: 'pwa'},
+        { from: 'src/robots.txt', to: 'robots.txt'},
         { from: 'src/site.webmanifest', to: 'site.webmanifest'},
         { from: 'src/browserconfig.xml', to: 'browserconfig.xml'},
         { from: 'src/android-chrome-192x192.png', to: 'android-chrome-192x192.png'},

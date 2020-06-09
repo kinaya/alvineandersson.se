@@ -47,7 +47,7 @@ module.exports = {
   },
   plugins: [
     new WebpackCleanupPlugin({
-      exclude: ["robots.txt","service-worker.js"],
+      exclude: [],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -60,6 +60,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'pwa', to: 'pwa'},
+        { from: 'src/robots.txt', to: 'robots.txt'},
         { from: 'src/site.webmanifest', to: 'site.webmanifest'},
         { from: 'src/browserconfig.xml', to: 'browserconfig.xml'},
         { from: 'src/android-chrome-192x192.png', to: 'android-chrome-192x192.png'},

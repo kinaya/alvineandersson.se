@@ -1,6 +1,6 @@
 {
   "main.css": "https://alvineandersson.se/main.css",
-  "main.js": "https://alvineandersson.se/main.bundle.8917c77e6c392ea7c923.js",
+  "main.js": "https://alvineandersson.se/main.bundle.c19121c3b83e7f44d1d4.js",
   "./index.html": "https://alvineandersson.se/./index.html",
   "android-chrome-192x192.png": "https://alvineandersson.se/android-chrome-192x192.png",
   "android-chrome-512x512.png": "https://alvineandersson.se/android-chrome-512x512.png",
@@ -75,6 +75,7 @@
   "pwa/mstile-150x150.png": "https://alvineandersson.se/pwa/mstile-150x150.png",
   "pwa/safari-pinned-tab.svg": "https://alvineandersson.se/pwa/safari-pinned-tab.svg",
   "pwa/site.webmanifest": "https://alvineandersson.se/pwa/site.webmanifest",
+  "robots.txt": "https://alvineandersson.se/robots.txt",
   "safari-pinned-tab.svg": "https://alvineandersson.se/safari-pinned-tab.svg",
   "service-worker.js": "https://alvineandersson.se/service-worker.js",
   "share.jpg": "https://alvineandersson.se/share.jpg",
