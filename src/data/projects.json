@@ -1,45 +1,5 @@
 [
   {
-    "id":"nagotharhant",
-    "title": "Något har hänt",
-    "info": "Webbaserat metodmaterial om sexuellt våld och rättigheter. Lättlästa artiklar, en webbserie och ett välj-ditt-eget-äventyr spel, tillgängligt på många olika språk",
-    "content": [
-      {
-        "headline": "Fokus på tillgänglighet",
-        "paragraph": "Projektets målgrupp, personer med intelektuella funktionsvariationer, ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången."
-      },
-      {
-        "headline": "Webbserie i egen biograf",
-        "paragraph": "En del av hemsidan utgörs av en biograf med egen form. Här finns en webbserie i 5 delar om utsatthet och motstånd. Varje avsnitt finns i en version utan tolkning, med teckentolkning och med syntolkning."
-      },
-      {
-        "headline": "Översättning till flera språk",
-        "paragraph": "Allt innehåll finns översatt till engelska, finska, spanska, arabiska, sorani och bosniska/kroatiska/serbiska. De svenska artiklarna finns dessutom på teckenspåk, och det går att få dem upplästa med en inbyggd lyssna-funktion."
-      }
-    ],
-    "link": {
-      "url": "https://nagotharhant.se",
-      "name": "nagotharhant.se"
-    },
-    "listimg": {
-      "url": "nagotharhant_list.png",
-      "alt": "Utklipp från startsidan för nagotharahant.se"
-    },
-    "date": "Våren 2020",
-    "pinned": true,
-    "tags": ["Drupal"],
-    "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
-    "designer": {
-      "url": "http://claespettersson.se",
-      "name": "claespettersson.se"
-    },
-    "image": {
-      "url": "nagotharhant.png",
-      "alt": "Startsidan från nagotharhant.se"
-    }
-  },
-
-  {
     "id":"dubestammer",
     "title": "Du bestämmer!",
     "info": "Ett välj-ditt-eget-äventyr spel om att göra motstånd mot sexuellt våld. Välj vem du vill spela om, bestäm hur din karakär agerar och se hur berättelsen utvecklas.",
@@ -76,38 +36,42 @@
   },
 
   {
-    "id":"pablodigtallvar",
-    "title":"På blodigt allvar",
-    "info": "Personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor! På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
+    "id":"nagotharhant",
+    "title": "Något har hänt",
+    "info": "Webbaserat metodmaterial om sexuellt våld och rättigheter. Lättlästa artiklar, en webbserie och ett välj-ditt-eget-äventyr spel, tillgängligt på många olika språk",
     "content": [
       {
-        "headline": "Varierat innehåll med enhetligt utseende",
-        "paragraph": "För den unga målgruppen ställdes höga krav på ett varierat innehåll, där långa texter behövde göras visuellt tilltalande och tillgängliga. Som verktyg för detta valdes Paragraphs i Drupal 8. Detta gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt."
+        "headline": "Fokus på tillgänglighet",
+        "paragraph": "Projektets målgrupp, personer med intelektuella funktionsvariationer, ställer höga krav på tillgänglighet i allt från innehåll och formgivning till kod. Hemsidan är avskalad och innehåll visas i kortare stycken - en textsnutt, en film eller en bild åt gången."
       },
       {
-        "headline": "Listor med blandat innehåll",
-        "paragraph": "Ett krav för hemsidan var att videos och artiklar behövde listas om vartannat för att göra innehållet varierat. Eftersom det i Drupal gränssnitt inte går att konfigurera listor med blandade typer av innehåll, utvecklades en egen plugin för jobbet. Modulen ändrar i views query och skapar listor och filtreringar där node och media entities blandas."
+        "headline": "Webbserie i egen biograf",
+        "paragraph": "En del av hemsidan utgörs av en biograf med egen form. Här finns en webbserie i 5 delar om utsatthet och motstånd. Varje avsnitt finns i en version utan tolkning, med teckentolkning och med syntolkning."
+      },
+      {
+        "headline": "Översättning till flera språk",
+        "paragraph": "Allt innehåll finns översatt till engelska, finska, spanska, arabiska, sorani och bosniska/kroatiska/serbiska. De svenska artiklarna finns dessutom på teckenspåk, och det går att få dem upplästa med en inbyggd lyssna-funktion."
       }
     ],
     "link": {
-      "url": "https://pablodigtallvar.se",
-      "name": "pablodigtallvar.se"
+      "url": "https://nagotharhant.se",
+      "name": "nagotharhant.se"
     },
     "listimg": {
-      "url": "pba_list.jpg",
-      "alt": "Bild på klistermärken från projektet På blodigt allvar"
+      "url": "nagotharhant_list.png",
+      "alt": "Utklipp från startsidan för nagotharahant.se"
     },
-    "date": "Sep 2018",
+    "date": "Våren 2020",
     "pinned": true,
-    "tags": [ "Drupal" ],
+    "tags": ["Drupal"],
     "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
     },
     "image": {
-      "url": "pba.png",
-      "alt": "Startsidan från pablodigtallvar.se"
+      "url": "nagotharhant.png",
+      "alt": "Startsidan från nagotharhant.se"
     }
   },
 
@@ -152,34 +116,6 @@
   },
 
   {
-    "id":"varldenfinnshar",
-    "title": "Världen finns här",
-    "info": "Lektionsbank och matchningstjänst mellan elever inom grundskola/gymnasieskola och vuxna som studerar SFI.",
-    "content": [
-      {
-        "heading": "Under utveckling",
-        "paragraph": "Lansering sommaren 2020."
-      }
-    ],
-    "listimg": {
-      "url": "varldenfinnshar_list.png",
-      "alt": "Logotyp för Världen finns här"
-    },
-    "date": "Juni 2020",
-    "pinned": true,
-    "tags": ["Wordpress"],
-    "extendedTags": "Wordpress, PHP, CSS/SASS, JavaScript",
-    "designer": {
-      "url": "http://claespettersson.se",
-      "name": "claespettersson.se"
-    },
-    "image": {
-      "url": "varldenfinnshar.png",
-      "alt": "Startsidan från varldenfinnshar.se"
-    }
-  },
-
-  {
     "id": "socialaspel",
     "title": "Sociala spel",
     "info": "Samling sociala spel där rollspel, diskussion och skratt står i fokus. Gör spelkorten alltid tillgängliga, hjälper till att slumpa roller och ser till att fokus är på det sociala spelandet.",
@@ -214,8 +150,72 @@
     "tags": ["Node.js", "React"],
     "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Socket.io, Jitsi Meet, Heroku",
     "image": {
-      "url": "socialgames.png",
+      "url": "socialaspel.png",
       "alt": "Skärmdump från Sociala spel"
+    }
+  },
+
+  {
+    "id":"pablodigtallvar",
+    "title":"På blodigt allvar",
+    "info": "Personer som lider av kraftig mensvärk ska kunna delta i samhället på lika villkor! På webbplatsen kan besökare lära sig om mensvärk, med texter och filmer från experter, kändisar och ungdomar.",
+    "content": [
+      {
+        "headline": "Varierat innehåll med enhetligt utseende",
+        "paragraph": "För den unga målgruppen ställdes höga krav på ett varierat innehåll, där långa texter behövde göras visuellt tilltalande och tillgängliga. Som verktyg för detta valdes Paragraphs i Drupal 8. Detta gav redaktörerna stor frihet att pussla ihop artiklar bestående av ett stort antal komponenter, utan att göra det onödigt krångligt."
+      },
+      {
+        "headline": "Listor med blandat innehåll",
+        "paragraph": "Ett krav för hemsidan var att videos och artiklar behövde listas om vartannat för att göra innehållet varierat. Eftersom det i Drupal gränssnitt inte går att konfigurera listor med blandade typer av innehåll, utvecklades en egen plugin för jobbet. Modulen ändrar i views query och skapar listor och filtreringar där node och media entities blandas."
+      }
+    ],
+    "link": {
+      "url": "https://pablodigtallvar.se",
+      "name": "pablodigtallvar.se"
+    },
+    "listimg": {
+      "url": "pba_list.jpg",
+      "alt": "Bild på klistermärken från projektet På blodigt allvar"
+    },
+    "date": "Sep 2018",
+    "pinned": true,
+    "tags": [ "Drupal" ],
+    "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "pba.png",
+      "alt": "Startsidan från pablodigtallvar.se"
+    }
+  },
+
+  {
+    "id":"varldenfinnshar",
+    "title": "Världen finns här",
+    "info": "Lektionsbank och matchningstjänst mellan elever inom grundskola/gymnasieskola och vuxna som studerar SFI.",
+    "content": [
+      {
+        "heading": "Under utveckling",
+        "paragraph": "Lansering sommaren 2020."
+      }
+    ],
+    "listimg": {
+      "url": "varldenfinnshar_list.png",
+      "alt": "Logotyp för Världen finns här"
+    },
+    "date": "Juni 2020",
+    "pinned": true,
+    "tags": ["Wordpress"],
+    "extendedTags": "Wordpress, PHP, CSS/SASS, JavaScript",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "varldenfinnshar.png",
+      "alt": "Startsidan från varldenfinnshar.se"
     }
   },
 
@@ -246,16 +246,16 @@
       "name": "everythingproject.herokuapp.com"
     },
     "listimg": {
-      "url": "socialaspel_list.png",
+      "url": "everything_list.png",
       "alt": "Utklipp från startsidan för Sociala spel"
     },
     "date": "April 2020",
     "pinned": true,
     "tags": ["Node.js", "React"],
-    "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Google Auth, AWS S3, SendGrid, Heroku",
+    "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Google Auth, AWS S3, SendGrid, Leaflet, Heroku",
     "image": {
-      "url": "socialgames.png",
-      "alt": "Skärmdump från Sociala spel"
+      "url": "everything.png",
+      "alt": "Skärmdump från Everything"
     }
   },
 

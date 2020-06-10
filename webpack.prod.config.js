@@ -49,9 +49,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new WebpackCleanupPlugin({
-      exclude: [],
-    }),
+    new WebpackCleanupPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
@@ -68,7 +66,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'pwa', to: 'pwa'},
         { from: 'src/robots.txt', to: 'robots.txt'},
         { from: 'src/site.webmanifest', to: 'site.webmanifest'},
         { from: 'src/browserconfig.xml', to: 'browserconfig.xml'},
