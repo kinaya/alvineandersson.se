@@ -267,6 +267,20 @@
 			flex-basis: 20%;
 		}
 
+		@media(max-height: 700px) {
+			@media(orientation: landscape) {
+				background-color: pink;
+				flex-basis: 16.66%;
+			}
+		}
+
+/*		@media(max-height: 700px) {
+			@media(min-width: $desktop) {
+				flex-basis: 16.66%;
+				background-color: pink;
+			}
+		}*/
+
 	}
 	.project.filtering-true {
 		opacity: 0;
