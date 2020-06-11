@@ -116,7 +116,7 @@ section {
 .scrollarrow.header {
 	display: block;
 }
-@media(min-height: 690px) and (min-width: $tablet) {
+@media(min-height: 500px) and (min-width: $tablet) {
 	.scrollarrow {
 		display: block;
 	}
@@ -136,6 +136,7 @@ section {
 	}
 	section.projects {
 		> .container {
+			background-color: pink;
 			padding-bottom: 0;
 			width: 940px;
 		}
