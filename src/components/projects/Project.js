@@ -16,6 +16,8 @@ const Project = ({project, animation, filtering}) => {
     setVisibilitySensorActive(isVisible)
   }
 
+
+
   return (
     <VisibilitySensor
       onChange={_onChangeVisibility}
