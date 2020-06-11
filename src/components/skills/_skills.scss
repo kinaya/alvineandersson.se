@@ -10,7 +10,13 @@
   margin-top: 3rem;
   text-align: center;
   @media(min-width: $tablet) {
-    width: 45%;
+    //width: 45%;
+    flex-basis: 45%;
+  }
+  @media(max-height: 700px) {
+    @media(orientation: landscape) {
+      flex-basis: 33.33%;
+    }
   }
 
 }

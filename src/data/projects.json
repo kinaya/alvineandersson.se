@@ -429,33 +429,5 @@
       "url": "lesbiskmakt.png",
       "alt": "Skärmdump från startsidan för lesbiskmakt.nu"
     }
-  },
-
-  {
-    "id": "luleapride",
-    "title": "Luleå Pride",
-    "info": "Luleå Pride är en årlig folkfest i hjärtat av Luleå. Festival arrangeras av RFSL Luleå och norra Norrbottens län.",
-    "content": [
-      {
-        "headline": "",
-        "paragraph": "Inbjudande webbplats där pride-besökare hittar all information de behöver om festivalen och Luleå stad. Wordpress gör webbplatsen enkel att uppdatera för festivalens volontärer. Programmet är filtrerbart per dag, kategori och/eller plats, så det är enkelt att hitta det som en är intresserad av!"
-      }
-    ],
-    "link": {
-      "url": "https://luleapride.se",
-      "name": "luleapride.se"
-    },
-    "listimg": {
-      "url": "luleapride_list.jpg",
-      "alt": "Skärmbild från luleapride.se"
-    },
-    "date": "Juni 2016",
-    "pinned": false,
-    "tags": ["Wordpress"],
-    "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
-    "image": {
-      "url": "luleapride.png",
-      "alt": "Skärmdump av startsidan för luleapride.se"
-    }
   }
 ]
