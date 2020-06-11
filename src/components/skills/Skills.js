@@ -3,7 +3,7 @@ import React from "react";
 /**
  * Component for displaying skills.
  */
-const Skills = () => {
+const Skills = ({scrollToContent}) => {
 
   return (
     <section data-test="skills-component" className="skills">
@@ -44,9 +44,7 @@ const Skills = () => {
 
         </div>
 
-        <div className="list">
-          <p>Linux som utvecklingsmiljö. Grundläggande koll på Java/Android och Python. Gillar att bygga möjliga och omöjliga saker med Raspberry Pi eller Arduino, studerat media och kommunikation, van projektledare och en stjärna på att googla.</p>
-        </div>
+        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow scrollarrow-skills"></div>
 
 			</div>
     </section>

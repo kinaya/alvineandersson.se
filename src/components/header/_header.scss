@@ -136,21 +136,25 @@
 @keyframes medkod { 100% {opacity: 1;} }
 
 .scrollarrow {
-	background: url(../images/arrow.svg);
+	background-image: url(../images/arrow.svg);
   background-size: contain;
 	background-repeat: no-repeat;
 	height: 30px;
 	width: 30px;
-	display: block;
+	//display: block;
 	margin: 2em auto 0 auto;
-	opacity: 0.7;
 	@include animation(MoveUpDown 3s linear infinite);
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 0;
   right: 0;
   cursor: pointer;
   z-index: 999;
+}
+.scrollarrow.header {
+  background-image: url(../images/arrow_white.svg);
+  opacity: 0.7;
+  bottom: 50px;
 }
 @-moz-keyframes MoveUpDown {
   0%, 100% { -moz-transform: translate(0,0); }

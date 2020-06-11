@@ -19,6 +19,9 @@ const App = ({projects, location, animation}) => {
 
   const projectsRef = useRef(null);
   const contentRef = useRef(null);
+  const skillsRef = useRef(null);
+  const matchmakingRef = useRef(null);
+  const footerRef = useRef(null);
   const topRef = useRef(null);
   const didMountRef = useRef(false);
 
@@ -57,11 +60,14 @@ const App = ({projects, location, animation}) => {
             <div className="front-page">
               <Header scrollToContent={() => _scrollToContent(contentRef)} />
               <div ref={contentRef} />
-              <Services />
+              <Services scrollToContent={() => _scrollToContent(projectsRef)}/>
               <div ref={projectsRef} />
-              <Projects />
-              <Skills />
-              <Matchmaking />
+              <Projects scrollToContent={() => _scrollToContent(skillsRef)}/>
+              <div ref={skillsRef} />
+              <Skills scrollToContent={() => _scrollToContent(matchmakingRef)}/>
+              <div ref={matchmakingRef} />
+              <Matchmaking scrollToContent={() => _scrollToContent(footerRef)}/>
+              <div ref={footerRef} />
               <Footer />
             </div>
           )} />

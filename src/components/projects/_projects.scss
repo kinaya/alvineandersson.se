@@ -5,47 +5,31 @@
   background-repeat: repeat-y;
 }
 
+.project-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding-top: 1em;
+	@media(min-width: 565px) {
+		justify-content: center;
+	}
+}
+
 .project {
-  border-bottom: 1px dashed $gray;
-  margin: 0;
-  padding: 2rem 0 2rem 0;
-  text-align: center;
-  text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   transition: all 0.3s ease-in;
-  display: block;
-  @media(min-width: $tablet) {
-		@include flexbox();
-		@include align-items(center);
-    text-align: left;
-    padding: 2rem;
-  }
 
-  &:last-child {
-    border-bottom: 0;
-  }
+	.inner {
+		padding: 0.5em 1em;
+	}
 
-  &:hover {
-    .image {
-      background-color: $blue-dark;
-      @include transform(scale(1.05));
-    }
-    .date {
-      background-color: $blue-dark;
-    }
-    .project-title {
-      color: #4d4d4d;
-    }
-  }
-
-  .image {
+	.image {
     width: 120px;
     height: 120px;
     margin: 0 auto;
     @include transition(all 0.3s);
-
-    @media(min-width: $tablet) {
-      margin: 0 2em 0 0;
-    }
 
     img {
       width: 100%;
@@ -54,57 +38,81 @@
 
   }
 
-  .info {
-    margin-top: 1em;
-
-    @media(min-width: $tablet) {
-      margin-top: -0.5em;
-    }
-
+	&:hover .image {
+    background-color: $blue-dark;
+    @include transform(scale(1.05));
   }
 
-  h3.project-title {
-    font-size: 2rem;
-    line-height: 1.2;
-    color: $black;
-    text-decoration: none;
-    margin: 0.2em 0;
-		font-family: $rig-solid-bold-reverse;
-    font-display: auto;
-    font-weight: 700;
-    display: block;
-    @include transition(all 0.3s);
-    @media(min-width: $tablet) {
-      margin: 0.2em 0 -0.1em 0;
-    }
-  }
+}
 
-  .tags {
-    font-size: 1em;
-    text-decoration: none;
-    color: $black;
-    border-bottom: 0;
-  }
+@media(min-height: 700px) and (min-width: 750px) {
 
-  .date {
-    display: none;
-    font-family: $din-2014;
-    font-display: auto;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    background-color: $blue;
-    color: $black;
-    text-decoration: none;
-    padding: 0.2em 0.5em;
-    @include transition(all 0.3s);
 
-    @media(min-width: $tablet) {
-      display: inline-block;
-    }
+}
 
-  }
+@media(min-width: 628px) {
+.project {
+	&.nagotharhant {
+		transform: translateY(-15px);
+		.image {
+			width: 160px;
+			height: 160px;
+		}
+	}
+	&.socialaspel {
+		transform: translateY(10px);
+		.image {
+			width: 170px;
+			height: 170px;
+		}
+	}
+	&.pablodigtallvar {
+		.image {
+			width: 160px;
+			height: 160px;
+		}
+	}
+	&.varldenfinnshar {
+		transform: translateY(20px);
+		.image {
+			width: 140px;
+			height: 140px;
+		}
+	}
+	&.everything {
+		transform: translateY(-10px);
+		.image {
+			width: 160px;
+			height: 160px;
+		}
+	}
+	&.filmregionsydost {
+		transform: translateY(10px);
+		.image {
+			width: 150px;
+			height: 150px;
+		}
+	}
+	&.newcomersyouth {
+		.image {
+			width: 160px;
+			height: 160px;
+		}
+	}
+	&.fridhadvokatbyra {
+		transform: translateY(15px);
+		.image {
+			width: 160px;
+			height: 160px;
+		}
+	}
+	&.luleapride {
+		.image {
+			width: 170px;
+			height: 170px;
+		}
+	}
+}
 }
 
 /* Animated blob images */
@@ -199,42 +207,124 @@
 }
 
 // Animation when filtering list
-.project {
-  overflow: hidden;
-	-webkit-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
+.project-list {
+	.project {
+		overflow: hidden;
+		transition: opacity 300ms, transform 300ms;
+		@media(min-width: 628px) and (max-width: 815px) {
+			flex-basis: 33.33%;
+			&:nth-child(1),
+			&:nth-child(6),
+			&:nth-child(11) {
+				margin-left: 16.6%;
+			}
+			&:nth-child(2),
+			&:nth-child(7),
+			&:nth-child(12) {
+				margin-right: 16.6%;
+			}
+		}
+		@media(min-width: 816px) and (max-width: 1003px){
+			flex-basis: 25%;
+			&:nth-child(1),
+			&:nth-child(8) {
+				margin-left: 12.5%;
+			}
+			&:nth-child(3),
+			&:nth-child(10) {
+				margin-right: 12.5%;
+			}
+
+		}
+
+		@media(min-width: 1004px) {
+			flex-basis: 20%;
+			&:nth-child(1),
+			&:nth-child(10) {
+				margin-left: 2em;
+			}
+			&:nth-child(4),
+			&:nth-child(13) {
+				margin-right: 2em;
+			}
+		}
+
+	}
+	.project.filtering-true {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+	.project.filtering-false {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+//.project {
+	//transform: scale(1);
+//	transform: scale(0);
+//border: 5px solid green;
+//  overflow: hidden;
+/*	-webkit-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
 	-moz-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
 	-o-transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
 	transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
   transition: max-height 500ms ease-in, opacity 500ms ease-in, transform 500ms;
-}
-.filter-enter {
+*/
+//	transition: opacity 500ms, transform 500ms;
+//}
+/*.filter-entering {
+//.filter-appear,
+//.filter-enter {
   opacity: 0;
-  max-height: 0;
+	transform: scale(0);
 }
-.filter-enter-active {
+.filter-entered {
+//.filter-appear-active,
+//.filter-enter-active {
   opacity: 1;
-  max-height: 300px;
+	transform: scale(1);
 }
-.filter-exit {
+.filter-exiting {
+//.filter-exit {
   opacity: 1;
-  max-height: 300px;
+	transform: scale(1);
 }
-.filter-exit-active {
+.filter-exited {
+//.filter-exit-active {
   opacity: 0;
-  max-height: 0;
-}
+	transform: scale(0);
+}*/
 
 // Animation  when project gets visible by scrolling
+
 .animate-projects-true .project.invisible {
   opacity: 0;
-  @include transform(translateY(80px));
-  @include transition(all 0.3s);
+	transform: scale(0.5);
+//  @include transform(translateY(80px));
+//  @include transition(all 0.3s);
 }
 .animate-projects-true .project.visible {
   opacity: 1;
-  @include transform(translateY(0));
-  @include transition(all 0.3s);
+	transform: scale(1);
+//  @include transform(translateY(0));
+//  @include transition(all 0.3s);
 }
+.animate-projects-true .project {
+	@include transition(all 0.3s);
+	&.newcomersyouth,
+	&.everything,
+	&.nagotharhant {
+		@include transition(all 0.8s);
+	}
+	&.mensvarkstestet,
+	&.pablodigtallvar,
+	&.lesbiskmakt {
+		@include transition(all 0.5s);
+	}
+}
+
 
 // Break titles with many words
 .project.newcomersyouth .project-title,

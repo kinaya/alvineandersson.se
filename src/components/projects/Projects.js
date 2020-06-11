@@ -1,5 +1,5 @@
-import React from "react";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React, { useState, useRef, useEffect } from "react";
+import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group';
 import { connect } from 'react-redux';
 
 import Project from "./Project";
@@ -12,27 +12,52 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation}) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent}) => {
+
+  const [filtering, setFiltering] = useState(false)
+  const [filteredProjects, setFilteredProjects] = useState(projects)
+  const [inlineStyle, setInlineStyle] = useState({})
+  const [firstRender, setFirstRender] = useState(true)
+
+  const projectsRef = useRef(null)
+
+
+  const _setHeight = () => {
+    const vh = projectsRef.current.offsetHeight + 20;
+    setInlineStyle({'height': `${vh}px`})
+  }
+
+  useEffect(() => {
+
+    if(firstRender) {
+      _setHeight()
+      setFirstRender(false)
+    } else {
+      setFiltering(true)
+      setTimeout(() => {
+        let filteredProjects = projects.filter(project => currentFilter.length == 0 || project.tags.some(r => currentFilter.indexOf(r) >= 0));
+        setFilteredProjects(filteredProjects)
+        setFiltering(false)
+      }, 300)
+    }
+
+  }, [currentFilter])
 
   return (
     <section data-test="projects-component" className="projects">
-			<div className="container narrow">
+			<div className="container" ref={projectsRef} style={inlineStyle} >
 
         <JumpingTitle title="Portfolio" />
 
         <Filter />
 
-        <TransitionGroup className="project-list">
-          {projects.map((project, i) => {
-            if(currentFilter.length == 0 && project.pinned || project.tags.some(r => currentFilter.indexOf(r) >= 0)) {
-              return (
-                <CSSTransition key={i} timeout={500} classNames="filter">
-                  <Project animation={animation} project={project} />
-                </CSSTransition>
-              )
-            }
-          })}
-        </TransitionGroup>
+        <div className={`project-list filtering-${filtering}`}>
+          {filteredProjects.map((project, i) => { return (
+            <Project key={i} filtering={filtering} animation={animation} project={project} />
+          )})}
+        </div>
+
+        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
 
 			</div>
     </section>

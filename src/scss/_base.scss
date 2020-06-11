@@ -89,6 +89,7 @@ p {
 	font-size: 1.2rem;
 }
 
+// Grid
 section {
   padding: 3rem 1rem;
   @media(min-width: $mobile) {
@@ -107,6 +108,41 @@ section {
     max-width: 740px;
   }
 }
+
+// Test
+.scrollarrow {
+	display: none;
+}
+.scrollarrow.header {
+	display: block;
+}
+@media(min-height: 700px) and (min-width: 1004px) {
+	.scrollarrow {
+		display: block;
+	}
+	section.footer,
+	section.services,
+	section {
+		padding-top: 0;
+		padding-bottom: 0;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
+		> .container {
+			padding-bottom: 2em;
+		}
+	}
+	section.projects {
+		> .container {
+			padding-bottom: 0;
+			width: 940px;
+		}
+	}
+}
+
+
 
 /* Router fade animation */
 .projectPage,

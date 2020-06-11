@@ -15,16 +15,6 @@
 
 }
 
-.list {
-  margin-top: 2rem;
-  p {
-    font-size: 0.9rem;
-    @media(min-width: $tablet) {
-      font-size: 1rem;
-    }
-  }
-}
-
 .skills {
   position: relative;
   background: linear-gradient(102deg, #7fc8bc, #d3d3a5);

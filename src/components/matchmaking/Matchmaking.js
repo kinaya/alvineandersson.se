@@ -5,7 +5,7 @@ import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
 import { chooseItem, startGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({game, chooseItem, startGame}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame, scrollToContent}) => {
 
   return (
     <section data-test="matchmaking-component" className="matchmaking">
@@ -31,6 +31,8 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame}) => {
           </div>
 
         </div>
+
+        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
 
       </div>
     </section>

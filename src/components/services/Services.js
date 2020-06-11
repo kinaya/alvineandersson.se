@@ -4,7 +4,7 @@ import Service from './Service'
 /**
  * Component for displaying services.
  */
-const Services = () => {
+const Services = ({scrollToContent}) => {
 
   return (
     <section data-test="services-component" className="services">
@@ -24,6 +24,8 @@ const Services = () => {
           headline="För alla"
           text="Med kod som verktyg för att lyfta kampanjen och organisationer, med drivkraft att göra världen lite bättre."
         />
+
+        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
 
       </div>
     </section>

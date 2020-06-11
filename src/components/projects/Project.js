@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * @param {object} props.project - The project
  * @param {bool} props.animation - If animation is true or false
  */
-const Project = ({project, animation}) => {
+const Project = ({project, animation, filtering}) => {
 
   const [visibilitySensorActive, setVisibilitySensorActive] = useState(false)
 
@@ -25,17 +25,14 @@ const Project = ({project, animation}) => {
 
       {({isVisible}) =>
 
-        <Link data-test="project-component" to={`/projects/${project.id}`} className={`project ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
-          <div data-test="project-image" className="image">
-            <picture>
-              <source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} />
-              <img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} />
-            </picture>
-          </div>
-
-          <div data-test="project-info" className="info">
-            <div className="date">{project.date}</div>
-            <h3 className="project-title" >{project.title}</h3>
+        <Link data-test="project-component" to={`/projects/${project.id}`} className={`project filtering-${filtering} ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
+          <div className="inner">
+            <div data-test="project-image" className="image">
+              <picture>
+                <source type="image/webp" srcSet={require(`../../images/${project.listimg.url}.webp`)} />
+                <img alt={project.listimg.alt} src={require(`../../images/${project.listimg.url}`)} />
+              </picture>
+            </div>
           </div>
         </Link>
 
