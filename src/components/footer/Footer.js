@@ -1,13 +1,24 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 
 /**
  * Component for displaying a footer.
  */
-const Footer = () => {
+const Footer = ({sectionStyle, getContentHeight}) => {
+
+  const contentRef = useRef()
+
+  useEffect(() => {
+    getContentHeight('footer', contentRef.current.offsetHeight)
+    const resizeHandler = () => {
+      getContentHeight('footer', contentRef.current.offsetHeight)
+    }
+    window.addEventListener('resize', resizeHandler)
+    return () => window.removeEventListener('resize', resizeHandler)
+  }, [contentRef.current])
 
   return (
-    <section data-test="footer-component" className="footer">
-			<div className="container">
+    <section data-test="footer-component" className="footer" style={sectionStyle}>
+			<div className="container" ref={contentRef}>
 
         <div className="contact">
           <p>Webbutvecklare med 10+ års erfarenhet. På plats eller distans, stora eller små projekt, front- eller backend.</p>

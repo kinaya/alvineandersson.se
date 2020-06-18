@@ -12,7 +12,7 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation, scrollToContent}) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent, getContentHeight, fullScreen, sectionStyle}) => {
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
@@ -21,16 +21,15 @@ const Projects = ({projects, currentFilter, animation, scrollToContent}) => {
 
   const projectsRef = useRef(null)
 
-
-  const _setHeight = () => {
+  /*const _setHeight = () => {
     const vh = projectsRef.current.offsetHeight + 20;
     setInlineStyle({'height': `${vh}px`})
-  }
+  }*/
 
   useEffect(() => {
 
     if(firstRender) {
-      _setHeight()
+      //_setHeight()
       setFirstRender(false)
     } else {
       setFiltering(true)
@@ -41,10 +40,17 @@ const Projects = ({projects, currentFilter, animation, scrollToContent}) => {
       }, 300)
     }
 
-  }, [currentFilter])
+    getContentHeight('projects', projectsRef.current.offsetHeight)
+    const resizeHandler = () => {
+      getContentHeight('projects', projectsRef.current.offsetHeight)
+    }
+    window.addEventListener('resize', resizeHandler)
+    return () => window.removeEventListener('resize', resizeHandler)
+
+  }, [currentFilter, projectsRef.current])
 
   return (
-    <section data-test="projects-component" className="projects">
+    <section data-test="projects-component" className="projects" style={sectionStyle}>
 			<div className="container" ref={projectsRef} style={inlineStyle} >
 
         <JumpingTitle title="Portfolio" />
@@ -57,7 +63,9 @@ const Projects = ({projects, currentFilter, animation, scrollToContent}) => {
           )})}
         </div>
 
-        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+        {fullScreen && (
+          <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+        )}
 
 			</div>
     </section>

@@ -1,14 +1,25 @@
-import React from "react";
+import React, {useRef, useState, useEffect} from "react";
 import Service from './Service'
 
 /**
  * Component for displaying services.
  */
-const Services = ({scrollToContent}) => {
+const Services = ({scrollToContent, getContentHeight, sectionStyle, fullScreen}) => {
+
+  const contentRef = useRef()
+
+  useEffect(() => {
+    getContentHeight('services', contentRef.current.offsetHeight)
+    const resizeHandler = () => {
+      getContentHeight('services', contentRef.current.offsetHeight)
+    }
+    window.addEventListener('resize', resizeHandler)
+    return () => window.removeEventListener('resize', resizeHandler)
+  }, [contentRef.current])
 
   return (
-    <section data-test="services-component" className="services">
-			<div className="container wide">
+    <section data-test="services-component" className="services" style={sectionStyle}>
+			<div ref={contentRef} className="container wide">
 
         <Service
           headline="Webb"
@@ -25,7 +36,9 @@ const Services = ({scrollToContent}) => {
           text="Med kod som verktyg för att lyfta kampanjen och organisationer, med drivkraft att göra världen lite bättre."
         />
 
-        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+        {fullScreen && (
+          <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+        )}
 
       </div>
     </section>

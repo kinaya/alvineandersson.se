@@ -1,15 +1,26 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import JumpingTitle from '../common/JumpingTitle';
 import SelectItem from "./SelectItem";
 import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
 import { chooseItem, startGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({game, chooseItem, startGame, scrollToContent}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame, scrollToContent, getContentHeight, fullScreen, sectionStyle}) => {
+
+  const contentRef = useRef()
+
+  useEffect(() => {
+    getContentHeight('matchmaking', contentRef.current.offsetHeight)
+    const resizeHandler = () => {
+      getContentHeight('matchmaking', contentRef.current.offsetHeight)
+    }
+    window.addEventListener('resize', resizeHandler)
+    return () => window.removeEventListener('resize', resizeHandler)
+  }, [contentRef.current])
 
   return (
-    <section data-test="matchmaking-component" className="matchmaking">
-			<div className="container">
+    <section data-test="matchmaking-component" className="matchmaking" style={sectionStyle}>
+			<div ref={contentRef} className="container">
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
 
@@ -32,7 +43,9 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, scrollToCon
 
         </div>
 
-        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+        {fullScreen && (
+          <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+        )}
 
       </div>
     </section>

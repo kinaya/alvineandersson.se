@@ -1,4 +1,4 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, START_GAME } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, START_GAME, GET_SECTION_HEIGHT, GET_WINDOW_HEIGHT, CALCULATE_FULLSCREEN } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
@@ -79,4 +79,25 @@ export const filterProjects = (filterItem) => (dispatch, getState) => {
     currentFilter: filterArray
   })
 
+}
+
+export const getSectionHeight = (sectionName, value) => (dispatch, getState) => {
+  dispatch({
+    type: GET_SECTION_HEIGHT,
+    sectionName: sectionName,
+    value: value
+  })
+
+  dispatch({
+    type: CALCULATE_FULLSCREEN,
+    windowHeight: getState().fullScreen.windowHeight
+  })
+
+}
+
+export const getWindowHeight = () => dispatch => {
+  dispatch({
+    type: GET_WINDOW_HEIGHT,
+    height: window.innerHeight
+  })
 }

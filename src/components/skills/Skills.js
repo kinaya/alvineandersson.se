@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 
 /**
  * Component for displaying skills.
  */
-const Skills = ({scrollToContent}) => {
+const Skills = ({scrollToContent, getContentHeight, fullScreen, sectionStyle}) => {
+
+  const contentRef = useRef()
+
+  useEffect(() => {
+    getContentHeight('skills', contentRef.current.offsetHeight)
+    const resizeHandler = () => {
+      getContentHeight('skills', contentRef.current.offsetHeight)
+    }
+    window.addEventListener('resize', resizeHandler)
+    return () => window.removeEventListener('resize', resizeHandler)
+  }, [contentRef.current])
+
 
   return (
-    <section data-test="skills-component" className="skills">
-			<div className="container">
+    <section data-test="skills-component" className="skills" style={sectionStyle}>
+			<div className="container" ref={contentRef}>
 
         <h2>Tekniker</h2>
 
@@ -44,7 +56,9 @@ const Skills = ({scrollToContent}) => {
 
         </div>
 
-        <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow scrollarrow-skills"></div>
+        {fullScreen && (
+          <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow scrollarrow-skills"></div>
+        )}
 
 			</div>
     </section>

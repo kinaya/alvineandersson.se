@@ -110,22 +110,21 @@ section {
 }
 
 // Test
-.scrollarrow {
-	display: none;
-}
-.scrollarrow.header {
+//.scrollarrow {
+//	display: none;
+//}
+
+/*.scrollarrow.header,
+.fullScreen-true .scrollarrow {
 	display: block;
-}
-@media(min-height: 600px) and (min-width: $tablet) {
-	.scrollarrow {
-		display: block;
-	}
+}*/
+
+.fullScreen-true {
 	section.footer,
 	section.services,
 	section {
 		padding-top: 0;
 		padding-bottom: 0;
-		min-height: 100vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -136,7 +135,6 @@ section {
 	}
 	section.projects {
 		> .container {
-//			padding-bottom: 0;
 			width: 940px;
 		}
 	}
