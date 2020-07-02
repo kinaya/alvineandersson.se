@@ -50,6 +50,7 @@ const App = ({projects, location, animation, windowHeight, sectionStyle, fullScr
   }
 
   const _getContentHeight = (sectionName, height) => {
+    console.log('getContentHeight!', sectionName)
     const boolean = height < windowHeight ? true : false;
     getSectionHeight(sectionName, boolean)
   }

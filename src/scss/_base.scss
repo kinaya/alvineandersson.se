@@ -85,7 +85,7 @@ h4 { // Black background
   }
 }
 
-p {
+p, ul, ol {
 	font-size: 1.2rem;
 }
 
@@ -130,10 +130,11 @@ section {
 		align-items: center;
 		position: relative;
 		> .container {
-			padding-bottom: 2em;
+			//padding-bottom: 2em;
 		}
 	}
 	section.projects {
+		//align-items: flex-start;
 		> .container {
 			width: 940px;
 		}

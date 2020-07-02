@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * @param {object} props.project - The project
  * @param {bool} props.animation - If animation is true or false
  */
-const Project = ({project, animation, filtering}) => {
+const Project = ({project, animation, filtering, faded}) => {
 
   const [visibilitySensorActive, setVisibilitySensorActive] = useState(false)
 
@@ -27,7 +27,7 @@ const Project = ({project, animation, filtering}) => {
 
       {({isVisible}) =>
 
-        <Link data-test="project-component" to={`/projects/${project.id}`} className={`project filtering-${filtering} ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
+        <Link data-test="project-component" to={`/projects/${project.id}`} className={`project faded-${faded} filtering-${filtering} ${project.id} ${isVisible ? 'visible' : 'invisible'}`}>
           <div className="inner">
             <div data-test="project-image" className="image">
               <picture>

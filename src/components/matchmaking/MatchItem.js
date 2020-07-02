@@ -4,14 +4,17 @@ import PropTypes from 'prop-types'
 /**
  * Component for displaying a match
  * @param {boolean} props.match - If the match is true or false
- * @param {function} props.startGame - Callback function to (re)start the game
+ * @param {function} props.endGame - Callback function to end the game
  */
-const MatchItem = ({match, startGame}) => {
+const MatchItem = React.forwardRef((props, ref) => {
+
+  const match = props.match;
+  const endGame = props.endGame;
 
   return (
-    <div data-test="match-item-component">
+    <div ref={ref} data-test="match-item-component">
 
-      {match ? (
+      {(match === true || match === null) ? (
         <div className='result match'>
 
           <div className="headline">Match!</div>
@@ -34,15 +37,15 @@ const MatchItem = ({match, startGame}) => {
         </div>
       )}
 
-      <span onClick={() => startGame()} className="redo">Gör ny matchmaking</span>
+      <span onClick={() => endGame()} className="redo">Gör ny matchmaking</span>
 
     </div>
   )
-}
+})
 
 MatchItem.propTypes = {
   match: PropTypes.bool.isRequired,
-  startGame: PropTypes.func.isRequired
+  endGame: PropTypes.func.isRequired
 }
 
 export default MatchItem;

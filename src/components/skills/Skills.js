@@ -8,9 +8,9 @@ const Skills = ({scrollToContent, getContentHeight, fullScreen, sectionStyle}) =
   const contentRef = useRef()
 
   useEffect(() => {
-    getContentHeight('skills', contentRef.current.offsetHeight)
+    getContentHeight('skills', contentRef.current.offsetHeight + 40)
     const resizeHandler = () => {
-      getContentHeight('skills', contentRef.current.offsetHeight)
+      getContentHeight('skills', contentRef.current.offsetHeight + 40)
     }
     window.addEventListener('resize', resizeHandler)
     return () => window.removeEventListener('resize', resizeHandler)

@@ -26,7 +26,7 @@
 }
 
 // Game visability
-.game-button { max-height: 100px; }
+/*.game-button { max-height: 100px; }
 .game-items { max-height: 2000px; }
 .select-item { max-height: 800px; }
 .select-item .text { max-height: 200px; }
@@ -42,7 +42,125 @@
 		opacity: 0;
 		max-height: 0;
 	}
+}*/
+
+.fullScreen-true {
+	.game {
+		position: relative;
+	}
+
+	.game-button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		opacity: 1;
+		z-index: 1;
+		&.visible-true {
+			@include transition(opacity 0.4s 0.4s ease);
+		}
+		&.visible-false {
+			opacity: 0;
+			z-index: 0;
+			@include transition(opacity 0.4s 0s ease);
+		}
+	}
+
+	.game-match {
+		opacity: 1;
+		z-index: 1;
+		@include transition(opacity 0.4s 0.4s ease);
+		&.visible-false {
+			opacity: 0;
+			z-index: 0;
+		}
+	}
+
+	.game-items {
+		opacity: 1;
+		z-index: 1;
+		@include transition(opacity 0.4s 0.4s ease);
+		&.visible-false {
+			opacity: 0;
+			z-index: 0;
+		}
+	}
+
+	// Select items animation
+	.select-item {
+		@include transition(transform 0.4s 0.2s ease);
+	}
+	.select-item {
+		position: absolute;
+		top: 0;
+		transform: translateX(0);
+		z-index: 2;
+	}
+	.select-item.clickable-false {
+		transform: translateX(-900px);
+		z-index: 0;
+	}
+	.select-item.visible-false {
+		transform: translateX(900px);
+		z-index: 0;
+	}
 }
+
+
+.fullScreen-false {
+
+	.game-items,
+	.game-button {
+		height: auto;
+		overflow: hidden;
+		opacity: 1;
+		transition: opacity 1s ease;
+		&.visible-false {
+			height: 0;
+ 			opacity: 0;
+		}
+	}
+
+	.game-match {
+		height: auto;
+		overflow: hidden;
+		opacity: 1;
+		transition: opacity 1s ease;
+		&.visible-false {
+			height: 0;
+			opacity: 0;
+		}
+	}
+
+	.game-items {
+		position: relative;
+
+		.select-item {
+			max-height: 0;
+			transition: transform 0.4s 0.4s ease, max-height 0s 0.4s, visibility 0s 0.4s;
+
+			&.visible-true {
+				max-height: none;
+				transform: translateX(0);
+			}
+
+			&.visible-true.clickable-false {
+				max-height: 0;
+				transform: translateX(-999px);
+			}
+
+			&.visible-false {
+				transform: translateX(999px);
+			}
+		}
+
+	}
+
+}
+
+
+
+
 
 // Alternatives
 .select-item {
@@ -62,27 +180,38 @@
 			background-color: $green-hover;
 		}
   }
-  &.clickable-false .text {
-    color: $gray;
-  }
+
+//  &.clickable-false .text {
+//    color: $gray;
+//  }
+
+	&.clickable-false .text.visible-true {
+		background-color: $green-hover;
+	}
+	&.clickable-false .text.visible-false {
+		color: $gray;
+	}
+
 }
 
 .result {
-  padding: 0 2em 3em;
-  margin-top: 3em;
+  //padding: 0 2em 3em;
+	padding: 0 2em 1em;
+  //margin-top: 3em;
+	margin-top: 3em;
   .headline {
     font-size: 1.4em;
     font-weight: 700;
     display: inline-block;
     padding: 0.5em 2em;
     @include transform(rotate(-5deg));
-    margin: -1em 0 1.5em;
+    //margin: -1em 0 1.5em;
+		margin: -1em 0 0.5em;
   }
 	.text {
 		text-align: left;
 	}
 	ul {
-		font-size: 1em;
 		padding-left: 1em;
 	}
   &.match {

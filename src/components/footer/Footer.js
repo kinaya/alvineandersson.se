@@ -8,9 +8,9 @@ const Footer = ({sectionStyle, getContentHeight}) => {
   const contentRef = useRef()
 
   useEffect(() => {
-    getContentHeight('footer', contentRef.current.offsetHeight)
+    getContentHeight('footer', contentRef.current.offsetHeight + 40)
     const resizeHandler = () => {
-      getContentHeight('footer', contentRef.current.offsetHeight)
+      getContentHeight('footer', contentRef.current.offsetHeight + 40)
     }
     window.addEventListener('resize', resizeHandler)
     return () => window.removeEventListener('resize', resizeHandler)

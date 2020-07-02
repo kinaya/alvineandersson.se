@@ -9,9 +9,9 @@ const Services = ({scrollToContent, getContentHeight, sectionStyle, fullScreen})
   const contentRef = useRef()
 
   useEffect(() => {
-    getContentHeight('services', contentRef.current.offsetHeight)
+    getContentHeight('services', contentRef.current.offsetHeight + 40)
     const resizeHandler = () => {
-      getContentHeight('services', contentRef.current.offsetHeight)
+      getContentHeight('services', contentRef.current.offsetHeight + 40)
     }
     window.addEventListener('resize', resizeHandler)
     return () => window.removeEventListener('resize', resizeHandler)

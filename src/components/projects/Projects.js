@@ -16,42 +16,45 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
-  const [inlineStyle, setInlineStyle] = useState({})
-  const [firstRender, setFirstRender] = useState(true)
-
+  const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const projectsRef = useRef(null)
+  const innerRef = useRef(null)
 
-  /*const _setHeight = () => {
-    const vh = projectsRef.current.offsetHeight + 20;
-    setInlineStyle({'height': `${vh}px`})
-  }*/
-
+  // Get height of section and set inner height for container
+  // Todo: ResizeHandler need to use the height when no filters are applied.
+  // If first filtering and then resizing, the height is wrong
   useEffect(() => {
 
-    if(firstRender) {
-      //_setHeight()
-      setFirstRender(false)
-    } else {
-      setFiltering(true)
-      setTimeout(() => {
-        let filteredProjects = projects.filter(project => currentFilter.length == 0 || project.tags.some(r => currentFilter.indexOf(r) >= 0));
-        setFilteredProjects(filteredProjects)
-        setFiltering(false)
-      }, 300)
+    setInlineStyle({'height': `${innerRef.current.offsetHeight + 20}px`})
+    getContentHeight('projects', projectsRef.current.offsetHeight + 40)
+
+    const resizeHandler = () => {
+      getContentHeight('projects', projectsRef.current.offsetHeight + 40)
+      setInlineStyle({'height': `${innerRef.current.offsetHeight}px`})
     }
 
-    getContentHeight('projects', projectsRef.current.offsetHeight)
-    const resizeHandler = () => {
-      getContentHeight('projects', projectsRef.current.offsetHeight)
-    }
     window.addEventListener('resize', resizeHandler)
     return () => window.removeEventListener('resize', resizeHandler)
 
-  }, [currentFilter, projectsRef.current])
+  }, [projectsRef.current, fullScreen])
+
+  // Handle user filtering
+  useEffect(() => {
+
+    setFiltering(true)
+
+    setTimeout(() => {
+      let filteredProjects = projects.filter(project => currentFilter.length == 0 || project.tags.some(r => currentFilter.indexOf(r) >= 0));
+      setFilteredProjects(filteredProjects)
+      setFiltering(false)
+    }, 300)
+
+  }, [currentFilter])
 
   return (
     <section data-test="projects-component" className="projects" style={sectionStyle}>
-			<div className="container" ref={projectsRef} style={inlineStyle} >
+			<div className="container" ref={projectsRef} style={fullScreen ? inlineStyle : {'height': 'auto'}} >
+        <div className="container-inner" ref={innerRef} >
 
         <JumpingTitle title="Portfolio" />
 
@@ -67,6 +70,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
           <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
         )}
 
+        </div>
 			</div>
     </section>
   );

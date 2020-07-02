@@ -1,4 +1,4 @@
-import { START_GAME, CHOOSE_ITEM, FINISH_GAME } from '../actions/types'
+import { START_GAME, END_GAME, CHOOSE_ITEM, FINISH_GAME } from '../actions/types'
 
 const defaultState = {
   active: false,
@@ -22,6 +22,13 @@ const gameReducer = (state = defaultState, action) => {
         active: true,
         items: action.items,
         match: action.match
+      }
+
+    case END_GAME:
+      return {
+        ...state,
+        active: false,
+        items: []
       }
 
     case CHOOSE_ITEM:

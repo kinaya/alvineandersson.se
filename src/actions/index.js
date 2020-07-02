@@ -1,4 +1,4 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, START_GAME, GET_SECTION_HEIGHT, GET_WINDOW_HEIGHT, CALCULATE_FULLSCREEN } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, GET_SECTION_HEIGHT, GET_WINDOW_HEIGHT, CALCULATE_FULLSCREEN } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
@@ -57,6 +57,16 @@ export const startGame = () => dispatch => {
     type: START_GAME,
     items: gameItems,
     match: null
+  })
+}
+
+/**
+* Ends the game
+* Runs when the user clicks restart game
+*/
+export const endGame = () => dispatch => {
+  dispatch({
+    type: END_GAME
   })
 }
 
