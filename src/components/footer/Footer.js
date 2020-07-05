@@ -1,19 +1,13 @@
-import React, {useRef, useEffect} from "react";
+import React, {forwardRef} from "react";
 
 /**
  * Component for displaying a footer.
  */
-const Footer = ({getContentHeight, windowSize}) => {
-
-  const contentRef = useRef()
-
-  useEffect(() => {
-    getContentHeight('footer', contentRef.current.offsetHeight + 40)
-  }, [windowSize])
+const Footer = forwardRef((props, ref) => {
 
   return (
-    <section data-test="footer-component" className="footer">
-			<div className="container" ref={contentRef}>
+    <section ref={ref} data-test="footer-component" className="footer">
+			<div className="container">
 
         <div className="contact">
           <p>Webbutvecklare med 10+ års erfarenhet. På plats eller distans, stora eller små projekt, front- eller backend.</p>
@@ -27,6 +21,6 @@ const Footer = ({getContentHeight, windowSize}) => {
     </section>
   );
 
-}
+})
 
 export default Footer;

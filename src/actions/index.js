@@ -1,4 +1,4 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, GET_SECTION_HEIGHT, GET_WINDOW_SIZE, CALCULATE_FULLSCREEN } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, SET_FULLSCREEN, SET_WINDOW_SIZE } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
@@ -49,15 +49,12 @@ export const startGame = () => dispatch => {
   // Make a deep copy so we don't change the original json data
   let gameItems = JSON.parse(JSON.stringify(game));
 
-  // Add the first item of the game to an items array
-  //let items = []
-  //items.push(gameItems[0])
-
   dispatch({
     type: START_GAME,
     items: gameItems,
     match: null
   })
+
 }
 
 /**
@@ -91,23 +88,25 @@ export const filterProjects = (filterItem) => (dispatch, getState) => {
 
 }
 
-export const getSectionHeight = (sectionName, value) => (dispatch, getState) => {
+/**
+* Update if fullScreen effect should be used
+* @param value The value true/false for the fullScreen effect
+*/
+export const setFullScreen = (value) => dispatch => {
   dispatch({
-    type: GET_SECTION_HEIGHT,
-    sectionName: sectionName,
+    type: SET_FULLSCREEN,
     value: value
-  })
-  dispatch({
-    type: CALCULATE_FULLSCREEN,
-    windowHeight: getState().fullScreen.windowSize[1]
   })
 }
 
-export const getWindowSize = () => (dispatch, getState) => {
+/**
+* Save the window inner size
+*/
+export const setWindowSize = () => (dispatch, getState) => {
   // Only update if the width has changed, or it will update on iPad scroll
   if(window.innerWidth != getState().fullScreen.windowSize[0]) {
     dispatch({
-      type: GET_WINDOW_SIZE,
+      type: SET_WINDOW_SIZE,
       width: window.innerWidth,
       height: window.innerHeight
     })

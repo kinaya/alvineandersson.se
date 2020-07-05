@@ -12,19 +12,18 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation, scrollToContent, getContentHeight, fullScreen, windowSize}) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen, windowSize}, ref) => {
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
-  const projectsRef = useRef(null)
+
   const projectListRef = useRef(null)
   const filterContainerRef = useRef(null)
 
   useEffect(() => {
-    getContentHeight('projects', projectsRef.current.offsetHeight + 40)
     _setInlineStyle()
-  }, [windowSize, fullScreen])
+  }, [windowSize])
 
   // Set inline height of projects area, so it doesn't jump when fullScreen filtering
   const _setInlineStyle = () => {
@@ -51,8 +50,8 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
   }, [currentFilter])
 
   return (
-    <section data-test="projects-component" className="projects">
-			<div className="container" ref={projectsRef} >
+    <section ref={ref} data-test="projects-component" className="projects">
+			<div className="container">
         <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
 
           <div className="filter-container" ref={filterContainerRef}>
@@ -82,11 +81,29 @@ const mapStateToProps = state => {
     projects: state.projects.projects,
     currentFilter: state.projects.currentFilter,
     animation: state.animation.projects,
-    windowSize: state.fullScreen.windowSize
+    windowSize: state.fullScreen.windowSize,
+    fullScreen: state.fullScreen.active
   }
 }
 
-export default connect(
+/*export default connect(
   mapStateToProps,
-  null,
-)(Projects)
+  null
+)(Projects)*/
+
+const connectAndForwardRef = (
+  mapStateToProps = null,
+  mapDispatchToProps = null,
+  mergeProps = null,
+  options = {},
+) => component => connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps,
+  {
+    ...options,
+    forwardRef: true,
+  },
+)(React.forwardRef(component));
+
+export default connectAndForwardRef(mapStateToProps, null)(Projects)

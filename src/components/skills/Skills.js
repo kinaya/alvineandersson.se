@@ -1,19 +1,13 @@
-import React, {useEffect, useRef} from "react";
+import React, {forwardRef} from "react";
 
 /**
  * Component for displaying skills.
  */
-const Skills = ({scrollToContent, getContentHeight, fullScreen, windowSize}) => {
-
-  const contentRef = useRef()
-
-  useEffect(() => {
-    getContentHeight('skills', contentRef.current.offsetHeight + 40)
-  }, [windowSize])
+const Skills = forwardRef(({scrollToContent, getContentHeight, fullScreen}, ref) => {
 
   return (
-    <section data-test="skills-component" className="skills" >
-			<div className="container" ref={contentRef}>
+    <section ref={ref} data-test="skills-component" className="skills" >
+			<div className="container" >
 
         <h2>Tekniker</h2>
 
@@ -58,6 +52,6 @@ const Skills = ({scrollToContent, getContentHeight, fullScreen, windowSize}) => 
     </section>
   );
 
-}
+})
 
 export default Skills;

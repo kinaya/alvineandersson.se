@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import scrollIntoView from 'scroll-into-view';
 import {connect} from 'react-redux';
-import { getSectionHeight, getWindowSize } from '../actions/';
+import { setFullScreen, setWindowSize } from '../actions/';
 
 import Header from "./header/Header";
 import Skills from "./skills/Skills";
@@ -16,7 +16,7 @@ import NotFound from "./NotFound";
 
 import "../scss/App.scss";
 
-const App = ({projects, location, animation, windowSize, fullScreen, getSectionHeight, getWindowSize}) => {
+const App = ({projects, location, animation, windowSize, fullScreen, setFullScreen, setWindowSize}) => {
 
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
@@ -41,21 +41,29 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
     }
   }, [location.pathname])
 
-  const _scrollToContent = (ref) => {
-    scrollIntoView(ref.current, {time: 500, align: {top:0}});
-  }
-
   // Set up window resize listener on mount
   useEffect(() => {
-    getWindowSize()
-    window.addEventListener('resize', getWindowSize)
-    return () => window.removeEventListener('resize', getWindowSize)
+    setWindowSize()
+    window.addEventListener('resize', setWindowSize)
+    return () => window.removeEventListener('resize', setWindowSize)
   }, [])
 
-  // Called from the child components when windowSize changes
-  const _getContentHeight = (sectionName, height) => {
-    const boolean = height < windowSize[1] ? true : false;
-    getSectionHeight(sectionName, boolean)
+  // Check if FullScreen when window resizes
+  useEffect(() => {
+    const sections = [
+      servicesRef.current.firstElementChild.offsetHeight + 40,
+      skillsRef.current.firstElementChild.offsetHeight + 40,
+      projectsRef.current.firstElementChild.offsetHeight + 40,
+      matchmakingRef.current.firstElementChild.offsetHeight + 40,
+      footerRef.current.firstElementChild.offsetHeight + 40
+    ]
+    // If at least one section is
+    const fullScreen = !sections.some(section => section > windowSize[1]);
+    setFullScreen(fullScreen)
+  }, [windowSize])
+
+  const _scrollToContent = (ref) => {
+    scrollIntoView(ref.current, {time: 500, align: {top:0}});
   }
 
   return (
@@ -73,38 +81,30 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
 
           <Route exact path="/" render={() => (
             <div className="front-page">
-              <Header scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
-              <div ref={servicesRef} >
+              <Header
+                scrollToContent={() => _scrollToContent(servicesRef)}
+                windowSize={windowSize}
+              />
               <Services
+                ref={servicesRef}
                 scrollToContent={() => _scrollToContent(projectsRef)}
-                getContentHeight={_getContentHeight}
                 fullScreen={fullScreen}
-                windowSize={windowSize}
               />
-              </div>
-              <div ref={projectsRef} />
               <Projects
+                ref={projectsRef}
                 scrollToContent={() => _scrollToContent(skillsRef)}
-                getContentHeight={_getContentHeight}
-                fullScreen={fullScreen}
-                />
-              <div ref={skillsRef} />
+              />
               <Skills
+                ref={skillsRef}
                 scrollToContent={() => _scrollToContent(matchmakingRef)}
-                getContentHeight={_getContentHeight}
                 fullScreen={fullScreen}
-                windowSize={windowSize}
               />
-              <div ref={matchmakingRef} />
               <Matchmaking
+                ref={matchmakingRef}
                 scrollToContent={() => _scrollToContent(footerRef)}
-                getContentHeight={_getContentHeight}
-                fullScreen={fullScreen}
               />
-              <div ref={footerRef} />
               <Footer
-                getContentHeight={_getContentHeight}
-                windowSize={windowSize}
+                ref={footerRef}
               />
             </div>
           )} />
@@ -138,5 +138,5 @@ const mapStateToProps = state => {
 
 export default withRouter(connect(
   mapStateToProps,
-  {getSectionHeight, getWindowSize}
+  {setFullScreen, setWindowSize}
 )(App))

@@ -1,24 +1,22 @@
-import React, {useRef, useEffect, useState} from "react";
+import React, {useRef, useEffect, useState, forwardRef} from "react";
 import JumpingTitle from '../common/JumpingTitle';
 import SelectItem from "./SelectItem";
 import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
 import { chooseItem, startGame, endGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, getContentHeight, fullScreen, windowSize}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, fullScreen, windowSize}, ref) => {
 
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const innerRef = useRef(null)
-  const contentRef = useRef(null)
 
   useEffect(() => {
     setInlineStyle({'height': `${innerRef.current.offsetHeight + 20}px`})
-    getContentHeight('matchmaking', contentRef.current.offsetHeight + 40)
   }, [windowSize])
 
   return (
-    <section data-test="matchmaking-component" className="matchmaking">
-			<div ref={contentRef} className="container">
+    <section ref={ref} data-test="matchmaking-component" className="matchmaking">
+			<div className="container">
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
 
@@ -52,11 +50,30 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
 function mapStateToProps(state) {
   return {
     game: state.game,
-    windowSize: state.fullScreen.windowSize
+    windowSize: state.fullScreen.windowSize,
+    fullScreen: state.fullScreen.active
   }
 }
 
-export default connect(
+/*export default connect(
   mapStateToProps,
   {chooseItem, startGame, endGame}
-)(UnconnectedMatchmaking)
+)(UnconnectedMatchmaking)*/
+
+
+const connectAndForwardRef = (
+  mapStateToProps = null,
+  mapDispatchToProps = null,
+  mergeProps = null,
+  options = {},
+) => component => connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps,
+  {
+    ...options,
+    forwardRef: true,
+  },
+)(forwardRef(component));
+
+export default connectAndForwardRef(mapStateToProps, {chooseItem, startGame, endGame})(UnconnectedMatchmaking)

@@ -1,20 +1,16 @@
-import React, {useRef, useState, useEffect} from "react";
+import React, { useRef } from "react";
 import Service from './Service'
 
 /**
  * Component for displaying services.
  */
-const Services = ({scrollToContent, getContentHeight, fullScreen, windowSize}) => {
+const Services = React.forwardRef(({scrollToContent, fullScreen}, ref) => {
 
   const contentRef = useRef()
 
-  useEffect(() => {
-    getContentHeight('services', contentRef.current.offsetHeight + 40)
-  }, [windowSize])
-
   return (
-    <section data-test="services-component" className="services">
-			<div ref={contentRef} className="container wide">
+    <section ref={ref} data-test="services-component" className="services">
+			<div className="container wide">
 
         <Service
           headline="Webb"
@@ -39,6 +35,6 @@ const Services = ({scrollToContent, getContentHeight, fullScreen, windowSize}) =
     </section>
   );
 
-}
+})
 
 export default Services;
