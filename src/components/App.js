@@ -45,6 +45,11 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
     scrollIntoView(ref.current,{time:500,align:{top:0}});
   }
 
+  const _scrollTest = () => {
+    console.log('ScrollTest!')
+    window.scroll({top: window.innerHeight, left: 0, behavior: 'smooth'})
+  }
+
   // Set up window resize listener on mount
   useEffect(() => {
     getWindowSize()
@@ -73,7 +78,7 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
 
           <Route exact path="/" render={() => (
             <div className="front-page">
-              <Header scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
+              <Header scrollTest={_scrollTest} scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
               <div ref={servicesRef} />
               <Services
                 scrollToContent={() => _scrollToContent(projectsRef)}
