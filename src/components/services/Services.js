@@ -4,17 +4,16 @@ import Service from './Service'
 /**
  * Component for displaying services.
  */
-const Services = ({scrollToContent, getContentHeight, sectionStyle, fullScreen, windowSize}) => {
+const Services = ({scrollToContent, getContentHeight, fullScreen, windowSize}) => {
 
   const contentRef = useRef()
 
   useEffect(() => {
     getContentHeight('services', contentRef.current.offsetHeight + 40)
   }, [windowSize])
-  //}, [contentRef.current])
 
   return (
-    <section data-test="services-component" className="services" /*style={sectionStyle}*/>
+    <section data-test="services-component" className="services" >
 			<div ref={contentRef} className="container wide">
 
         <Service

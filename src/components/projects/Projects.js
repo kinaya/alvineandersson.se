@@ -12,46 +12,55 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation, scrollToContent, getContentHeight, fullScreen, windowSize, sectionStyle}) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent, getContentHeight, fullScreen, windowSize}) => {
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const projectsRef = useRef(null)
-  const innerRef = useRef(null)
+  const projectListRef = useRef(null)
+  const filterContainerRef = useRef(null)
 
-  // Get height of section and set inner height for container
-  // Todo: ResizeHandler need to use the height when no filters are applied.
-  // If first filtering and then resizing, the height is wrong
   useEffect(() => {
-    setInlineStyle({'height': `${innerRef.current.offsetHeight + 20}px`})
     getContentHeight('projects', projectsRef.current.offsetHeight + 40)
-  }, [windowSize])
-  //}, [projectsRef.current, fullScreen])
+    _setInlineStyle()
+  }, [windowSize, fullScreen])
+
+  // Set inline height of projects area, so it doesn't jump when fullScreen filtering
+  const _setInlineStyle = () => {
+    if(fullScreen) {
+      // Height of the area with projects when all are visible
+      const numberOfRows = window.innerWidth >= 736 ? 3 : 4;
+      const projectHeight = projectListRef.current.firstElementChild.offsetHeight;
+      const projectsHeight = projectHeight * numberOfRows + 20;
+      // Height of the filterContainer
+      const filterContainerHeight = filterContainerRef.current.offsetHeight;
+      // Set the height of the whole container
+      setInlineStyle({'height': `${projectsHeight + filterContainerHeight}px`})
+    }
+  }
 
   // Handle user filtering
   useEffect(() => {
-
     setFiltering(true)
-
     setTimeout(() => {
       let filteredProjects = projects.filter(project => currentFilter.length == 0 || project.tags.some(r => currentFilter.indexOf(r) >= 0));
       setFilteredProjects(filteredProjects)
       setFiltering(false)
     }, 300)
-
   }, [currentFilter])
 
   return (
-    <section data-test="projects-component" className="projects" /*style={sectionStyle}*/>
-			<div className="container" ref={projectsRef} /*style={fullScreen ? inlineStyle : {'height': 'auto'}} */>
-        <div className="container-inner" ref={innerRef} >
+    <section data-test="projects-component" className="projects">
+			<div className="container" ref={projectsRef} >
+        <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
 
-          <JumpingTitle title="Portfolio" />
+          <div className="filter-container" ref={filterContainerRef}>
+            <JumpingTitle title="Portfolio" />
+            <Filter />
+          </div>
 
-          <Filter />
-
-          <div className={`project-list filtering-${filtering}`}>
+          <div className={`project-list filtering-${filtering}`} ref={projectListRef}>
             {filteredProjects.map((project, i) => { return (
               <Project key={i} filtering={filtering} animation={animation} project={project} />
             )})}

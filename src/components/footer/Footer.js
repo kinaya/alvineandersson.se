@@ -3,17 +3,16 @@ import React, {useRef, useEffect} from "react";
 /**
  * Component for displaying a footer.
  */
-const Footer = ({sectionStyle, getContentHeight, windowSize}) => {
+const Footer = ({getContentHeight, windowSize}) => {
 
   const contentRef = useRef()
 
   useEffect(() => {
     getContentHeight('footer', contentRef.current.offsetHeight + 40)
   }, [windowSize])
-  //}, [contentRef.current])
 
   return (
-    <section data-test="footer-component" className="footer" /*style={sectionStyle}*/>
+    <section data-test="footer-component" className="footer">
 			<div className="container" ref={contentRef}>
 
         <div className="contact">

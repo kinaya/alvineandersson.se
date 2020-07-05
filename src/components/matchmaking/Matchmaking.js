@@ -5,7 +5,7 @@ import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
 import { chooseItem, startGame, endGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, getContentHeight, fullScreen, windowSize, sectionStyle}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, getContentHeight, fullScreen, windowSize}) => {
 
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const innerRef = useRef(null)
@@ -15,10 +15,9 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
     setInlineStyle({'height': `${innerRef.current.offsetHeight + 20}px`})
     getContentHeight('matchmaking', contentRef.current.offsetHeight + 40)
   }, [windowSize])
-  //}, [contentRef.current, innerRef.current])
 
   return (
-    <section data-test="matchmaking-component" className="matchmaking" /*style={sectionStyle}*/>
+    <section data-test="matchmaking-component" className="matchmaking">
 			<div ref={contentRef} className="container">
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />

@@ -9,16 +9,16 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	padding-top: 1em;
+	//padding-top: 1em;
 	@media(min-width: 565px) {
 		justify-content: center;
 	}
 }
 
 .project {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
   transition: all 0.3s ease-in;
 
 	.inner {
@@ -105,6 +105,7 @@
 // Filter buttons
 .filter {
   padding-bottom: 0.5em;
+	margin-bottom: 1em;
   font-family: $open-sans;
   font-display: auto;
   font-size: 1.2em;

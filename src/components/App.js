@@ -16,7 +16,7 @@ import NotFound from "./NotFound";
 
 import "../scss/App.scss";
 
-const App = ({projects, location, animation, windowSize, sectionStyle, fullScreen, getSectionHeight, getWindowSize}) => {
+const App = ({projects, location, animation, windowSize, fullScreen, getSectionHeight, getWindowSize}) => {
 
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
@@ -54,7 +54,7 @@ const App = ({projects, location, animation, windowSize, sectionStyle, fullScree
 
   // Called from the child components when windowSize changes
   const _getContentHeight = (sectionName, height) => {
-    const boolean = height < windowSize[0] ? true : false;
+    const boolean = height < windowSize[1] ? true : false;
     getSectionHeight(sectionName, boolean)
   }
 
@@ -78,7 +78,6 @@ const App = ({projects, location, animation, windowSize, sectionStyle, fullScree
               <Services
                 scrollToContent={() => _scrollToContent(projectsRef)}
                 getContentHeight={_getContentHeight}
-                sectionStyle={sectionStyle}
                 fullScreen={fullScreen}
                 windowSize={windowSize}
               />
@@ -86,14 +85,12 @@ const App = ({projects, location, animation, windowSize, sectionStyle, fullScree
               <Projects
                 scrollToContent={() => _scrollToContent(skillsRef)}
                 getContentHeight={_getContentHeight}
-                sectionStyle={sectionStyle}
                 fullScreen={fullScreen}
                 />
               <div ref={skillsRef} />
               <Skills
                 scrollToContent={() => _scrollToContent(matchmakingRef)}
                 getContentHeight={_getContentHeight}
-                sectionStyle={sectionStyle}
                 fullScreen={fullScreen}
                 windowSize={windowSize}
               />
@@ -101,12 +98,10 @@ const App = ({projects, location, animation, windowSize, sectionStyle, fullScree
               <Matchmaking
                 scrollToContent={() => _scrollToContent(footerRef)}
                 getContentHeight={_getContentHeight}
-                sectionStyle={sectionStyle}
                 fullScreen={fullScreen}
               />
               <div ref={footerRef} />
               <Footer
-                sectionStyle={sectionStyle}
                 getContentHeight={_getContentHeight}
                 windowSize={windowSize}
               />
@@ -136,8 +131,7 @@ const mapStateToProps = state => {
     projects: state.projects.projects,
     animation: state.animation,
     fullScreen: state.fullScreen.active,
-    windowSize: state.fullScreen.windowSize,
-    sectionStyle: state.fullScreen.style
+    windowSize: state.fullScreen.windowSize
   }
 }
 

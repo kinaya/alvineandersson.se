@@ -43,9 +43,9 @@ const MatchItem = React.forwardRef((props, ref) => {
   )
 })
 
-MatchItem.propTypes = {
-  match: PropTypes.bool.isRequired,
-  endGame: PropTypes.func.isRequired
-}
+//MatchItem.propTypes = {
+  //match: PropTypes.bool.isRequired,
+  //endGame: PropTypes.func.isRequired
+//}
 
 export default MatchItem;

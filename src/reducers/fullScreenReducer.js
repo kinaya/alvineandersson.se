@@ -3,7 +3,6 @@ import { GET_SECTION_HEIGHT, GET_WINDOW_SIZE, CALCULATE_FULLSCREEN } from '../ac
 const defaultState = {
   active: false,
   windowSize: [0,0],
-  style: {'height': 'auto'},
   sections: {
     services: false,
     projects: false,
@@ -35,22 +34,16 @@ const fullScreenReducer = (state = defaultState, action) => {
     case GET_WINDOW_SIZE:
       return {
         ...state,
-        windowSize: [action.width, action.height, action.availHeight, action.screenHeight, action.outherHeight]
+        windowSize: [action.width, action.height]
       }
 
     case CALCULATE_FULLSCREEN:
       // Check if any sections has fullScreen as 'false'. Negate the return
       const activateFullScreen = !Object.values(state.sections).some(item => item == false);
 
-      let style = {'height': 'auto'}
-      if(activateFullScreen) {
-        style = {'height': `${action.windowHeight}px`}
-      }
-
       return {
         ...state,
-        active: activateFullScreen,
-        style: style
+        active: activateFullScreen
       }
 
     default:

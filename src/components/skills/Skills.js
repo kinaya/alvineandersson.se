@@ -3,18 +3,16 @@ import React, {useEffect, useRef} from "react";
 /**
  * Component for displaying skills.
  */
-const Skills = ({scrollToContent, getContentHeight, fullScreen, windowSize, sectionStyle}) => {
+const Skills = ({scrollToContent, getContentHeight, fullScreen, windowSize}) => {
 
   const contentRef = useRef()
 
   useEffect(() => {
     getContentHeight('skills', contentRef.current.offsetHeight + 40)
   }, [windowSize])
-  //}, [contentRef.current])
-
 
   return (
-    <section data-test="skills-component" className="skills" /*style={sectionStyle}*/>
+    <section data-test="skills-component" className="skills" >
 			<div className="container" ref={contentRef}>
 
         <h2>Tekniker</h2>

@@ -142,6 +142,28 @@ section {
 	}
 }
 
+.fullScreen-true {
+	section.projects {
+		//background-color: pink;
+		//display: grid;
+		//align-items: stretch;
+		.container {
+			//background-color: yellow;
+
+			.project-list {
+				//background-color: salmon;
+				//align-items: baseline;
+				//padding-top: 0;
+
+				.project {
+					//background-color: yellow;
+				}
+			}
+
+		}
+	}
+}
+
 
 
 /* Router fade animation */
