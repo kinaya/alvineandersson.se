@@ -14,7 +14,7 @@ const Skills = ({scrollToContent, getContentHeight, fullScreen, windowSize, sect
 
 
   return (
-    <section data-test="skills-component" className="skills" style={sectionStyle}>
+    <section data-test="skills-component" className="skills" /*style={sectionStyle}*/>
 			<div className="container" ref={contentRef}>
 
         <h2>Tekniker</h2>

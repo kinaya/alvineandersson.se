@@ -14,7 +14,7 @@ const Services = ({scrollToContent, getContentHeight, sectionStyle, fullScreen, 
   //}, [contentRef.current])
 
   return (
-    <section data-test="services-component" className="services" style={sectionStyle}>
+    <section data-test="services-component" className="services" /*style={sectionStyle}*/>
 			<div ref={contentRef} className="container wide">
 
         <Service

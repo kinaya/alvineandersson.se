@@ -74,11 +74,6 @@ const App = ({projects, location, animation, windowSize, sectionStyle, fullScree
           <Route exact path="/" render={() => (
             <div className="front-page">
               <Header scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
-              height: {windowSize[1]}
-              availHeight: {windowSize[2]}
-              screenHeight: {windowSize[3]}
-              outherHeight: {windowSize[4]}
-
               <div ref={servicesRef} />
               <Services
                 scrollToContent={() => _scrollToContent(projectsRef)}

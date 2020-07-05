@@ -13,7 +13,7 @@ const Footer = ({sectionStyle, getContentHeight, windowSize}) => {
   //}, [contentRef.current])
 
   return (
-    <section data-test="footer-component" className="footer" style={sectionStyle}>
+    <section data-test="footer-component" className="footer" /*style={sectionStyle}*/>
 			<div className="container" ref={contentRef}>
 
         <div className="contact">

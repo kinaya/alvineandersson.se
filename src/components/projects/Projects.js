@@ -43,8 +43,8 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
   }, [currentFilter])
 
   return (
-    <section data-test="projects-component" className="projects" style={sectionStyle}>
-			<div className="container" ref={projectsRef} style={fullScreen ? inlineStyle : {'height': 'auto'}} >
+    <section data-test="projects-component" className="projects" /*style={sectionStyle}*/>
+			<div className="container" ref={projectsRef} /*style={fullScreen ? inlineStyle : {'height': 'auto'}} */>
         <div className="container-inner" ref={innerRef} >
 
           <JumpingTitle title="Portfolio" />

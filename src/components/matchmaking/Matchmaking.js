@@ -18,7 +18,7 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
   //}, [contentRef.current, innerRef.current])
 
   return (
-    <section data-test="matchmaking-component" className="matchmaking" style={sectionStyle}>
+    <section data-test="matchmaking-component" className="matchmaking" /*style={sectionStyle}*/>
 			<div ref={contentRef} className="container">
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
