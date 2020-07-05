@@ -20,6 +20,8 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const projectsRef = useRef(null)
   const innerRef = useRef(null)
+  const [widthHeight, setWidthHeight] = useState([0, 0])
+  const [theWindowSize, setTheWindowSize] = useState([0,0])
 
   const [resizeListener, sizes] = useResizeAware();
 
@@ -28,10 +30,17 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
   // If first filtering and then resizing, the height is wrong
   useEffect(() => {
 
+    setTheWindowSize([window.innerWidth, window.innerHeight])
+
+    setWidthHeight([innerRef.current.offsetWidth, innerRef.current.offsetHeight]);
+
     setInlineStyle({'height': `${innerRef.current.offsetHeight + 20}px`})
     getContentHeight('projects', projectsRef.current.offsetHeight + 40)
 
     const resizeHandler = () => {
+      setTheWindowSize([window.innerWidth, window.innerHeight])
+
+      setWidthHeight([innerRef.current.offsetWidth, innerRef.current.offsetHeight]);
       getContentHeight('projects', projectsRef.current.offsetHeight + 40)
       setInlineStyle({'height': `${innerRef.current.offsetHeight}px`})
     }
@@ -54,12 +63,18 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
 
   }, [currentFilter])
 
+  console.log('windowSize', theWindowSize)
+
   return (
     <section data-test="projects-component" className="projects" style={sectionStyle}>
 			<div className="container" ref={projectsRef} style={fullScreen ? inlineStyle : {'height': 'auto'}} >
         <div className="container-inner" ref={innerRef} >
           {resizeListener}
-          Sizes: {sizes.width} x {sizes.height}
+          Sizes plugin width/height: {sizes.width} x {sizes.height}
+          <br/>
+          Sizes state width/height: {widthHeight[0]} x {widthHeight[1]}
+          <br/>
+          Window width/height: {theWindowSize[0]} x {theWindowSize[1]}
           <JumpingTitle title="Portfolio" />
 
           <Filter />
