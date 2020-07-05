@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import scrollIntoView from 'scroll-into-view';
 import {connect} from 'react-redux';
-import { setFullScreen, setWindowSize } from '../actions/';
+import { setWindowSize, checkFullScreen } from '../actions/';
 
 import Header from "./header/Header";
 import Skills from "./skills/Skills";
@@ -16,7 +16,7 @@ import NotFound from "./NotFound";
 
 import "../scss/App.scss";
 
-const App = ({projects, location, animation, windowSize, fullScreen, setFullScreen, setWindowSize}) => {
+const App = ({projects, location, animation, windowSize, fullScreen, setWindowSize, checkFullScreen}) => {
 
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
@@ -48,22 +48,6 @@ const App = ({projects, location, animation, windowSize, fullScreen, setFullScre
     return () => window.removeEventListener('resize', setWindowSize)
   }, [])
 
-  // Check if FullScreen when window resizes
-  // Todo: This does not work properly on resize.
-  // Need to trigger this when the refs update
-  useEffect(() => {
-    const sections = [
-      servicesRef.current.firstElementChild.offsetHeight + 40,
-      skillsRef.current.firstElementChild.offsetHeight + 40,
-      projectsRef.current.firstElementChild.offsetHeight + 40,
-      matchmakingRef.current.firstElementChild.offsetHeight + 40,
-      footerRef.current.firstElementChild.offsetHeight + 40
-    ]
-    // If at least one section is
-    const fullScreen = !sections.some(section => section > windowSize[1]);
-    setFullScreen(fullScreen)
-  }, [windowSize])
-
   const _scrollToContent = (ref) => {
     scrollIntoView(ref.current, {time: 500, align: {top:0}});
   }
@@ -87,27 +71,36 @@ const App = ({projects, location, animation, windowSize, fullScreen, setFullScre
                 scrollToContent={() => _scrollToContent(servicesRef)}
                 windowSize={windowSize}
               />
+
               <Services
                 ref={servicesRef}
                 scrollToContent={() => _scrollToContent(projectsRef)}
                 fullScreen={fullScreen}
+                checkFullScreen={checkFullScreen}
               />
+
               <Projects
                 ref={projectsRef}
                 scrollToContent={() => _scrollToContent(skillsRef)}
               />
+
               <Skills
                 ref={skillsRef}
                 scrollToContent={() => _scrollToContent(matchmakingRef)}
                 fullScreen={fullScreen}
+                checkFullScreen={checkFullScreen}
               />
+
               <Matchmaking
                 ref={matchmakingRef}
                 scrollToContent={() => _scrollToContent(footerRef)}
               />
+
               <Footer
                 ref={footerRef}
+                checkFullScreen={checkFullScreen}
               />
+
             </div>
           )} />
 
@@ -140,5 +133,5 @@ const mapStateToProps = state => {
 
 export default withRouter(connect(
   mapStateToProps,
-  {setFullScreen, setWindowSize}
+  {setWindowSize, checkFullScreen}
 )(App))

@@ -1,4 +1,4 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, SET_FULLSCREEN, SET_WINDOW_SIZE } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, SET_FULLSCREEN, SET_WINDOW_SIZE, SET_SECTION_SIZE } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
@@ -92,10 +92,22 @@ export const filterProjects = (filterItem) => (dispatch, getState) => {
 * Update if fullScreen effect should be used
 * @param value The value true/false for the fullScreen effect
 */
-export const setFullScreen = (value) => dispatch => {
-  dispatch({
+//export const setFullScreen = (value) => dispatch => {
+/*  dispatch({
     type: SET_FULLSCREEN,
     value: value
+  })*/
+//}
+
+export const checkFullScreen = (width, height, section) => dispatch => {
+  console.log('checkFullScreen', section)
+  dispatch({
+    type: SET_SECTION_SIZE,
+    section: section,
+    height: height + 40
+  })
+  dispatch({
+    type: SET_FULLSCREEN
   })
 }
 

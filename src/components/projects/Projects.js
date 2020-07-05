@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group';
 import { connect } from 'react-redux';
+import ReactResizeDetector from 'react-resize-detector';
 
+import { checkFullScreen } from '../../actions/'
 import Project from "./Project";
 import Filter from './Filter';
 import JumpingTitle from '../common/JumpingTitle';
@@ -12,32 +14,12 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen, windowSize}, ref) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen, checkFullScreen, windowSize}, ref) => {
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
-
-  const projectListRef = useRef(null)
   const filterContainerRef = useRef(null)
-
-  useEffect(() => {
-    _setInlineStyle()
-  }, [windowSize, fullScreen])
-
-  // Set inline height of projects area, so it doesn't jump when fullScreen filtering
-  const _setInlineStyle = () => {
-    if(fullScreen) {
-      // Height of the area with projects when all are visible
-      const numberOfRows = window.innerWidth >= 736 ? 3 : 4;
-      const projectHeight = projectListRef.current.firstElementChild.offsetHeight;
-      const projectsHeight = projectHeight * numberOfRows + 30;
-      // Height of the filterContainer
-      const filterContainerHeight = filterContainerRef.current.offsetHeight;
-      // Set the height of the whole container
-      setInlineStyle({'height': `${projectsHeight + filterContainerHeight}px`})
-    }
-  }
 
   // Handle user filtering
   useEffect(() => {
@@ -49,28 +31,41 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, fullScre
     }, 300)
   }, [currentFilter])
 
+  // Set inline height of project area, so it doesn't jump when fullScreen filtering
+  // Update when project blobs height change
+  const onResize = (width, height) => {
+    const numberOfRows = window.innerWidth >= 736 ? 3 : 4;
+    const projectsHeight = height * numberOfRows + 30;
+    const filterContainerHeight = filterContainerRef.current.offsetHeight;
+    setInlineStyle({'height': `${projectsHeight + filterContainerHeight}px`})
+  }
+
   return (
     <section ref={ref} data-test="projects-component" className="projects">
-			<div className="container">
-        <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
+      <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'projects')} >
+  			<div className="container">
+          <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
 
-          <div className="filter-container" ref={filterContainerRef}>
-            <JumpingTitle title="Portfolio" />
-            <Filter />
+            <div className="filter-container" ref={filterContainerRef}>
+              <JumpingTitle title="Portfolio" />
+              <Filter />
+            </div>
+
+            <div className={`project-list filtering-${filtering}`}>
+              {filteredProjects.map((project, i) => { return (
+                <ReactResizeDetector key={i} handleHeight onResize={onResize}>
+                  <Project filtering={filtering} animation={animation} project={project} />
+                </ReactResizeDetector>
+              )})}
+            </div>
+
+            {fullScreen && (
+              <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+            )}
+
           </div>
-
-          <div className={`project-list filtering-${filtering}`} ref={projectListRef}>
-            {filteredProjects.map((project, i) => { return (
-              <Project key={i} filtering={filtering} animation={animation} project={project} />
-            )})}
-          </div>
-
-          {fullScreen && (
-            <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
-          )}
-
-        </div>
-			</div>
+  			</div>
+      </ReactResizeDetector>
     </section>
   );
 
@@ -106,4 +101,4 @@ const connectAndForwardRef = (
   },
 )(React.forwardRef(component));
 
-export default connectAndForwardRef(mapStateToProps, null)(Projects)
+export default connectAndForwardRef(mapStateToProps, {checkFullScreen})(Projects)
