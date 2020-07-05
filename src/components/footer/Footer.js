@@ -1,13 +1,13 @@
-import React, {forwardRef} from "react";
+import React from "react";
 import ReactResizeDetector from 'react-resize-detector';
 
 /**
  * Component for displaying a footer.
  */
-const Footer = forwardRef(({checkFullScreen}, ref) => {
+const Footer = ({checkFullScreen}) => {
 
   return (
-    <section ref={ref} data-test="footer-component" className="footer">
+    <section data-test="footer-component" className="footer">
       <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'footer')} >
   			<div className="container">
           <div className="contact">
@@ -22,6 +22,6 @@ const Footer = forwardRef(({checkFullScreen}, ref) => {
     </section>
   );
 
-})
+}
 
 export default Footer;

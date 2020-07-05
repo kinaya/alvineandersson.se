@@ -71,33 +71,32 @@ const App = ({projects, location, animation, windowSize, fullScreen, setWindowSi
                 scrollToContent={() => _scrollToContent(servicesRef)}
                 windowSize={windowSize}
               />
-
+              <div ref={servicesRef} />
               <Services
-                ref={servicesRef}
                 scrollToContent={() => _scrollToContent(projectsRef)}
                 fullScreen={fullScreen}
                 checkFullScreen={checkFullScreen}
               />
 
+              <div ref={projectsRef} />
               <Projects
-                ref={projectsRef}
                 scrollToContent={() => _scrollToContent(skillsRef)}
               />
 
+              <div ref={skillsRef} />
               <Skills
-                ref={skillsRef}
                 scrollToContent={() => _scrollToContent(matchmakingRef)}
                 fullScreen={fullScreen}
                 checkFullScreen={checkFullScreen}
               />
 
+              <div ref={matchmakingRef} />
               <Matchmaking
-                ref={matchmakingRef}
                 scrollToContent={() => _scrollToContent(footerRef)}
               />
 
+              <div ref={footerRef} />
               <Footer
-                ref={footerRef}
                 checkFullScreen={checkFullScreen}
               />
 

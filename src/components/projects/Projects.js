@@ -14,7 +14,7 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen, checkFullScreen, windowSize}, ref) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen, checkFullScreen, windowSize}) => {
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
@@ -41,7 +41,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, fullScre
   }
 
   return (
-    <section ref={ref} data-test="projects-component" className="projects">
+    <section data-test="projects-component" className="projects">
       <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'projects')} >
   			<div className="container">
           <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
@@ -81,24 +81,7 @@ const mapStateToProps = state => {
   }
 }
 
-/*export default connect(
+export default connect(
   mapStateToProps,
-  null
-)(Projects)*/
-
-const connectAndForwardRef = (
-  mapStateToProps = null,
-  mapDispatchToProps = null,
-  mergeProps = null,
-  options = {},
-) => component => connect(
-  mapStateToProps,
-  mapDispatchToProps,
-  mergeProps,
-  {
-    ...options,
-    forwardRef: true,
-  },
-)(React.forwardRef(component));
-
-export default connectAndForwardRef(mapStateToProps, {checkFullScreen})(Projects)
+  {checkFullScreen}
+)(Projects)

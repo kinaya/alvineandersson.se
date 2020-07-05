@@ -1,13 +1,13 @@
-import React, {forwardRef} from "react";
+import React from "react";
 import ReactResizeDetector from 'react-resize-detector';
 
 /**
  * Component for displaying skills.
  */
-const Skills = forwardRef(({scrollToContent, getContentHeight, fullScreen, checkFullScreen}, ref) => {
+const Skills = ({scrollToContent, getContentHeight, fullScreen, checkFullScreen}) => {
 
   return (
-    <section ref={ref} data-test="skills-component" className="skills" >
+    <section data-test="skills-component" className="skills" >
       <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'skills')} >
   			<div className="container" >
 
@@ -55,6 +55,6 @@ const Skills = forwardRef(({scrollToContent, getContentHeight, fullScreen, check
     </section>
   );
 
-})
+}
 
 export default Skills;

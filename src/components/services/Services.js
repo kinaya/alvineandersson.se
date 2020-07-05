@@ -1,16 +1,14 @@
-import React, { useRef } from "react";
+import React from "react";
 import Service from './Service'
 import ReactResizeDetector from 'react-resize-detector';
 
 /**
  * Component for displaying services.
  */
-const Services = React.forwardRef(({scrollToContent, fullScreen, checkFullScreen}, ref) => {
-
-  const contentRef = useRef()
+const Services = ({scrollToContent, fullScreen, checkFullScreen}) => {
 
   return (
-    <section ref={ref} data-test="services-component" className="services">
+    <section data-test="services-component" className="services">
       <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'services')} >
   			<div className="container wide">
 
@@ -37,6 +35,6 @@ const Services = React.forwardRef(({scrollToContent, fullScreen, checkFullScreen
     </section>
   );
 
-})
+}
 
 export default Services;
