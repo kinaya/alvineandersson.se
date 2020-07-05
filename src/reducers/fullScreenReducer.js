@@ -35,7 +35,7 @@ const fullScreenReducer = (state = defaultState, action) => {
     case GET_WINDOW_SIZE:
       return {
         ...state,
-        windowSize: [action.width, action.height]
+        windowSize: [action.width, action.height, action.availHeight, action.screenHeight, action.outherHeight]
       }
 
     case CALCULATE_FULLSCREEN:
