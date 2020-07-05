@@ -25,6 +25,7 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
   const footerRef = useRef(null);
   const topRef = useRef(null);
   const didMountRef = useRef(false);
+  const fullHeightRef = useRef(null);
 
   // Run on path change only
   useEffect(() => {
@@ -42,20 +43,26 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
   }, [location.pathname])
 
   const _scrollToContent = (ref) => {
-    scrollIntoView(ref.current,{time:500,align:{top:0}});
-  }
-
-  const _scrollTest = () => {
-    console.log('ScrollTest!')
-    window.scroll({top: window.innerHeight, left: 0, behavior: 'smooth'})
+    // Adjust for statusBar
+    const statusBar = windowSize[3];
+    let topOffset = 0;
+    if(statusBar > 0) {
+      topOffset = -(statusBar/2)
+    }
+    scrollIntoView(ref.current,{time:500,align:{top:0, topOffset: topOffset}});
   }
 
   // Set up window resize listener on mount
   useEffect(() => {
-    getWindowSize()
-    window.addEventListener('resize', getWindowSize)
-    return () => window.removeEventListener('resize', getWindowSize)
+    _getWindowSize()
+    window.addEventListener('resize', _getWindowSize)
+    return () => window.removeEventListener('resize', _getWindowSize)
   }, [])
+
+  const _getWindowSize = () => {
+    const vh = fullHeightRef.current.offsetHeight;
+    getWindowSize(vh)
+  }
 
   // Called from the child components when windowSize changes
   const _getContentHeight = (sectionName, height) => {
@@ -64,7 +71,9 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
   }
 
   return (
-    <div data-test="app-component" ref={topRef} className={`App fullScreen-${fullScreen} animate-projects-${animation.projects}`}>
+    <div data-test="app-component" ref={topRef} className={`App statusBar-${windowSize[3] > 0 ? 'true' : 'false'} fullScreen-${fullScreen} animate-projects-${animation.projects}`}>
+
+      <div className="fullHeightDiv" ref={fullHeightRef} style={{'position': 'absolute', 'height': '100vh'}} />
 
       <Link data-test="app-logo" className="logo" to="/" >
         <span>A</span>
@@ -78,14 +87,15 @@ const App = ({projects, location, animation, windowSize, fullScreen, getSectionH
 
           <Route exact path="/" render={() => (
             <div className="front-page">
-              <Header scrollTest={_scrollTest} scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
-              <div ref={servicesRef} />
+              <Header scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
+              <div ref={servicesRef} >
               <Services
                 scrollToContent={() => _scrollToContent(projectsRef)}
                 getContentHeight={_getContentHeight}
                 fullScreen={fullScreen}
                 windowSize={windowSize}
               />
+              </div>
               <div ref={projectsRef} />
               <Projects
                 scrollToContent={() => _scrollToContent(skillsRef)}

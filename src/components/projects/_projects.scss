@@ -157,6 +157,7 @@
 		@media(min-width: $desktop) {
 			flex-basis: 20%;
 		}
+		// iPad landscape
 		@media(max-height: 700px) {
 			@media(orientation: landscape) {
 				flex-basis: 16.66%;

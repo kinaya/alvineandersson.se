@@ -13,7 +13,7 @@ const Services = ({scrollToContent, getContentHeight, fullScreen, windowSize}) =
   }, [windowSize])
 
   return (
-    <section data-test="services-component" className="services" >
+    <section data-test="services-component" className="services">
 			<div ref={contentRef} className="container wide">
 
         <Service

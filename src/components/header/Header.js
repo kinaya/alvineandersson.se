@@ -6,14 +6,14 @@ import Slogan from './Slogan'
  * Component for displaying a `jumping` title.
  * @params {function} onClick - OnClick callback function
  */
-const Header = ({scrollToContent, scrollTest, windowSize}) => {
+const Header = ({scrollToContent, windowSize}) => {
 
   return (
     <section data-test="header-component" className="header" style={{'height': `${windowSize[1]}px`}}>
 
       <Slogan />
 
-      <div data-test="header-scrollarrow" onClick={scrollTest} className="scrollarrow header"></div>
+      <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow header"></div>
 
     </section>
   );

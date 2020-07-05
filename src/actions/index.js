@@ -103,13 +103,23 @@ export const getSectionHeight = (sectionName, value) => (dispatch, getState) => 
   })
 }
 
-export const getWindowSize = () => (dispatch, getState) => {
+export const getWindowSize = (vh) => (dispatch, getState) => {
   // Only update if the width has changed, or it will update on iPad scroll
   if(window.innerWidth != getState().fullScreen.windowSize[0]) {
     dispatch({
       type: GET_WINDOW_SIZE,
       width: window.innerWidth,
       height: window.innerHeight,
+      vh: vh,
+      statusBar: vh - window.innerHeight
+    })
+  } else { // scrolling
+    dispatch({
+      type: GET_WINDOW_SIZE,
+      width: getState().fullScreen.windowSize[0],
+      height: getState().fullScreen.windowSize[1],
+      vh: vh,
+      statusBar: vh - window.innerHeight
     })
   }
 }
