@@ -22,8 +22,6 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
 
         <JumpingTitle title="Lets&nbsp;play&nbsp;Matchmaking!" />
 
-        <p className="intro">Välj det som passar bäst in på er, för att se om vi skulle passa ihop.</p>
-
         <div className="game" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
 
           <div className={`game-button visible-${!game.active}`}>

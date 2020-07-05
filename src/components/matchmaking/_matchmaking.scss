@@ -20,9 +20,12 @@
   font-family: $roboto-mono;
   font-display: auto;
   font-size: 1rem;
-  @media(min-width: $tablet) {
+  /*@media(min-width: $tablet) {
     font-size: 1.2rem;
-  }
+  }*/
+	p, ul, ol {
+		font-size: 1em;
+	}
 }
 
 // Game visability

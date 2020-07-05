@@ -46,6 +46,9 @@ h2 { // Section headlines
 		margin-bottom: 0.5rem;
 	}
 }
+.matchmaking h2 {
+	line-height: 0.9;
+}
 
 h3 { // Contact
 	font-family: "rig-solid-bold-fill", sans-serif;
@@ -131,7 +134,7 @@ section {
 		align-items: center;
 		position: relative;
 		> .container {
-			//padding-bottom: 2em;
+			padding-bottom: 4em;
 		}
 	}
 	section.projects {
