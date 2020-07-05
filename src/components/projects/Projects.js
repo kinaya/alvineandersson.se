@@ -30,6 +30,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
   // If first filtering and then resizing, the height is wrong
   useEffect(() => {
 
+
     setTheWindowSize([window.innerWidth, window.innerHeight])
 
     setWidthHeight([innerRef.current.offsetWidth, innerRef.current.offsetHeight]);
@@ -38,7 +39,9 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
     getContentHeight('projects', projectsRef.current.offsetHeight + 40)
 
     const resizeHandler = () => {
-      setTheWindowSize([window.innerWidth, window.innerHeight])
+      if(window.innerWidth != theWindowSize[0]) {
+        setTheWindowSize([window.innerWidth, window.innerHeight])        
+      }
 
       setWidthHeight([innerRef.current.offsetWidth, innerRef.current.offsetHeight]);
       getContentHeight('projects', projectsRef.current.offsetHeight + 40)
