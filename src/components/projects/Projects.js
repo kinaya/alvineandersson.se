@@ -23,7 +23,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, fullScre
 
   useEffect(() => {
     _setInlineStyle()
-  }, [windowSize])
+  }, [windowSize, fullScreen])
 
   // Set inline height of projects area, so it doesn't jump when fullScreen filtering
   const _setInlineStyle = () => {
