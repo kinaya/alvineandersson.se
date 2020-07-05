@@ -104,9 +104,8 @@ export const getSectionHeight = (sectionName, value) => (dispatch, getState) => 
 }
 
 export const getWindowSize = () => (dispatch, getState) => {
-  // Only update if the width has changed, or it will update on iPad scroll!
+  // Only update if the width has changed, or it will update on iPad scroll
   if(window.innerWidth != getState().fullScreen.windowSize[0]) {
-    alert('The window changed!')
     dispatch({
       type: GET_WINDOW_SIZE,
       height: window.innerHeight,
