@@ -35,37 +35,44 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, fullScre
   // Update when project blobs height change
   const onResize = (width, height) => {
     const numberOfRows = window.innerWidth >= 736 ? 3 : 4;
+    if(window.innerHeight <= 700 && window.ninerWidth > window.innerHeight) {
+      numberOfRows = 2;
+    }
     const projectsHeight = height * numberOfRows + 30;
+
     const filterContainerHeight = filterContainerRef.current.offsetHeight;
     setInlineStyle({'height': `${projectsHeight + filterContainerHeight}px`})
+    checkFullScreen(width, projectsHeight + filterContainerHeight, 'projects')
   }
 
   return (
     <section data-test="projects-component" className="projects">
-      <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'projects')} >
-  			<div className="container">
-          <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
+			<div className="container">
+        <div className="container-inner" style={fullScreen ? inlineStyle : {'height': 'auto'}}>
 
-            <div className="filter-container" ref={filterContainerRef}>
-              <JumpingTitle title="Portfolio" />
-              <Filter />
-            </div>
+          <div className="filter-container" ref={filterContainerRef}>
+            <JumpingTitle title="Portfolio" />
+            <Filter />
+          </div>
 
-            <div className={`project-list filtering-${filtering}`}>
-              {filteredProjects.map((project, i) => { return (
+          <div className={`project-list filtering-${filtering}`}>
+            {filteredProjects.map((project, i) => {
+              if(i === 0) { return (
                 <ReactResizeDetector key={i} handleHeight onResize={onResize}>
                   <Project filtering={filtering} animation={animation} project={project} />
                 </ReactResizeDetector>
-              )})}
-            </div>
-
-            {fullScreen && (
-              <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
-            )}
-
+              )} else { return (
+                <Project key={i} filtering={filtering} animation={animation} project={project} />
+              )}
+            })}
           </div>
-  			</div>
-      </ReactResizeDetector>
+
+          {fullScreen && (
+            <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+          )}
+
+        </div>
+			</div>
     </section>
   );
 

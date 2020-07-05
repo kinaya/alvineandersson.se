@@ -1,14 +1,11 @@
 import { SET_WINDOW_SIZE, SET_FULLSCREEN, SET_SECTION_SIZE } from '../actions/types'
 
 const defaultState = {
-  active: false,
+  active: true,
   windowSize: [0,0],
   sections: {
-    services: 0,
-    projects: 0,
     skills: 0,
-    matchmaking: 0,
-    footer: 0
+    projects: 0
   }
 }
 
@@ -45,6 +42,12 @@ const fullScreenReducer = (state = defaultState, action) => {
           fullScreen = false;
         }
       }
+
+      //prompt('SET_FULLSCREEN', state.sections.projects)
+
+      console.log(window.innerHeight)
+      console.log(state.sections)
+      console.log(fullScreen)
 
       // Todo: Why doesn't this work?
       // const fullScreen = !Object.values(state.sections).some(item => item > window.innerHeigh);

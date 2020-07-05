@@ -1,12 +1,11 @@
 import React, {useRef, useEffect, useState} from "react";
-import ReactResizeDetector from 'react-resize-detector';
 import JumpingTitle from '../common/JumpingTitle';
 import SelectItem from "./SelectItem";
 import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
-import { chooseItem, startGame, endGame, checkFullScreen } from '../../actions'
+import { chooseItem, startGame, endGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, checkFullScreen, fullScreen, windowSize}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, fullScreen, windowSize}) => {
 
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const innerRef = useRef(null)
@@ -17,7 +16,6 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
 
   return (
     <section data-test="matchmaking-component" className="matchmaking">
-      <ReactResizeDetector onResize={(width, height, section) => checkFullScreen(width, height, 'matchmaking')} >
 
 			<div className="container">
 
@@ -46,7 +44,6 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
         )}
 
       </div>
-      </ReactResizeDetector>
     </section>
   );
 }
@@ -61,5 +58,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  {checkFullScreen, chooseItem, startGame, endGame}
+  {chooseItem, startGame, endGame}
 )(UnconnectedMatchmaking)

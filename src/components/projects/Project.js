@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
@@ -8,15 +8,13 @@ import PropTypes from 'prop-types';
  * @param {object} props.project - The project
  * @param {bool} props.animation - If animation is true or false
  */
-const Project = ({project, animation, filtering, faded}) => {
+const Project = ({width, height, project, animation, filtering, faded}) => {
 
   const [visibilitySensorActive, setVisibilitySensorActive] = useState(false)
 
   const _onChangeVisibility = isVisible => {
     setVisibilitySensorActive(isVisible)
   }
-
-
 
   return (
     <VisibilitySensor
