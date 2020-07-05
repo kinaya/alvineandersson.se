@@ -99,6 +99,12 @@ section {
     padding: 6rem 2rem;
   }
 }
+section.services {
+	padding: 3rem 1rem 0 1rem;
+	@media(min-width: $mobile) {
+		padding: 6rem 3rem 0 3rem;
+	}
+}
 
 .container {
   max-width: 940px;
