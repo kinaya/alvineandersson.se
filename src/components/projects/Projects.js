@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group';
 import { connect } from 'react-redux';
+import useResizeAware from 'react-resize-aware';
 
 import Project from "./Project";
 import Filter from './Filter';
@@ -19,6 +20,8 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const projectsRef = useRef(null)
   const innerRef = useRef(null)
+
+  const [resizeListener, sizes] = useResizeAware();
 
   // Get height of section and set inner height for container
   // Todo: ResizeHandler need to use the height when no filters are applied.
@@ -55,20 +58,21 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
     <section data-test="projects-component" className="projects" style={sectionStyle}>
 			<div className="container" ref={projectsRef} style={fullScreen ? inlineStyle : {'height': 'auto'}} >
         <div className="container-inner" ref={innerRef} >
+          {resizeListener}
+          Sizes: {sizes.width} x {sizes.height}
+          <JumpingTitle title="Portfolio" />
 
-        <JumpingTitle title="Portfolio" />
+          <Filter />
 
-        <Filter />
+          <div className={`project-list filtering-${filtering}`}>
+            {filteredProjects.map((project, i) => { return (
+              <Project key={i} filtering={filtering} animation={animation} project={project} />
+            )})}
+          </div>
 
-        <div className={`project-list filtering-${filtering}`}>
-          {filteredProjects.map((project, i) => { return (
-            <Project key={i} filtering={filtering} animation={animation} project={project} />
-          )})}
-        </div>
-
-        {fullScreen && (
-          <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
-        )}
+          {fullScreen && (
+            <div data-test="header-scrollarrow" onClick={scrollToContent} className="scrollarrow"></div>
+          )}
 
         </div>
 			</div>
