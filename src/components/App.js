@@ -49,6 +49,8 @@ const App = ({projects, location, animation, windowSize, fullScreen, setFullScre
   }, [])
 
   // Check if FullScreen when window resizes
+  // Todo: This does not work properly on resize.
+  // Need to trigger this when the refs update
   useEffect(() => {
     const sections = [
       servicesRef.current.firstElementChild.offsetHeight + 40,
