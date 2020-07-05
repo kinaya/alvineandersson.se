@@ -40,7 +40,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
 
     const resizeHandler = () => {
       if(window.innerWidth != theWindowSize[0]) {
-        setTheWindowSize([window.innerWidth, window.innerHeight])        
+        setTheWindowSize([window.innerWidth, window.innerHeight])
       }
 
       setWidthHeight([innerRef.current.offsetWidth, innerRef.current.offsetHeight]);
@@ -66,8 +66,6 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
 
   }, [currentFilter])
 
-  console.log('windowSize', theWindowSize)
-
   return (
     <section data-test="projects-component" className="projects" style={sectionStyle}>
 			<div className="container" ref={projectsRef} style={fullScreen ? inlineStyle : {'height': 'auto'}} >
@@ -77,7 +75,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
           <br/>
           Sizes state width/height: {widthHeight[0]} x {widthHeight[1]}
           <br/>
-          Window width/height: {theWindowSize[0]} x {theWindowSize[1]}
+          <span style={{'backgroundColor': 'pink'}}>Window width/height: {theWindowSize[0]} x {theWindowSize[1]}</span>
           <JumpingTitle title="Portfolio" />
 
           <Filter />
