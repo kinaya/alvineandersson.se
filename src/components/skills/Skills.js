@@ -3,18 +3,14 @@ import React, {useEffect, useRef} from "react";
 /**
  * Component for displaying skills.
  */
-const Skills = ({scrollToContent, getContentHeight, fullScreen, sectionStyle}) => {
+const Skills = ({scrollToContent, getContentHeight, fullScreen, windowSize, sectionStyle}) => {
 
   const contentRef = useRef()
 
   useEffect(() => {
     getContentHeight('skills', contentRef.current.offsetHeight + 40)
-    const resizeHandler = () => {
-      getContentHeight('skills', contentRef.current.offsetHeight + 40)
-    }
-    window.addEventListener('resize', resizeHandler)
-    return () => window.removeEventListener('resize', resizeHandler)
-  }, [contentRef.current])
+  }, [windowSize])
+  //}, [contentRef.current])
 
 
   return (

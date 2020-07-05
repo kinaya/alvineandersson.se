@@ -3,18 +3,14 @@ import React, {useRef, useEffect} from "react";
 /**
  * Component for displaying a footer.
  */
-const Footer = ({sectionStyle, getContentHeight}) => {
+const Footer = ({sectionStyle, getContentHeight, windowSize}) => {
 
   const contentRef = useRef()
 
   useEffect(() => {
     getContentHeight('footer', contentRef.current.offsetHeight + 40)
-    const resizeHandler = () => {
-      getContentHeight('footer', contentRef.current.offsetHeight + 40)
-    }
-    window.addEventListener('resize', resizeHandler)
-    return () => window.removeEventListener('resize', resizeHandler)
-  }, [contentRef.current])
+  }, [windowSize])
+  //}, [contentRef.current])
 
   return (
     <section data-test="footer-component" className="footer" style={sectionStyle}>

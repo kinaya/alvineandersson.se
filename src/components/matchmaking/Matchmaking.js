@@ -5,7 +5,7 @@ import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
 import { chooseItem, startGame, endGame } from '../../actions'
 
-export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, getContentHeight, fullScreen, sectionStyle}) => {
+export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, getContentHeight, fullScreen, windowSize, sectionStyle}) => {
 
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})
   const innerRef = useRef(null)
@@ -14,13 +14,8 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
   useEffect(() => {
     setInlineStyle({'height': `${innerRef.current.offsetHeight + 20}px`})
     getContentHeight('matchmaking', contentRef.current.offsetHeight + 40)
-    const resizeHandler = () => {
-      setInlineStyle({'height': `${innerRef.current.offsetHeight}px`})
-      getContentHeight('matchmaking', contentRef.current.offsetHeight + 40)
-    }
-    window.addEventListener('resize', resizeHandler)
-    return () => window.removeEventListener('resize', resizeHandler)
-  }, [contentRef.current, innerRef.current])
+  }, [windowSize])
+  //}, [contentRef.current, innerRef.current])
 
   return (
     <section data-test="matchmaking-component" className="matchmaking" style={sectionStyle}>
@@ -59,7 +54,8 @@ export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, sc
 
 function mapStateToProps(state) {
   return {
-    game: state.game
+    game: state.game,
+    windowSize: state.fullScreen.windowSize
   }
 }
 

@@ -4,18 +4,14 @@ import Service from './Service'
 /**
  * Component for displaying services.
  */
-const Services = ({scrollToContent, getContentHeight, sectionStyle, fullScreen}) => {
+const Services = ({scrollToContent, getContentHeight, sectionStyle, fullScreen, windowSize}) => {
 
   const contentRef = useRef()
 
   useEffect(() => {
     getContentHeight('services', contentRef.current.offsetHeight + 40)
-    const resizeHandler = () => {
-      getContentHeight('services', contentRef.current.offsetHeight + 40)
-    }
-    window.addEventListener('resize', resizeHandler)
-    return () => window.removeEventListener('resize', resizeHandler)
-  }, [contentRef.current])
+  }, [windowSize])
+  //}, [contentRef.current])
 
   return (
     <section data-test="services-component" className="services" style={sectionStyle}>

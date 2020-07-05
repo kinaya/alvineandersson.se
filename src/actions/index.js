@@ -1,4 +1,4 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, GET_SECTION_HEIGHT, GET_WINDOW_HEIGHT, CALCULATE_FULLSCREEN } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, GET_SECTION_HEIGHT, GET_WINDOW_SIZE, CALCULATE_FULLSCREEN } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
@@ -97,17 +97,20 @@ export const getSectionHeight = (sectionName, value) => (dispatch, getState) => 
     sectionName: sectionName,
     value: value
   })
-
   dispatch({
     type: CALCULATE_FULLSCREEN,
-    windowHeight: getState().fullScreen.windowHeight
+    windowHeight: getState().fullScreen.windowSize[1]
   })
-
 }
 
-export const getWindowHeight = () => dispatch => {
-  dispatch({
-    type: GET_WINDOW_HEIGHT,
-    height: window.innerHeight
-  })
+export const getWindowSize = () => (dispatch, getState) => {
+  // Only update if the width has changed, or it will update on iPad scroll!
+  if(window.innerWidth != getState().fullScreen.windowSize[0]) {
+    alert('The window changed!')
+    dispatch({
+      type: GET_WINDOW_SIZE,
+      height: window.innerHeight,
+      width: window.innerWidth
+    })
+  }
 }

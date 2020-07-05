@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import scrollIntoView from 'scroll-into-view';
 import {connect} from 'react-redux';
-import { getSectionHeight, getWindowHeight } from '../actions/';
+import { getSectionHeight, getWindowSize } from '../actions/';
 
 import Header from "./header/Header";
 import Skills from "./skills/Skills";
@@ -16,7 +16,7 @@ import NotFound from "./NotFound";
 
 import "../scss/App.scss";
 
-const App = ({projects, location, animation, windowHeight, sectionStyle, fullScreen, getSectionHeight, getWindowHeight}) => {
+const App = ({projects, location, animation, windowSize, sectionStyle, fullScreen, getSectionHeight, getWindowSize}) => {
 
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
@@ -26,6 +26,7 @@ const App = ({projects, location, animation, windowHeight, sectionStyle, fullScr
   const topRef = useRef(null);
   const didMountRef = useRef(false);
 
+  // Run on path change only
   useEffect(() => {
     if(didMountRef.current) {
       setTimeout(function() {
@@ -36,22 +37,24 @@ const App = ({projects, location, animation, windowHeight, sectionStyle, fullScr
         }
       }.bind(this), 500);
     } else {
-      getWindowHeight()
       didMountRef.current = true;
     }
-
-    window.addEventListener('resize', getWindowHeight)
-    return () => window.removeEventListener('resize', getWindowHeight)
-
   }, [location.pathname])
 
   const _scrollToContent = (ref) => {
     scrollIntoView(ref.current,{time:500,align:{top:0}});
   }
 
+  // Set up window resize listener on mount
+  useEffect(() => {
+    getWindowSize()
+    window.addEventListener('resize', getWindowSize)
+    return () => window.removeEventListener('resize', getWindowSize)
+  }, [])
+
+  // Called from the child components when windowSize changes
   const _getContentHeight = (sectionName, height) => {
-    console.log('getContentHeight!', sectionName)
-    const boolean = height < windowHeight ? true : false;
+    const boolean = height < windowSize[0] ? true : false;
     getSectionHeight(sectionName, boolean)
   }
 
@@ -70,13 +73,14 @@ const App = ({projects, location, animation, windowHeight, sectionStyle, fullScr
 
           <Route exact path="/" render={() => (
             <div className="front-page">
-              <Header scrollToContent={() => _scrollToContent(servicesRef)} windowHeight={windowHeight}/>
+              <Header scrollToContent={() => _scrollToContent(servicesRef)} windowSize={windowSize}/>
               <div ref={servicesRef} />
               <Services
                 scrollToContent={() => _scrollToContent(projectsRef)}
                 getContentHeight={_getContentHeight}
                 sectionStyle={sectionStyle}
                 fullScreen={fullScreen}
+                windowSize={windowSize}
               />
               <div ref={projectsRef} />
               <Projects
@@ -91,6 +95,7 @@ const App = ({projects, location, animation, windowHeight, sectionStyle, fullScr
                 getContentHeight={_getContentHeight}
                 sectionStyle={sectionStyle}
                 fullScreen={fullScreen}
+                windowSize={windowSize}
               />
               <div ref={matchmakingRef} />
               <Matchmaking
@@ -103,6 +108,7 @@ const App = ({projects, location, animation, windowHeight, sectionStyle, fullScr
               <Footer
                 sectionStyle={sectionStyle}
                 getContentHeight={_getContentHeight}
+                windowSize={windowSize}
               />
             </div>
           )} />
@@ -130,12 +136,12 @@ const mapStateToProps = state => {
     projects: state.projects.projects,
     animation: state.animation,
     fullScreen: state.fullScreen.active,
-    windowHeight: state.fullScreen.windowHeight,
+    windowSize: state.fullScreen.windowSize,
     sectionStyle: state.fullScreen.style
   }
 }
 
 export default withRouter(connect(
   mapStateToProps,
-  {getSectionHeight, getWindowHeight}
+  {getSectionHeight, getWindowSize}
 )(App))

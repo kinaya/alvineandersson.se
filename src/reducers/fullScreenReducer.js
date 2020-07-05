@@ -1,8 +1,8 @@
-import { GET_SECTION_HEIGHT, GET_WINDOW_HEIGHT, CALCULATE_FULLSCREEN } from '../actions/types'
+import { GET_SECTION_HEIGHT, GET_WINDOW_SIZE, CALCULATE_FULLSCREEN } from '../actions/types'
 
 const defaultState = {
   active: false,
-  windowHeight: false,
+  windowSize: [0,0],
   style: {'height': 'auto'},
   sections: {
     services: false,
@@ -32,10 +32,10 @@ const fullScreenReducer = (state = defaultState, action) => {
           }
       }
 
-    case GET_WINDOW_HEIGHT:
+    case GET_WINDOW_SIZE:
       return {
         ...state,
-        windowHeight: action.height
+        windowSize: [action.width, action.height]
       }
 
     case CALCULATE_FULLSCREEN:
