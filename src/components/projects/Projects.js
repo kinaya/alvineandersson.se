@@ -32,7 +32,7 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, getConte
       // Height of the area with projects when all are visible
       const numberOfRows = window.innerWidth >= 736 ? 3 : 4;
       const projectHeight = projectListRef.current.firstElementChild.offsetHeight;
-      const projectsHeight = projectHeight * numberOfRows + 20;
+      const projectsHeight = projectHeight * numberOfRows + 30;
       // Height of the filterContainer
       const filterContainerHeight = filterContainerRef.current.offsetHeight;
       // Set the height of the whole container
