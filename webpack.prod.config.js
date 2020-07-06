@@ -11,6 +11,7 @@ const PUBLIC_PATH = 'https://alvineandersson.se/';
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
+  //entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.[hash].js',
