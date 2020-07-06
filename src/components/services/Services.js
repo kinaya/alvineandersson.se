@@ -10,8 +10,6 @@ const Services = ({scrollToContent, fullScreen}) => {
     <section data-test="services-component" className="services">
 			<div className="container wide">
 
-        {window.innerWidth} x {window.innerHeight}
-
         <Service
           headline="Webb"
           text="Webbsidor och interaktiva applikationer, med användarvänliga system och moderna tekniker."
