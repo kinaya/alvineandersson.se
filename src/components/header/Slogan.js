@@ -7,7 +7,7 @@ import {isIE} from 'react-device-detect';
  */
 const Slogan = () => {
 
-  if(isIE) {
+  if(isIE || isEdge || (isMobileSafari && osVersion <= 6)) {
     return (
       <div data-test="slogan-component" className="slogan slogan-image">
         <picture>
