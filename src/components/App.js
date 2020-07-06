@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import scrollIntoView from 'scroll-into-view';
 import {connect} from 'react-redux';
-import { setWindowSize, checkFullScreen } from '../actions/';
+import { setWindowSize } from '../actions/';
 
 import Header from "./header/Header";
 import Skills from "./skills/Skills";
@@ -16,7 +16,7 @@ import NotFound from "./NotFound";
 
 import "../scss/App.scss";
 
-const App = ({projects, location, animation, windowSize, fullScreen, setWindowSize, checkFullScreen}) => {
+const App = ({projects, location, animation, windowSize, fullScreen, setWindowSize}) => {
 
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
@@ -75,7 +75,6 @@ const App = ({projects, location, animation, windowSize, fullScreen, setWindowSi
               <Services
                 scrollToContent={() => _scrollToContent(projectsRef)}
                 fullScreen={fullScreen}
-                checkFullScreen={checkFullScreen}
               />
 
               <div ref={projectsRef} />
@@ -87,7 +86,6 @@ const App = ({projects, location, animation, windowSize, fullScreen, setWindowSi
               <Skills
                 scrollToContent={() => _scrollToContent(matchmakingRef)}
                 fullScreen={fullScreen}
-                checkFullScreen={checkFullScreen}
               />
 
               <div ref={matchmakingRef} />
@@ -96,9 +94,7 @@ const App = ({projects, location, animation, windowSize, fullScreen, setWindowSi
               />
 
               <div ref={footerRef} />
-              <Footer
-                checkFullScreen={checkFullScreen}
-              />
+              <Footer />
 
             </div>
           )} />
@@ -132,5 +128,5 @@ const mapStateToProps = state => {
 
 export default withRouter(connect(
   mapStateToProps,
-  {setWindowSize, checkFullScreen}
+  {setWindowSize}
 )(App))

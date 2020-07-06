@@ -3,7 +3,6 @@ import { CSSTransition, TransitionGroup, Transition } from 'react-transition-gro
 import { connect } from 'react-redux';
 import ReactResizeDetector from 'react-resize-detector';
 
-import { checkFullScreen } from '../../actions/'
 import Project from "./Project";
 import Filter from './Filter';
 import JumpingTitle from '../common/JumpingTitle';
@@ -88,5 +87,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {checkFullScreen}
+  null
 )(Projects)

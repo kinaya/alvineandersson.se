@@ -1,11 +1,24 @@
 import React from 'react'
+import {isIE} from 'react-device-detect';
+
 
 /**
  * Component for displaying an animated slogan
  */
 const Slogan = () => {
 
-  return (
+  //if(isIE) {
+    return (
+      <div data-test="slogan-component" className="slogan slogan-image">
+        <picture>
+          <source type="image/webp" srcSet={require(`../../images/slogan.webp`)} />
+          <img alt="slogan" src={require(`../../images/slogan.png`)} />
+        </picture>
+      </div>
+    )
+  //}
+
+  /*return (
     <div data-test="slogan-component" className="slogan">
 
     <div className="alvine">
@@ -82,7 +95,7 @@ const Slogan = () => {
     </div>
 
     </div>
-  )
+  )*/
 }
 
 export default Slogan

@@ -1,6 +1,6 @@
 {
   "main.css": "https://alvineandersson.se/main.css",
-  "main.js": "https://alvineandersson.se/main.bundle.a4125b97b02aa4389345.js",
+  "main.js": "https://alvineandersson.se/main.bundle.a877101ccfda560ff18d.js",
   "./index.html": "https://alvineandersson.se/./index.html",
   "android-chrome-192x192.png": "https://alvineandersson.se/android-chrome-192x192.png",
   "android-chrome-512x512.png": "https://alvineandersson.se/android-chrome-512x512.png",
@@ -74,6 +74,8 @@
   "service-worker.js": "https://alvineandersson.se/service-worker.js",
   "share.jpg": "https://alvineandersson.se/share.jpg",
   "site.webmanifest": "https://alvineandersson.se/site.webmanifest",
+  "slogan.png": "https://alvineandersson.se/slogan.png",
+  "slogan.webp": "https://alvineandersson.se/slogan.webp",
   "socialaspel.png": "https://alvineandersson.se/socialaspel.png",
   "socialaspel.png.webp": "https://alvineandersson.se/socialaspel.png.webp",
   "socialaspel_list.png": "https://alvineandersson.se/socialaspel_list.png",

@@ -26,6 +26,13 @@
   }
 }
 
+.slogan-image {
+  margin: 0 1em;
+  img {
+    width: 100%;
+  }
+}
+
 .webb {
   @include transform(translateY(-3px));
   .text {
