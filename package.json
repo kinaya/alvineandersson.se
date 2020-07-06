@@ -12,6 +12,7 @@
   "author": "Alvine Andersson",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "@babel/runtime": "^7.10.2",
     "history": "^4.10.1",
     "node-sass": "^4.14.1",
