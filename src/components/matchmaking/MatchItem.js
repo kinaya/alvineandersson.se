@@ -6,10 +6,7 @@ import PropTypes from 'prop-types'
  * @param {boolean} props.match - If the match is true or false
  * @param {function} props.endGame - Callback function to end the game
  */
-const MatchItem = React.forwardRef((props, ref) => {
-
-  const match = props.match;
-  const endGame = props.endGame;
+const MatchItem = React.forwardRef(({match, endGame}, ref) => {
 
   return (
     <div ref={ref} data-test="match-item-component">
@@ -20,9 +17,10 @@ const MatchItem = React.forwardRef((props, ref) => {
           <div className="headline">Match!</div>
           <div className="text">
             <p>Ni verkar ha det jag letar efter: </p>
-            <ul><li>En jysst arbetsplats</li>
-                <li>Möjlighet att utvecklas</li>
-                <li>Produkter som gör skillnad</li>
+            <ul>
+              <li>En jysst arbetsplats</li>
+              <li>Möjlighet att utvecklas</li>
+              <li>Verksamhet som gör skillnad</li>
             </ul>
             <p>Har jag det ni letar efter? Hör av er på hej@alvineandersson.se så pratar vi mer</p>
           </div>

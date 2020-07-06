@@ -8,4 +8,4 @@ Website built using React. Tests with Jest and Enzyme.
 
 ## Want to work together?
 
-Contact me at hello@alvineandersson.se
+Contact me at hej@alvineandersson.se

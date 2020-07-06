@@ -11,7 +11,6 @@ const PUBLIC_PATH = 'https://alvineandersson.se/';
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
-  //entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.[hash].js',
@@ -60,8 +59,6 @@ module.exports = {
       fileName: 'asset-manifest.json',
     }),
     new WorkboxPlugin.GenerateSW({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
       clientsClaim: true,
       skipWaiting: true
     }),

@@ -3,6 +3,8 @@ import Service from './Service'
 
 /**
  * Component for displaying services.
+ * @param {function} props.scrollToContent - Function for triggering scroll
+ * @param {boolean} props.fullScreen - Weather fullscreen mode is true or false
  */
 const Services = ({scrollToContent, fullScreen}) => {
 
@@ -22,7 +24,7 @@ const Services = ({scrollToContent, fullScreen}) => {
 
         <Service
           headline="För alla"
-          text="Med kod som verktyg för att lyfta kampanjen och organisationer, med drivkraft att göra världen lite bättre."
+          text="Med kod som verktyg för att lyfta kampanjer och organisationer, med drivkraft att göra världen lite bättre."
         />
 
         {fullScreen && (

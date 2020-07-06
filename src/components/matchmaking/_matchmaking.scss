@@ -20,32 +20,10 @@
   font-family: $roboto-mono;
   font-display: auto;
   font-size: 1rem;
-  /*@media(min-width: $tablet) {
-    font-size: 1.2rem;
-  }*/
 	p, ul, ol {
 		font-size: 1em;
 	}
 }
-
-// Game visability
-/*.game-button { max-height: 100px; }
-.game-items { max-height: 2000px; }
-.select-item { max-height: 800px; }
-.select-item .text { max-height: 200px; }
-
-.select-item .text,
-.select-item,
-.game-items,
-.game-button {
-	opacity: 1;
-	overflow: hidden;
-	@include transition(all 0.4s ease);
-	&.visible-false {
-		opacity: 0;
-		max-height: 0;
-	}
-}*/
 
 .fullScreen-true {
 	.game {
@@ -156,14 +134,9 @@
 				@include transform(translateX(999px));
 			}
 		}
-
 	}
 
 }
-
-
-
-
 
 // Alternatives
 .select-item {
@@ -183,11 +156,6 @@
 			background-color: $green-hover;
 		}
   }
-
-//  &.clickable-false .text {
-//    color: $gray;
-//  }
-
 	&.clickable-false .text.visible-true {
 		background-color: $green-hover;
 	}
@@ -198,9 +166,7 @@
 }
 
 .result {
-  //padding: 0 2em 3em;
 	padding: 0 2em 1em;
-  //margin-top: 3em;
 	margin-top: 3em;
   .headline {
     font-size: 1.4em;
@@ -208,7 +174,6 @@
     display: inline-block;
     padding: 0.5em 2em;
     @include transform(rotate(-5deg));
-    //margin: -1em 0 1.5em;
 		margin: -1em 0 0.5em;
   }
 	.text {

@@ -5,6 +5,20 @@ import MatchItem from "./MatchItem";
 import { connect } from 'react-redux'
 import { chooseItem, startGame, endGame } from '../../actions'
 
+
+/**
+ * Component for displaying the matchmaking game.
+ * The default export is the connected component, but we also export an
+ * unconnected component used for testing.
+ *
+ * @params {array} props.game - An array with game data
+ * @params {fuunction} pros.chooseItem - Function to choose an item
+ * @params {function} props.startGame - Function to start the game
+ * @params {function} props.endGame - Function to end the game
+ * @params {function} props.scrollToContent - Function to trigger scroll
+ * @params {boolean} props.fullScreen - Weather full screen mode is on
+ * @params {array} props.windowSize - The wwindow dimensions
+ */
 export const UnconnectedMatchmaking = ({game, chooseItem, startGame, endGame, scrollToContent, fullScreen, windowSize}) => {
 
   const [inlineStyle, setInlineStyle] = useState({'height': 'auto'})

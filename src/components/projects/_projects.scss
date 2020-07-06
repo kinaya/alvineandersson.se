@@ -143,7 +143,6 @@
 	.project {
 		overflow: hidden;
 		@include transition(all 300ms);
-		//transition: opacity 300ms, transform 300ms;
 		@include flex-basis(50%);
 		@media(min-width: $mobile) {
 			@include flex-basis(33.33%);
@@ -154,7 +153,6 @@
 		@media(min-width: $desktop) {
 			@include flex-basis(20%);
 		}
-		// iPad landscape
 		@media(max-height: 700px) {
 			@media(orientation: landscape) {
 				@include flex-basis(16.66%);
@@ -331,21 +329,4 @@
 .fade-enter-active .project-title,
 .fade-enter-active .description {
   @include transform(scale(1));
-}
-.featuredImage img {
-	//-webkit-transition: -webkit-transform 1000ms, width 1000ms;operty;
-	//-moz-transition: -moz-transform 1000ms, width 1000ms;
-	//-o-transition: -o-transform 1000ms, width 1000ms;
-  //transition: transform 1000ms, width 1000ms;
-  //width: calc(100% + 200px);
-  //@include transform(translateX(-100px) scale(1.1));
-}
-.fade-enter .featuredImage img {
-  //transform: translateX(0px) scale(1);
-  //@include transform(translateX(0));
-}
-.fade-enter-active .featuredImage img {
-  //@include transform(translateX(-100px));
-  //width: calc(100% + 200px);
-  //@uinclude transform(translateX(-100px) scale(1.1));
 }

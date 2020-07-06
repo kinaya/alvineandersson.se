@@ -11,7 +11,9 @@ import JumpingTitle from '../common/JumpingTitle';
  * Component that displays projects
  * @param {array} props.projects - A list of projects
  * @param {array} props.currentFilter - The current filter
- * @param {bool} props.animation - If the animation is true or false
+ * @param {boolean} props.animation - If the animation is true or false
+ * @param {function} props.scrollToContent - Function for triggering scroll
+ * @param {boolean} props.fullScreen - Weather fullscreen mode is true or false
  */
 const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen}) => {
 
@@ -31,7 +33,6 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, fullScre
   }, [currentFilter])
 
   // Set inline height of project area, so it doesn't jump when fullScreen filtering
-  // Update when project blobs height change
   const onResize = (width, height) => {
     const numberOfRows = window.innerWidth >= 736 ? 3 : 4;
     if(window.innerHeight <= 700 && window.ninerWidth > window.innerHeight) {

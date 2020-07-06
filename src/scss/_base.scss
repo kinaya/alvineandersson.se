@@ -13,7 +13,7 @@ body {
   background-color: $white;
 }
 
-h1 { // ProjectPage
+h1 {
 	font-family: 'rig-solid-bold-fill', sans-serif;
   font-display: auto;
 	text-transform: uppercase;
@@ -32,7 +32,7 @@ h1 { // ProjectPage
   }
 }
 
-h2 { // Section headlines
+h2 {
 	font-family: 'rig-solid-bold-fill', sans-serif;
   font-display: auto;
 	text-transform: uppercase;
@@ -50,7 +50,7 @@ h2 { // Section headlines
 	line-height: 0.9;
 }
 
-h3 { // Contact
+h3 {
 	font-family: "rig-solid-bold-fill", sans-serif;
   font-display: auto;
   text-transform: uppercase;
@@ -63,7 +63,7 @@ h3 { // Contact
 	}
 }
 
-h4 { // Black background
+h4 {
   font-size: 1.4rem;
   font-family: 'din-2014', sans-serif;
   font-display: auto;
@@ -147,10 +147,6 @@ section.services {
 	position: absolute;
 	width: 100%;
 }
-/*.fading {
-	position: absolute;
-	width: 100%;
-}*/
 .fade-enter {
 	opacity: 0;
 }

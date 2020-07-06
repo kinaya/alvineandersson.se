@@ -1,10 +1,10 @@
-import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, withRouter, Link } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import scrollIntoView from 'scroll-into-view';
-import {connect} from 'react-redux';
-import { setWindowSize } from '../actions/';
+import { connect } from 'react-redux';
 
+import { setWindowSize } from '../actions/';
 import Header from "./header/Header";
 import Skills from "./skills/Skills";
 import Footer from "./footer/Footer";
@@ -13,7 +13,6 @@ import Projects from "./projects/Projects"
 import Matchmaking from "./matchmaking/Matchmaking";
 import ProjectPage from "./projects/ProjectPage";
 import NotFound from "./NotFound";
-
 import "../scss/App.scss";
 
 const App = ({projects, location, animation, windowSize, fullScreen, setWindowSize}) => {

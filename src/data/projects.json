@@ -10,7 +10,7 @@
       },
       {
         "headline": "Headless Drupal",
-        "paragraph": "Spelet är byggt med React och gränssnittet finns översatt till 7 olika språk. Som backend använda Drupal där data och bilder hämtas via systemets konfigurerbara REST server."
+        "paragraph": "Spelet är byggt med React och gränssnittet finns översatt till 7 olika språk. Som backend används Drupal där data och bilder hämtas via systemets konfigurerbara REST server."
       }
     ],
     "link": {
@@ -25,12 +25,13 @@
     "pinned": true,
     "tags": ["React", "Drupal"],
     "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
+    "customer": "Forum Skill",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
     },
     "image": {
-      "url": "dubestammer.jpg",
+      "url": "dubestammer.png",
       "alt": "Startsidan från spelet"
     }
   },
@@ -65,6 +66,7 @@
     "pinned": true,
     "tags": ["Drupal"],
     "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
+    "customer": "Forum Skill",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -105,6 +107,7 @@
     "pinned": true,
     "tags": ["React", "Drupal"],
     "extendedTags": "React/Redux, Drupal, CSS/SASS, JavaScript",
+    "customer": "På blodigt allvar / GrrlTech Växjö",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -149,6 +152,7 @@
     "pinned": true,
     "tags": ["Node.js", "React"],
     "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Socket.io, Jitsi Meet, Heroku",
+    "customer": "Hobbyprojekt",
     "image": {
       "url": "socialaspel.png",
       "alt": "Skärmdump från Sociala spel"
@@ -181,6 +185,7 @@
     "pinned": true,
     "tags": [ "Drupal" ],
     "extendedTags": "Drupal, PHP, CSS/SASS, JavaScript",
+    "customer": "På blodigt allvar / GrrlTech Växjö",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -197,8 +202,12 @@
     "info": "Lektionsbank och matchningstjänst mellan elever inom grundskola/gymnasieskola och vuxna som studerar SFI.",
     "content": [
       {
-        "heading": "Under utveckling",
-        "paragraph": "Lansering sommaren 2020."
+        "headline": "Lektionsmaterial som skapar möten",
+        "paragraph": "Världen finns här tar fram lektionsmaterial för att skapa möten mellan människor som annars inte träffas. På hemsidan utnyttjas Wordpress block-redigering med styrande templates, för att ge redaktörerna både ramar och frihet och skapa inbjudande och varierande sidor. Ett antal egna block har tagits fram specifikt för hemsidann."
+      },
+      {
+        "headline": "Avancerad filtrering",
+        "paragraph": "För att lätt kunna hitta bland de 100+ lektionerna i lektionsbanken togs en specialbyggd filtreringsfunktion fram för jobbet. Lektioner kategoriserar via målgrupp och ämnesområden och filtreringsalternativen anpassas efter vad som redan valts. Resultatet visas naturligtvis i realtid medan du skriver eller filtrerar."
       }
     ],
     "listimg": {
@@ -209,6 +218,7 @@
     "pinned": true,
     "tags": ["Wordpress"],
     "extendedTags": "Wordpress, PHP, CSS/SASS, JavaScript",
+    "customer": "Världen finns här / ABF Göteborg",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -234,7 +244,7 @@
       },
       {
         "headline": "Google Auth och SendGrid",
-        "paragraph": "För att göra authenticeringen så enkel som möjligt används Google Auth, och användare loggar snabbt in med ett klick. För enkel kommunikation mellan användare skickas meddelanden som epost med hjälp av SendGrid."
+        "paragraph": "För att göra autentiseringen så enkel som möjligt används Google Auth, och användare loggar snabbt in med ett klick. För enkel kommunikation mellan användare skickas meddelanden som epost med hjälp av SendGrid."
       }
     ],
     "github": {
@@ -253,6 +263,7 @@
     "pinned": true,
     "tags": ["Node.js", "React"],
     "extendedTags": "Node.js, Express, MongoDb, React/Redux, CSS/SASS, JavaScript, Google Auth, AWS S3, SendGrid, Leaflet, Heroku",
+    "customer": "Hobbyprojekt",
     "image": {
       "url": "everything.png",
       "alt": "Skärmdump från Everything"
@@ -281,6 +292,7 @@
     "pinned": false,
     "tags": [ "Drupal" ],
     "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "På tal om 6 / Grrltech Växjö",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -297,8 +309,8 @@
     "info": "Filmregion Sydost hjälper filmare och filmälskare i Växjöregionen att skapa film och filmkultur. Webbplatsen samlar material för de olika målgrupperna och innehåller plattformen för en årlig filmfestival.",
     "content": [
       {
-        "headline": "",
-        "paragraph": "Webbplatsens innehåll struktureras genom ingångar för de tre mångrupperna: filmare, pedagoger och arrangörer. Drupals views används för att filtrera fram relevant material beroende på ingång. Filmregion Sydost jobbar med film, och naturligtvis är det lätt och smidigt att visa film på webbplatsen. Drupals Media modul gör att videos lätt hämtas från YouTube eller Vimeo och visas i blogginlägg och på sidor. I bloggen finns förutom filmer av alla dess slag inspiration, guider och mycket mer. På webbplatsen finns ett flertal fomulär byggda på Webforms, bland annat bokningsformulär för att låna utrustning."
+        "headline": "Resurs för filmare, pedagoger och arrangörer",
+        "paragraph": "Webbplatsens innehåll struktureras genom ingångar för de tre mångrupperna: filmare, pedagoger och arrangörer. Filmregion Sydost jobbar med film, och naturligtvis är det lätt och smidigt att visa film på webbplatsen. Drupals Media modul gör att videos lätt hämtas från YouTube eller Vimeo och visas i blogginlägg och på sidor. I bloggen finns förutom filmer av alla dess slag inspiration, guider och mycket mer. På webbplatsen finns ett flertal fomulär byggda på Webforms, bland annat bokningsformulär för att låna utrustning."
       },
       {
         "headline": "Filmfestivalen TellUs",
@@ -317,6 +329,7 @@
     "pinned": false,
     "tags": [ "Drupal" ],
     "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "Filmregion Sydost",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -349,6 +362,7 @@
     "pinned": false,
     "tags": [ "Wordpress" ],
     "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "Newcomers Youth / RFSL",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -377,6 +391,7 @@
     "pinned": false,
     "tags": ["Drupal"],
     "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "Fridh advokatbyrå",
     "designer": {
       "url": "http://claespettersson.se",
       "name": "claespettersson.se"
@@ -421,6 +436,7 @@
     "pinned": false,
     "tags": ["Drupal"],
     "extendedTags": "Drupal, PHP, SQL, Facebook Api, Google Api, CSS/SASS, JavaScript",
+    "customer": "Lesbisk Makt",
     "designer": {
       "url": "http://maryamfanni.se",
       "name": "mayramfanni.se"

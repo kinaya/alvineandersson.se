@@ -6,10 +6,10 @@ const defaultState = {
 }
 
 /**
- * @function gameReducer
+ * @function fullscreenReducer
  * @param {array} state - the current state
  * @param {object} action - action to be reduced
- * @returns {array} - new game state
+ * @returns {array} - new state
  */
 const fullScreenReducer = (state = defaultState, action) => {
 
