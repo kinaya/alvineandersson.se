@@ -14,7 +14,7 @@ import JumpingTitle from '../common/JumpingTitle';
  * @param {array} props.currentFilter - The current filter
  * @param {bool} props.animation - If the animation is true or false
  */
-const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen, checkFullScreen, windowSize}) => {
+const Projects = ({projects, currentFilter, animation, scrollToContent, fullScreen}) => {
 
   const [filtering, setFiltering] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState(projects)
@@ -42,7 +42,6 @@ const Projects = ({projects, currentFilter, animation, scrollToContent, fullScre
 
     const filterContainerHeight = filterContainerRef.current.offsetHeight;
     setInlineStyle({'height': `${projectsHeight + filterContainerHeight}px`})
-    checkFullScreen(width, projectsHeight + filterContainerHeight, 'projects')
   }
 
   return (
@@ -83,7 +82,6 @@ const mapStateToProps = state => {
     projects: state.projects.projects,
     currentFilter: state.projects.currentFilter,
     animation: state.animation.projects,
-    windowSize: state.fullScreen.windowSize,
     fullScreen: state.fullScreen.active
   }
 }

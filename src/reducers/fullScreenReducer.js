@@ -1,12 +1,8 @@
-import { SET_WINDOW_SIZE, SET_FULLSCREEN, SET_SECTION_SIZE } from '../actions/types'
+import { SET_WINDOW_SIZE } from '../actions/types'
 
 const defaultState = {
   active: true,
-  windowSize: [0,0],
-  sections: {
-    skills: 0,
-    projects: 0
-  }
+  windowSize: [0,0]
 }
 
 /**
@@ -22,39 +18,8 @@ const fullScreenReducer = (state = defaultState, action) => {
     case SET_WINDOW_SIZE:
       return {
         ...state,
-        windowSize: [action.width, action.height]
-      }
-
-    case SET_SECTION_SIZE:
-      return {
-        ...state,
-          sections : {
-            ...state.sections,
-            [action.section] : action.height
-          }
-      }
-
-    case SET_FULLSCREEN:
-
-      let fullScreen = true;
-      for(let section in Object.values(state.sections)) {
-        if(Object.values(state.sections)[section] > window.innerHeight) {
-          fullScreen = false;
-        }
-      }
-
-      //prompt('SET_FULLSCREEN', state.sections.projects)
-
-      console.log(window.innerHeight)
-      console.log(state.sections)
-      console.log(fullScreen)
-
-      // Todo: Why doesn't this work?
-      // const fullScreen = !Object.values(state.sections).some(item => item > window.innerHeigh);
-
-      return {
-        ...state,
-        active: fullScreen
+        windowSize: [action.width, action.height],
+        active: action.fullscreen
       }
 
     default:

@@ -1,4 +1,4 @@
-import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, SET_FULLSCREEN, SET_WINDOW_SIZE, SET_SECTION_SIZE } from './types'
+import { CHOOSE_ITEM, FILTER_PROJECTS, FINISH_GAME, END_GAME, START_GAME, SET_WINDOW_SIZE } from './types'
 import { addOrRemoveFilter } from '../helpers'
 import game from "../data/game.json";
 
@@ -89,38 +89,23 @@ export const filterProjects = (filterItem) => (dispatch, getState) => {
 }
 
 /**
-* Update if fullScreen effect should be used
-* @param value The value true/false for the fullScreen effect
-*/
-//export const setFullScreen = (value) => dispatch => {
-/*  dispatch({
-    type: SET_FULLSCREEN,
-    value: value
-  })*/
-//}
-
-export const checkFullScreen = (width, height, section) => dispatch => {
-  console.log('checkFullScreen', section)
-  dispatch({
-    type: SET_SECTION_SIZE,
-    section: section,
-    height: height + 40
-  })
-  dispatch({
-    type: SET_FULLSCREEN
-  })
-}
-
-/**
-* Save the window inner size
+* Save the window inner size and decide if fullScreen mode should be on
 */
 export const setWindowSize = () => (dispatch, getState) => {
   // Only update if the width has changed, or it will update on iPad scroll
   if(window.innerWidth != getState().fullScreen.windowSize[0]) {
+
+    let fullscreen = false;
+    if(window.innerWidth > 750 && window.innerHeight > 900 ||
+       window.innerWidth > 900 && window.innerHeight > 650) {
+      fullscreen = true;
+    }
+
     dispatch({
       type: SET_WINDOW_SIZE,
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
+      fullscreen: fullscreen
     })
   }
 }
