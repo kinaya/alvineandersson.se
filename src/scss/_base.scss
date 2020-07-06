@@ -73,7 +73,7 @@ h4 { // Black background
   display: inline-block;
   padding: 0.3rem 0.8rem;
   margin: 0.5rem 0 0;
-  transform: rotate(-3deg);
+  @include transform(rotate(-3deg));
   text-transform: uppercase;
 
   @media(min-width: $tablet) {
@@ -118,16 +118,6 @@ section.services {
   }
 }
 
-// Test
-//.scrollarrow {
-//	display: none;
-//}
-
-/*.scrollarrow.header,
-.fullScreen-true .scrollarrow {
-	display: block;
-}*/
-
 .fullScreen-true {
 	section.footer,
 	section.services,
@@ -135,8 +125,8 @@ section.services {
 		height: 100vh;
 		padding-top: 0;
 		padding-bottom: 0;
-		display: flex;
-		flex-direction: row;
+		@include flexbox();
+		@include flex-direction(row);
 		align-items: center;
 		position: relative;
 		> .container {
@@ -144,36 +134,11 @@ section.services {
 		}
 	}
 	section.projects {
-		//align-items: flex-start;
 		> .container {
 			width: 940px;
 		}
 	}
 }
-
-.fullScreen-true {
-	section.projects {
-		//background-color: pink;
-		//display: grid;
-		//align-items: stretch;
-		.container {
-			//background-color: yellow;
-
-			.project-list {
-				//background-color: salmon;
-				//align-items: baseline;
-				//padding-top: 0;
-
-				.project {
-					//background-color: yellow;
-				}
-			}
-
-		}
-	}
-}
-
-
 
 /* Router fade animation */
 .projectPage,
@@ -189,13 +154,13 @@ section.services {
 	opacity: 0;
 }
 .fade-enter-active {
-	transition: opacity 500ms 500ms;
+	@include transition(opacity 500ms 500ms);
  	opacity: 1;
 }
 .fade-exit {
 	opacity: 1;
 }
 .fade-exit-active {
-  transition: opacity 500ms 0ms;
+  @include transition(opacity 500ms 0ms);
   opacity: 0;
 }

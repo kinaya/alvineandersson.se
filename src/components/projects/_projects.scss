@@ -6,20 +6,16 @@
 }
 
 .project-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	//padding-top: 1em;
+  @include flexbox();
+	@include flex-wrap(wrap);
+	@include justify-content(space-evenly);
 	@media(min-width: 565px) {
-		justify-content: center;
+		@include justify-content(center);
 	}
 }
 
 .project {
-	//display: flex;
-	//justify-content: center;
-	//align-items: center;
-  transition: all 0.3s ease-in;
+	@include transition(all 0.3s ease-in);
 
 	.inner {
 		width: 100%;
@@ -146,31 +142,32 @@
 .project-list {
 	.project {
 		overflow: hidden;
-		transition: opacity 300ms, transform 300ms;
-		flex-basis: 50%;
+		@include transition(all 300ms);
+		//transition: opacity 300ms, transform 300ms;
+		@include flex-basis(50%);
 		@media(min-width: $mobile) {
-			flex-basis: 33.33%;
+			@include flex-basis(33.33%);
 		}
 		@media(min-width: $tablet) {
-			flex-basis: 25%;
+			@include flex-basis(25%);
 		}
 		@media(min-width: $desktop) {
-			flex-basis: 20%;
+			@include flex-basis(20%);
 		}
 		// iPad landscape
 		@media(max-height: 700px) {
 			@media(orientation: landscape) {
-				flex-basis: 16.66%;
+				@include flex-basis(16.66%);
 			}
 		}
 	}
 	.project.filtering-true {
 		opacity: 0;
-		transform: scale(0.1);
+		@include transform(scale(0.1));
 	}
 	.project.filtering-false {
 		opacity: 1;
-		transform: scale(1);
+		@include transform(scale(1));
 	}
 
 }
@@ -178,11 +175,11 @@
 // Animation  when project gets visible by scrolling
 .animate-projects-true .project.invisible {
   opacity: 0;
-	transform: scale(0.5);
+	@include transform(scale(0.5));
 }
 .animate-projects-true .project.visible {
   opacity: 1;
-	transform: scale(1);
+	@include transform(scale(1));
 }
 .animate-projects-true .project {
 	@include transition(all 0.3s);
@@ -310,7 +307,6 @@
 }
 
 .navigation {
-  //border-top: 2px dotted $gray;
   margin-top: 4em;
   @media(min-width: $tablet) {
     margin-top: 6em;
@@ -320,7 +316,6 @@
 		max-width: 200px;
 		margin: 0 auto;
 		display: block;
-    //@include justify-content(center);
   }
 }
 

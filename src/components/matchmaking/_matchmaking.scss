@@ -96,15 +96,15 @@
 	.select-item {
 		position: absolute;
 		top: 0;
-		transform: translateX(0);
+		@include transform(translateX(0));
 		z-index: 2;
 	}
 	.select-item.clickable-false {
-		transform: translateX(-900px);
+		@include transform(translateX(-900px));
 		z-index: 0;
 	}
 	.select-item.visible-false {
-		transform: translateX(900px);
+		@include transform(translateX(900px));
 		z-index: 0;
 	}
 }
@@ -117,7 +117,7 @@
 		height: auto;
 		overflow: hidden;
 		opacity: 1;
-		transition: opacity 1s ease;
+		@include transition(opacity 1s ease);
 		&.visible-false {
 			height: 0;
  			opacity: 0;
@@ -128,7 +128,7 @@
 		height: auto;
 		overflow: hidden;
 		opacity: 1;
-		transition: opacity 1s ease;
+		@include transition(opacity 1s ease);
 		&.visible-false {
 			height: 0;
 			opacity: 0;
@@ -144,16 +144,16 @@
 
 			&.visible-true {
 				max-height: none;
-				transform: translateX(0);
+				@include transform(translateX(0));
 			}
 
 			&.visible-true.clickable-false {
 				max-height: 0;
-				transform: translateX(-999px);
+				@include transform(translateX(-999px));
 			}
 
 			&.visible-false {
-				transform: translateX(999px);
+				@include transform(translateX(999px));
 			}
 		}
 
