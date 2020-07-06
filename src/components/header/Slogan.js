@@ -1,5 +1,5 @@
 import React from 'react'
-import {isIE} from 'react-device-detect';
+import {isIE, isEdge} from 'react-device-detect';
 
 
 /**
