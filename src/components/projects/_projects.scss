@@ -153,6 +153,7 @@
 		}
 		@media(min-width: $desktop) {
 			@include flex-basis(20%);
+			background-color: pink;
 		}
 		/*@media(max-height: 700px) {
 			@media(orientation: landscape) {
