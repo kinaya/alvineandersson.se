@@ -96,8 +96,9 @@ export const setWindowSize = () => (dispatch, getState) => {
   if(window.innerWidth != getState().fullScreen.windowSize[0]) {
 
     let fullscreen = false;
-    if(window.innerWidth > 750 && window.innerHeight > 900 ||
-       window.innerWidth > 900 && window.innerHeight > 650) {
+    if(window.innerWidth > 750 && window.innerHeight > 900) {
+      //(window.innerWidth > 750 && window.innerHeight > 900 ||
+      // window.innerWidth > 900 && window.innerHeight > 800) {
       fullscreen = true;
     }
 

@@ -21,17 +21,17 @@ const Skills = ({scrollToContent, fullScreen}) => {
 
           <div data-test="skills-skill" className="stack">
             <h4>Drupal & Wordpress</h4>
-            <p>Konfigurering och teman. Plugins med <strong>PHP</strong> och <strong>SQL</strong>. Standard eller "headless" via <strong>RESTApi</strong>.</p>
+            <p>Konfigurering, teman, block och plugins. <strong>PHP</strong> och <strong>SQL</strong>. Standard eller "headless" via <strong>RESTApi</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>MERN-stack</h4>
-            <p>Applikationer med <strong>React.js/Redux</strong>. Backend via <strong>Node.js</strong> och <strong>Express</strong> med <strong>MongoDB</strong> databas.</p>
+            <p>Applikationer med <strong>React.js/Redux</strong>. Backend via <strong>Node.js</strong> och <strong>Express</strong>, med <strong>MongoDB</strong> databas.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">
             <h4>Verktyg & miljö</h4>
-            <p><strong>Linux</strong>, <strong>Git</strong>, TDD med <strong>Jest</strong> och <strong>Enzyme</strong>, <strong>Webpack</strong>, <strong>Heroku</strong> eller <strong>Apache</strong>. Leker med <strong>Docker</strong> och <strong>AWS</strong>.</p>
+            <p><strong>Linux</strong>, <strong>Git</strong>, TDD med <strong>Jest</strong> och <strong>Enzyme</strong>, <strong>Webpack</strong>, <strong>Apache/Cpanel</strong> eller <strong>PaaS</strong>.</p>
           </div>
 
           <div data-test="skills-skill" className="stack">

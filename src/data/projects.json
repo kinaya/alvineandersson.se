@@ -271,6 +271,35 @@
   },
 
   {
+    "id":"fridhadvokatbyra",
+    "title":"Fridh Advokatbyrå",
+    "info": "Advokatbyrå specialiserad på migrationsrätt. För en rättssäker, inkluderande och djärv humanjuridik.",
+    "content": [
+    ],
+    "link": {
+      "url": "https://fridhadvokatbyra.se",
+      "name": "fridhadvokatbyra.se"
+    },
+    "listimg": {
+      "url": "fridhadvokatbyra_list.jpg",
+      "alt": "Bild från fridhadvokatbyra.se"
+    },
+    "date": "Mars 2016",
+    "pinned": false,
+    "tags": ["Drupal"],
+    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "Fridh advokatbyrå",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "fridhadvokatbyra.png",
+      "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
+    }
+  },
+
+  {
     "id":"patalomsex",
     "title":"På tal om 6",
     "info": "Det är viktigt att kunna snacka om känslor, lust, jämställdhet och sex! Det är utgångspunkten för På tal om 6 som är ett modernt normkritiskt sexualundervisningsmaterial för högstadiet och gymnasiet.",
@@ -282,7 +311,7 @@
     ],
     "link": {
       "url": "https://patalomsex.se",
-      "name": "patalomsex.se"
+      "name": "patalom6.se"
     },
     "listimg": {
       "url": "patalom6_list.jpg",
@@ -300,6 +329,72 @@
     "image": {
       "url": "patalom6.png",
       "alt": "Bild från På tal om 6"
+    }
+  },
+
+  {
+    "id":"kvinnofolkhogskolan",
+    "title":"Kvinnofolkhögskolan",
+    "info": "Folkhögskola i centrala Göteborg, för kvinnor och transpersoner i olika åldrar, med olika bakgrund, mål och studievanor.",
+    "content": [
+      {
+        "headline": "",
+        "paragraph": ""
+      }
+    ],
+    "link": {
+      "url": "https://kvinnofolkhogskolan.se",
+      "name": "kvinnofolkhogskolan.se"
+    },
+    "listimg": {
+      "url": "kfhsk_list.jpg",
+      "alt": "Skärmdump från Kvinnofolkhögskolan"
+    },
+    "date": "Jan 2018",
+    "pinned": false,
+    "tags": [ "Wordpress" ],
+    "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "Kvinnofolkhögskolan",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "kfhsk.png",
+      "alt": "Bild från Kvinnofolkhögskolan"
+    }
+  },
+
+  {
+    "id":"ingenillegal",
+    "title":"Ingen människa är illegal",
+    "info": "Nätverket Ingen människa är illegal arbetar med att praktiskt stödja personer som fått avslag på sin asylansökan hos Migrationsverket.",
+    "content": [
+      {
+        "headline": "",
+        "paragraph": ""
+      }
+    ],
+    "link": {
+      "url": "https://ingenillegal.org",
+      "name": "ingenillegal.org"
+    },
+    "listimg": {
+      "url": "imai_list.png",
+      "alt": "Skärmdump från Ingen människa är illegal"
+    },
+    "date": "Våren 2019",
+    "pinned": false,
+    "tags": [ "Wordpress" ],
+    "extendedTags": "Wordpress, PHP, SQL, CSS/SASS, JavaScript",
+    "customer": "",
+    "designer": {
+      "url": "http://claespettersson.se",
+      "name": "claespettersson.se"
+    },
+    "image": {
+      "url": "imai.png",
+      "alt": "Bild från Ingen människa är Illegal"
     }
   },
 
@@ -370,35 +465,6 @@
     "image": {
       "url": "newcomersyouth.png",
       "alt": "Skärmdump av startsidan för newcomersyouth.se"
-    }
-  },
-
-  {
-    "id":"fridhadvokatbyra",
-    "title":"Fridh Advokatbyrå",
-    "info": "Advokatbyrå specialiserad på migrationsrätt. För en rättssäker, inkluderande och djärv humanjuridik.",
-    "content": [
-    ],
-    "link": {
-      "url": "https://fridhadvokatbyra.se",
-      "name": "fridhadvokatbyra.se"
-    },
-    "listimg": {
-      "url": "fridhadvokatbyra_list.jpg",
-      "alt": "Bild från fridhadvokatbyra.se"
-    },
-    "date": "Mars 2016",
-    "pinned": false,
-    "tags": ["Drupal"],
-    "extendedTags": "Drupal, PHP, SQL, CSS/SASS, JavaScript",
-    "customer": "Fridh advokatbyrå",
-    "designer": {
-      "url": "http://claespettersson.se",
-      "name": "claespettersson.se"
-    },
-    "image": {
-      "url": "fridhadvokatbyra.png",
-      "alt": "Skärmdump av startsidan för fridhadvokatbyra.se"
     }
   },
 

@@ -148,16 +148,17 @@
 			@include flex-basis(33.33%);
 		}
 		@media(min-width: $tablet) {
-			@include flex-basis(25%);
+			//@include flex-basis(25%);
+			@include flex-basis(20%);
 		}
 		@media(min-width: $desktop) {
 			@include flex-basis(20%);
 		}
-		@media(max-height: 700px) {
+		/*@media(max-height: 700px) {
 			@media(orientation: landscape) {
 				@include flex-basis(16.66%);
 			}
-		}
+		}*/
 	}
 	.project.filtering-true {
 		opacity: 0;
