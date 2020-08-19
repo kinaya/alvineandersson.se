@@ -9,3 +9,7 @@ Website built using React. Tests with Jest and Enzyme.
 ## Want to work together?
 
 Contact me at hej@alvineandersson.se
+
+## Screenshots
+
+[![screenshoot](screenshot.png)](https://raw.githubusercontent.com/kinaya/alvineandersson.se/master/screenshot.png)
