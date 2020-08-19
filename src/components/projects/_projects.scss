@@ -220,6 +220,7 @@
   overflow: hidden;
 	background-color: $white;
   .container {
+		box-sizing: border-box;
     overflow: visible;
     max-width: 780px;
     padding: 4rem 1rem 1rem 1rem;
