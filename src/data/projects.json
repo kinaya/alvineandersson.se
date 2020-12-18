@@ -140,10 +140,6 @@
       "url": "https://github.com/kinaya/socialgames",
       "name": "github.com/kinaya/socialgames"
     },
-    "link": {
-      "url": "https://socialgamesapp.herokuapp.com",
-      "name": "socialgamesapp.herokuapp.com"
-    },
     "listimg": {
       "url": "socialaspel_list.png",
       "alt": "Utklipp från startsidan för Sociala spel"
@@ -250,10 +246,6 @@
     "github": {
       "url": "https://github.com/kinaya/everything",
       "name": "github.com/kinaya/everything"
-    },
-    "link": {
-      "url": "https://everythingproject.herokuapp.com",
-      "name": "everythingproject.herokuapp.com"
     },
     "listimg": {
       "url": "everything_list.png",
